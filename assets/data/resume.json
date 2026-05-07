@@ -1,0 +1,454 @@
+{
+  "personalInfo": {
+    "name": "Jason Rae",
+    "title": "Senior Data Analyst EMEA | Commercial Analytics Architect | Applied AI & Decision Intelligence Leader",
+    "location": "Stuttgart, Germany",
+    "email": "jason@jasonrae.ai",
+    "linkedin": "https://www.linkedin.com/in/jason-c-rae/",
+    "github": "https://github.com/JSunRae",
+    "website": "jasonrae.ai",
+    "summary": "Commercial analytics and applied AI leader with 13+ years across sales leadership, EMEA analytics, pricing, forecasting, margin analysis, CRM governance, acquisition integration and data transformation. Proven record of building commercial systems from zero, improving sales performance, correcting broken reporting logic and translating fragmented data into trusted executive decision systems. Brings hands-on BI, analytics engineering, automation, and applied AI capability in service of clearer commercial decisions across Sales, Finance, BI and executive stakeholder environments."
+  },
+  "experience": [
+    {
+      "id": "exp-1",
+      "title": "Senior Data Analyst EMEA",
+      "company": "Medline",
+      "location": "Stuttgart, Germany",
+      "startDate": "2026-01",
+      "endDate": null,
+      "current": true,
+      "description": "Own and develop EMEA commercial analytics architecture across gross margin walks, pricing intelligence, forecasting, CRM analytics, opportunity identification, incentives and executive business review support. Build decision-ready reporting, automation, and analytical workflows across Power BI, Python, SQL, ML, and deterministic GPT-4 where they improve auditability and speed.",
+      "achievements": [
+        {
+          "text": "Own and develop EMEA commercial analytics architecture across gross margin walks, pricing intelligence, forecasting, CRM analytics and executive business review support",
+          "metric": "EMEA",
+          "category": "analytics"
+        },
+        {
+          "text": "Build decision-ready reporting, automation, and analytical workflows across Power BI, Python, SQL, ML, and deterministic GPT-4 where they improve auditability and speed",
+          "metric": "Power BI",
+          "category": "innovation"
+        },
+        {
+          "text": "Support European leadership with forecasting governance, CRM quality improvement, pricing interpretation, margin analysis and business review narratives",
+          "metric": "Executive",
+          "category": "impact"
+        },
+        {
+          "text": "Lead applied AI and analytics enablement — translating technical concepts into practical commercial use cases, training approaches and governance models",
+          "metric": "AI",
+          "category": "leadership"
+        },
+        {
+          "text": "Operate as a cross-functional bridge between Sales, Finance, BI, IT and Supply Chain to resolve data-quality, reporting and decision-system issues",
+          "metric": "Cross-functional",
+          "category": "efficiency"
+        }
+      ],
+      "technologies": [
+        "Python",
+        "Power BI",
+        "SQL",
+        "LLM Programming",
+        "Machine Learning",
+        "Azure"
+      ]
+    },
+    {
+      "id": "exp-2",
+      "title": "Senior Data Analyst Europe",
+      "company": "Medline",
+      "location": "Germany (Hybrid)",
+      "startDate": "2022-10",
+      "endDate": "2026-01",
+      "current": false,
+      "description": "Reporting to the SVP of Sales for Europe, combining commercial analytics leadership with UK key account sales development. Led European forecasting, pricing, financial integrity, and decision-system improvement, with applied AI introduced only where it served real workflows.",
+      "achievements": [
+        {
+          "text": "Achieved €1.3M in UK sales growth in 2023, surpassing target by more than fourfold — independently",
+          "metric": "€1.3M",
+          "category": "impact"
+        },
+        {
+          "text": "Fully handled two acquisitions end to end, partnering with the BI team on credits, customer/account-level data refactoring, and country-by-country customer matching to ensure clean data transfer and reliable performance measurement",
+          "metric": "2 acquisitions",
+          "category": "integration"
+        },
+        {
+          "text": "Led European contribution to a global applied AI initiative by building a training program from scratch that enabled commercial teams to use AI safely across real business workflows",
+          "metric": "Global",
+          "category": "leadership"
+        },
+        {
+          "text": "Resolved historical discrepancies in country P&L reporting by identifying and correcting systemic FX methodology errors, restoring alignment between local and group financials",
+          "metric": "10+ years",
+          "category": "integrity"
+        },
+        {
+          "text": "Re-engineered Price / Quantity / FX decomposition logic to correctly model interaction effects and eliminate mis-attributed growth and margin drivers in commercial analytics",
+          "metric": "PVFX",
+          "category": "analytics"
+        },
+        {
+          "text": "Designed and implemented advanced bonus payment system, significantly improving security, accuracy, and reliability",
+          "metric": "Enterprise",
+          "category": "efficiency"
+        },
+        {
+          "text": "Discovered FX implementation defects in pricing systems, preventing systematic margin distortion across multiple European markets",
+          "metric": "Multi-market",
+          "category": "accuracy"
+        }
+      ],
+      "technologies": [
+        "Python",
+        "Power BI",
+        "SQL",
+        "GPT-4",
+        "LangChain",
+        "Excel VBA",
+        "Machine Learning"
+      ]
+    },
+    {
+      "id": "exp-3",
+      "title": "Inside Sales Department Manager / BDM UK",
+      "company": "Medline",
+      "location": "Warrington, England, UK",
+      "startDate": "2020-10",
+      "endDate": "2022-09",
+      "current": false,
+      "description": "Selected to launch a new Inside Sales department for UK market expansion. Overcame pandemic and GDPR constraints to build a high-performing channel, independently out-performing all European sales representatives.",
+      "achievements": [
+        {
+          "text": "Achieved €3M in sales growth against an initial annual target of ~€300k — surpassing the combined performance of all European Sales Representatives",
+          "metric": "€3M",
+          "category": "impact"
+        },
+        {
+          "text": "Identified 120 new distributors and secured 33 new accounts in a highly constrained market",
+          "metric": "120+ distributors",
+          "category": "growth"
+        },
+        {
+          "text": "Developed advanced analytics tools including customer segmentation, forecasting, market analysis, and backorder analysis to optimise sales processes",
+          "metric": "Analytics",
+          "category": "innovation"
+        },
+        {
+          "text": "Identified and corrected costing discrepancies, securing double-digit improvements in cost basis through factory collaboration",
+          "metric": "Double-digit",
+          "category": "efficiency"
+        }
+      ],
+      "technologies": [
+        "Python",
+        "Excel VBA",
+        "SQL",
+        "Customer Segmentation",
+        "Forecasting",
+        "Power BI"
+      ]
+    },
+    {
+      "id": "exp-4",
+      "title": "Inside Sales Department Manager",
+      "company": "Medline",
+      "location": "Kings Park, NSW, Australia",
+      "startDate": "2016-11",
+      "endDate": "2020-09",
+      "current": false,
+      "description": "Reinstated to lead a turnaround of the Inside Sales division, leveraging AI and data analytics to transform operations across 38 customer markets.",
+      "achievements": [
+        {
+          "text": "Grew divisional sales from 4% to 57% growth — a complete operational turnaround",
+          "metric": "4% → 57%",
+          "category": "impact"
+        },
+        {
+          "text": "Architected a Customer Management System from the ground up, incorporating AI, analytical tools, and rigorous data management",
+          "metric": "CMS build",
+          "category": "innovation"
+        },
+        {
+          "text": "Transformed customer service personnel into award-winning sales professionals through intensive training — multiple STAR award recipients",
+          "metric": "STAR awards",
+          "category": "leadership"
+        }
+      ],
+      "technologies": [
+        "Python",
+        "Data Analytics",
+        "CRM",
+        "Excel VBA",
+        "Forecasting",
+        "AI"
+      ]
+    },
+    {
+      "id": "exp-5",
+      "title": "Account Manager — NSW & ACT",
+      "company": "Medline",
+      "location": "Canberra, ACT, Australia",
+      "startDate": "2014-07",
+      "endDate": "2016-10",
+      "current": false,
+      "description": "Took on the least profitable territory in Australia and delivered the highest profitability in the country within two years.",
+      "achievements": [
+        {
+          "text": "Grew territory revenue from $1.4M to $4.2M — a 3× increase in two years",
+          "metric": "$4.2M",
+          "category": "impact"
+        },
+        {
+          "text": "Improved territory profitability to 35% — the highest in Australia",
+          "metric": "35% margin",
+          "category": "efficiency"
+        },
+        {
+          "text": "Named Account Manager of the Year and earned two STAR Award trips",
+          "metric": "AM of Year",
+          "category": "recognition"
+        }
+      ],
+      "technologies": ["Sales Analytics", "Excel", "CRM", "Data Analysis"]
+    },
+    {
+      "id": "exp-6",
+      "title": "Pilot",
+      "company": "Royal Australian Air Force",
+      "location": "New South Wales, Australia",
+      "startDate": "2005-01",
+      "endDate": "2008-09",
+      "current": false,
+      "description": "Completed rigorous pilot training at ADFA (UNSW), developing rapid learning capability, disciplined systems thinking, and high-performance decision-making under pressure.",
+      "achievements": [
+        {
+          "text": "Earned Commandant Commendation Academic and Deputy Commandant Commendation Academic ×3 at ADFA",
+          "metric": "4× academic awards",
+          "category": "recognition"
+        },
+        {
+          "text": "Developed rapid learning, high-stakes decision-making, and performance-under-pressure skills foundational to all subsequent career success",
+          "metric": "RAAF",
+          "category": "leadership"
+        }
+      ],
+      "technologies": [
+        "Systems Thinking",
+        "Rapid Learning",
+        "Military Communications"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Technology (Aviation)",
+      "institution": "Australian Defence Force Academy (UNSW)",
+      "location": "Canberra, Australia",
+      "year": "2008",
+      "highlights": [
+        "Commandant Commendation Academic",
+        "Deputy Commandant Commendation Academic (×3)",
+        "Divisional Representative, Mess Committee, Precision Drill Team"
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "name": "PSS Selling",
+      "issuer": "Medline",
+      "year": "2012"
+    },
+    {
+      "name": "The Challenger Sale",
+      "issuer": "Medline",
+      "year": "2015"
+    },
+    {
+      "name": "Python (Programming Language)",
+      "issuer": "LinkedIn Skill Assessment",
+      "year": "2023"
+    },
+    {
+      "name": "Machine Learning",
+      "issuer": "LinkedIn Skill Assessment",
+      "year": "2023"
+    },
+    {
+      "name": "Microsoft Excel",
+      "issuer": "LinkedIn Skill Assessment",
+      "year": "2022"
+    },
+    {
+      "name": "Visual Basic for Applications (VBA)",
+      "issuer": "LinkedIn Skill Assessment",
+      "year": "2022"
+    }
+  ],
+  "skills": {
+    "ai_ml": {
+      "category": "AI & Machine Learning",
+      "items": [
+        { "name": "GPT-4 / LLMs", "level": 95 },
+        { "name": "Deterministic LLM Programming", "level": 95 },
+        { "name": "LangChain", "level": 85 },
+        { "name": "scikit-learn", "level": 90 },
+        { "name": "Machine Learning", "level": 90 },
+        { "name": "LLM Workflow Design", "level": 95 }
+      ]
+    },
+    "data_engineering": {
+      "category": "Data Engineering & Analytics",
+      "items": [
+        { "name": "Python", "level": 95 },
+        { "name": "SQL", "level": 95 },
+        { "name": "ETL/ELT Pipelines", "level": 90 },
+        { "name": "Excel / VBA", "level": 95 },
+        { "name": "Data Modeling", "level": 90 }
+      ]
+    },
+    "visualization": {
+      "category": "Data Visualization",
+      "items": [
+        { "name": "Power BI", "level": 95 },
+        { "name": "Tableau", "level": 85 },
+        { "name": "Python (Matplotlib, Plotly)", "level": 85 },
+        { "name": "Excel Advanced", "level": 95 }
+      ]
+    },
+    "cloud": {
+      "category": "Cloud & Infrastructure",
+      "items": [
+        { "name": "Microsoft Azure", "level": 80 },
+        { "name": "AWS", "level": 65 },
+        { "name": "Google Cloud", "level": 60 },
+        { "name": "Docker", "level": 60 }
+      ]
+    },
+    "soft_skills": {
+      "category": "Leadership & Strategy",
+      "items": [
+        { "name": "Team Leadership", "level": 95 },
+        { "name": "Strategic Planning", "level": 90 },
+        { "name": "Stakeholder Management", "level": 95 },
+        { "name": "AI Training & Evangelism", "level": 95 },
+        { "name": "Commercial / Sales Analytics", "level": 95 }
+      ]
+    }
+  },
+  "languages": [
+    { "name": "English", "level": "Native" },
+    { "name": "German", "level": "Working proficiency" }
+  ],
+  "dailyAIStack": [
+    {
+      "name": "GPT-4 (OpenAI API)",
+      "category": "LLM",
+      "usage": "Executive-ready drafting, deterministic AI workflows, case-study writing, and practical AI enablement"
+    },
+    {
+      "name": "Power BI",
+      "category": "Business Intelligence",
+      "usage": "Semantic models, commercial reporting, KPI governance, margin walks, and executive review outputs"
+    },
+    {
+      "name": "Python",
+      "category": "Language",
+      "usage": "Commercial analytics automation, deterministic LLM pipelines, data transformation, and model development"
+    },
+    {
+      "name": "SQL",
+      "category": "Data",
+      "usage": "Data extraction, commercial logic validation, KPI definition checks, and reporting-model support"
+    },
+    {
+      "name": "Excel / VBA",
+      "category": "Analytics",
+      "usage": "Rapid commercial analysis, pricing and margin investigation, and operational workflow support"
+    },
+    {
+      "name": "LangChain",
+      "category": "AI Orchestration",
+      "usage": "Workflow chaining, retrieval-assisted AI patterns, and structured automation experiments"
+    },
+    {
+      "name": "scikit-learn / TensorFlow",
+      "category": "Machine Learning",
+      "usage": "Forecasting, classification, and proof-of-build work for production-grade AI systems"
+    },
+    {
+      "name": "Tableau",
+      "category": "Visualization",
+      "usage": "Comparative BI capability, stakeholder communication, and dashboard design in mixed enterprise stacks"
+    }
+  ],
+  "personalProjects": [
+    {
+      "id": "algo-trading-ai",
+      "title": "Algorithmic Trading AI System",
+      "summary": "Production-grade machine-learning proof of work demonstrating model governance, promotion controls, observability, and automated execution discipline across a complex multi-model environment.",
+      "technologies": [
+        "TensorFlow",
+        "Keras",
+        "scikit-learn",
+        "W&B",
+        "ibapi",
+        "Databento",
+        "FastAPI",
+        "PyArrow",
+        "Parquet",
+        "JSON Schema",
+        "CUDA",
+        "Python"
+      ]
+    },
+    {
+      "id": "ai-memoir-pipeline",
+      "title": "AI Memoir & Narrative Pipeline (Bibliography)",
+      "summary": "Deterministic GPT-4 proof of work showing retrieval-grounded generation, atomic patching, quality gates, and auditable LLM workflow design rather than prompt-and-pray experimentation.",
+      "technologies": [
+        "GPT-4",
+        "FAISS",
+        "sentence-transformers",
+        "spaCy",
+        "python-docx",
+        "SQLite",
+        "Typer",
+        "Pydantic",
+        "FastAPI"
+      ]
+    },
+    {
+      "id": "desktop-agent-automation",
+      "title": "AI Desktop Agent Orchestrator",
+      "summary": "Operational AI orchestration proof of work demonstrating multi-agent coordination, approval handling, transcript quality control, and cost-aware automation across concurrent workflows.",
+      "technologies": [
+        "Python",
+        "OpenAI Computer Use API",
+        "pyautogui",
+        "pyvda",
+        "uiautomation",
+        "Telegram Bot API"
+      ]
+    },
+    {
+      "id": "visa-travel-platform",
+      "title": "Multilingual Travel Authorization SaaS (visa-platform)",
+      "summary": "Full-stack SaaS proof of work demonstrating regulated workflow design, multilingual UX, payment integration, and AI-assisted policy monitoring in a compliance-sensitive environment.",
+      "technologies": [
+        "Next.js 14",
+        "TypeScript",
+        "TailwindCSS",
+        "PostgreSQL",
+        "Prisma",
+        "Clerk",
+        "Stripe",
+        "OpenAI",
+        "Anthropic",
+        "Turborepo"
+      ]
+    }
+  ]
+}

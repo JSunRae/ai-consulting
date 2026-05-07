@@ -1,0 +1,1 @@
+telegram-notifications-agent @ git+https://github.com/JSunRae/TelegramNotifications.git

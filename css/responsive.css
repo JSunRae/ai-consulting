@@ -1,0 +1,34 @@
+/* Responsive Utility Helpers */
+
+/* Stack horizontal button rows on narrow screens without changing desktop layout */
+.stack-buttons-sm {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .stack-buttons-sm {
+    gap: var(--space-3);
+  }
+  
+  .stack-buttons-sm > * {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Attribute-based overrides for legacy inline two-column grids */
+@media (max-width: 900px) {
+  [style*="grid-template-columns: 1fr 1.5fr"],
+  [style*="grid-template-columns: 1.5fr 1fr"],
+  [style*="grid-template-columns: 1fr 1fr"],
+  [style*="grid-template-columns: auto 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Additional safety for very small devices */
+@media (max-width: 540px) {
+  .chat-widget {
+    right: var(--space-4);
+  }
+}

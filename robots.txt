@@ -1,0 +1,18 @@
+﻿# Robots.txt for jasonrae.ai
+# Senior Data Analyst EMEA, Commercial Analytics Architect, and Applied AI Leader portfolio
+
+User-agent: *
+Allow: /
+
+# Crawl-delay (be nice to servers)
+Crawl-delay: 1
+
+# Block internal agent/ops documents from being indexed
+Disallow: /assets/docs/
+
+# Allow CSS and JS for proper rendering
+Allow: /css/
+Allow: /js/
+Allow: /assets/images/
+
+Sitemap: https://jasonrae.ai/sitemap.xml

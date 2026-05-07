@@ -1,0 +1,33 @@
+{
+  "name": "jason-rae-commercial-analytics",
+  "version": "1.0.0",
+  "description": "Personal website and commercial analytics decision-systems consulting platform for Jason Rae - Senior Data Analyst EMEA, Commercial Analytics Architect, and Applied AI & Decision Intelligence Leader",
+  "author": "Jason Rae",
+  "license": "MIT",
+  "homepage": "https://jasonrae.ai",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JSunRae/ai-consulting"
+  },
+  "keywords": [
+    "commercial analytics consulting",
+    "data science",
+    "machine learning",
+    "portfolio",
+    "resume"
+  ],
+  "scripts": {
+    "start": "serve .",
+    "dev": "live-server --port=3000",
+    "build": "python generate_portfolio_pages.py",
+    "deploy:gh-pages": "gh-pages -d .",
+    "deploy:netlify": "netlify deploy --prod"
+  },
+  "devDependencies": {
+    "netlify-cli": "^17.34.1",
+    "live-server": "^1.2.2",
+    "gh-pages": "^6.1.1",
+    "serve": "^14.2.3"
+  }
+}
+

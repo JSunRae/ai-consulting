@@ -1,0 +1,331 @@
+{
+  "projects": [
+    {
+      "id": "algo-trading-ai",
+      "title": "Algorithmic Trading AI System",
+      "category": "machine-learning",
+      "description": "Production trading estate proving governance, model-promotion controls, execution reliability, and observability under live conditions.",
+      "longDescription": "Built to answer a hard operational question: how do you run research-heavy model development without letting fragile models leak into live execution? This trading estate separates experimentation from production execution, enforces promotion gates through shared contracts, and keeps live operations observable in real time. Underneath, the platform spans three interconnected repositories (tf_1, Trading-Win, Trading-WSL). The ML engine trains four model categories: hourly macro-regime classifiers (5-class directional labels STRONG_SELL→STRONG_BUY), high-frequency seconds-bar models with 30-minute lookback windows, multi-task L2 order book models predicting direction + bid-ask spread transitions + market impact regression, and a pre-market gap-opener ranker scoring probability of intraday moves from float, short ratio, relative volume, and news sentiment. Models are gated through a JSON-Logic promotion pipeline enforced via a shared ml-contracts schema repository (git submodule). The execution layer manages headless IBKR Gateway sessions (paper + live), appends market data to Parquet manifests, and consumes only models tagged production.alias. A shared FastAPI notification microservice (TelegramNotifications) delivers real-time alerts across the estate.",
+      "technologies": [
+        "TensorFlow / Keras",
+        "scikit-learn",
+        "W&B (Weights & Biases)",
+        "Interactive Brokers API (ibapi)",
+        "Databento (L2 order book)",
+        "FastAPI",
+        "Pandas / PyArrow / Parquet",
+        "JSON Schema / JSON-Logic",
+        "Python",
+        "CUDA (GPU training)",
+        "Docker",
+        "pytest / CI"
+      ],
+      "businessRelevance": "Governance, promotion control, execution reliability, and observability for high-stakes automated decisions.",
+      "metrics": {
+        "models": "4 model categories: hourly, seconds, L2 order book (multi-task), gap opener",
+        "experiments": "19 W&B training campaigns (Nov 2025 – Feb 2026)",
+        "infrastructure": "3-repo estate with shared contract governance via ml-contracts submodule",
+        "dataIngestion": "Databento L2 order book + IBKR historical bars in append-only Parquet manifests"
+      },
+      "highlights": [
+        "Multi-task L2 order book model: direction + spread transition + market impact in one network",
+        "JSON-Logic promotion gates enforcing schema contracts before any model reaches production",
+        "Headless IBKR Gateway management — paper and live modes with smart port probing",
+        "Pre-market gap-opener ranker using float, short ratio, relative volume, and news sentiment",
+        "Shared FastAPI microservice for real-time Telegram notifications across the estate",
+        "Full CI pipeline with cross-smoke testing between Windows and WSL environments"
+      ],
+      "status": "Active",
+      "year": "2024–Present",
+      "caseStudyUrl": "portfolio/algorithmic-trading-ai.html",
+      "detailPage": {
+        "metaDescription": "Detailed case study of Jason Rae's Algorithmic Trading AI System covering four model families, three-repo architecture, ML promotion gates, IBKR execution, and observability.",
+        "metaKeywords": "Algorithmic Trading AI, Machine Learning Case Study, TensorFlow Trading System, IBKR Automation, ML Ops",
+        "heroSummary": "An end-to-end trading estate that separates ML research from execution, governs model promotion through shared contracts, and keeps production trading infrastructure observable in real time.",
+        "heroTechBadges": [
+          "TensorFlow / Keras",
+          "IBKR API",
+          "Databento L2",
+          "W&B",
+          "FastAPI",
+          "Parquet"
+        ],
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Windows, WSL, Linux",
+        "schemaDescription": "A full-stack algorithmic trading ecosystem spanning TensorFlow signal generation, IBKR execution, Databento market data ingestion, JSON-Logic promotion gates, and FastAPI notifications.",
+        "ctaLabel": "Book Health Check"
+      },
+      "image": "assets/images/projects/project-trading-ai.svg",
+      "demoUrl": null,
+      "githubUrl": null
+    },
+    {
+      "id": "ai-memoir-pipeline",
+      "title": "AI Memoir & Narrative Pipeline",
+      "category": "generative-ai",
+      "description": "Document-intelligence workflow proving retrieval quality, editorial control, and auditability in long-form decision content.",
+      "longDescription": "A deterministic long-form document pipeline that transforms fragmented source material into a structured narrative output. The workflow combines semantic retrieval, structured patch generation, editorial quality gates, and audit-friendly run tracking so changes remain controlled, explainable, and reversible. The architecture demonstrates how LLM systems can be used in production when generation is constrained by retrieval quality, validation rules, and explicit approval points.",
+      "technologies": [
+        "GPT-4 (OpenAI API)",
+        "FAISS (semantic search)",
+        "sentence-transformers (all-MiniLM-L6-v2)",
+        "spaCy 3.7",
+        "python-docx / pypandoc",
+        "SQLite (sqlite-utils)",
+        "Typer + Rich (CLI)",
+        "Pydantic v2",
+        "FastAPI (TelegramNotifications)",
+        "Python"
+      ],
+      "businessRelevance": "Document intelligence, retrieval quality, editorial control, and audit-friendly workflow design.",
+      "metrics": {
+        "pipeline": "Ingest → Propose → Patch → Quality Gate → DOCX export (fully deterministic)",
+        "scale": "Processes multi-year email and chat archives into structured narrative",
+        "quality": "Narrative safeguards: structural anchors, agency beats, tension calibration on every run",
+        "observability": "W&B-style run tracking with per-run metrics and full CHANGELOG audit trail"
+      },
+      "highlights": [
+        "FAISS-powered semantic retrieval over fragmented long-form source material",
+        "GPT-4 proposal generation with atomic chapter patch application",
+        "Narrative safeguards enforced on every pipeline run — not just at export",
+        "Editorial approval workflow with quality-gate CI preventing regressions",
+        "Full observability: unique run IDs, metrics logs, and CHANGELOG audit trail",
+        "Shared TelegramNotifications microservice for real-time pipeline alerts"
+      ],
+      "status": "Active",
+      "year": "2025–Present",
+      "caseStudyUrl": "portfolio/ai-memoir-narrative-pipeline.html",
+      "detailPage": {
+        "metaDescription": "Detailed case study of Jason Rae's AI Narrative Pipeline covering deterministic chapter generation, FAISS retrieval, editorial quality gates, and narrative safeguards.",
+        "metaKeywords": "AI Memoir Pipeline, GPT-4 Case Study, FAISS Retrieval, Narrative Pipeline, Document Intelligence",
+        "heroSummary": "A deterministic GPT-4 pipeline that transforms fragmented long-form source material into publication-ready output while preserving retrieval quality, editorial control, and full auditability.",
+        "heroTechBadges": [
+          "GPT-4",
+          "FAISS",
+          "sentence-transformers",
+          "SQLite",
+          "Typer",
+          "FastAPI"
+        ],
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Cross-platform",
+        "schemaDescription": "A deterministic GPT-4 narrative pipeline that ingests long-form source material, retrieves relevant context semantically, applies structured chapter patches, and validates output quality before export.",
+        "ctaLabel": "Discuss Your Document Intelligence Workflow"
+      },
+      "image": "assets/images/projects/project-biography-writer.svg",
+      "demoUrl": null,
+      "githubUrl": null
+    },
+    {
+      "id": "desktop-agent-automation",
+      "title": "AI Desktop Agent Orchestrator",
+      "category": "automation",
+      "description": "Workflow orchestration framework proving process control, QA scoring, productivity measurement, and cost observability across autonomous agents.",
+      "longDescription": "A multi-desktop Python automation framework that manages AI coding agents (VS Code Copilot) running across multiple virtual desktops simultaneously. OpenAI Computer Use API provides visual detection of approval buttons (Allow, Keep Edits, Try Again) for fully autonomous operation. When no approval fires within 1 hour, the orchestrator calls OpenAI to auto-generate 10 fresh coding prompts drawn from the live project's documentation, then distributes them round-robin across active panels. A transcript quality dashboard scores each panel's output (COMPLETED / IN_PROGRESS / NEEDS_REVISION / BLOCKED), maintains a feedback blacklist for failed prompts, and tracks all OpenAI API costs per session. Includes a master CLI launcher, pytest coverage, and full CI documentation.",
+      "technologies": [
+        "Python",
+        "OpenAI Computer Use API",
+        "pyautogui",
+        "pyvda (virtual desktop management)",
+        "uiautomation",
+        "Pillow (screenshot analysis)",
+        "keyboard",
+        "Telegram Bot API",
+        "Rich (CLI dashboard)",
+        "pytest"
+      ],
+      "businessRelevance": "Agent orchestration, process control, QA scoring, productivity measurement, and cost observability.",
+      "metrics": {
+        "scale": "Manages multiple AI agents across simultaneous virtual desktops",
+        "automation": "Zero human intervention — automatic prompt generation and agent restarts",
+        "quality": "4-tier transcript scoring: COMPLETED / IN_PROGRESS / NEEDS_REVISION / BLOCKED",
+        "costTracking": "Real-time OpenAI API cost tracking per run and per agent"
+      },
+      "highlights": [
+        "OpenAI Computer Use API for visual button detection — no brittle pixel coordinates",
+        "Round-robin prompt distribution across simultaneous Copilot agent panels",
+        "Auto-generates fresh prompts from live project docs when agents go idle for 1 hour",
+        "Transcript quality pipeline with blacklist feedback loop to avoid bad prompts",
+        "Real-time API cost dashboard per agent and per session",
+        "Installable Python package with pip install -e.[dev] and full pytest suite"
+      ],
+      "status": "Active",
+      "year": "2025–Present",
+      "caseStudyUrl": "portfolio/ai-desktop-agent-orchestrator.html",
+      "detailPage": {
+        "metaDescription": "Detailed case study of Jason Rae's AI Desktop Agent Orchestrator covering autonomous multi-desktop agent control, prompt generation, transcript scoring, and feedback-loop automation.",
+        "metaKeywords": "AI Agent Orchestrator, Desktop Automation, Computer Use API, Virtual Desktops, Python Automation",
+        "heroSummary": "A multi-desktop orchestration framework that keeps several AI coding agents productive at once by detecting approvals visually, generating prompts when work stalls, and continuously scoring output quality.",
+        "heroTechBadges": [
+          "Python",
+          "Computer Use API",
+          "pyvda",
+          "pyautogui",
+          "Rich CLI",
+          "pytest"
+        ],
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Windows",
+        "schemaDescription": "A Python automation framework that orchestrates multiple AI coding agents across virtual desktops, monitors approval states visually, generates prompts from project docs, and scores transcript quality.",
+        "ctaLabel": "Book Health Check"
+      },
+      "image": "assets/images/projects/project-productivity-suite.svg",
+      "demoUrl": null,
+      "githubUrl": null
+    },
+    {
+      "id": "visa-travel-platform",
+      "title": "Multilingual Travel Authorization SaaS",
+      "category": "full-stack",
+      "description": "Compliance-first multilingual travel authorization SaaS proving regulated workflow design, policy monitoring, and full-stack delivery across payments, auth, and compliance.",
+      "longDescription": "A full-stack SaaS application guiding travelers through government travel authorization applications in multiple languages. Built as a Turborepo monorepo with separate packages for UI components, validators (Zod schemas), email templates (React Email), content, and an automated policy monitor. Wizard-based flows support family and group applications. A real-time compliance framework ensures fee transparency. The monitoring package scrapes government websites on a Vercel cron schedule and runs OpenAI/Anthropic semantic analysis to detect policy changes before travelers are affected. Authentication via Clerk, payments via Stripe, PostgreSQL managed by Prisma. E2E testing with Playwright, accessibility validated by axe-core.",
+      "technologies": [
+        "Next.js 14 (App Router)",
+        "TypeScript",
+        "TailwindCSS",
+        "PostgreSQL / Prisma",
+        "Clerk (authentication)",
+        "Stripe (payments)",
+        "OpenAI / Anthropic (policy monitoring)",
+        "next-intl (i18n)",
+        "React Hook Form + Zod",
+        "Turborepo / pnpm workspaces",
+        "Playwright / Vitest / axe-core",
+        "Vercel"
+      ],
+      "businessRelevance": "Compliance workflows, policy monitoring, full-stack delivery, payments, authentication, accessibility, and production testing discipline.",
+      "metrics": {
+        "architecture": "Turborepo monorepo — 5 packages: ui, validators, content, emails, monitor",
+        "compliance": "LLM-powered monitoring of government policy changes via cron + OpenAI/Anthropic",
+        "stack": "Full SaaS: auth, payments, DB, email, E2E tests, and a11y validation baked in"
+      },
+      "highlights": [
+        "LLM-powered automated scraping + analysis of government sites for policy change detection",
+        "Wizard-based multi-step application flows with family and group support",
+        "Full fee transparency compliance framework (government vs. service fee breakdown)",
+        "Shared Zod validator packages ensuring consistent data contracts across the monorepo",
+        "React Email templates for all transactional and notification emails",
+        "Clerk + Stripe + Prisma + Vercel — fully integrated production SaaS stack"
+      ],
+      "status": "MVP / Active",
+      "year": "2025–Present",
+      "caseStudyUrl": "portfolio/multilingual-travel-authorization-saas.html",
+      "detailPage": {
+        "metaDescription": "Detailed case study of Jason Rae's Multilingual Travel Authorization SaaS covering compliance monitoring, full-stack platform architecture, payments, authentication, and accessibility validation.",
+        "metaKeywords": "Travel Authorization SaaS, Next.js Case Study, Compliance Monitoring, Stripe SaaS, Multilingual Product",
+        "heroSummary": "A production-ready SaaS platform for guided travel authorization applications that combines multilingual UX, fee transparency, authentication, payments, and LLM-powered policy monitoring.",
+        "heroTechBadges": [
+          "Next.js 14",
+          "TypeScript",
+          "Prisma",
+          "Stripe",
+          "Clerk",
+          "Playwright"
+        ],
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "schemaDescription": "A multilingual travel authorization SaaS that combines guided application flows, LLM-powered policy monitoring, payments, authentication, and compliance-aware UX.",
+        "ctaLabel": "Discuss Your Compliance Workflow"
+      },
+      "image": "assets/images/projects/project-dashboard.svg",
+      "demoUrl": null,
+      "githubUrl": null
+    }
+  ],
+  "caseStudies": [
+    {
+      "id": "forecast-governance-reset",
+      "title": "Forecast Governance Reset",
+      "category": "commercial-analytics",
+      "summaryCard": true,
+      "displayCategory": "Forecasting & CRM Governance",
+      "description": "Public-safe engagement summary: forecasts were overstated or inconsistent because CRM behavior, stage discipline, and accountability varied across markets.",
+      "highlights": [
+        "Diagnosed governance and behavior root causes before modeling",
+        "Improved review cadence and sales-cycle assumptions",
+        "Helped leadership move toward stronger forecast confidence"
+      ]
+    },
+    {
+      "id": "commercial-analytics-foundation",
+      "title": "Commercial Analytics Foundation",
+      "category": "commercial-analytics",
+      "summaryCard": true,
+      "displayCategory": "KPI & Reporting Governance",
+      "description": "Public-safe engagement summary from a broader foundation-fix brief: Sales, Finance, and leadership lacked one trusted view across revenue, margin, pricing, and opportunity data.",
+      "highlights": [
+        "Standardized KPI definitions and improved reporting ownership",
+        "Supported centralized Power BI model and governance direction",
+        "Reduced conflicting narratives and improved decision speed"
+      ]
+    },
+    {
+      "id": "sales-engine-from-zero",
+      "title": "Sales Engine From Zero",
+      "category": "commercial-analytics",
+      "displayCategory": "Commercial Leadership",
+      "description": "A new market required a functioning commercial engine under severe operating constraints.",
+      "highlights": [
+        "Built targeting, distributor identification, and operating rhythm from scratch",
+        "Connected process, prioritization, and analytics to execution discipline",
+        "Delivered major growth improvement against the original target"
+      ]
+    },
+    {
+      "id": "margin-pricing-logic-repair",
+      "title": "Margin And Pricing Logic Repair",
+      "category": "commercial-analytics",
+      "displayCategory": "Pricing & Margin Logic",
+      "description": "Pricing, FX, cost, rebate, and incentive logic distorted how leadership interpreted commercial performance.",
+      "highlights": [
+        "Rebuilt decomposition logic and aligned methodology",
+        "Identified defects creating margin distortion across markets",
+        "Improved pricing and margin interpretation for leadership"
+      ]
+    },
+    {
+      "id": "applied-ai-enablement",
+      "title": "Applied AI Enablement",
+      "category": "commercial-analytics",
+      "displayCategory": "Workflow Enablement & Governance",
+      "description": "Leaders wanted faster analysis and workflow leverage, but teams lacked shared language, governance, and practical use cases tied to real commercial decisions.",
+      "highlights": [
+        "Built training and enablement around practical business use cases",
+        "Connected governance, operating model, and adoption rather than hype",
+        "Positioned AI as a decision-system capability, not a side experiment"
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "id": "all",
+      "name": "All Projects",
+      "description": "View all proof-of-work projects and commercial analytics case studies"
+    },
+    {
+      "id": "machine-learning",
+      "name": "Modeling Systems",
+      "description": "Predictive models, governance, and operational modeling pipelines"
+    },
+    {
+      "id": "generative-ai",
+      "name": "Document Intelligence",
+      "description": "Controlled retrieval, narrative workflows, and document systems"
+    },
+    {
+      "id": "automation",
+      "name": "Workflow Automation",
+      "description": "Process automation, orchestration, and operational controls"
+    },
+    {
+      "id": "full-stack",
+      "name": "Platform Delivery",
+      "description": "End-to-end product delivery spanning compliance, payments, authentication, and decision workflows"
+    },
+    {
+      "id": "commercial-analytics",
+      "name": "Commercial Analytics",
+      "description": "Sanitized business case studies across forecasting, pricing, margin, CRM, and decision systems"
+    }
+  ]
+}

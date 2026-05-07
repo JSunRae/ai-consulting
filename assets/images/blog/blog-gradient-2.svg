@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="Diagonal gradient placeholder">
+  <defs>
+    <linearGradient id="blog2-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070f1e" />
+      <stop offset="100%" stop-color="#0f2640" />
+    </linearGradient>
+    <linearGradient id="blog2-diag" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#64ffda" />
+      <stop offset="100%" stop-color="#4fbfff" />
+    </linearGradient>
+  </defs>
+  <rect width="640" height="400" rx="32" fill="url(#blog2-bg)" />
+  <path d="M-40 420L680-20" stroke="url(#blog2-diag)" stroke-width="70" stroke-linecap="round" opacity="0.15" />
+  <path d="M-80 420L640-40" stroke="url(#blog2-diag)" stroke-width="50" stroke-linecap="round" opacity="0.25" />
+  <circle cx="180" cy="290" r="70" fill="none" stroke="#64ffda" stroke-width="4" opacity="0.4" />
+  <circle cx="460" cy="120" r="50" fill="none" stroke="#64ffda" stroke-width="3" opacity="0.5" />
+  <circle cx="460" cy="120" r="16" fill="#64ffda" opacity="0.4" />
+  <path d="M100 90h120" stroke="#64ffda" stroke-width="4" stroke-linecap="round" opacity="0.3" />
+  <path d="M420 320h120" stroke="#64ffda" stroke-width="4" stroke-linecap="round" opacity="0.3" />
+</svg>

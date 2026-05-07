@@ -1,0 +1,89 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Netlify configuration
+# ─────────────────────────────────────────────────────────────────────────────
+
+# ── Build settings ────────────────────────────────────────────────────────────
+[build]
+  publish = "."
+
+# ── Redirects ─────────────────────────────────────────────────────────────────
+[[redirects]]
+  from   = "/*"
+  to     = "/404.html"
+  status = 404
+
+# ── Security & performance headers ────────────────────────────────────────────
+
+# Static assets – revalidate because filenames are not fingerprinted
+[[headers]]
+  for = "/assets/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/assets/data/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/assets/docs/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/favicon*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/assets/images/favicon*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# HTML pages – always revalidate
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/blog/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/portfolio/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Global security headers applied to every response
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options            = "DENY"
+    X-Content-Type-Options     = "nosniff"
+    Referrer-Policy            = "strict-origin-when-cross-origin"
+    Permissions-Policy         = "camera=(), microphone=(), geolocation=()"
+    Content-Security-Policy    = """
+      default-src 'self';
+      script-src  'self' https://cdnjs.cloudflare.com https://assets.calendly.com https://snap.licdn.com;
+      style-src   'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com;
+      font-src    'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com;
+      frame-src   https://calendly.com;
+      connect-src 'self' https://formspree.io https://px.ads.linkedin.com;
+      img-src     'self' data: https:;
+      object-src  'none';
+      base-uri    'self';
+      form-action 'self' https://formspree.io;
+      upgrade-insecure-requests;
+    """

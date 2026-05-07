@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="Cyan gradient placeholder">
+  <defs>
+    <linearGradient id="blog1-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#081127" />
+      <stop offset="100%" stop-color="#132b47" />
+    </linearGradient>
+    <linearGradient id="blog1-wave" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#64ffda" />
+      <stop offset="100%" stop-color="#3ed6ff" />
+    </linearGradient>
+  </defs>
+  <rect width="640" height="400" rx="32" fill="url(#blog1-bg)" />
+  <path d="M0 260c60-20 120-40 180-20s120 80 180 80 120-60 180-60 120 40 120 40v100H0z" fill="url(#blog1-wave)" opacity="0.25" />
+  <path d="M0 300c60-30 120-60 180-50s120 90 180 80 120-90 180-80 120 70 120 70v80H0z" fill="#64ffda" opacity="0.18" />
+  <circle cx="520" cy="120" r="70" fill="none" stroke="#64ffda" stroke-width="4" opacity="0.4" />
+  <circle cx="140" cy="90" r="40" fill="none" stroke="#64ffda" stroke-width="3" opacity="0.3" />
+  <circle cx="140" cy="90" r="12" fill="#64ffda" opacity="0.5" />
+  <path d="M80 60h120" stroke="#64ffda" stroke-width="4" stroke-linecap="round" opacity="0.3" />
+  <path d="M440 60h120" stroke="#64ffda" stroke-width="4" stroke-linecap="round" opacity="0.3" />
+</svg>

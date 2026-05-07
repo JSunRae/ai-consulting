@@ -1,0 +1,526 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How to Evaluate AI Projects ROI | Jason Rae</title>
+    <meta
+      name="description"
+      content="A framework for quantifying AI initiative value. Calculate ROI, account for hidden costs, and translate technical metrics into business impact."
+    />
+    <meta
+      name="keywords"
+      content="AI ROI, measuring AI value, business case for AI, data science strategy, Jason Rae, AI cost benefit analysis"
+    />
+    <meta name="author" content="Jason Rae" />
+    <link
+      rel="canonical"
+      href="https://jasonrae.ai/blog/how-to-evaluate-ai-projects-roi.html"
+    />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="How to Evaluate AI Projects ROI | Jason Rae"
+    />
+    <meta
+      property="og:description"
+      content="Stop guessing. Start measuring. A leader's guide to calculating the true return on investment for AI and data science projects."
+    />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="https://jasonrae.ai/blog/how-to-evaluate-ai-projects-roi.html"
+    />
+    <meta
+      property="og:image"
+      content="https://jasonrae.ai/assets/images/og-image.png"
+    />
+    <meta
+      property="og:image:alt"
+      content="Jason Rae — Senior Data Analyst EMEA | Commercial Analytics Architect | Applied AI & Decision Intelligence Leader"
+    />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="How to Evaluate AI Projects ROI | Jason Rae"
+    />
+    <meta
+      name="twitter:description"
+      content="Stop guessing. Start measuring. A leader's guide to calculating the true return on investment for AI and data science projects."
+    />
+    <meta
+      name="twitter:image"
+      content="https://jasonrae.ai/assets/images/og-image.png"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg" />
+
+    <!-- Preconnect for critical origins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+
+    <!-- Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    />
+
+    <!-- Stylesheets -->
+    <script src="../js/theme-init.js"></script>
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <!-- Font Awesome (solid + brands subset — no regular/light/duotone used) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/solid.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/brands.min.css"
+    />
+
+    <!-- Schema.org markup -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "How to Evaluate AI Projects ROI",
+        "description": "A framework for quantifying AI initiative value. Calculate ROI, account for hidden costs, and translate technical metrics into business impact.",
+        "url": "https://jasonrae.ai/blog/how-to-evaluate-ai-projects-roi.html",
+        "datePublished": "2026-01-15",
+        "dateModified": "2026-02-23",
+        "author": {
+          "@type": "Person",
+          "name": "Jason Rae",
+          "url": "https://jasonrae.ai"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Jason Rae",
+          "url": "https://jasonrae.ai"
+        },
+        "image": "https://jasonrae.ai/assets/images/og-image.png",
+        "inLanguage": "en"
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header" id="header">
+      <div class="container header-inner">
+        <a href="../index.html" class="logo">
+          <div class="logo-icon">JR</div>
+          <span>Jason Rae</span>
+        </a>
+
+        <nav class="nav">
+          <ul class="nav-links" id="nav-links">
+            <li><a href="../index.html" class="nav-link">Home</a></li>
+            <li><a href="../about.html" class="nav-link">About</a></li>
+            <li><a href="../portfolio.html" class="nav-link">Portfolio</a></li>
+            <li><a href="../services.html" class="nav-link">Services</a></li>
+            <li><a href="../resume.html" class="nav-link">Resume</a></li>
+            <li><a href="index.html" class="nav-link active">Blog</a></li>
+            <li><a href="../contact.html" class="nav-link">Contact</a></li>
+            <li class="nav-cta-item">
+              <a href="../contact.html" class="btn btn-primary nav-cta"
+                >Book Health Check</a
+              >
+            </li>
+          </ul>
+          <button
+            class="mobile-menu-toggle"
+            id="mobile-menu-toggle"
+            type="button"
+            aria-label="Toggle menu"
+            aria-controls="nav-links"
+            aria-expanded="false"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Blog Post Hero -->
+    <section class="section blog-hero single">
+      <div class="container">
+        <span class="section-label">Strategy</span>
+        <h1>How to Evaluate AI Projects ROI</h1>
+        <p class="lead">
+          Too many AI pilots fail to launch because the business case is fuzzy.
+          Here is a concrete framework for calculating ROI, managing total cost
+          of ownership, and defining success metrics that CFOs respect.
+        </p>
+        <div class="blog-meta">
+          <div class="author-info">
+            <p class="author-name"><a href="../about.html">Jason Rae</a></p>
+            <p class="author-role">
+              Commercial Analytics Architect | Applied AI Leader
+            </p>
+          </div>
+          <div class="meta-details">
+            <time datetime="2026-01-15">Published: January 15, 2026</time>
+            <span>Reading time: 8 minutes</span>
+          </div>
+        </div>
+        <!-- Hero image gradient -->
+        <div
+          class="blog-hero-image placeholder-image gradient-2"
+          aria-hidden="true"
+        ></div>
+      </div>
+    </section>
+
+    <!-- Blog Content -->
+    <article class="section blog-article">
+      <div class="container">
+        <div class="article-content">
+          <p>
+            In the rush to adopt GenAI and advanced analytics, organizations
+            often skip the boring part: the math. We see "proof of concepts"
+            that prove the technology works but fail to prove it creates value.
+            As an AI leader, my job isn't just to deploy models—it's to ensure
+            every deployment pays for itself. Here is the framework I use to
+            evaluate AI projects, separating the vanity metrics from the true
+            ROI drivers.
+          </p>
+
+          <h2>1. The "Value Bucket" Approach</h2>
+          <p>
+            Not all AI value looks the same on a P&L statement. I categorize
+            every potential project into one of three buckets:
+          </p>
+          <ul>
+            <li>
+              <strong>Cost Reduction (Hard ROI):</strong> Direct labor savings,
+              reduced software licensing, lower cloud spend through
+              optimization. <br /><em
+                >Example: An automated document processing bot saving 2,000
+                analyst hours/year.</em
+              >
+            </li>
+            <li>
+              <strong>Revenue Generation (Hard ROI):</strong> Improved
+              conversion rates, churn reduction, cross-sell lift. <br /><em
+                >Example: A recommender system increasing average order value by
+                4%.</em
+              >
+            </li>
+            <li>
+              <strong>Strategic Capability (Soft ROI):</strong> Faster
+              time-to-market, improved customer satisfaction (NPS), risk
+              mitigation. <br /><em
+                >Example: A predictive maintenance model preventing
+                reputation-damaging outages.</em
+              >
+            </li>
+          </ul>
+          <p>
+            <strong>The Rule:</strong> Strategic capability is great, but your
+            portfolio should be weighted 70% toward Hard ROI to maintain
+            executive support.
+          </p>
+
+          <h2>2. Calculating the True Cost (TCO)</h2>
+          <p>
+            ROI is <code>(Value - Cost) / Cost</code>. Most teams underestimate
+            the denominator. A realistic AI budget must include:
+          </p>
+          <ul>
+            <li>
+              <strong>Development:</strong> Data engineering, data science, and
+              UI/UX time.
+            </li>
+            <li>
+              <strong>Infrastructure:</strong> GPU/cloud compute, API token
+              costs (which scale linearly with GenAI usage).
+            </li>
+            <li>
+              <strong>Maintenance (The "AI Tax"):</strong> Model retraining,
+              monitoring, and fixing data drift. We typically estimate this at
+              20-30% of the initial build cost <em>annually</em>.
+            </li>
+            <li>
+              <strong>Change Management:</strong> Training users and redesigning
+              workflows. If the users don't adopt it, the value is zero.
+            </li>
+          </ul>
+
+          <h2>3. Define "Success" Before You Code</h2>
+          <p>
+            I never approve a line of code until the stakeholder signs off on
+            the "Metric of Truth." This avoids the common trap where a model has
+            95% accuracy but zero business impact.
+          </p>
+          <blockquote>
+            "Don't measure the model. Measure the process the model improves."
+          </blockquote>
+          <p>
+            Instead of "Model Accuracy > 90%," use "Reduction in manual review
+            time by 50%." <br />Instead of "Chatbot containment rate," use "Cost
+            per ticket resolution."
+          </p>
+
+          <h2>4. Case Study: The "Perfect" Customer Churn Model</h2>
+          <p>
+            I once saw a team build a churn predictor with incredible precision.
+            They identified customers at risk with 90% accuracy. The ROI?
+            Negative using the basic calculation. Why?
+          </p>
+          <p>
+            Because the cost of the retention offer (a 20% discount) was higher
+            than the profit margin on those customers, and the marketing team
+            lacked the resources to call them all. The <em>model</em> worked,
+            but the <em>project</em> failed.
+          </p>
+          <p>
+            <strong>The Fix:</strong> We re-scoped the project to focus only on
+            "high-value, saveable" customers. The accuracy dropped, but the ROI
+            skyrocketed because the intervention was now profitable.
+          </p>
+
+          <h2>5. The "Go/No-Go" Gate Review</h2>
+          <p>
+            Every quarter, review your portfolio. Be ruthless. If a pilot has
+            been stuck in "validation" for 6 months, kill it. If a deployed
+            model's maintenance cost exceeds its value, deprecate it. Freeing up
+            resources from zombie projects is the only way to have capacity for
+            the next big breakthrough.
+          </p>
+
+          <h2>Conclusion</h2>
+          <p>
+            Evaluating AI ROI isn't about stifling innovation; it's about
+            steering it. By rigorously defining value, accounting for full
+            costs, and measuring business outcomes, you transform your data team
+            from a cost center into a strategic profit engine.
+          </p>
+          <p>
+            To see how these principles have played out in practice, browse my
+            <a href="../portfolio.html">AI project portfolio</a> — each case
+            study includes the business case, the cost model, and the measured
+            outcome. For a deeper conversation about your own portfolio, the
+            <a href="../services.html">AI Strategy &amp; Consulting</a> page
+            outlines how I engage with leadership teams.
+          </p>
+
+          <div class="cta-box">
+            <h3>Need help validating your AI strategy?</h3>
+            <p>
+              I help organizations audit their AI portfolios to uncover hidden
+              value and cut wasteful initiatives.
+            </p>
+            <a href="../contact.html" class="btn btn-primary"
+              >Schedule an Audit</a
+            >
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Related Posts -->
+    <section class="section related-posts">
+      <div class="container">
+        <h2>You Might Also Like</h2>
+        <div class="related-grid">
+          <article>
+            <h3>
+              <a href="5-ways-gpt4-transforms-business-analytics.html"
+                >5 Ways GPT-4 Transforms Business Analytics</a
+              >
+            </h3>
+            <p>
+              Deploy GPT copilots across analytics workflows once your ROI case
+              is approved.
+            </p>
+          </article>
+          <article>
+            <h3>
+              <a href="reducing-report-volume-95-percent-case-study.html"
+                >Reducing Report Volume by 95%</a
+              >
+            </h3>
+            <p>
+              A live case study with the before/after metrics that prove the ROI
+              framework in action.
+            </p>
+          </article>
+          <article>
+            <h3>
+              <a href="power-bi-vs-tableau-2024-comparison.html"
+                >Power BI vs Tableau: 2024 Comparison</a
+              >
+            </h3>
+            <p>
+              Platform cost and governance factors that belong in every AI TCO
+              model.
+            </p>
+          </article>
+          <article>
+            <h3>
+              <a href="pl-attribution-fx-errors-data-analytics.html"
+                >Why Your P&amp;L Attribution Is Probably Wrong</a
+              >
+            </h3>
+            <p>
+              See how broken Price/Volume/FX logic can distort the ROI story
+              behind commercial performance.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Post CTA -->
+    <section class="section blog-cta">
+      <div class="container">
+        <div class="cta-card">
+          <p class="section-label">
+            Ready to build a bullet-proof AI business case?
+          </p>
+          <h2>
+            I help leadership teams turn vague AI ambitions into funded,
+            measurable programmes.
+          </h2>
+          <p>
+            Bring me in for a portfolio audit, a go/no-go gate review, or a full
+            AI strategy sprint.
+          </p>
+          <div class="cta-actions">
+            <a href="../contact.html" class="btn btn-primary"
+              >Book a Strategy Call</a
+            >
+            <a href="../services.html" class="btn btn-secondary"
+              >Explore Services</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-content">
+        <div class="footer-social">
+          <a
+            href="https://www.linkedin.com/in/jason-c-rae/"
+            target="_blank"
+            rel="noopener"
+            aria-label="LinkedIn"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a
+            href="https://github.com/JSunRae"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="mailto:jason@jasonrae.ai" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+        <p class="footer-text">
+          Designed &amp; Built by Jason Rae<br />
+          &copy; <span id="footer-year">2026</span> All rights reserved.<br />
+          <a href="../privacy.html" class="footer-link"
+            >Privacy &amp; Data Notice</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <div class="chat-widget" id="chat-widget">
+      <div
+        class="chat-window"
+        id="chat-window"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="chat-window-title"
+        aria-hidden="true"
+      >
+        <div class="chat-header">
+          <div class="chat-header-title" id="chat-window-title">
+            <span class="chat-status"></span>
+            Jason's AI Assistant
+          </div>
+          <button class="modal-close" id="chat-close" aria-label="Close chat">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div
+          class="chat-messages"
+          id="chat-messages"
+          aria-live="polite"
+          aria-relevant="additions"
+        >
+          <div class="chat-message bot">
+            Hi! 👋 I'm Jason's AI assistant. Ask me anything about his
+            experience, skills, or how he can help your business.
+          </div>
+        </div>
+        <div class="chat-suggestions" id="chat-suggestions">
+          <button
+            class="chat-suggestion"
+            data-question="How do you measure AI ROI?"
+          >
+            Measuring AI ROI?
+          </button>
+          <button
+            class="chat-suggestion"
+            data-question="What AI tools do you use daily?"
+          >
+            Daily AI stack?
+          </button>
+          <button
+            class="chat-suggestion"
+            data-question="Tell me about your AI projects"
+          >
+            AI projects?
+          </button>
+        </div>
+        <div class="chat-input-container">
+          <input
+            type="text"
+            class="chat-input"
+            id="chat-input"
+            placeholder="Type your question..."
+            autocomplete="off"
+          />
+          <label for="chat-input" class="sr-only">Message</label>
+          <button class="chat-send" id="chat-send" aria-label="Send message">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </div>
+      </div>
+      <button
+        class="chat-toggle"
+        id="chat-toggle"
+        aria-label="Open chat"
+        aria-expanded="false"
+        aria-controls="chat-window"
+      >
+        <i class="fas fa-comments"></i>
+      </button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+    <script src="../js/chatbot.js"></script>
+    <script src="../js/animations.js"></script>
+  </body>
+</html>

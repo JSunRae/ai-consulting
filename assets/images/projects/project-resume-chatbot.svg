@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-label="Interactive resume chatbot placeholder">
+  <defs>
+    <linearGradient id="chat-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#071125" />
+      <stop offset="100%" stop-color="#132b47" />
+    </linearGradient>
+    <linearGradient id="chat-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#64ffda" />
+      <stop offset="100%" stop-color="#4acbff" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" rx="28" fill="url(#chat-bg)" />
+  <rect x="120" y="70" width="360" height="260" rx="28" fill="#0b1d33" stroke="#1b3551" stroke-width="3" />
+  <circle cx="200" cy="140" r="30" fill="#112a44" />
+  <path d="M188 128a18 18 0 0 1 24 0" stroke="#64ffda" stroke-width="4" stroke-linecap="round" fill="none" />
+  <circle cx="190" cy="140" r="6" fill="#64ffda" />
+  <circle cx="210" cy="140" r="6" fill="#64ffda" />
+  <path d="M185 155c10 10 25 10 35 0" stroke="#64ffda" stroke-width="4" stroke-linecap="round" fill="none" />
+  <rect x="170" y="200" width="220" height="28" rx="14" fill="#102840" />
+  <rect x="170" y="240" width="180" height="20" rx="10" fill="#163551" />
+  <rect x="170" y="270" width="220" height="20" rx="10" fill="#163551" />
+  <path d="M140 110h80" stroke="#64ffda" stroke-width="4" stroke-linecap="round" opacity="0.6" />
+  <rect x="250" y="110" width="200" height="32" rx="16" fill="#102840" />
+  <rect x="270" y="120" width="120" height="12" rx="6" fill="#163551" />
+  <rect x="250" y="160" width="200" height="32" rx="16" fill="#102840" />
+  <rect x="270" y="170" width="150" height="12" rx="6" fill="#163551" />
+  <path d="M160 320l30 30 40-30" fill="none" stroke="url(#chat-accent)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+  <rect x="230" y="320" width="240" height="16" rx="8" fill="#102840" />
+  <rect x="250" y="324" width="120" height="8" rx="4" fill="#163551" />
+  <circle cx="510" cy="120" r="16" fill="none" stroke="#64ffda" stroke-width="3" opacity="0.6" />
+  <circle cx="90" cy="120" r="12" fill="#64ffda" opacity="0.3" />
+  <path d="M450 260h40v40" fill="none" stroke="#64ffda" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
