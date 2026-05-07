@@ -1,0 +1,154 @@
+/* CSS Custom Properties - Design Tokens */
+:root {
+  /* Colors - Dark Theme */
+  --color-bg-primary: #0b1320;
+  --color-bg-secondary: #111c2d;
+  --color-bg-tertiary: #1a2737;
+  --color-bg-card: #121d2c;
+  --color-border: rgba(155, 170, 191, 0.18);
+  --color-border-strong: rgba(205, 169, 103, 0.38);
+
+  /* Accent Colors */
+  --color-accent: #cda967;
+  --color-accent-hover: #e2c58f;
+  --color-accent-muted: rgba(205, 169, 103, 0.14);
+
+  /* Text Colors
+   * Contrast audit (WCAG 2.1 AA):
+   *   #ccd6f6 on #0a192f  → 10.49 : 1  ✓ passes normal + large
+   *   #94a3b8 on #0a192f  →  6.17 : 1  ✓ passes normal text (≥4.5:1)
+   *   #94a3b8 on #172a45  →  4.90 : 1  ✓ passes normal text (≥4.5:1)
+   *   #64ffda on #0a192f  → 13.04 : 1  ✓ passes normal + large
+   * Note: the former secondary value #8892b0 on card bg #172a45
+   * yielded ≈4.20:1, which fails the 4.5:1 normal-text threshold.
+   * Bumped to #94a3b8 to resolve the failure across all surfaces.
+   */
+  --color-text-primary: #d8e1ec;
+  --color-text-secondary: #9aa8ba;
+  --color-text-heading: #f3efe7;
+  --color-text-accent: #cda967;
+
+  /* Semantic Colors */
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+  --color-info: #3b82f6;
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #b88a51 0%, #d9bf8d 55%, #8097ac 100%);
+  --gradient-bg: radial-gradient(circle at top right, rgba(205, 169, 103, 0.08), transparent 24%),
+    radial-gradient(circle at 18% 10%, rgba(128, 151, 172, 0.08), transparent 18%),
+    linear-gradient(180deg, #0b1320 0%, #101926 100%);
+  --gradient-card: linear-gradient(180deg, rgba(20, 30, 44, 0.98) 0%, rgba(13, 20, 31, 0.98) 100%);
+
+  /* Typography */
+  --font-family-sans:
+    "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-family-display: "Source Serif 4", Georgia, serif;
+  --font-family-mono: "IBM Plex Mono", "Fira Code", monospace;
+
+  /* Font Sizes */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+
+  /* Font Weights */
+  --font-light: 300;
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+
+  /* Line Heights */
+  --leading-tight: 1.25;
+  --leading-normal: 1.65;
+  --leading-relaxed: 1.8;
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-7: 1.75rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  /* Border Radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.625rem;
+  --radius-lg: 0.875rem;
+  --radius-xl: 1.125rem;
+  --radius-2xl: 1.4rem;
+  --radius-pill: 9999px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 10px 24px rgba(4, 8, 14, 0.18);
+  --shadow-md: 0 18px 36px rgba(4, 8, 14, 0.28);
+  --shadow-lg: 0 26px 52px rgba(4, 8, 14, 0.34);
+  --shadow-xl: 0 36px 72px rgba(4, 8, 14, 0.42);
+  --shadow-glow: 0 18px 40px rgba(4, 8, 14, 0.3);
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-normal: 300ms ease;
+  --transition-slow: 500ms ease;
+
+  /* Z-Index */
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-fixed: 300;
+  --z-modal-backdrop: 400;
+  --z-modal: 500;
+  --z-popover: 600;
+  --z-tooltip: 700;
+  --z-dev-banner: 99999; /* dev-mode warning banner — always on top */
+
+  /* Container */
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-2xl: 1536px;
+
+  /* Header */
+  --header-height: 80px;
+}
+
+/* Light theme override */
+[data-theme="light"] {
+  color-scheme: light;
+  --color-bg-primary: #f4efe5;
+  --color-bg-secondary: #ebe3d5;
+  --color-bg-tertiary: #ddd3c3;
+  --color-bg-card: #fbf8f1;
+  --color-border: rgba(72, 84, 104, 0.16);
+  --color-border-strong: rgba(138, 93, 36, 0.28);
+  --color-text-primary: #253243;
+  --color-text-secondary: #586579;
+  --color-text-heading: #111827;
+  --color-accent: #8a5d24;
+  --color-accent-hover: #6f4918;
+  --color-accent-muted: rgba(138, 93, 36, 0.12);
+  --color-text-accent: #8a5d24;
+  --gradient-bg: linear-gradient(180deg, #f4efe5 0%, #efe8db 100%);
+  --gradient-card: linear-gradient(180deg, rgba(255, 252, 247, 0.98) 0%, rgba(246, 240, 231, 0.98) 100%);
+  --shadow-glow: 0 16px 28px rgba(17, 24, 39, 0.08);
+  --shadow-sm: 0 8px 18px rgba(17, 24, 39, 0.06);
+  --shadow-md: 0 16px 28px rgba(17, 24, 39, 0.1);
+  --shadow-lg: 0 24px 42px rgba(17, 24, 39, 0.12);
+  --shadow-xl: 0 34px 60px rgba(17, 24, 39, 0.16);
+    0 20px 36px -24px rgba(15, 23, 42, 0.28),

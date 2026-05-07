@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Detailed case study of Jason Rae&#x27;s AI Narrative Pipeline covering deterministic chapter generation, FAISS retrieval, editorial quality gates, and narrative safeguards."
+    />
+    <meta
+      name="keywords"
+      content="AI Memoir Pipeline, GPT-4 Case Study, FAISS Retrieval, Narrative Pipeline, Document Intelligence"
+    />
+    <meta name="author" content="Jason Rae" />
+    <link
+      rel="canonical"
+      href="https://jasonrae.ai/portfolio/ai-memoir-narrative-pipeline.html"
+    />
+
+    <meta
+      property="og:title"
+      content="AI Memoir &amp; Narrative Pipeline | Jason Rae Case Study"
+    />
+    <meta
+      property="og:description"
+      content="Detailed case study of Jason Rae&#x27;s AI Narrative Pipeline covering deterministic chapter generation, FAISS retrieval, editorial quality gates, and narrative safeguards."
+    />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="https://jasonrae.ai/portfolio/ai-memoir-narrative-pipeline.html"
+    />
+    <meta property="og:site_name" content="Jason Rae" />
+    <meta
+      property="og:image"
+      content="https://jasonrae.ai/assets/images/og-image.png"
+    />
+    <meta
+      property="og:image:alt"
+      content="Jason Rae — Commercial Analytics Architect &amp; Applied AI Leader"
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="AI Memoir &amp; Narrative Pipeline | Jason Rae Case Study"
+    />
+    <meta
+      name="twitter:description"
+      content="Detailed case study of Jason Rae&#x27;s AI Narrative Pipeline covering deterministic chapter generation, FAISS retrieval, editorial quality gates, and narrative safeguards."
+    />
+    <meta
+      name="twitter:image"
+      content="https://jasonrae.ai/assets/images/og-image.png"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="Jason Rae — Commercial Analytics Architect &amp; Applied AI Leader"
+    />
+
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    />
+
+    <script src="../js/theme-init.js"></script>
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/solid.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/brands.min.css"
+    />
+
+    <title>AI Memoir &amp; Narrative Pipeline | Jason Rae Case Study</title>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "AI Memoir & Narrative Pipeline",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Cross-platform",
+        "description": "A deterministic GPT-4 narrative pipeline that ingests long-form source material, retrieves relevant context semantically, applies structured chapter patches, and validates output quality before export.",
+        "creator": {
+          "@type": "Person",
+          "name": "Jason Rae"
+        },
+        "url": "https://jasonrae.ai/portfolio/ai-memoir-narrative-pipeline.html",
+        "keywords": "AI Memoir Pipeline, GPT-4 Case Study, FAISS Retrieval, Narrative Pipeline, Document Intelligence",
+        "featureList": [
+          "FAISS-powered semantic retrieval over fragmented long-form source material",
+          "GPT-4 proposal generation with atomic chapter patch application",
+          "Narrative safeguards enforced on every pipeline run — not just at export",
+          "Editorial approval workflow with quality-gate CI preventing regressions"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header class="header" id="header">
+      <div class="container header-inner">
+        <a href="../index.html" class="logo">
+          <div class="logo-icon">JR</div>
+          <span>Jason Rae</span>
+        </a>
+
+        <nav class="nav">
+          <ul class="nav-links" id="nav-links">
+            <li><a href="../index.html" class="nav-link">Home</a></li>
+            <li><a href="../about.html" class="nav-link">About</a></li>
+            <li>
+              <a href="../portfolio.html" class="nav-link active">Portfolio</a>
+            </li>
+            <li><a href="../services.html" class="nav-link">Services</a></li>
+            <li><a href="../resume.html" class="nav-link">Resume</a></li>
+            <li><a href="../blog/index.html" class="nav-link">Blog</a></li>
+            <li><a href="../contact.html" class="nav-link">Contact</a></li>
+            <li class="nav-cta-item">
+              <a href="../contact.html" class="btn btn-primary nav-cta"
+                >Book Health Check</a
+              >
+            </li>
+          </ul>
+          <button
+            class="mobile-menu-toggle"
+            id="mobile-menu-toggle"
+            type="button"
+            aria-label="Toggle menu"
+            aria-controls="nav-links"
+            aria-expanded="false"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <section class="section case-study-hero">
+      <div class="container">
+        <div class="card case-study-hero-card reveal">
+          <p class="section-label">Case Study</p>
+          <div class="case-study-meta">
+            <span class="badge badge-success">Active</span>
+            <span class="badge badge-warning">2025–Present</span>
+            <span class="badge badge-primary">Generative AI</span>
+          </div>
+          <h1 style="margin-bottom: var(--space-4)">
+            AI Memoir &amp; Narrative Pipeline
+          </h1>
+          <p
+            class="section-subtitle"
+            style="max-width: 900px; margin-bottom: 0"
+          >
+            A deterministic GPT-4 pipeline that transforms fragmented long-form
+            source material into publication-ready output while preserving
+            retrieval quality, editorial control, and full auditability.
+          </p>
+          <div class="case-study-stack" aria-label="Technology badges">
+            <span class="badge badge-primary">GPT-4</span>
+            <span class="badge badge-primary">FAISS</span>
+            <span class="badge badge-primary">sentence-transformers</span>
+            <span class="badge badge-primary">SQLite</span>
+            <span class="badge badge-primary">Typer</span>
+            <span class="badge badge-primary">FastAPI</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-sm" style="padding-top: 0">
+      <div class="container case-study-layout">
+        <main>
+          <section class="section-sm" style="padding-top: 0">
+            <h2 class="numbered-heading" data-number="01">Overview</h2>
+            <div class="card case-study-richtext reveal">
+              <p>
+                This project is a deterministic AI pipeline built to convert raw
+                communications into a structured long-form manuscript. The input
+                layer ingests emails, WhatsApp archives, and document files into
+                JSONL event streams stored in SQLite, creating a searchable and
+                reproducible record of source material rather than a loose
+                prompt pile.
+              </p>
+              <p>
+                Retrieval is handled through FAISS and sentence-transformers so
+                the proposal engine can surface relevant evidence for each
+                chapter draft before anything is sent to GPT-4. That matters
+                because the problem is not simply text generation; it is
+                controlled generation with the right memory at the right time.
+              </p>
+              <p>
+                GPT-4 produces structured chapter proposals that are applied as
+                atomic patches instead of free-form replacements. That
+                patch-based model protects manuscript integrity and makes it
+                possible to review, approve, or reject discrete edits without
+                losing the broader arc.
+              </p>
+              <p>
+                Every run also passes through narrative safeguards and editorial
+                quality gates. Structural anchors, agency beats, and tension
+                calibration are enforced on each apply pass, while run IDs,
+                metrics logs, and change history make the entire pipeline
+                observable and auditable.
+              </p>
+            </div>
+          </section>
+
+          <section class="section-sm">
+            <h2 class="numbered-heading" data-number="02">Pipeline Flow</h2>
+            <div class="card reveal">
+              <pre class="case-study-pre">
+Source archives
+  |
+  |  emails, chat exports, .docx files
+  v
+Structured ingestion
+  |
+  |  normalized JSONL events stored in SQLite
+  v
+Semantic retrieval layer
+  |
+  |  FAISS + sentence-transformers select relevant evidence
+  v
+Proposal engine
+  |
+  |  GPT-4 generates structured chapter proposals
+  v
+Atomic patch application
+  |
+  |  manuscript updated through controlled chapter-level patches
+  v
+Narrative safeguards + quality gate
+  |
+  |  structural anchors, agency beats, tension calibration, approvals
+  v
+DOCX export + observability
+  |
+  +--> run IDs, metrics logs, CHANGELOG, Telegram notifications</pre
+              >
+            </div>
+          </section>
+
+          <section class="section-sm">
+            <h2 class="numbered-heading" data-number="03">Why It Matters</h2>
+            <div class="case-study-grid">
+              <article class="card reveal">
+                <h3>Document intelligence, not blind generation</h3>
+                <p>
+                  The system is built around retrieval and validation so GPT-4
+                  is grounded in evidence, which maps directly to real
+                  enterprise document-intelligence problems.
+                </p>
+              </article>
+              <article class="card reveal">
+                <h3>Controlled long-form output</h3>
+                <p>
+                  Atomic chapter patching makes this a governed content system,
+                  not a single-shot prompt workflow. That is the same operating
+                  principle needed for policy, legal, or knowledge outputs.
+                </p>
+              </article>
+              <article class="card reveal">
+                <h3>Quality gates reduce regression risk</h3>
+                <p>
+                  The narrative safeguards and editorial approvals ensure each
+                  run improves the manuscript without silently breaking
+                  structure or consistency.
+                </p>
+              </article>
+              <article class="card reveal">
+                <h3>Observability supports trust</h3>
+                <p>
+                  Run-level metrics, IDs, and audit trails make the workflow
+                  reviewable and explainable, which is essential when AI output
+                  needs stakeholder trust.
+                </p>
+              </article>
+            </div>
+          </section>
+        </main>
+
+        <aside class="case-study-sidebar">
+          <div class="card reveal">
+            <h2 class="card-title">Results &amp; Metrics</h2>
+            <div class="metric-list">
+              <div class="metric-item">
+                <span class="metric-label">Pipeline</span>
+                <p class="metric-value">
+                  Ingest → Propose → Patch → Quality Gate → DOCX export (fully
+                  deterministic)
+                </p>
+              </div>
+              <div class="metric-item">
+                <span class="metric-label">Scale</span>
+                <p class="metric-value">
+                  Processes multi-year email and chat archives into structured
+                  narrative
+                </p>
+              </div>
+              <div class="metric-item">
+                <span class="metric-label">Quality</span>
+                <p class="metric-value">
+                  Narrative safeguards: structural anchors, agency beats,
+                  tension calibration on every run
+                </p>
+              </div>
+              <div class="metric-item">
+                <span class="metric-label">Observability</span>
+                <p class="metric-value">
+                  W&amp;B-style run tracking with per-run metrics and full
+                  CHANGELOG audit trail
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card reveal">
+            <h2 class="card-title">Project Highlights</h2>
+            <ul class="list-check" style="margin-bottom: 0">
+              <li>
+                FAISS-powered semantic retrieval over fragmented long-form
+                source material
+              </li>
+              <li>
+                GPT-4 proposal generation with atomic chapter patch application
+              </li>
+              <li>
+                Narrative safeguards enforced on every pipeline run — not just
+                at export
+              </li>
+              <li>
+                Editorial approval workflow with quality-gate CI preventing
+                regressions
+              </li>
+              <li>
+                Full observability: unique run IDs, metrics logs, and CHANGELOG
+                audit trail
+              </li>
+              <li>
+                Shared TelegramNotifications microservice for real-time pipeline
+                alerts
+              </li>
+            </ul>
+          </div>
+
+          <div class="card reveal">
+            <h2 class="card-title">Technologies</h2>
+            <div class="tags">
+              <span class="tag">GPT-4 (OpenAI API)</span>
+              <span class="tag">FAISS (semantic search)</span>
+              <span class="tag">sentence-transformers (all-MiniLM-L6-v2)</span>
+              <span class="tag">spaCy 3.7</span>
+              <span class="tag">python-docx / pypandoc</span>
+              <span class="tag">SQLite (sqlite-utils)</span>
+              <span class="tag">Typer + Rich (CLI)</span>
+              <span class="tag">Pydantic v2</span>
+              <span class="tag">FastAPI (TelegramNotifications)</span>
+              <span class="tag">Python</span>
+            </div>
+          </div>
+
+          <div class="card reveal">
+            <h2 class="card-title">Call To Action</h2>
+            <p>
+              If you need production-grade decision systems rather than another
+              isolated pilot, start with a Health Check.
+            </p>
+            <div class="case-study-actions">
+              <a href="../contact.html" class="btn btn-primary"
+                >Discuss Your Document Intelligence Workflow</a
+              >
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer-content">
+        <div class="footer-social">
+          <a
+            href="https://www.linkedin.com/in/jason-c-rae/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a
+            href="https://github.com/JSunRae"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="mailto:jason@jasonrae.ai" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+        <p class="footer-text">
+          Designed &amp; Built by Jason Rae<br />
+          © <span id="footer-year">2026</span> All rights reserved.<br />
+          <a href="../privacy.html" class="footer-link"
+            >Privacy &amp; Data Notice</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <div class="chat-widget" id="chat-widget">
+      <div
+        class="chat-window"
+        id="chat-window"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="chat-window-title"
+        aria-hidden="true"
+      >
+        <div class="chat-header">
+          <div class="chat-header-title" id="chat-window-title">
+            <span class="chat-status"></span>
+            Jason's AI Assistant
+          </div>
+          <button class="modal-close" id="chat-close" aria-label="Close chat">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div
+          class="chat-messages"
+          id="chat-messages"
+          aria-live="polite"
+          aria-relevant="additions"
+        >
+          <div class="chat-message bot">
+            Hi! 👋 Ask me about the memoir pipeline, semantic retrieval, or how
+            this maps to enterprise document-intelligence workflows.
+          </div>
+        </div>
+        <div class="chat-suggestions" id="chat-suggestions">
+          <button
+            class="chat-suggestion"
+            data-question="How does the memoir pipeline use FAISS retrieval?"
+          >
+            FAISS retrieval?
+          </button>
+          <button
+            class="chat-suggestion"
+            data-question="Why use deterministic patching instead of one-shot generation?"
+          >
+            Deterministic patching?
+          </button>
+          <button
+            class="chat-suggestion"
+            data-question="How does this translate into business value?"
+          >
+            Business value?
+          </button>
+        </div>
+        <div class="chat-input-container">
+          <input
+            type="text"
+            class="chat-input"
+            id="chat-input"
+            placeholder="Type your question..."
+            autocomplete="off"
+          />
+          <label for="chat-input" class="sr-only">Message</label>
+          <button class="chat-send" id="chat-send" aria-label="Send message">
+            <svg viewBox="0 0 24 24">
+              <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <button
+        class="chat-toggle"
+        id="chat-toggle"
+        aria-label="Open chat"
+        aria-expanded="false"
+        aria-controls="chat-window"
+      >
+        <svg viewBox="0 0 24 24">
+          <path
+            d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/chatbot.js"></script>
+    <script src="../js/animations.js"></script>
+    <script src="../js/portfolio.js"></script>
+  </body>
+</html>

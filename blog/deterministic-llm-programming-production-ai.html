@@ -1,0 +1,558 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      How I Use Deterministic LLM Programming to Build AI That Actually Ships |
+      Jason Rae
+    </title>
+    <meta
+      name="description"
+      content="A technical guide to deterministic LLM programming using structured outputs, validation gates, atomic operations, and observability to turn AI demos into production systems."
+    />
+    <meta
+      name="keywords"
+      content="deterministic LLM programming, production LLM systems, structured outputs, Pydantic, LLM observability, Jason Rae"
+    />
+    <meta name="author" content="Jason Rae" />
+    <link
+      rel="canonical"
+      href="https://jasonrae.ai/blog/deterministic-llm-programming-production-ai.html"
+    />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="How I Use Deterministic LLM Programming to Build AI That Actually Ships | Jason Rae"
+    />
+    <meta
+      property="og:description"
+      content="Prompt-and-pray does not survive contact with production. Here is the engineering pattern I use to make LLM systems testable and dependable."
+    />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="https://jasonrae.ai/blog/deterministic-llm-programming-production-ai.html"
+    />
+    <meta
+      property="og:image"
+      content="https://jasonrae.ai/assets/images/og-image.png"
+    />
+    <meta
+      property="og:image:alt"
+      content="Jason Rae — Senior Data Analyst EMEA | Commercial Analytics Architect | Applied AI &amp; Decision Intelligence Leader"
+    />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="How I Use Deterministic LLM Programming to Build AI That Actually Ships | Jason Rae"
+    />
+    <meta
+      name="twitter:description"
+      content="A production engineering approach for making LLM systems structured, validated, observable, and rollback-safe."
+    />
+    <meta
+      name="twitter:image"
+      content="https://jasonrae.ai/assets/images/og-image.png"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg" />
+
+    <!-- Preconnect for critical origins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+
+    <!-- Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    />
+
+    <!-- Stylesheets -->
+    <script src="../js/theme-init.js"></script>
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <!-- Font Awesome (solid + brands subset — no regular/light/duotone used) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/solid.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/brands.min.css"
+    />
+
+    <!-- Schema.org markup -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "How I Use Deterministic LLM Programming to Build AI That Actually Ships",
+        "description": "A technical guide to deterministic LLM programming using structured outputs, validation gates, atomic operations, and observability to turn AI demos into production systems.",
+        "url": "https://jasonrae.ai/blog/deterministic-llm-programming-production-ai.html",
+        "datePublished": "2026-04-24",
+        "dateModified": "2026-04-24",
+        "author": {
+          "@type": "Person",
+          "name": "Jason Rae",
+          "url": "https://jasonrae.ai"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Jason Rae",
+          "url": "https://jasonrae.ai"
+        },
+        "image": "https://jasonrae.ai/assets/images/og-image.png",
+        "inLanguage": "en"
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header" id="header">
+      <div class="container header-inner">
+        <a href="../index.html" class="logo">
+          <div class="logo-icon">JR</div>
+          <span>Jason Rae</span>
+        </a>
+
+        <nav class="nav">
+          <ul class="nav-links" id="nav-links">
+            <li><a href="../index.html" class="nav-link">Home</a></li>
+            <li><a href="../about.html" class="nav-link">About</a></li>
+            <li><a href="../portfolio.html" class="nav-link">Portfolio</a></li>
+            <li><a href="../services.html" class="nav-link">Services</a></li>
+            <li><a href="../resume.html" class="nav-link">Resume</a></li>
+            <li><a href="index.html" class="nav-link active">Blog</a></li>
+            <li><a href="../contact.html" class="nav-link">Contact</a></li>
+            <li class="nav-cta-item">
+              <a href="../contact.html" class="btn btn-primary nav-cta"
+                >Book Health Check</a
+              >
+            </li>
+          </ul>
+          <button
+            class="mobile-menu-toggle"
+            id="mobile-menu-toggle"
+            type="button"
+            aria-label="Toggle menu"
+            aria-controls="nav-links"
+            aria-expanded="false"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Blog Post Hero -->
+    <section class="section blog-hero single">
+      <div class="container">
+        <span class="section-label">Engineering</span>
+        <h1>
+          How I Use Deterministic LLM Programming to Build AI That Actually
+          Ships
+        </h1>
+        <p class="lead">
+          Most LLM applications fail because they are treated like clever
+          prompts rather than software systems. The shift that matters is from
+          "prompt-and-pray" to deterministic, validated, observable execution.
+        </p>
+        <div class="blog-meta">
+          <div class="author-info">
+            <p class="author-name"><a href="../about.html">Jason Rae</a></p>
+            <p class="author-role">
+              Commercial Analytics Architect | Applied AI Leader
+            </p>
+          </div>
+          <div class="meta-details">
+            <time datetime="2026-04-24">Published: April 24, 2026</time>
+            <span>Reading time: 11 minutes</span>
+          </div>
+        </div>
+        <!-- Hero image gradient -->
+        <div
+          class="blog-hero-image placeholder-image gradient-3"
+          aria-hidden="true"
+        ></div>
+      </div>
+    </section>
+
+    <!-- Blog Content -->
+    <article class="section blog-article">
+      <div class="container">
+        <div class="article-content">
+          <h2>1. Introduction: Why most AI demos never become products</h2>
+          <p>
+            The first version of almost every LLM idea looks impressive. You
+            give it a rich prompt, the model returns something fluent, and a
+            room full of stakeholders decides the future has arrived. Then the
+            real work starts. The second run returns a different structure. A
+            third run omits a field your downstream service expects. A fourth
+            run invents content, trips a safety filter, or quietly produces a
+            low-quality answer that no monitoring system catches. The demo was
+            real. The product was not.
+          </p>
+          <p>
+            I have found that most teams are not blocked by model quality alone.
+            They are blocked by software discipline. If you wire an LLM into a
+            production workflow without hard contracts, quality gates, and
+            rollback logic, you have created a probabilistic dependency with no
+            operational containment. That is why so many GenAI projects stall in
+            prototype mode.
+          </p>
+          <p>
+            My rule is simple: if a system must ship, it must behave like
+            software. That means deterministic LLM programming.
+          </p>
+
+          <h2>2. What deterministic LLM programming means</h2>
+          <p>
+            Deterministic LLM programming does not mean the model itself becomes
+            mathematically deterministic in every possible sense. It means the
+            surrounding system constrains the degrees of freedom so outputs are
+            structured, testable, recoverable, and measurable. The application
+            becomes dependable even if the model underneath remains stochastic.
+          </p>
+          <p>
+            In practice, this means each model call has a narrow contract. It
+            receives specific context, returns a schema-constrained payload,
+            passes validation, and either advances the workflow or fails in a
+            known way. The system logs the run, captures prompt and response
+            metadata, and supports replay. Once you think like this, LLMs stop
+            feeling mystical and start behaving like components in an engineered
+            pipeline.
+          </p>
+
+          <h2>
+            3. Pattern 1: Structured outputs with Pydantic and JSON Schema
+          </h2>
+          <p>
+            The first production pattern is obvious but still underused: never
+            ask for "an answer" when you can ask for a typed object. I prefer
+            Pydantic models or JSON Schema because they formalize the contract
+            between the model and the rest of the application. Instead of
+            returning a paragraph that another function has to parse later, the
+            model returns a known shape with required fields, enums, length
+            limits, and optional metadata.
+          </p>
+          <p>
+            This does two things immediately. It cuts downstream fragility, and
+            it forces you to clarify what the model is actually responsible for.
+            In my AI Memoir Pipeline, for example, I do not ask the model to
+            "rewrite a chapter" in one shot. I ask it for a specific patch
+            object with target section identifiers, revision intent, factual
+            dependencies, and confidence notes. That makes each operation small,
+            inspectable, and retryable.
+          </p>
+
+          <h2>4. Pattern 2: Quality gates and validation layers</h2>
+          <p>
+            Structured outputs are necessary, but they are not sufficient.
+            Systems still need quality gates. I normally apply three layers:
+            schema validation, business-rule validation, and semantic
+            validation. Schema validation checks shape. Business-rule validation
+            checks constraints such as allowed section names, maximum token
+            budgets, and forbidden claims. Semantic validation checks whether
+            the content is good enough for the task.
+          </p>
+          <p>
+            The semantic layer is where teams usually get lazy. If the model
+            returns valid JSON, they call it done. That is a mistake. A valid
+            object can still be poor work. In production I score outputs for
+            completeness, consistency, groundedness, and task-specific quality.
+            If a run misses the threshold, it triggers repair logic or gets
+            routed to a human review queue.
+          </p>
+          <p>
+            This approach is the opposite of prompt superstition. You are not
+            hoping a more poetic system prompt will save you. You are treating
+            model output like any other external input: untrusted until proven
+            acceptable.
+          </p>
+
+          <h2>5. Pattern 3: Atomic operations with rollback</h2>
+          <p>
+            The most important design lesson from my AI Memoir Pipeline is that
+            large generative operations should be decomposed into atomic units.
+            My memoir workflow uses deterministic retrieval, structured chapter
+            patches, and section-level updates rather than full-document
+            rewrites. Every write operation is isolated. If one patch fails, the
+            system rolls back that patch instead of corrupting the entire
+            manuscript.
+          </p>
+          <p>
+            Atomicity matters because LLMs are excellent at producing plausible
+            damage. A whole-document rewrite can degrade voice consistency,
+            break chronology, or overwrite validated material. A section patch
+            is much safer. You can diff it, validate it, approve it, and commit
+            it. The principle is the same one I use in commercial analytics and
+            AI agents: smaller state transitions create more reliable systems.
+          </p>
+
+          <h2>6. Pattern 4: W&amp;B-style observability for every LLM run</h2>
+          <p>
+            If you cannot inspect a run, compare it to previous runs, and trace
+            failure modes over time, you do not have a production LLM system.
+            You have a black box. I borrow the mindset of Weights &amp; Biases
+            style experiment tracking even when I am not training a model. Each
+            invocation should record versioned prompts, model choice, inputs,
+            token usage, latency, validation outcomes, retries, and final human
+            disposition.
+          </p>
+          <p>
+            This turns troubleshooting from guesswork into engineering. You can
+            ask whether quality declined after a prompt change, whether one
+            model variant drives more retries, or whether a given retrieval
+            strategy improves groundedness. Without that telemetry, teams keep
+            debating anecdotes. With it, they can iterate like software teams.
+          </p>
+
+          <h2>7. Real example: the AI Memoir Pipeline architecture</h2>
+          <p>
+            My AI Memoir Pipeline is a good example of these principles in one
+            system. It combines GPT-4 with FAISS-backed retrieval, deterministic
+            orchestration, and atomic chapter patching. Source material is
+            embedded and indexed so retrieval stays grounded in known memories,
+            notes, and chapter state. The orchestrator then issues narrow tasks:
+            summarize evidence, propose a patch, validate the patch, and only
+            then apply it.
+          </p>
+          <p>
+            The critical point is that each stage has a contract. Retrieval
+            returns ranked supporting context. Generation returns a typed patch
+            object. Validation checks chronology, duplication risk, and style
+            consistency. The write step applies only approved changes. If any
+            stage fails, the run is marked incomplete rather than silently
+            degrading the manuscript.
+          </p>
+          <p>
+            I use the same philosophy in other systems as well, including my AI
+            desktop agent orchestrator and algorithmic trading research stack.
+            Whether the domain is memoir authoring, multi-agent workflow
+            control, or model experimentation across 19 training campaigns, the
+            pattern is stable: narrow contracts, observable state, and safe
+            rollback points.
+          </p>
+
+          <h2>8. Conclusion</h2>
+          <p>
+            LLMs become useful in enterprise settings when they stop being magic
+            and start being infrastructure. Deterministic LLM programming is not
+            about removing intelligence from the system. It is about putting
+            intelligence inside a frame that operations, compliance, and product
+            teams can trust.
+          </p>
+          <p>
+            If you are building an LLM feature that needs to ship, the path is
+            clear: structure outputs, validate aggressively, keep operations
+            atomic, and instrument everything. That is how you turn a good demo
+            into production software.
+          </p>
+
+          <div class="cta-box">
+            <h3>Need help hardening an LLM system for production?</h3>
+            <p>
+              I help engineering and product teams design deterministic LLM
+              pipelines with structured outputs, evaluation gates, and
+              observability that hold up in real deployment.
+            </p>
+            <a href="../contact.html" class="btn btn-primary"
+              >Book an LLM Architecture Session</a
+            >
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Related Posts -->
+    <section class="section related-posts">
+      <div class="container">
+        <h2>You Might Also Like</h2>
+        <div class="related-grid">
+          <article>
+            <h3>
+              <a href="5-ways-gpt4-transforms-business-analytics.html"
+                >5 Ways GPT-4 Transforms Business Analytics</a
+              >
+            </h3>
+            <p>
+              See the operating patterns that sit on top of reliable LLM
+              plumbing.
+            </p>
+          </article>
+          <article>
+            <h3>
+              <a href="enterprise-ai-adoption-commercial-analytics.html"
+                >The Commercial Analyst's Guide to AI Adoption</a
+              >
+            </h3>
+            <p>
+              Reliable AI systems matter most when they support real frontline
+              workflows.
+            </p>
+          </article>
+          <article>
+            <h3>
+              <a href="how-to-evaluate-ai-projects-roi.html"
+                >How to Evaluate AI Project ROI</a
+              >
+            </h3>
+            <p>
+              Connect production-grade engineering to measurable business value.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Post CTA -->
+    <section class="section blog-cta">
+      <div class="container">
+        <div class="cta-card">
+          <p class="section-label">Shipping LLM features beyond demo mode?</p>
+          <h2>
+            I help teams design deterministic AI systems that are structured,
+            testable, and ready for production scrutiny.
+          </h2>
+          <p>
+            From schema design to evaluation gates and telemetry, I build the
+            engineering discipline that makes AI dependable.
+          </p>
+          <div class="cta-actions">
+            <a href="../contact.html" class="btn btn-primary"
+              >Start an Architecture Review</a
+            >
+            <a href="../services.html" class="btn btn-secondary"
+              >Explore Services</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-content">
+        <div class="footer-social">
+          <a
+            href="https://www.linkedin.com/in/jason-c-rae/"
+            target="_blank"
+            rel="noopener"
+            aria-label="LinkedIn"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a
+            href="https://github.com/JSunRae"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="mailto:jason@jasonrae.ai" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+        <p class="footer-text">
+          Designed &amp; Built by Jason Rae<br />
+          &copy; <span id="footer-year">2026</span> All rights reserved.<br />
+          <a href="../privacy.html" class="footer-link"
+            >Privacy &amp; Data Notice</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <div class="chat-widget" id="chat-widget">
+      <div
+        class="chat-window"
+        id="chat-window"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="chat-window-title"
+        aria-hidden="true"
+      >
+        <div class="chat-header">
+          <div class="chat-header-title" id="chat-window-title">
+            <span class="chat-status"></span>
+            Jason's AI Assistant
+          </div>
+          <button class="modal-close" id="chat-close" aria-label="Close chat">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div
+          class="chat-messages"
+          id="chat-messages"
+          aria-live="polite"
+          aria-relevant="additions"
+        >
+          <div class="chat-message bot">
+            Hi! 👋 I'm Jason's AI assistant. Ask me anything about his
+            experience, skills, or how he can help your business.
+          </div>
+        </div>
+        <div class="chat-suggestions" id="chat-suggestions">
+          <button
+            class="chat-suggestion"
+            data-question="What is deterministic LLM programming?"
+          >
+            Deterministic LLMs?
+          </button>
+          <button
+            class="chat-suggestion"
+            data-question="How do you make GPT systems reliable in production?"
+          >
+            Reliable GPT systems?
+          </button>
+          <button
+            class="chat-suggestion"
+            data-question="Tell me about your AI engineering work"
+          >
+            AI engineering work?
+          </button>
+        </div>
+        <div class="chat-input-container">
+          <input
+            type="text"
+            class="chat-input"
+            id="chat-input"
+            placeholder="Type your question..."
+            autocomplete="off"
+          />
+          <label for="chat-input" class="sr-only">Message</label>
+          <button class="chat-send" id="chat-send" aria-label="Send message">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </div>
+      </div>
+      <button
+        class="chat-toggle"
+        id="chat-toggle"
+        aria-label="Open chat"
+        aria-expanded="false"
+        aria-controls="chat-window"
+      >
+        <i class="fas fa-comments"></i>
+      </button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+    <script src="../js/chatbot.js"></script>
+    <script src="../js/animations.js"></script>
+  </body>
+</html>

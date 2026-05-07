@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-label="Stock trading AI placeholder">
+  <defs>
+    <linearGradient id="trading-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#071022" />
+      <stop offset="50%" stop-color="#0d1f37" />
+      <stop offset="100%" stop-color="#102a43" />
+    </linearGradient>
+    <linearGradient id="trading-line" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#64ffda" />
+      <stop offset="100%" stop-color="#3fddff" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" rx="28" fill="url(#trading-bg)" />
+  <g stroke="#102f4a" stroke-width="1">
+    <path d="M60 320h480" />
+    <path d="M60 260h480" />
+    <path d="M60 200h480" />
+    <path d="M60 140h480" />
+    <path d="M120 60v280" />
+    <path d="M200 60v280" />
+    <path d="M280 60v280" />
+    <path d="M360 60v280" />
+    <path d="M440 60v280" />
+    <path d="M520 60v280" />
+  </g>
+  <polyline points="80,280 150,220 210,260 250,180 300,210 360,140 420,190 470,120 520,180" fill="none" stroke="url(#trading-line)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+  <circle cx="250" cy="180" r="30" fill="#0c1f33" stroke="#64ffda" stroke-width="4" />
+  <circle cx="420" cy="190" r="18" fill="#0c1f33" stroke="#64ffda" stroke-width="3" />
+  <rect x="420" y="250" width="90" height="60" rx="12" fill="#0c1f33" stroke="#1c3a57" />
+  <path d="M440 300l20-28 12 12 30-36" fill="none" stroke="#64ffda" stroke-linecap="round" stroke-width="4" />
+  <path d="M70 340h160" stroke="#64ffda" stroke-width="4" stroke-linecap="round" opacity="0.5" />
+  <path d="M250 340h90" stroke="#64ffda" stroke-width="4" stroke-linecap="round" opacity="0.5" />
+  <path d="M360 340h170" stroke="#64ffda" stroke-width="4" stroke-linecap="round" opacity="0.5" />
+</svg>

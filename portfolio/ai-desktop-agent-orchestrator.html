@@ -1,0 +1,571 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Detailed case study of Jason Rae&#x27;s AI Desktop Agent Orchestrator covering autonomous multi-desktop agent control, prompt generation, transcript scoring, and feedback-loop automation."
+    />
+    <meta
+      name="keywords"
+      content="AI Agent Orchestrator, Desktop Automation, Computer Use API, Virtual Desktops, Python Automation"
+    />
+    <meta name="author" content="Jason Rae" />
+    <link
+      rel="canonical"
+      href="https://jasonrae.ai/portfolio/ai-desktop-agent-orchestrator.html"
+    />
+
+    <meta
+      property="og:title"
+      content="AI Desktop Agent Orchestrator | Jason Rae Case Study"
+    />
+    <meta
+      property="og:description"
+      content="Detailed case study of Jason Rae&#x27;s AI Desktop Agent Orchestrator covering autonomous multi-desktop agent control, prompt generation, transcript scoring, and feedback-loop automation."
+    />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="https://jasonrae.ai/portfolio/ai-desktop-agent-orchestrator.html"
+    />
+    <meta property="og:site_name" content="Jason Rae" />
+    <meta
+      property="og:image"
+      content="https://jasonrae.ai/assets/images/og-image.png"
+    />
+    <meta
+      property="og:image:alt"
+      content="Jason Rae — Commercial Analytics Architect &amp; Applied AI Leader"
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="AI Desktop Agent Orchestrator | Jason Rae Case Study"
+    />
+    <meta
+      name="twitter:description"
+      content="Detailed case study of Jason Rae&#x27;s AI Desktop Agent Orchestrator covering autonomous multi-desktop agent control, prompt generation, transcript scoring, and feedback-loop automation."
+    />
+    <meta
+      name="twitter:image"
+      content="https://jasonrae.ai/assets/images/og-image.png"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="Jason Rae — Commercial Analytics Architect &amp; Applied AI Leader"
+    />
+
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    />
+
+    <script src="../js/theme-init.js"></script>
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/solid.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/brands.min.css"
+    />
+
+    <title>AI Desktop Agent Orchestrator | Jason Rae Case Study</title>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "AI Desktop Agent Orchestrator",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Windows",
+        "description": "A Python automation framework that orchestrates multiple AI coding agents across virtual desktops, monitors approval states visually, generates prompts from project docs, and scores transcript quality.",
+        "creator": {
+          "@type": "Person",
+          "name": "Jason Rae"
+        },
+        "url": "https://jasonrae.ai/portfolio/ai-desktop-agent-orchestrator.html",
+        "keywords": "AI Agent Orchestrator, Desktop Automation, Computer Use API, Virtual Desktops, Python Automation",
+        "featureList": [
+          "OpenAI Computer Use API for visual button detection — no brittle pixel coordinates",
+          "Round-robin prompt distribution across simultaneous Copilot agent panels",
+          "Auto-generates fresh prompts from live project docs when agents go idle for 1 hour",
+          "Transcript quality pipeline with blacklist feedback loop to avoid bad prompts"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header class="header" id="header">
+      <div class="container header-inner">
+        <a href="../index.html" class="logo">
+          <div class="logo-icon">JR</div>
+          <span>Jason Rae</span>
+        </a>
+
+        <nav class="nav">
+          <ul class="nav-links" id="nav-links">
+            <li><a href="../index.html" class="nav-link">Home</a></li>
+            <li><a href="../about.html" class="nav-link">About</a></li>
+            <li>
+              <a href="../portfolio.html" class="nav-link active">Portfolio</a>
+            </li>
+            <li><a href="../services.html" class="nav-link">Services</a></li>
+            <li><a href="../resume.html" class="nav-link">Resume</a></li>
+            <li><a href="../blog/index.html" class="nav-link">Blog</a></li>
+            <li><a href="../contact.html" class="nav-link">Contact</a></li>
+            <li class="nav-cta-item">
+              <a href="../contact.html" class="btn btn-primary nav-cta"
+                >Book Health Check</a
+              >
+            </li>
+          </ul>
+          <button
+            class="mobile-menu-toggle"
+            id="mobile-menu-toggle"
+            type="button"
+            aria-label="Toggle menu"
+            aria-controls="nav-links"
+            aria-expanded="false"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <section class="section case-study-hero">
+      <div class="container">
+        <div class="card case-study-hero-card reveal">
+          <p class="section-label">Case Study</p>
+          <div class="case-study-meta">
+            <span class="badge badge-success">Active</span>
+            <span class="badge badge-warning">2025–Present</span>
+            <span class="badge badge-primary">Automation</span>
+          </div>
+          <h1 style="margin-bottom: var(--space-4)">
+            AI Desktop Agent Orchestrator
+          </h1>
+          <p
+            class="section-subtitle"
+            style="max-width: 900px; margin-bottom: 0"
+          >
+            A multi-desktop orchestration framework that keeps several AI coding agents productive at once by detecting approvals visually, generating prompts when work stalls, and continuously scoring output quality.
+          </p>
+          <div class="case-study-stack" aria-label="Technology badges">
+            <span class="badge badge-primary">Python</span>
+            <span class="badge badge-primary">Computer Use API</span>
+            <span class="badge badge-primary">pyvda</span>
+            <span class="badge badge-primary">pyautogui</span>
+            <span class="badge badge-primary">Rich CLI</span>
+            <span class="badge badge-primary">pytest</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-sm" style="padding-top: 0">
+      <div class="container case-study-layout">
+        <main>
+          <section class="section-sm" style="padding-top: 0">
+            <h2 class="numbered-heading" data-number="01">Overview</h2>
+            <div class="card case-study-richtext reveal">
+              <p>
+                This project is a Python automation framework built to manage
+                multiple AI coding agents running across different virtual
+                desktops at the same time. Instead of relying on fragile
+                coordinate-based automation, the orchestrator uses the OpenAI
+                Computer Use API to visually detect approval actions such as
+                Allow, Keep Edits, and Try Again, which makes the control loop
+                more adaptable to UI changes.
+              </p>
+              <p>
+                The orchestration layer is designed around continuous
+                utilization. If no approval event fires within an hour, the
+                system assumes the current prompt stream has stalled. It then
+                calls OpenAI to generate ten fresh prompts from the live
+                project's documentation and distributes them round-robin across
+                active agent panels.
+              </p>
+              <p>
+                That alone would only solve throughput. The more interesting
+                layer is quality control. The framework includes a
+                transcript-scoring pipeline that classifies output as COMPLETED,
+                IN_PROGRESS, NEEDS_REVISION, or BLOCKED, and feeds failed
+                prompts into a blacklist so the same weak instructions are not
+                recycled back into the system.
+              </p>
+              <p>
+                Together with per-session API cost tracking, a master CLI
+                launcher, and a test-backed Python package structure, the result
+                is an agent orchestration system focused on sustained developer
+                throughput rather than one-off desktop scripting.
+              </p>
+            </div>
+          </section>
+
+          <section class="section-sm">
+            <h2 class="numbered-heading" data-number="02">How It Works</h2>
+            <div class="card reveal">
+              <div class="case-study-step-list">
+                <div class="case-study-step">
+                  <div class="case-study-step-icon">
+                    <i class="fas fa-desktop"></i>
+                  </div>
+                  <div>
+                    <h3>
+                      <span class="case-study-step-number">01</span> Agents run
+                      on virtual desktops
+                    </h3>
+                    <p>
+                      Each VS Code Copilot agent is hosted on its own virtual
+                      desktop, which isolates workstreams while allowing the
+                      orchestrator to supervise them as a coordinated pool.
+                    </p>
+                  </div>
+                </div>
+                <div class="case-study-step">
+                  <div class="case-study-step-icon">
+                    <i class="fas fa-eye"></i>
+                  </div>
+                  <div>
+                    <h3>
+                      <span class="case-study-step-number">02</span> Computer
+                      Use API watches for approvals
+                    </h3>
+                    <p>
+                      The system visually detects buttons like Allow, Keep
+                      Edits, and Try Again, replacing brittle pixel-matching
+                      logic with a more resilient control mechanism.
+                    </p>
+                  </div>
+                </div>
+                <div class="case-study-step">
+                  <div class="case-study-step-icon">
+                    <i class="fas fa-clock"></i>
+                  </div>
+                  <div>
+                    <h3>
+                      <span class="case-study-step-number">03</span> Idle for
+                      one hour triggers prompt generation
+                    </h3>
+                    <p>
+                      When the system sees prolonged inactivity, it generates
+                      ten new coding prompts grounded in the current project's
+                      documentation.
+                    </p>
+                  </div>
+                </div>
+                <div class="case-study-step">
+                  <div class="case-study-step-icon">
+                    <i class="fas fa-share-nodes"></i>
+                  </div>
+                  <div>
+                    <h3>
+                      <span class="case-study-step-number">04</span> Prompts are
+                      distributed round-robin
+                    </h3>
+                    <p>
+                      New work is balanced across active panels so no single
+                      agent becomes overloaded while others sit idle.
+                    </p>
+                  </div>
+                </div>
+                <div class="case-study-step">
+                  <div class="case-study-step-icon">
+                    <i class="fas fa-chart-line"></i>
+                  </div>
+                  <div>
+                    <h3>
+                      <span class="case-study-step-number">05</span> Transcript
+                      scorer evaluates output quality
+                    </h3>
+                    <p>
+                      Every panel transcript is graded as COMPLETED,
+                      IN_PROGRESS, NEEDS_REVISION, or BLOCKED so the
+                      orchestrator can decide what to do next instead of
+                      assuming all activity is useful progress.
+                    </p>
+                  </div>
+                </div>
+                <div class="case-study-step">
+                  <div class="case-study-step-icon">
+                    <i class="fas fa-ban"></i>
+                  </div>
+                  <div>
+                    <h3>
+                      <span class="case-study-step-number">06</span> Blacklist
+                      feedback loop filters bad prompts
+                    </h3>
+                    <p>
+                      Failed prompts are blacklisted to prevent recurrence,
+                      gradually improving prompt quality and reducing wasted
+                      agent cycles over time.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="section-sm">
+            <h2 class="numbered-heading" data-number="03">Key Features</h2>
+            <div class="case-study-grid">
+              <article class="card reveal">
+                <h3>Visual approval detection</h3>
+                <p>
+                  OpenAI Computer Use API provides visual button detection
+                  without depending on brittle pixel coordinates.
+                </p>
+              </article>
+              <article class="card reveal">
+                <h3>Round-robin orchestration</h3>
+                <p>
+                  Prompt distribution keeps simultaneous Copilot agent panels
+                  evenly utilized across the desktop estate.
+                </p>
+              </article>
+              <article class="card reveal">
+                <h3>Idle-time prompt generation</h3>
+                <p>
+                  When agents stall for one hour, the system derives ten fresh
+                  prompts from live project documentation and restarts
+                  throughput automatically.
+                </p>
+              </article>
+              <article class="card reveal">
+                <h3>Transcript quality scoring</h3>
+                <p>
+                  A four-tier quality pipeline scores outcomes and gives the
+                  control layer an explicit signal for intervention or
+                  continuation.
+                </p>
+              </article>
+              <article class="card reveal">
+                <h3>Cost visibility</h3>
+                <p>
+                  Real-time API cost tracking makes it possible to monitor spend
+                  at the run and agent level instead of treating orchestration
+                  cost as opaque.
+                </p>
+              </article>
+              <article class="card reveal">
+                <h3>Package-grade delivery</h3>
+                <p>
+                  The framework ships as an installable Python package with
+                  editable dev installs, pytest coverage, and CI-oriented
+                  documentation.
+                </p>
+              </article>
+            </div>
+          </section>
+        </main>
+
+        <aside class="case-study-sidebar">
+          <div class="card reveal">
+            <h2 class="card-title">Results &amp; Metrics</h2>
+            <div class="metric-list">
+              <div class="metric-item">
+                <span class="metric-label">Scale</span>
+                <p class="metric-value">
+                  Manages multiple AI agents across simultaneous virtual desktops
+                </p>
+              </div>
+              <div class="metric-item">
+                <span class="metric-label">Automation</span>
+                <p class="metric-value">
+                  Zero human intervention — automatic prompt generation and agent restarts
+                </p>
+              </div>
+              <div class="metric-item">
+                <span class="metric-label">Quality</span>
+                <p class="metric-value">
+                  4-tier transcript scoring: COMPLETED / IN_PROGRESS / NEEDS_REVISION / BLOCKED
+                </p>
+              </div>
+              <div class="metric-item">
+                <span class="metric-label">Cost Tracking</span>
+                <p class="metric-value">
+                  Real-time OpenAI API cost tracking per run and per agent
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card reveal">
+            <h2 class="card-title">Project Highlights</h2>
+            <ul class="list-check" style="margin-bottom: 0">
+              <li>OpenAI Computer Use API for visual button detection — no brittle pixel coordinates</li>
+              <li>Round-robin prompt distribution across simultaneous Copilot agent panels</li>
+              <li>Auto-generates fresh prompts from live project docs when agents go idle for 1 hour</li>
+              <li>Transcript quality pipeline with blacklist feedback loop to avoid bad prompts</li>
+              <li>Real-time API cost dashboard per agent and per session</li>
+              <li>Installable Python package with pip install -e.[dev] and full pytest suite</li>
+            </ul>
+          </div>
+
+          <div class="card reveal">
+            <h2 class="card-title">Technologies</h2>
+            <div class="tags">
+              <span class="tag">Python</span>
+              <span class="tag">OpenAI Computer Use API</span>
+              <span class="tag">pyautogui</span>
+              <span class="tag">pyvda (virtual desktop management)</span>
+              <span class="tag">uiautomation</span>
+              <span class="tag">Pillow (screenshot analysis)</span>
+              <span class="tag">keyboard</span>
+              <span class="tag">Telegram Bot API</span>
+              <span class="tag">Rich (CLI dashboard)</span>
+              <span class="tag">pytest</span>
+            </div>
+          </div>
+
+          <div class="card reveal">
+            <h2 class="card-title">Call To Action</h2>
+            <p>
+              If you need production-grade decision systems rather than another isolated pilot, start with a Health Check.
+            </p>
+            <div class="case-study-actions">
+              <a href="../contact.html" class="btn btn-primary">Book Health Check</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer-content">
+        <div class="footer-social">
+          <a
+            href="https://www.linkedin.com/in/jason-c-rae/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a
+            href="https://github.com/JSunRae"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="mailto:jason@jasonrae.ai" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+        <p class="footer-text">
+          Designed &amp; Built by Jason Rae<br />
+          © <span id="footer-year">2026</span> All rights reserved.<br />
+          <a href="../privacy.html" class="footer-link"
+            >Privacy &amp; Data Notice</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <div class="chat-widget" id="chat-widget">
+      <div
+        class="chat-window"
+        id="chat-window"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="chat-window-title"
+        aria-hidden="true"
+      >
+        <div class="chat-header">
+          <div class="chat-header-title" id="chat-window-title">
+            <span class="chat-status"></span>
+            Jason's AI Assistant
+          </div>
+          <button class="modal-close" id="chat-close" aria-label="Close chat">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div
+          class="chat-messages"
+          id="chat-messages"
+          aria-live="polite"
+          aria-relevant="additions"
+        >
+          <div class="chat-message bot">
+            Hi! 👋 I'm Jason's AI assistant. Ask me anything about these
+            projects or how similar solutions could help your business.
+          </div>
+        </div>
+        <div class="chat-suggestions" id="chat-suggestions">
+          <button
+            class="chat-suggestion"
+            data-question="Tell me about the stock trading AI"
+          >
+            Stock Trading AI?
+          </button>
+          <button
+            class="chat-suggestion"
+            data-question="How would this kind of automation help a commercial team?"
+          >
+            Commercial team fit?
+          </button>
+          <button
+            class="chat-suggestion"
+            data-question="What kind of automation use case should we start with?"
+          >
+            First use case?
+          </button>
+        </div>
+        <div class="chat-input-container">
+          <input
+            type="text"
+            class="chat-input"
+            id="chat-input"
+            placeholder="Type your question..."
+            autocomplete="off"
+          />
+          <label for="chat-input" class="sr-only">Message</label>
+          <button class="chat-send" id="chat-send" aria-label="Send message">
+            <svg viewBox="0 0 24 24">
+              <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <button
+        class="chat-toggle"
+        id="chat-toggle"
+        aria-label="Open chat"
+        aria-expanded="false"
+        aria-controls="chat-window"
+      >
+        <svg viewBox="0 0 24 24">
+          <path
+            d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/chatbot.js"></script>
+    <script src="../js/animations.js"></script>
+    <script src="../js/portfolio.js"></script>
+  </body>
+</html>

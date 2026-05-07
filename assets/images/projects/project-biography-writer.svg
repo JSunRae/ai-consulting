@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-label="AI biography writer placeholder">
+  <defs>
+    <linearGradient id="bio-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#081126" />
+      <stop offset="100%" stop-color="#122a45" />
+    </linearGradient>
+    <linearGradient id="bio-accent" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#64ffda" />
+      <stop offset="100%" stop-color="#3fd7ff" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" rx="28" fill="url(#bio-bg)" />
+  <rect x="95" y="70" width="410" height="260" rx="20" fill="#0f2136" stroke="#1c3655" stroke-width="3" />
+  <rect x="120" y="100" width="360" height="200" rx="16" fill="#0a192f" />
+  <rect x="140" y="120" width="160" height="24" rx="12" fill="#142b45" />
+  <rect x="140" y="160" width="220" height="12" rx="6" fill="#1d3756" />
+  <rect x="140" y="185" width="240" height="12" rx="6" fill="#1d3756" />
+  <rect x="140" y="210" width="180" height="12" rx="6" fill="#1d3756" />
+  <rect x="140" y="235" width="260" height="12" rx="6" fill="#1d3756" />
+  <rect x="140" y="260" width="200" height="12" rx="6" fill="#1d3756" />
+  <rect x="330" y="120" width="120" height="120" rx="18" fill="#142b45" stroke="#64ffda" stroke-width="3" />
+  <circle cx="390" cy="160" r="28" fill="#0d1f33" stroke="#64ffda" stroke-width="3" />
+  <rect x="356" y="200" width="70" height="40" rx="12" fill="#0d1f33" stroke="#64ffda" stroke-width="3" />
+  <path d="M360 244h60" stroke="#64ffda" stroke-width="3" stroke-linecap="round" />
+  <path d="M250 320l70-40 70 40" fill="none" stroke="url(#bio-accent)" stroke-width="4" stroke-linecap="round" />
+  <path d="M120 320h90" stroke="#64ffda" stroke-width="4" stroke-linecap="round" opacity="0.5" />
+  <path d="M390 320h110" stroke="#64ffda" stroke-width="4" stroke-linecap="round" opacity="0.5" />
+  <circle cx="500" cy="90" r="18" fill="none" stroke="#64ffda" stroke-width="3" opacity="0.5" />
+  <circle cx="120" cy="90" r="12" fill="#64ffda" opacity="0.3" />
+</svg>

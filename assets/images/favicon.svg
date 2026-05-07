@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="JR favicon">
+  <rect width="512" height="512" rx="96" fill="#0a192f"/>
+  <rect x="36" y="36" width="440" height="440" rx="84" fill="none" stroke="#64ffda" stroke-width="12" opacity="0.9"/>
+  <text x="50%" y="54%" text-anchor="middle" dominant-baseline="middle" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif" font-size="220" font-weight="700" fill="#ccd6f6">JR</text>
+</svg>

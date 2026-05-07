@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" role="img" aria-label="Professional profile placeholder">
+  <defs>
+    <linearGradient id="profile-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1b2a" />
+      <stop offset="50%" stop-color="#0a192f" />
+      <stop offset="100%" stop-color="#102a43" />
+    </linearGradient>
+    <linearGradient id="profile-accent" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#64ffda" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#64ffda" stop-opacity="0.4" />
+    </linearGradient>
+    <mask id="grid-mask">
+      <rect width="640" height="640" fill="url(#profile-accent)" opacity="0.12" />
+    </mask>
+  </defs>
+  <rect width="640" height="640" fill="url(#profile-bg)" />
+  <g opacity="0.3" fill="none" stroke="#64ffda" stroke-width="1" mask="url(#grid-mask)">
+    <path d="M0 80h640M0 160h640M0 240h640M0 320h640M0 400h640M0 480h640M0 560h640" />
+    <path d="M80 0v640M160 0v640M240 0v640M320 0v640M400 0v640M480 0v640M560 0v640" />
+  </g>
+  <circle cx="320" cy="220" r="110" fill="#0f253e" opacity="0.9" stroke="#64ffda" stroke-width="4" />
+  <path d="M320 145c45 0 82 37 82 82s-37 82-82 82-82-37-82-82 37-82 82-82z" fill="#132840" />
+  <path d="M320 170c28 0 50 22 50 50s-22 50-50 50-50-22-50-50 22-50 50-50z" fill="url(#profile-accent)" opacity="0.8" />
+  <path d="M196 474c0-69 56-125 125-125s125 56 125 125v66H196z" fill="#102538" stroke="#64ffda" stroke-width="4" stroke-linejoin="round" />
+  <path d="M226 490c10-52 51-90 95-90s85 38 95 90z" fill="#143047" opacity="0.9" />
+  <circle cx="470" cy="140" r="24" fill="none" stroke="#64ffda" stroke-width="4" opacity="0.6" />
+  <circle cx="170" cy="500" r="18" fill="#64ffda" opacity="0.3" />
+  <rect x="110" y="90" width="70" height="70" rx="12" fill="none" stroke="#64ffda" stroke-width="3" opacity="0.5" />
+  <path d="M520 420l40-40" stroke="#64ffda" stroke-width="4" stroke-linecap="round" opacity="0.4" />
+  <path d="M520 420l40 40" stroke="#64ffda" stroke-width="4" stroke-linecap="round" opacity="0.4" />
+</svg>

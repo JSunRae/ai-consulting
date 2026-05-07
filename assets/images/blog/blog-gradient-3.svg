@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="Grid gradient placeholder">
+  <defs>
+    <linearGradient id="blog3-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070f21" />
+      <stop offset="100%" stop-color="#14314f" />
+    </linearGradient>
+    <linearGradient id="blog3-grid" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#64ffda" />
+      <stop offset="100%" stop-color="#49c6ff" />
+    </linearGradient>
+  </defs>
+  <rect width="640" height="400" rx="32" fill="url(#blog3-bg)" />
+  <g opacity="0.2" stroke="#64ffda" stroke-width="2">
+    <path d="M80 60v280M160 60v280M240 60v280M320 60v280M400 60v280M480 60v280M560 60v280" />
+    <path d="M60 80h520M60 140h520M60 200h520M60 260h520M60 320h520" />
+  </g>
+  <rect x="120" y="120" width="400" height="160" rx="24" fill="#0b1c31" stroke="#1e3a57" stroke-width="3" />
+  <path d="M140 200c80-120 160 120 240 0 64-96 128 80 160-40" fill="none" stroke="url(#blog3-grid)" stroke-width="6" stroke-linecap="round" />
+  <circle cx="180" cy="150" r="16" fill="none" stroke="#64ffda" stroke-width="3" opacity="0.6" />
+  <circle cx="460" cy="250" r="22" fill="#64ffda" opacity="0.25" />
+  <path d="M200 320h240" stroke="#64ffda" stroke-width="4" stroke-linecap="round" opacity="0.4" />
+</svg>
