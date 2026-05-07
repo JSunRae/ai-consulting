@@ -8,13 +8,13 @@ Registrar: Cloudflare Registrar
 ## 🎯 Purpose
 
 1. **Job Applications** - A polished digital resume for data science and AI leadership roles (€100k+)
-2. **Consulting Services** - Lead generation platform for forecasting, pricing, margin, CRM, executive reporting, and applied AI engagements
+2. **Consulting Services** - Lead generation platform for forecasting, pricing, margin, CRM, executive reporting, workflow improvement, and applied AI engagements
 
 ## 🚀 Features
 
 - **Interactive AI Chatbot** - Answers questions about Jason's experience and skills (powered by `assets/data/resume.json`)
 - **Portfolio Showcase** - Proof-of-work landing page, structured data, and case-study metadata generated from `assets/data/projects.json`
-- **Daily AI Stack** - Visual display of AI tools and technologies
+- **Selected Delivery Stack** - Technical platforms framed behind the commercial decision work
 - **Lead Capture** - Commercial Analytics Health Check intake, Formspree-ready forms with email fallback, email-led booking flow, newsletter signup
 - **Blog** - SEO-targeted articles in `blog/`
 - **Responsive Design** - Mobile-first, `css/responsive.css` utility layer, tested down to 320 px
