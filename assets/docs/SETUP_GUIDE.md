@@ -43,7 +43,10 @@ Use this guide when the real Formspree ID, final booking decision, LinkedIn part
 - Build command: `npm run build` or leave blank for a static deploy.
 - Publish directory: `.`
 - Add the custom domain `jasonrae.ai` in Netlify.
-- In Cloudflare DNS, create the apex and optional `www` records exactly as Netlify instructs.
+- In Cloudflare DNS, create the apex record as either:
+	- flattened `CNAME` / `ALIAS` for `jasonrae.ai` -> `apex-loadbalancer.netlify.com`, or
+	- fallback `A` record for `jasonrae.ai` -> `75.2.60.5`
+- In Cloudflare DNS, create `CNAME` for `www` -> `jasonrae-ai.netlify.app`.
 - If Cloudflare proxying causes validation trouble during initial setup, temporarily use DNS-only until Netlify verifies the domain, then re-enable proxying if desired.
 - Keep `jasonrae.ai` as the canonical production hostname across the site metadata.
 

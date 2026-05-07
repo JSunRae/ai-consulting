@@ -149,15 +149,17 @@ npm run deploy:netlify
 
 - `jasonrae.ai` is now owned and registered through Cloudflare Registrar.
 - The site code already targets `https://jasonrae.ai` in canonical URLs, sitemap entries, robots.txt, and Open Graph metadata.
-- The remaining launch work is DNS + hosting connection, not another domain purchase.
+- GitHub repo is live at `https://github.com/JSunRae/ai-consulting` and the Netlify project is live at `https://jasonrae-ai.netlify.app`.
+- The remaining launch work is Cloudflare DNS verification so `jasonrae.ai` and `www.jasonrae.ai` point at Netlify and HTTPS can provision.
 
 ### Recommended Production Setup
 
 1. Use Netlify as the production host.
 2. Connect the GitHub repo to Netlify.
 3. In Netlify, add `jasonrae.ai` as the custom domain.
-4. In Cloudflare DNS, point the apex domain and optional `www` host to Netlify using the records Netlify provides.
-5. After DNS resolves, verify HTTPS, forms, sitemap, and crawlability.
+4. In Cloudflare DNS, point the apex domain to `apex-loadbalancer.netlify.com` using a flattened `CNAME` / `ALIAS` if available, or fallback `A 75.2.60.5` if not.
+5. In Cloudflare DNS, point `www` to `jasonrae-ai.netlify.app` with a `CNAME`.
+6. After DNS resolves, verify HTTPS, forms, sitemap, and crawlability.
 
 > Do not store personal registrant address, phone number, or email in repo files. Keep public project docs limited to domain ownership status and deployment steps.
 
