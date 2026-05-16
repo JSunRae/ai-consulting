@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const ctaLabels = {
-    "book-fit-call": "Start Conversation",
+    "book-fit-call": "Book Fit Call",
     "start-diagnostic-review": "Start Diagnostic Review",
     "download-checklist": "Download Checklist",
   };

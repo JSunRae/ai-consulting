@@ -67,7 +67,7 @@ function loadDecisionFieldExperience() {
 
 function updateDefaultConsultationLabels() {
   document.querySelectorAll(".nav-cta").forEach((anchor) => {
-    setAnchorLabel(anchor, "Start Conversation");
+    setAnchorLabel(anchor, "Book Fit Call");
   });
 
   document.querySelectorAll('a[href*="contact.html"]').forEach((anchor) => {
@@ -91,7 +91,7 @@ function updateDefaultConsultationLabels() {
       label === "Schedule a Workshop" ||
       label === "Start the Conversation"
     ) {
-      setAnchorLabel(anchor, "Start Conversation");
+      setAnchorLabel(anchor, "Book Fit Call");
     }
   });
 }
