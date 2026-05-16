@@ -1382,6 +1382,206 @@ select:focus-visible {
   font-style: italic;
 }
 
+.social-archive-callout {
+  background: var(--gradient-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  padding: var(--space-8);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: var(--space-6);
+  align-items: end;
+}
+
+.social-archive-callout h2 {
+  margin-bottom: var(--space-3);
+}
+
+.social-archive-callout p {
+  margin: 0;
+  max-width: 760px;
+  color: var(--color-text-secondary);
+}
+
+.social-filter-toolbar {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.social-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--space-4);
+  margin-top: var(--space-8);
+}
+
+.social-summary-card {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-sm);
+}
+
+.social-summary-label {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-family: var(--font-family-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.social-summary-value {
+  margin: var(--space-3) 0 0;
+  color: var(--color-text-heading);
+  font-size: clamp(var(--text-xl), 2.6vw, var(--text-3xl));
+  font-weight: var(--font-semibold);
+}
+
+.social-summary-date {
+  font-size: var(--text-lg);
+}
+
+.social-feed-note {
+  margin-bottom: var(--space-6);
+  color: var(--color-text-secondary);
+}
+
+.social-feed-note p {
+  margin: 0;
+}
+
+.social-post-grid {
+  display: grid;
+  gap: var(--space-8);
+}
+
+.social-card {
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
+}
+
+.social-card-header {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-4);
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.social-status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.8rem;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(205, 169, 103, 0.2);
+  background-color: var(--color-accent-muted);
+  color: var(--color-accent-hover);
+  font-family: var(--font-family-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.social-card-title {
+  margin-bottom: var(--space-3);
+}
+
+.social-card-summary {
+  margin-bottom: var(--space-5);
+}
+
+.social-copy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-4);
+}
+
+.social-copy-panel {
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+}
+
+.social-copy-panel-header {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-3);
+  align-items: flex-start;
+  margin-bottom: var(--space-4);
+}
+
+.social-copy-platform,
+.social-copy-status,
+.social-copy-count {
+  margin: 0;
+  font-family: var(--font-family-mono);
+  font-size: var(--text-xs);
+}
+
+.social-copy-platform {
+  color: var(--color-accent);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.social-copy-status,
+.social-copy-count {
+  color: var(--color-text-secondary);
+}
+
+.social-copy-text {
+  color: var(--color-text-primary);
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+  white-space: normal;
+}
+
+.social-link-row,
+.social-card-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.social-link-row {
+  margin-top: var(--space-4);
+}
+
+.social-card-footer {
+  margin-top: var(--space-5);
+}
+
+.social-link {
+  color: var(--color-accent);
+  text-decoration: none;
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+}
+
+.social-link:hover {
+  text-decoration: underline;
+}
+
+.social-empty-state {
+  background-color: var(--color-bg-card);
+  border: 1px dashed var(--color-border-strong);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  text-align: center;
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 768px) {
+  .social-archive-callout {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+}
+
 /* ---------- Single post hero ---------- */
 .blog-hero.single {
   text-align: left;

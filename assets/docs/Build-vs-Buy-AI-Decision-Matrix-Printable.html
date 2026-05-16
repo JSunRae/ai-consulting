@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Build-vs-Buy AI Decision Matrix</title>
+    <style>
+      @page {
+        size: A4;
+        margin: 16mm;
+      }
+
+      :root {
+        --ink: #142033;
+        --muted: #5a6575;
+        --line: #d7deea;
+        --panel: #f5f7fb;
+        --accent: #885f0b;
+        --accent-soft: #f8edd3;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        color: var(--ink);
+        line-height: 1.45;
+        background: #ffffff;
+      }
+
+      .cover {
+        min-height: calc(297mm - 32mm);
+        padding: 14mm;
+        border: 1px solid var(--line);
+        background: linear-gradient(165deg, #faf5e9 0%, #ffffff 52%, #eef4fb 100%);
+      }
+
+      .eyebrow {
+        display: inline-block;
+        padding: 5px 10px;
+        border-radius: 999px;
+        background: var(--accent-soft);
+        color: var(--accent);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 18px 0 12px;
+        font-size: 34px;
+        line-height: 1.08;
+      }
+
+      h2 {
+        margin: 0 0 10px;
+        font-size: 20px;
+      }
+
+      h3 {
+        margin: 0 0 8px;
+        font-size: 15px;
+      }
+
+      p {
+        margin: 0 0 10px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .lead {
+        max-width: 570px;
+        font-size: 15px;
+        color: var(--ink);
+      }
+
+      .meta,
+      .cards,
+      .score-grid {
+        display: grid;
+        gap: 10px;
+      }
+
+      .meta {
+        margin-top: 18px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .cards {
+        margin-top: 18px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .score-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .card,
+      .section,
+      table {
+        border: 1px solid var(--line);
+        background: #ffffff;
+      }
+
+      .card,
+      .section {
+        padding: 12px;
+      }
+
+      .page {
+        page-break-before: always;
+      }
+
+      ul {
+        margin: 8px 0 0;
+        padding-left: 18px;
+      }
+
+      li {
+        margin-bottom: 6px;
+        font-size: 12.5px;
+        color: var(--ink);
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 14px;
+      }
+
+      th,
+      td {
+        border: 1px solid var(--line);
+        padding: 10px;
+        text-align: left;
+        vertical-align: top;
+        font-size: 12px;
+      }
+
+      th {
+        background: var(--panel);
+        color: var(--ink);
+      }
+
+      .score-grid div {
+        padding: 10px;
+        border: 1px solid var(--line);
+        background: var(--panel);
+      }
+
+      .footer-note {
+        margin-top: 16px;
+        padding: 12px;
+        background: var(--panel);
+        border-left: 4px solid var(--accent);
+      }
+    </style>
+  </head>
+  <body>
+    <section class="cover">
+      <span class="eyebrow">Decision Aid</span>
+      <h1>Build-vs-Buy AI Decision Matrix</h1>
+      <p class="lead">
+        Use this when the real question is not which AI vendor looks strongest, but where the workflow logic,
+        data risk, switching cost, and operating ownership should actually sit.
+      </p>
+
+      <div class="meta">
+        <div class="card">
+          <strong>Best for</strong>
+          <p>Leaders comparing vendor software, lean API workflows, retrieval systems, or higher-control internal builds.</p>
+        </div>
+        <div class="card">
+          <strong>Use when</strong>
+          <p>The buying conversation is happening before the workflow, governance, and ownership logic are clear.</p>
+        </div>
+        <div class="card">
+          <strong>Prepared by</strong>
+          <p>Jason Rae<br />Commercial Analytics & Applied AI Leader</p>
+        </div>
+      </div>
+
+      <div class="section" style="margin-top: 20px;">
+        <h2>Decision before comparison</h2>
+        <p>
+          Start by defining the workflow, exception load, data sensitivity, and operating owner.
+          Only then compare vendors, build options, or internal-control paths.
+        </p>
+      </div>
+    </section>
+
+    <section class="page">
+      <div class="cards">
+        <section class="section">
+          <h3>Option A. Off-the-shelf vendor software</h3>
+          <ul>
+            <li>Best for common, stable workflows.</li>
+            <li>Good when speed matters more than custom control.</li>
+            <li>Main caution: a polished demo can hide thin product substance.</li>
+          </ul>
+        </section>
+        <section class="section">
+          <h3>Option B. OpenAI API workflow</h3>
+          <ul>
+            <li>Best for focused workflows that need moderate customization.</li>
+            <li>Good when routing, prompts, and review logic need tighter control.</li>
+            <li>Main caution: monitoring and exception design remain your problem.</li>
+          </ul>
+        </section>
+        <section class="section">
+          <h3>Option C. Retrieval or narrower tuned system</h3>
+          <ul>
+            <li>Best for knowledge-heavy workflows where grounding matters.</li>
+            <li>Good when citation quality and permissioning are central.</li>
+            <li>Main caution: retrieval quality and freshness often determine trust.</li>
+          </ul>
+        </section>
+        <section class="section">
+          <h3>Option D. Higher-control in-house system</h3>
+          <ul>
+            <li>Best for high-consequence workflows or sensitive logic.</li>
+            <li>Good when governance and switching control outweigh speed.</li>
+            <li>Main caution: the internal burden rises quickly without a real owner.</li>
+          </ul>
+        </section>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Option</th>
+            <th>Speed</th>
+            <th>Control</th>
+            <th>Best fit</th>
+            <th>Main caution</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Vendor software</td>
+            <td>High</td>
+            <td>Low to medium</td>
+            <td>Generic, stable workflows</td>
+            <td>Demo quality can overstate product depth</td>
+          </tr>
+          <tr>
+            <td>API workflow</td>
+            <td>Medium to high</td>
+            <td>Medium to high</td>
+            <td>Specific workflow builds</td>
+            <td>Needs explicit monitoring and guardrails</td>
+          </tr>
+          <tr>
+            <td>Retrieval or tuned system</td>
+            <td>Medium</td>
+            <td>Medium to high</td>
+            <td>Knowledge-grounded decisions</td>
+            <td>Permissioning and evaluation are easy to underestimate</td>
+          </tr>
+          <tr>
+            <td>Higher-control in-house</td>
+            <td>Low to medium</td>
+            <td>High</td>
+            <td>Sensitive, strategic workflows</td>
+            <td>Slower start and heavier internal burden</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <section class="section" style="margin-top: 14px;">
+        <h2>Score each option from 1 to 5</h2>
+        <div class="score-grid">
+          <div><strong>Workflow fit</strong><br />Does it match the real process?</div>
+          <div><strong>Exception burden</strong><br />How much messy reality still lands on humans?</div>
+          <div><strong>Data sensitivity</strong><br />How much control is needed over logs, prompts, and storage?</div>
+          <div><strong>Integration load</strong><br />How hard is it to make this operational?</div>
+          <div><strong>Governance strength</strong><br />Can the business audit and reverse failure?</div>
+          <div><strong>Cost clarity</strong><br />Can production cost be modeled credibly?</div>
+          <div><strong>Switching cost</strong><br />How painful is a bad decision later?</div>
+          <div><strong>Ownership realism</strong><br />Is there a real operator after launch?</div>
+        </div>
+      </section>
+
+      <div class="footer-note">
+        <strong>Final test:</strong>
+        <p style="margin-top: 6px;">
+          If the team still cannot explain what workflow is improving, where the risk should sit,
+          who owns the process after launch, and what the real production cost will be, the decision is still too early.
+        </p>
+      </div>
+    </section>
+  </body>
+</html>

@@ -53,7 +53,7 @@
         "applicationCategory": "BusinessApplication",
         "operatingSystem": "Windows, WSL, Linux",
         "schemaDescription": "A full-stack algorithmic trading ecosystem spanning TensorFlow signal generation, IBKR execution, Databento market data ingestion, JSON-Logic promotion gates, and FastAPI notifications.",
-        "ctaLabel": "Book Health Check"
+        "ctaLabel": "Start Diagnostic Review"
       },
       "image": "assets/images/projects/project-trading-ai.svg",
       "demoUrl": null,
@@ -66,7 +66,7 @@
       "description": "Document-intelligence workflow proving retrieval quality, editorial control, and auditability in long-form decision content.",
       "longDescription": "A deterministic long-form document pipeline that transforms fragmented source material into a structured narrative output. The workflow combines semantic retrieval, structured patch generation, editorial quality gates, and audit-friendly run tracking so changes remain controlled, explainable, and reversible. The architecture demonstrates how LLM systems can be used in production when generation is constrained by retrieval quality, validation rules, and explicit approval points.",
       "technologies": [
-        "GPT-4 (OpenAI API)",
+        "LLM APIs (OpenAI-compatible)",
         "FAISS (semantic search)",
         "sentence-transformers (all-MiniLM-L6-v2)",
         "spaCy 3.7",
@@ -86,7 +86,7 @@
       },
       "highlights": [
         "FAISS-powered semantic retrieval over fragmented long-form source material",
-        "GPT-4 proposal generation with atomic chapter patch application",
+        "LLM-backed proposal generation with atomic chapter patch application",
         "Narrative safeguards enforced on every pipeline run — not just at export",
         "Editorial approval workflow with quality-gate CI preventing regressions",
         "Full observability: unique run IDs, metrics logs, and CHANGELOG audit trail",
@@ -97,10 +97,10 @@
       "caseStudyUrl": "portfolio/ai-memoir-narrative-pipeline.html",
       "detailPage": {
         "metaDescription": "Detailed case study of Jason Rae's AI Narrative Pipeline covering deterministic chapter generation, FAISS retrieval, editorial quality gates, and narrative safeguards.",
-        "metaKeywords": "AI Memoir Pipeline, GPT-4 Case Study, FAISS Retrieval, Narrative Pipeline, Document Intelligence",
-        "heroSummary": "A deterministic GPT-4 pipeline that transforms fragmented long-form source material into publication-ready output while preserving retrieval quality, editorial control, and full auditability.",
+        "metaKeywords": "AI Memoir Pipeline, LLM Workflow Case Study, FAISS Retrieval, Narrative Pipeline, Document Intelligence",
+        "heroSummary": "A deterministic LLM pipeline that transforms fragmented long-form source material into publication-ready output while preserving retrieval quality, editorial control, and full auditability.",
         "heroTechBadges": [
-          "GPT-4",
+          "LLM APIs",
           "FAISS",
           "sentence-transformers",
           "SQLite",
@@ -109,7 +109,7 @@
         ],
         "applicationCategory": "BusinessApplication",
         "operatingSystem": "Cross-platform",
-        "schemaDescription": "A deterministic GPT-4 narrative pipeline that ingests long-form source material, retrieves relevant context semantically, applies structured chapter patches, and validates output quality before export.",
+        "schemaDescription": "A deterministic LLM narrative pipeline that ingests long-form source material, retrieves relevant context semantically, applies structured chapter patches, and validates output quality before export.",
         "ctaLabel": "Discuss Your Document Intelligence Workflow"
       },
       "image": "assets/images/projects/project-biography-writer.svg",
@@ -167,7 +167,7 @@
         "applicationCategory": "DeveloperApplication",
         "operatingSystem": "Windows",
         "schemaDescription": "A Python automation framework that orchestrates multiple AI coding agents across virtual desktops, monitors approval states visually, generates prompts from project docs, and scores transcript quality.",
-        "ctaLabel": "Book Health Check"
+        "ctaLabel": "Start Diagnostic Review"
       },
       "image": "assets/images/projects/project-productivity-suite.svg",
       "demoUrl": null,
