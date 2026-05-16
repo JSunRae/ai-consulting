@@ -5,7 +5,7 @@ Last updated: 2026-05-16
 ## Branch Under Test
 
 - Branch: `codex/commercialization-release-20260516`
-- Expected commit: `pending update after final deploy-prep commit`
+- Expected commit: `391529af4b3876f5dd96f4cda37060a0d8dd0f70`
 
 ## Purpose
 
