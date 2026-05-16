@@ -1,0 +1,408 @@
+[
+  {
+    "id": "linkedin-activity-7425086130791825408",
+    "title": "\u201cCan AI suggest the best price for a sales rep?\u201d It sounds like a simple question. It\u2019s...",
+    "summary": "\u201cCan AI suggest the best price for a sales rep?\u201d It sounds like a simple question. It\u2019s not. In fact, it\u2019s one of the most complex problems you can give an AI team \u2014 not because of the model, but because of the decisi...",
+    "status": "published",
+    "pillar": "Pricing",
+    "contentType": "historical",
+    "preparedDate": "2026-02-08",
+    "publishedDate": "2026-02-08",
+    "captureSource": "public-linkedin-activity-page",
+    "sourcePage": "https://www.linkedin.com/in/jason-c-rae/recent-activity/all/",
+    "relativeAgeAtCapture": "3mo",
+    "activityType": "Posted by",
+    "tags": [
+      "Pricing",
+      "Customer targeting",
+      "Decision systems"
+    ],
+    "platforms": [
+      {
+        "name": "LinkedIn",
+        "status": "published",
+        "copy": "\u201cCan AI suggest the best price for a sales rep?\u201d It sounds like a simple question. It\u2019s not. In fact, it\u2019s one of the most complex problems you can give an AI team \u2014 not because of the model, but because of the decisions hiding underneath it. Before a single line of code, leaders need to be explicit about things like: \u2022 Are we optimizing for margin, revenue, volume, or retention? \u2022 Is success defined at deal level, customer level, or portfolio level? \u2022 How much price risk is acceptable \u2014 and where? \u2022 Do we want consistency across reps, or controlled flexibility? \u2022 What happens when a rep disagrees with the recommendation? If those questions aren\u2019t answered, the AI won\u2019t be wrong. It will be misaligned. And misaligned pricing models don\u2019t fail dramatically. They quietly shift behavior \u2014 eroding margins, distorting incentives, and creating false confidence. This is where many AI initiatives struggle. Leaders ask: \u201cCan AI tell reps what price to sell at?\u201d Stronger leaders ask: \u2022 \u201cWhat decision do we actually want to improve?\u201d \u2022 \u201cWhere should AI guide, and where should humans decide?\u201d \u2022 \u201cWhat does a good decision look like under uncertainty?\u201d \u2022 \u201cHow will we detect when the model is no longer helping?\u201d The best pricing systems don\u2019t output a single number. They offer: \u2022 Price ranges, not absolutes \u2022 Risk signals, not instructions \u2022 Context, not commands \u2022 Continuous feedback loops, not static rules AI doesn\u2019t set the price. It shapes the decision environment around the person who does. And when leaders frame the problem this way, pricing stops being an AI experiment \u2014 and becomes a durable competitive advantage.",
+        "url": "https://www.linkedin.com/posts/jason-c-rae_can-ai-suggest-the-best-price-for-a-sales-activity-7425086130791825408-y0xk",
+        "publishedAt": "2026-02-08"
+      }
+    ]
+  },
+  {
+    "id": "linkedin-activity-7424731002192797696",
+    "title": "Most people treat AI like a smarter Google. That\u2019s not where the leverage is. The real...",
+    "summary": "Most people treat AI like a smarter Google. That\u2019s not where the leverage is. The real value appears when you use it as a thinking partner: \u2022 You bring context \u2022 You bring constraints \u2022 You challenge the output \u2022 You...",
+    "status": "published",
+    "pillar": "LinkedIn thought leadership",
+    "contentType": "historical",
+    "preparedDate": "2026-02-08",
+    "publishedDate": "2026-02-08",
+    "captureSource": "public-linkedin-activity-page",
+    "sourcePage": "https://www.linkedin.com/in/jason-c-rae/recent-activity/all/",
+    "relativeAgeAtCapture": "3mo",
+    "activityType": "Posted by",
+    "tags": [
+      "LinkedIn import"
+    ],
+    "platforms": [
+      {
+        "name": "LinkedIn",
+        "status": "published",
+        "copy": "Most people treat AI like a smarter Google. That\u2019s not where the leverage is. The real value appears when you use it as a thinking partner: \u2022 You bring context \u2022 You bring constraints \u2022 You challenge the output \u2022 You decide what survives Without that, you don\u2019t get intelligence \u2014 you get fluent noise. AI doesn\u2019t make people smarter. It amplifies how they already think. Which is why the gap between \u201cAI access\u201d and \u201cAI advantage\u201d keeps growing.",
+        "url": "https://www.linkedin.com/posts/jason-c-rae_most-people-treat-ai-like-a-smarter-google-activity-7424731002192797696-e_hI",
+        "publishedAt": "2026-02-08"
+      }
+    ]
+  },
+  {
+    "id": "linkedin-activity-7424361502737948672",
+    "title": "A pattern I keep seeing with AI software purchases: Companies buy capability before the...",
+    "summary": "A pattern I keep seeing with AI software purchases: Companies buy capability before they assess fit. An AI model that looks impressive in a demo can quietly fail in production if: \u2022 It wasn\u2019t trained on similar data \u2022...",
+    "status": "published",
+    "pillar": "Pricing",
+    "contentType": "historical",
+    "preparedDate": "2026-02-08",
+    "publishedDate": "2026-02-08",
+    "captureSource": "public-linkedin-activity-page",
+    "sourcePage": "https://www.linkedin.com/in/jason-c-rae/recent-activity/all/",
+    "relativeAgeAtCapture": "3mo",
+    "activityType": "Posted by",
+    "tags": [
+      "Pricing",
+      "Customer targeting",
+      "Forecasting",
+      "Decision systems",
+      "Governance"
+    ],
+    "platforms": [
+      {
+        "name": "LinkedIn",
+        "status": "published",
+        "copy": "A pattern I keep seeing with AI software purchases: Companies buy capability before they assess fit. An AI model that looks impressive in a demo can quietly fail in production if: \u2022 It wasn\u2019t trained on similar data \u2022 The data distribution shifts \u2022 The edge cases matter (they usually do) \u2022 No one internally can stress-test the assumptions That\u2019s not an AI problem. That\u2019s a governance and ownership problem. What often gets missed is that the real opportunity isn\u2019t in large, generic models at all. It\u2019s in small, bespoke models that sit directly inside your own data flows: \u2022 Price suggestions and margin-risk flags \u2022 Forecasting ranges instead of point estimates \u2022 Early warning signals when markets move faster than margins \u2022 Customer grouping based on buying behavior (no manual segmentation) \u2022 Customer-at-risk detection before churn appears in KPIs \u2022 Backorder and supply-stress flagging before it hits revenue These models don\u2019t need hype. They need context, feedback, and ownership. AI works best when: \u2022 The data is yours \u2022 The decision boundary is clear \u2022 The outcome is measurable \u2022 Humans remain accountable Buying AI without the right people to assess it is like buying a race car without a driver. Powerful. Expensive. And very easy to crash. The teams getting real value from AI aren\u2019t asking \u201cWhat tool should we buy?\u201d",
+        "url": "https://www.linkedin.com/posts/jason-c-rae_a-pattern-i-keep-seeing-with-ai-software-activity-7424361502737948672-iCrQ",
+        "publishedAt": "2026-02-08"
+      }
+    ]
+  },
+  {
+    "id": "linkedin-activity-7424003432828551168",
+    "title": "One thing I\u2019ve learned using AI heavily: There are many things it\u2019s bad at, and pretend...",
+    "summary": "One thing I\u2019ve learned using AI heavily: There are many things it\u2019s bad at, and pretending otherwise slows teams down. I don\u2019t use AI to: \u2022 Decide strategy \u2022 Resolve ambiguity \u2022 Replace domain judgment \u2022 Make final ca...",
+    "status": "published",
+    "pillar": "LinkedIn thought leadership",
+    "contentType": "historical",
+    "preparedDate": "2026-02-08",
+    "publishedDate": "2026-02-08",
+    "captureSource": "public-linkedin-activity-page",
+    "sourcePage": "https://www.linkedin.com/in/jason-c-rae/recent-activity/all/",
+    "relativeAgeAtCapture": "3mo",
+    "activityType": "Posted by",
+    "tags": [
+      "Strategy"
+    ],
+    "platforms": [
+      {
+        "name": "LinkedIn",
+        "status": "published",
+        "copy": "One thing I\u2019ve learned using AI heavily: There are many things it\u2019s bad at, and pretending otherwise slows teams down. I don\u2019t use AI to: \u2022 Decide strategy \u2022 Resolve ambiguity \u2022 Replace domain judgment \u2022 Make final calls that carry accountability I do use it to: \u2022 Stress-test assumptions \u2022 Surface second-order effects \u2022 Explore edge cases quickly \u2022 Compress thinking cycles AI accelerates thinking. It doesn\u2019t own outcomes. The fastest teams aren\u2019t the ones using AI everywhere. They\u2019re the ones who know exactly where not to use it.",
+        "url": "https://www.linkedin.com/posts/jason-c-rae_one-thing-ive-learned-using-ai-heavily-activity-7424003432828551168-kjyf",
+        "publishedAt": "2026-02-08"
+      }
+    ]
+  },
+  {
+    "id": "linkedin-share-7421462085051764737",
+    "title": "Jason shared: This isn\u2019t \u201ctime spent chatting.\u201d It\u2019s deliberate use. Top 0.1% of users. ~10,000 messa...",
+    "summary": "This isn\u2019t \u201ctime spent chatting.\u201d It\u2019s deliberate use. Top 0.1% of users. ~10,000 messages. Hundreds of focused conversations. Very few images. Almost no fluff. What this really represents is how I use AI: \u2022 To think...",
+    "status": "published",
+    "pillar": "LinkedIn share",
+    "contentType": "historical-share",
+    "preparedDate": "2026-02-08",
+    "publishedDate": "2026-02-08",
+    "captureSource": "public-linkedin-activity-page",
+    "sourcePage": "https://www.linkedin.com/in/jason-c-rae/recent-activity/all/",
+    "relativeAgeAtCapture": "3mo",
+    "activityType": "Shared by",
+    "tags": [
+      "LinkedIn share"
+    ],
+    "platforms": [
+      {
+        "name": "LinkedIn",
+        "status": "published",
+        "copy": "This isn\u2019t \u201ctime spent chatting.\u201d It\u2019s deliberate use. Top 0.1% of users. ~10,000 messages. Hundreds of focused conversations. Very few images. Almost no fluff. What this really represents is how I use AI: \u2022 To think, not to replace thinking \u2022 To pressure-test ideas, not generate noise \u2022 To design systems, not chase prompts \u2022 To clarify strategy, architecture, and trade-offs \u2022 To move faster after I understand the problem Most AI usage today optimizes for novelty. Real value comes from alignment: objectives, constraints, and feedback loops. AI doesn\u2019t fail \u2014 objectives do. Reasoning is cheap. Integration is hard. Used properly, AI becomes a force multiplier for judgment, not a substitute for it. The gap between \u201cAI adoption\u201d and \u201cAI advantage\u201d is still very wide. And that gap is where the work is.",
+        "url": "https://www.linkedin.com/posts/jason-c-rae_this-isnt-time-spent-chatting-its-deliberate-activity-7421462085051764737-Y2Zx",
+        "publishedAt": "2026-02-08"
+      }
+    ]
+  },
+  {
+    "id": "linkedin-activity-7420012668457136129",
+    "title": "Most companies are adopting AI. Very few are integrating it. Adoption looks like: \u2022 add...",
+    "summary": "Most companies are adopting AI. Very few are integrating it. Adoption looks like: \u2022 adding an LLM to a workflow \u2022 building a chatbot \u2022 generating content faster \u2022 \u201cAI\u201d features bolted onto existing processes Integrati...",
+    "status": "published",
+    "pillar": "Applied AI strategy",
+    "contentType": "historical",
+    "preparedDate": "2026-02-08",
+    "publishedDate": "2026-02-08",
+    "captureSource": "public-linkedin-activity-page",
+    "sourcePage": "https://www.linkedin.com/in/jason-c-rae/recent-activity/all/",
+    "relativeAgeAtCapture": "3mo",
+    "activityType": "Posted by",
+    "tags": [
+      "Workflow design",
+      "Decision systems"
+    ],
+    "platforms": [
+      {
+        "name": "LinkedIn",
+        "status": "published",
+        "copy": "Most companies are adopting AI. Very few are integrating it. Adoption looks like: \u2022 adding an LLM to a workflow \u2022 building a chatbot \u2022 generating content faster \u2022 \u201cAI\u201d features bolted onto existing processes Integration looks like: \u2022 clear decision rights (who owns outcomes) \u2022 real feedback loops (what happens when it\u2019s wrong) \u2022 strong evaluation (not vibes-based demos) \u2022 the right model for the task (often not an LLM) \u2022 monitoring, drift detection, retraining or policy updates This is where people overestimate their understanding. They think AI projects are software launches. They\u2019re not. Software is deterministic. AI is probabilistic \u2014 and will shift as the world shifts. If you treat AI like normal software, you\u2019ll get a normal outcome: a clever pilot that never becomes reliable enough to matter.",
+        "url": "https://www.linkedin.com/posts/jason-c-rae_most-companies-are-adopting-ai-very-few-activity-7420012668457136129-fmxT",
+        "publishedAt": "2026-02-08"
+      }
+    ]
+  },
+  {
+    "id": "linkedin-activity-7419287810819440640",
+    "title": "We\u2019re entering a weird era where \u201creasoning\u201d is becoming cheap. You can buy impressive...",
+    "summary": "We\u2019re entering a weird era where \u201creasoning\u201d is becoming cheap. You can buy impressive reasoning output on demand. But alignment \u2014 getting systems to consistently serve the right intent in the real world \u2014 is still ha...",
+    "status": "published",
+    "pillar": "LinkedIn thought leadership",
+    "contentType": "historical",
+    "preparedDate": "2026-02-08",
+    "publishedDate": "2026-02-08",
+    "captureSource": "public-linkedin-activity-page",
+    "sourcePage": "https://www.linkedin.com/in/jason-c-rae/recent-activity/all/",
+    "relativeAgeAtCapture": "3mo",
+    "activityType": "Posted by",
+    "tags": [
+      "LinkedIn import"
+    ],
+    "platforms": [
+      {
+        "name": "LinkedIn",
+        "status": "published",
+        "copy": "We\u2019re entering a weird era where \u201creasoning\u201d is becoming cheap. You can buy impressive reasoning output on demand. But alignment \u2014 getting systems to consistently serve the right intent in the real world \u2014 is still hard. Because alignment isn\u2019t about cleverness. It\u2019s about: \u2022 incentives (loss/reward functions) \u2022 context (what \u201cgood\u201d means here) \u2022 constraints (safety, compliance, brand, risk) \u2022 feedback loops (how the system learns from outcomes) That\u2019s why many AI pilots look great in a sandbox, then fall apart in production. The capability is there. The integration isn\u2019t. If you want AI to work, stop asking \u201cCan it reason?\u201d Ask \u201cCan we define success, constrain it, and measure impact after deployment?\u201d",
+        "url": "https://www.linkedin.com/posts/jason-c-rae_were-entering-a-weird-era-where-reasoning-activity-7419287810819440640-t350",
+        "publishedAt": "2026-02-08"
+      }
+    ]
+  },
+  {
+    "id": "linkedin-like-7417880358676885504",
+    "title": "Jason liked: Excited to share that I have been appointed Vice President, Sales and Marketing EMEA at...",
+    "summary": "Excited to share that I have been appointed Vice President, Sales and Marketing EMEA at Medline. Over the past several years, I have had the opportunity to work closely with outstanding teams across Europe, the Middle...",
+    "status": "published",
+    "pillar": "LinkedIn like",
+    "contentType": "historical-like",
+    "preparedDate": "2026-02-08",
+    "publishedDate": "2026-02-08",
+    "captureSource": "public-linkedin-activity-page",
+    "sourcePage": "https://www.linkedin.com/in/jason-c-rae/recent-activity/all/",
+    "relativeAgeAtCapture": "3mo",
+    "activityType": "Liked by",
+    "tags": [
+      "LinkedIn like"
+    ],
+    "platforms": [
+      {
+        "name": "LinkedIn",
+        "status": "published",
+        "copy": "Excited to share that I have been appointed Vice President, Sales and Marketing EMEA at Medline. Over the past several years, I have had the opportunity to work closely with outstanding teams across Europe, the Middle East, and Africa. Most recently, as Vice President, Sales and General Manager MEA, I gained valuable experience across diverse markets and healthcare systems. This experience continues to shape my leadership approach. In this new role, I look forward to collaborating even more closely with our EMEA teams to strengthen our sales strategy, support sustainable growth, and remain responsive to the evolving needs of healthcare providers throughout the region. Thank you to the Medline leadership team for their trust and support, and to our teams across EMEA. I am excited about what we will achieve together. https://lnkd.in/eDWfMdK8",
+        "url": "https://www.linkedin.com/posts/antonio-garcia-paine-829b5a16_excited-to-share-that-i-have-been-appointed-activity-7417880358676885504-S-uQ",
+        "publishedAt": "2026-02-08"
+      }
+    ],
+    "sourceAuthor": "Antonio Garcia Paine"
+  },
+  {
+    "id": "linkedin-activity-7418200436056313856",
+    "title": "lot of \u201cAI failures\u201d aren\u2019t model failures. They\u2019re objective failures. Teams optimise...",
+    "summary": "lot of \u201cAI failures\u201d aren\u2019t model failures. They\u2019re objective failures. Teams optimise what\u2019s measurable: \u2022 accuracy \u2022 response time \u2022 click-through \u2022 cost reduction \u2026and then act surprised when the system produces: \u2022...",
+    "status": "published",
+    "pillar": "Commercial analytics",
+    "contentType": "historical",
+    "preparedDate": "2026-02-08",
+    "publishedDate": "2026-02-08",
+    "captureSource": "public-linkedin-activity-page",
+    "sourcePage": "https://www.linkedin.com/in/jason-c-rae/recent-activity/all/",
+    "relativeAgeAtCapture": "3mo",
+    "activityType": "Posted by",
+    "tags": [
+      "Decision systems"
+    ],
+    "platforms": [
+      {
+        "name": "LinkedIn",
+        "status": "published",
+        "copy": "lot of \u201cAI failures\u201d aren\u2019t model failures. They\u2019re objective failures. Teams optimise what\u2019s measurable: \u2022 accuracy \u2022 response time \u2022 click-through \u2022 cost reduction \u2026and then act surprised when the system produces: \u2022 confident nonsense \u2022 misaligned decisions \u2022 short-term wins and long-term damage That\u2019s not the AI being \u201cwrong.\u201d That\u2019s the AI doing exactly what you asked\u2014just not what you meant. In business, the real question isn\u2019t \u201cIs the model good?\u201d It\u2019s: \u2022 What is it rewarded for? \u2022 What constraints are explicit? \u2022 What trade-offs are encoded? (speed vs quality, growth vs margin, automation vs risk) Most people think they can assess AI projects by demo quality. Demos are theatre. AI success is usually determined before training starts \u2014 in the objective function, data definitions, and feedback loop design.",
+        "url": "https://www.linkedin.com/posts/jason-c-rae_lot-of-ai-failures-arent-model-failures-activity-7418200436056313856-EdAP",
+        "publishedAt": "2026-02-08"
+      }
+    ]
+  },
+  {
+    "id": "linkedin-like-7417188818790924288",
+    "title": "Jason liked: We have officially opened our new office in Riyadh, marking our first permanent presenc...",
+    "summary": "We have officially opened our new office in Riyadh, marking our first permanent presence in the Kingdom of Saudi Arabia and a major milestone for Medline in the region. Our new Riyadh office strengthens our ability to...",
+    "status": "published",
+    "pillar": "LinkedIn like",
+    "contentType": "historical-like",
+    "preparedDate": "2026-02-08",
+    "publishedDate": "2026-02-08",
+    "captureSource": "public-linkedin-activity-page",
+    "sourcePage": "https://www.linkedin.com/in/jason-c-rae/recent-activity/all/",
+    "relativeAgeAtCapture": "3mo",
+    "activityType": "Liked by",
+    "tags": [
+      "LinkedIn like"
+    ],
+    "platforms": [
+      {
+        "name": "LinkedIn",
+        "status": "published",
+        "copy": "We have officially opened our new office in Riyadh, marking our first permanent presence in the Kingdom of Saudi Arabia and a major milestone for Medline in the region. Our new Riyadh office strengthens our ability to support healthcare providers with faster response times, closer collaboration and on-the-ground expertise. The Riyadh team brings together colleagues across Management, Business Development, Product Management, Regulatory Affairs and Human Resources, with support available in both Arabic and English.",
+        "url": "https://www.linkedin.com/posts/medline-middle-east-africa_newoffice-medlinemea-newbeginings-activity-7417188818790924288-ua6v",
+        "publishedAt": "2026-02-08"
+      }
+    ],
+    "sourceAuthor": "Medline Middle East & Africa"
+  },
+  {
+    "id": "linkedin-activity-7416445899821780993",
+    "title": "Most people think \u201cAI\u201d means LLMs. That\u2019s like thinking \u201ctransport\u201d means planes. LLMs...",
+    "summary": "Most people think \u201cAI\u201d means LLMs. That\u2019s like thinking \u201ctransport\u201d means planes. LLMs are great at language-shaped work: \u2022 drafting, summarising, rewriting \u2022 search + synthesis (with sources) \u2022 turning messy human in...",
+    "status": "published",
+    "pillar": "Applied AI governance",
+    "contentType": "historical",
+    "preparedDate": "2026-02-08",
+    "publishedDate": "2026-02-08",
+    "captureSource": "public-linkedin-activity-page",
+    "sourcePage": "https://www.linkedin.com/in/jason-c-rae/recent-activity/all/",
+    "relativeAgeAtCapture": "3mo",
+    "activityType": "Posted by",
+    "tags": [
+      "Workflow design",
+      "Forecasting",
+      "Copilot",
+      "Decision systems",
+      "Strategy"
+    ],
+    "platforms": [
+      {
+        "name": "LinkedIn",
+        "status": "published",
+        "copy": "Most people think \u201cAI\u201d means LLMs. That\u2019s like thinking \u201ctransport\u201d means planes. LLMs are great at language-shaped work: \u2022 drafting, summarising, rewriting \u2022 search + synthesis (with sources) \u2022 turning messy human intent into structured outputs \u2022 copilots for analysis, coding, documentation But a huge chunk of business value still comes from non-LLM AI: \u2022 forecasting (time series, causal models) \u2022 propensity / churn (classification, uplift) \u2022 pricing (elasticity, constrained optimisation) \u2022 fraud / anomaly detection (statistical + ML) \u2022 recommendations (ranking, retrieval) \u2022 operations (OR, simulation, queuing, routing) Where AI tends to disappoint is where leaders think it\u2019s intelligent: \u2022 ownership of decisions \u2022 accountability \u2022 \u201cunderstanding\u201d strategy or nuance \u2022 high-stakes judgement without feedback loops If you want real ROI, stop asking \u201cWhich LLM?\u201d Start asking: \u201cWhich problem class is this?\u201d Because the best solution is often not an LLM \u2014 it\u2019s the right model + the right workflow + the right controls.",
+        "url": "https://www.linkedin.com/posts/jason-c-rae_most-people-think-ai-means-llms-that-activity-7416445899821780993-iC_M",
+        "publishedAt": "2026-02-08"
+      }
+    ]
+  },
+  {
+    "id": "linkedin-activity-7414939128456359936",
+    "title": "Why mistaking tools for intelligence is risky \u2014 especially in business The biggest risk...",
+    "summary": "Why mistaking tools for intelligence is risky \u2014 especially in business The biggest risk with modern AI in business isn\u2019t job replacement. It\u2019s misalignment. LLMs are powerful tools, but they don\u2019t understand your stra...",
+    "status": "published",
+    "pillar": "LinkedIn thought leadership",
+    "contentType": "historical",
+    "preparedDate": "2026-01-09",
+    "publishedDate": "2026-01-09",
+    "captureSource": "public-linkedin-activity-page",
+    "sourcePage": "https://www.linkedin.com/in/jason-c-rae/recent-activity/all/",
+    "relativeAgeAtCapture": "4mo",
+    "activityType": "Posted by",
+    "tags": [
+      "Decision systems",
+      "Strategy"
+    ],
+    "platforms": [
+      {
+        "name": "LinkedIn",
+        "status": "published",
+        "copy": "Why mistaking tools for intelligence is risky \u2014 especially in business The biggest risk with modern AI in business isn\u2019t job replacement. It\u2019s misalignment. LLMs are powerful tools, but they don\u2019t understand your strategy, your risk tolerance, or your downstream consequences. They optimize their objective function \u2014 not your desired outcomes. When we treat these systems as \u201cintelligent,\u201d we start: \u2022 delegating judgment instead of decisions \u2022 trusting outputs without validating incentives \u2022 assuming correctness where there is only optimization This is where business risk appears. Using AI well isn\u2019t about plugging in the most capable model. It\u2019s about using the right tool, in the right place, with the right loss/reward function. If the objective function doesn\u2019t encode what you actually care about: \u2022 profit vs growth \u2022 speed vs accuracy \u2022 exploration vs control the system will optimize the wrong thing \u2014 very efficiently. That doesn\u2019t mean the model failed. It means we misunderstood the tool. Real business intelligence comes from: \u2022 clear objectives \u2022 explicit constraints \u2022 human ownership of outcomes \u2022 continuous validation against real-world impact AI should amplify intent, not replace it. Until systems can understand consequences and adapt autonomously, the most important intelligence in the loop is still human.",
+        "url": "https://www.linkedin.com/posts/jason-c-rae_why-mistaking-tools-for-intelligence-is-risky-activity-7414939128456359936-ApAI",
+        "publishedAt": "2026-01-09"
+      }
+    ]
+  },
+  {
+    "id": "linkedin-share-7413836661110943744",
+    "title": "Jason shared: Is it really AI? Large Language Models are often labeled Artificial Intelligence. I thi...",
+    "summary": "Is it really AI? Large Language Models are often labeled Artificial Intelligence. I think that label is premature. What we mostly have today is the appearance of intelligence. LLMs can produce intelligent-looking outp...",
+    "status": "published",
+    "pillar": "LinkedIn share",
+    "contentType": "historical-share",
+    "preparedDate": "2026-01-09",
+    "publishedDate": "2026-01-09",
+    "captureSource": "public-linkedin-activity-page",
+    "sourcePage": "https://www.linkedin.com/in/jason-c-rae/recent-activity/all/",
+    "relativeAgeAtCapture": "4mo",
+    "activityType": "Shared by",
+    "tags": [
+      "LinkedIn share"
+    ],
+    "platforms": [
+      {
+        "name": "LinkedIn",
+        "status": "published",
+        "copy": "Is it really AI? Large Language Models are often labeled Artificial Intelligence. I think that label is premature. What we mostly have today is the appearance of intelligence. LLMs can produce intelligent-looking outputs, but they do not: \u2022 learn continuously from interaction \u2022 revise their internal models through experience \u2022 form goals or evaluate outcomes in the world What looks like learning is offline training plus inference over a fixed model. What looks like reasoning is pattern-based inference without understanding. What looks like decision-making is optimization without agency. So where is the line? Appearance of Intelligence - A system shows the appearance of intelligence when it: \u2022 generates outputs indistinguishable from intelligent behavior \u2022 adapts responses without adapting itself \u2022 performs reasoning-like tasks without autonomy or grounding \u2022 This is where LLMs sit today. Artificial Intelligence (proper) - A system earns the label Artificial Intelligence when it: \u2022 learns from interaction with its environment \u2022 updates its internal world model autonomously \u2022 evaluates outcomes and corrects itself \u2022 pursues goals beyond a single prompt or session \u2022 At this point, intelligence is no longer just simulated \u2014 it is implemented. Artificial General Intelligence (AGI) - AGI is not \u201ca bigger model\u201d or \u201cbetter benchmarks\u201d. AGI would be a system that: \u2022 learns across domains, not tasks \u2022 transfers knowledge without retraining \u2022 forms and revises goals \u2022 builds persistent memory and identity \u2022 understands cause and effect through interaction \u2022 improves itself without human orchestration In short: AGI is an autonomous, self-improving learning agent with a grounded model of the world. Until systems cross that threshold, calling them AGI \u2014 or even fully intelligent \u2014 risks confusing capability with cognition. LLMs are remarkable. But intelligence is not just what a system produces \u2014 it\u2019s what it can become on its own. Curious where others would draw this line",
+        "url": "https://www.linkedin.com/posts/jason-c-rae_is-it-really-ai-large-language-models-are-activity-7413836661110943744-ZiMZ",
+        "publishedAt": "2026-01-09"
+      }
+    ]
+  },
+  {
+    "id": "linkedin-activity-7399549829867266048",
+    "title": "OpenAI\u2019s Strategy Is Clear \u2014 But Is It Sustainable? It\u2019s becoming obvious that OpenAI i...",
+    "summary": "OpenAI\u2019s Strategy Is Clear \u2014 But Is It Sustainable? It\u2019s becoming obvious that OpenAI isn\u2019t just trying to build great models \u2014 they\u2019re trying to make their product synonymous with work itself. Integration into every...",
+    "status": "published",
+    "pillar": "Applied AI governance",
+    "contentType": "historical",
+    "preparedDate": "2025-12-10",
+    "publishedDate": "2025-12-10",
+    "captureSource": "public-linkedin-activity-page",
+    "sourcePage": "https://www.linkedin.com/in/jason-c-rae/recent-activity/all/",
+    "relativeAgeAtCapture": "5mo",
+    "activityType": "Posted by",
+    "tags": [
+      "Workflow design",
+      "Copilot",
+      "Strategy"
+    ],
+    "platforms": [
+      {
+        "name": "LinkedIn",
+        "status": "published",
+        "copy": "OpenAI\u2019s Strategy Is Clear \u2014 But Is It Sustainable? It\u2019s becoming obvious that OpenAI isn\u2019t just trying to build great models \u2014 they\u2019re trying to make their product synonymous with work itself. Integration into every workflow, every application, every moment of productivity. A strategy built on ubiquity first, profit later. And they\u2019re willing to lose money for years to make that happen. Because once people, teams, and companies rely on a tool daily, switching becomes almost impossible. But there\u2019s a critical question nobody seems to be asking: Can OpenAI outspend companies like Google, who can embed AI into profitable products at global scale without burning billions? Google doesn\u2019t need to monetise every model directly. They can fold intelligence into Search, Docs, Gmail, Android \u2014 instantly deployed to billions. Their cost of distribution is effectively zero. Their moat is enormous. And they can afford to absorb AI costs indefinitely. So while OpenAI races to become the \u201coperating system of work,\u201d Google can simply outlast them. But here\u2019s the bigger point: This entire focus on copilots and productivity tools won\u2019t deliver AGI. Not even close. In my view, the next major leap \u2014 the next \u201cTransformer moment\u201d \u2014 is far more likely to come from teams like DeepMind, who continue to push the frontier of machine learning beyond language: \u2022 protein folding \u2022 self-play reinforcement learning \u2022 model-based reasoning \u2022 novel architectures outside the LLM paradigm These are not incremental productivity improvements. These are scientific breakthroughs that give us entirely new learning principles. OpenAI has chosen the path of productisation. DeepMind has chosen the path of discovery. One creates dependence. The other creates breakthroughs. And if history tells us anything, true paradigm shifts rarely come from the team optimising for market share. They come from the team exploring the edges of what\u2019s possible.#AI#OpenAI#DeepMind#AGI#MachineLearning#Innovation#Strategy#FutureOfWork",
+        "url": "https://www.linkedin.com/posts/jason-c-rae_ai-openai-deepmind-activity-7399549829867266048-8YRX",
+        "publishedAt": "2025-12-10"
+      }
+    ]
+  },
+  {
+    "id": "linkedin-activity-7391009509856530432",
+    "title": "One of the biggest costs in any business isn\u2019t always on the balance sheet \u2014 it\u2019s in th...",
+    "summary": "One of the biggest costs in any business isn\u2019t always on the balance sheet \u2014 it\u2019s in the time and effort that never gets measured. Across large organizations, analysts and teams quietly spend hours every week adjustin...",
+    "status": "published",
+    "pillar": "Commercial analytics",
+    "contentType": "historical",
+    "preparedDate": "2025-11-10",
+    "publishedDate": "2025-11-10",
+    "captureSource": "public-linkedin-activity-page",
+    "sourcePage": "https://www.linkedin.com/in/jason-c-rae/recent-activity/all/",
+    "relativeAgeAtCapture": "6mo",
+    "activityType": "Posted by",
+    "tags": [
+      "Commercial analytics"
+    ],
+    "platforms": [
+      {
+        "name": "LinkedIn",
+        "status": "published",
+        "copy": "One of the biggest costs in any business isn\u2019t always on the balance sheet \u2014 it\u2019s in the time and effort that never gets measured. Across large organizations, analysts and teams quietly spend hours every week adjusting numbers, reformatting data, reconciling mismatched definitions, or reproducing the same reports. From a distance, everything looks fine \u2014 dashboards are delivered, metrics are shared, insights circulate. But underneath, enormous manual effort is holding it all together. The real opportunity isn\u2019t just in building more reports \u2014 it\u2019s in building smarter processes. When we connect systems, standardize logic, and align how we work, we unlock capacity we didn\u2019t know we had. Data efficiency doesn\u2019t make headlines \u2014 but it quietly powers everything that does.#DataEfficiency#DigitalTransformation#AnalyticsLeadership#ProcessImprovement",
+        "url": "https://www.linkedin.com/posts/jason-c-rae_dataefficiency-digitaltransformation-analyticsleadership-activity-7391009509856530432-BIso",
+        "publishedAt": "2025-11-10"
+      }
+    ]
+  }
+]

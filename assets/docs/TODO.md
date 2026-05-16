@@ -1,6 +1,6 @@
 ﻿# Pre-Launch Checklist & Audit Log
 
-_Last updated: 2026-04-26._
+_Last updated: 2026-05-12._
 
 This file tracks the remaining work needed to consider the current website workstream launch-ready. The repo-side commercial analytics refresh is complete; what remains is mostly external launch configuration, final asset swaps, and last-mile QA.
 
@@ -8,16 +8,16 @@ This file tracks the remaining work needed to consider the current website works
 
 - Workstream status: **Repo-side implementation closed; handoff items remain**
 - Autonomous content and positioning work: **Complete**
-- Public contact and newsletter fallback paths: **Operational**
-- Launch blockers requiring external inputs: **Still open**
+- Public contact and newsletter web submissions: **Live via Formspree**
+- Launch blockers requiring external inputs: **Booking choice, social credentials, phone rollout inputs**
 
 ## 🔴 P0 — Launch Inputs (Owner decisions before going live)
 
-- [ ] **Connect Cloudflare DNS for `jasonrae.ai` to the production host**
-      Domain ownership is now complete. The remaining infrastructure step is to add `jasonrae.ai` in Netlify and create the DNS records in Cloudflare that Netlify provides.
+- [x] **Connect Cloudflare DNS for `jasonrae.ai` to the production host**
+      The production domain is live and responding on Netlify at `https://jasonrae.ai`.
 
-- [ ] **Decide whether direct web-form posting is needed at launch** (`js/forms.js`)
-      Contact and newsletter forms already fall back to prefilled email drafts. Only replace `'xeqkyzoq'` with real Formspree IDs if direct in-browser submission should be live on day one.
+- [x] **Activate direct web-form posting at launch** (`js/forms.js`, `contact.html`, `index.html`, `blog/index.html`)
+      Contact and newsletter forms now submit live via Formspree. Public copy and markup were aligned with the active endpoint on 2026-05-07.
 
 - [ ] **Confirm the final booking flow** (`contact.html`, optional future direct-booking links)
       The current site is valid with email-led scheduling. Only replace the current flow if direct Calendly booking is being enabled.
@@ -39,10 +39,16 @@ This file tracks the remaining work needed to consider the current website works
 - [ ] **Run a physical-device Safari smoke test**
       Verify `backdrop-filter`, fixed elements, and the chat widget on a real iPhone or iPad.
 
+- [x] **Decide the production posting route for X and LinkedIn** (`assets/docs/SOCIAL_CONTENT_OPERATING_PLAN.md`, `scripts/social_buffer_publish.py`)
+      Buffer is now the chosen repo-side broker. The remaining work is external credential setup, not architectural decision-making.
+
+- [ ] **Backfill historical short-form posts into the archive** (`assets/data/social-posts.json`, `blog/social-posts.html`, `scripts/social_archive_import.py`, `scripts/extract_linkedin_saved_activity.py`)
+      The supplied LinkedIn exports are now reconciled: the saved HTML contains `10` unique activity items and those entries are in the archive. The remaining gap is X post history if you want both channels represented more fully.
+
 ## 🟡 P2 — Medium Priority (Polish before or shortly after launch)
 
-- [ ] **Replace the hero video placeholder** (`index.html`)
-      Swap the placeholder block for the final intro video or approved avatar embed.
+- [ ] **Optional: add richer hero media** (`index.html`)
+      There is no live hero video placeholder blocking launch in the current homepage HTML. Only do this if you want to add an intro video or avatar later as a design enhancement.
 
 - [ ] **Replace the profile photo placeholder** (`about.html`, `assets/images/`)
       Replace `profile-placeholder.svg` with the final headshot asset.
@@ -50,13 +56,16 @@ This file tracks the remaining work needed to consider the current website works
 - [ ] **Add public project URLs where appropriate** (`assets/data/projects.json`)
       Restore live demo or code links for any projects Jason wants to expose publicly.
 
+- [x] **Extend the social workflow from draft generation to posting** (`scripts/social_buffer_publish.py`, `.github/workflows/social-publish.yml`)
+      Approved posts can now be scheduled and synced through Buffer while preserving the approval-first archive model.
+
 ## 🟢 P3 — Enhancement (Optional post-launch)
 
 - [ ] **Upgrade newsletter handling**
       Consider replacing the current email/Formspree hybrid with Mailchimp, ConvertKit, or a dedicated CRM workflow.
 
-- [ ] **Run a post-deploy Lighthouse pass**
-      Audit the live site and optimize the heaviest assets to keep performance above 90.
+- [x] **Run a post-deploy Lighthouse pass**
+      Completed on `2026-05-12`. Current scores are strong on accessibility / best practices / SEO, while performance remains the only worthwhile tuning target. See `Research and Documentation/Lighthouse Summary - 2026-05-12.md`.
 
 ## ✅ Completed In This Workstream
 
@@ -73,3 +82,6 @@ This file tracks the remaining work needed to consider the current website works
 - [x] **Projects data reconciled with shipped SVG assets** (`assets/data/projects.json`)
 - [x] **Font/privacy implementation aligned** (`css/style.css`, `privacy.html`)
 - [x] **Local git repository initialized with GitHub origin**
+- [x] **Draft-only social automation runtime implemented** (`scripts/social_draft_pipeline.py`, `.github/workflows/social-draft.yml`, `assets/data/social-sources.json`, `README.md`, `assets/docs/SOCIAL_CONTENT_OPERATING_PLAN.md`)
+- [x] **Repo-side social posting bridge implemented** (`scripts/social_buffer_publish.py`, `.github/workflows/social-publish.yml`, `assets/docs/DEPLOY_AND_AUTOMATION_RUNBOOK.md`)
+- [x] **Voice intake backend scaffold added** (`netlify/functions/voice-incoming.mjs`, `netlify/functions/voice-summary.mjs`, `assets/docs/VOICE_CALL_TEST_PLAN.md`)

@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Resume/Portfolio Chatbot for Jason Rae's Website
  * Offline-first, client-side retrieval over local JSON data (no API keys, no network dependency for basic answers).
  */
@@ -343,12 +343,48 @@ class ChatBot {
     this.retrieval = new LocalRetrieval();
     this.localDataLoaded = false;
     this.loadingStarted = false;
+    this.intentTaxonomy = [
+      {
+        tag: "pricing",
+        patterns: [/\b(price|pricing|cost|budget|fee|quote|rates?|how much|charge)\b/i],
+      },
+      {
+        tag: "vendor_diligence",
+        patterns: [
+          /\b(vendor|software|platform|vendor diligence|due diligence|copilot|tooling|procurement|buying ai software)\b/i,
+        ],
+      },
+      {
+        tag: "build_vs_buy",
+        patterns: [
+          /\b(build vs buy|build-or-buy|vendor or internal|in-house|openai api|fine[- ]?tun|retrieval|rag|api wrapper)\b/i,
+        ],
+      },
+      {
+        tag: "customer_service_ai",
+        patterns: [
+          /\b(customer service|support|ticket|tickets|chatbot|helpdesk|call center|contact centre|service automation)\b/i,
+        ],
+      },
+      {
+        tag: "headcount_or_capacity",
+        patterns: [
+          /\b(headcount|fte|capacity|productivity|cost reduction|cost takeout|reduce staff|reduce team)\b/i,
+        ],
+      },
+      {
+        tag: "implementation_scope",
+        patterns: [
+          /\b(scope|implementation|engagement|offer|service|workflow|diagnostic|sprint|deployment|enablement|fit call|next step)\b/i,
+        ],
+      },
+    ];
 
     // Fallback summary (used only if JSON cannot be loaded)
     this.fallback = {
       name: "Jason Rae",
       title:
-        "Senior Data Analyst EMEA | Commercial Analytics Architect | Applied AI & Decision Intelligence Leader",
+        "Commercial Analytics & Applied AI Leader | Leading EMEA Commercial & Sales Analytics",
       location: "Stuttgart, Germany",
     };
 
@@ -358,13 +394,13 @@ class ChatBot {
       name: this.fallback.name,
       title: this.fallback.title,
       location: this.fallback.location,
-      email: "jason@jasonrae.ai",
+      email: "Jason_C_Rae@Outlook.com",
       // Populated from resume.json on load; fallback strings reflect actual resume content
       achievements: [
         "€1.3M in UK sales growth in 2023, surpassing target by more than fourfold — independently",
         "Fully handled two acquisitions end to end, partnering with the BI team on credits, customer/account-level data refactoring, and country-by-country customer matching to ensure clean data transfer and reliable performance measurement",
         "Led European contribution to a global AI initiative: built a training programme from scratch that enabled commercial teams to apply AI safely across real business workflows",
-        "€3M in sales growth against an initial annual target of ~€300k — surpassing the combined performance of all European Sales Representatives",
+        "Personally generated €3M in sales growth against an initial annual target of ~€300k — surpassing the combined performance of all European Sales Representatives",
         "Grew divisional sales from 4% to 57% growth — a complete operational turnaround across 38 customer markets",
         "Grew territory revenue from $1.4M to $4.2M — a 3× increase — achieving the highest territory profitability in Australia",
       ],
@@ -442,40 +478,105 @@ class ChatBot {
     const path = (window.location.pathname || "/").replace(/\\/g, "/");
     const isHome = /^\/(?:index\.html)?$/.test(path);
     const isBlogIndex = /^\/blog(?:\/index\.html|\/)?$/.test(path);
+    const isContact = /^\/contact(?:\.html)?$/.test(path);
     const isServices = /^\/services(?:\.html)?$/.test(path);
     const isPortfolioIndex = /^\/portfolio(?:\.html)?$/.test(path);
     const isResume = /^\/resume(?:\.html)?$/.test(path);
     const isBlogArticle = path.startsWith("/blog/") && !isBlogIndex;
     const isPortfolioDetail = path.startsWith("/portfolio/");
 
+    if (isHome) {
+      return {
+        enabled: true,
+        title: "AI Decision Assistant",
+        intro:
+          "Ask about AI software choices, customer-service automation, vendor risk, or which first step fits your situation.",
+        placeholder: "Ask about software choice, support AI, or scope...",
+        launcherAriaLabel: "Open AI decision assistant",
+        revealDelayMs: 9000,
+        revealOnScrollRatio: 0.18,
+        suggestions: [
+          {
+            label: "Buying AI software?",
+            question: "What should we check before buying AI software?",
+          },
+          {
+            label: "Support automation?",
+            question: "Can AI reduce customer service workload safely?",
+          },
+          {
+            label: "Diagnostic price?",
+            question: "What does the Diagnostic Review cost and include?",
+          },
+        ],
+        examples: [
+          "What should we check before buying AI software?",
+          "Can AI reduce customer service workload safely?",
+          "What does the Diagnostic Review cost and include?",
+        ],
+      };
+    }
+
     if (isServices) {
       return {
         enabled: true,
         title: "Decision Systems Assistant",
         intro:
-          "Ask about forecasting, pricing, CRM governance, executive reporting, or which engagement fits the problem.",
-        placeholder: "Ask about forecasting, pricing, CRM, or scope...",
+          "Ask about forecasting, pricing, CRM governance, AI software diligence, or which engagement fits the problem.",
+        placeholder: "Ask about software choice, pricing, CRM, or scope...",
         launcherAriaLabel: "Open decision systems assistant",
         revealDelayMs: 10000,
         revealOnScrollRatio: 0.24,
         suggestions: [
           {
-            label: "Forecasting issues?",
-            question: "Where do forecasting systems usually break down?",
+            label: "Software due diligence?",
+            question: "How do you help evaluate AI software vendors?",
           },
           {
-            label: "Pricing or margin?",
-            question: "Which service fits pricing or margin problems?",
+            label: "Customer service AI?",
+            question: "Can AI reduce customer service headcount safely?",
           },
           {
-            label: "Health Check?",
-            question: "What happens in a Commercial Analytics Health Check?",
+            label: "Diagnostic review?",
+            question: "What does the Diagnostic Review cost and include?",
           },
         ],
         examples: [
-          "Where do forecasting systems usually break down?",
-          "Which service fits pricing or margin problems?",
-          "What happens in a Commercial Analytics Health Check?",
+          "How do you help evaluate AI software vendors?",
+          "Can AI reduce customer service headcount safely?",
+          "What does the Diagnostic Review cost and include?",
+        ],
+      };
+    }
+
+    if (isContact) {
+      return {
+        enabled: true,
+        title: "Fit Call Assistant",
+        intro:
+          "Ask what to include in the intake, whether your problem is a fit, or which route makes sense before you submit.",
+        placeholder: "Ask about fit, intake, or the right first step...",
+        launcherAriaLabel: "Open fit-call assistant",
+        revealDelayMs: 7000,
+        revealOnScrollRatio: 0.14,
+        suggestions: [
+          {
+            label: "Is this a fit?",
+            question: "What problems are the best fit for Jason?",
+          },
+          {
+            label: "What to submit?",
+            question: "What should I include before submitting the intake form?",
+          },
+          {
+            label: "Vendor or in-house?",
+            question: "Can Jason help decide between a vendor tool and an internal AI build?",
+          },
+        ],
+        examples: [
+          "What problems are the best fit for Jason?",
+          "What should I include before submitting the intake form?",
+          "Can Jason help decide between a vendor tool and an internal AI build?",
         ],
       };
     }
@@ -659,6 +760,11 @@ class ChatBot {
   open() {
     this.revealWidget();
     window.sessionStorage.setItem("jr-chat-engaged", "true");
+    if (typeof window.jrTrackEvent === "function") {
+      window.jrTrackEvent("chat_open", {
+        chat_title: this.pageConfig.title,
+      });
+    }
     this.lastFocusedElement = document.activeElement;
     this.chatWindow?.classList.add("active");
     this.chatWindow?.setAttribute("aria-hidden", "false");
@@ -711,9 +817,18 @@ class ChatBot {
   sendMessage() {
     const message = this.chatInput?.value.trim();
     if (!message || this.isTyping) return;
+    const userIntentTags = this.detectIntentTags(message);
+
+    if (typeof window.jrTrackEvent === "function") {
+      window.jrTrackEvent("chat_prompt_submitted", {
+        chat_title: this.pageConfig.title,
+        intent_tags: userIntentTags.join(","),
+        prompt_length: message.length,
+      });
+    }
 
     // Add user message
-    this.addMessage(message, "user");
+    this.addMessage(message, "user", userIntentTags);
     this.chatInput.value = "";
 
     // Hide suggestions after first message
@@ -722,25 +837,63 @@ class ChatBot {
     }
 
     // Generate response first so the delay can be proportional to its length
-    const response = this.generateResponse(message);
+    const response = this.normalizeResponse(this.generateResponse(message), message);
     // ~2 ms per character, clamped to [300, 1500] ms
-    const delay = Math.min(Math.max(300, response.length * 2), 1500);
+    const delay = Math.min(Math.max(300, response.text.length * 2), 1500);
 
     this.showTyping();
     setTimeout(() => {
       this.hideTyping();
-      this.addMessage(response, "bot");
+      this.addMessage(response.text, "bot", response.tags);
     }, delay);
   }
 
-  addMessage(text, type) {
+  addMessage(text, type, tags = []) {
     const messageDiv = document.createElement("div");
     messageDiv.className = `chat-message ${type}`;
     // Preserve newlines for readable sourced snippets.
     messageDiv.style.whiteSpace = "pre-wrap";
     messageDiv.textContent = text;
+    if (tags.length) {
+      messageDiv.dataset.intentTags = tags.join(",");
+      window.dispatchEvent(
+        new CustomEvent("jr:chat-intent", {
+          detail: {
+            source: "chatbot",
+            role: type,
+            tags,
+            text,
+          },
+        }),
+      );
+    }
     this.chatMessages?.appendChild(messageDiv);
     this.scrollToBottom();
+  }
+
+  detectIntentTags(input) {
+    const normalized = (input || "").trim();
+    if (!normalized) return [];
+
+    return this.intentTaxonomy
+      .filter((entry) => entry.patterns.some((pattern) => pattern.test(normalized)))
+      .map((entry) => entry.tag);
+  }
+
+  normalizeResponse(response, input) {
+    if (typeof response === "string") {
+      return {
+        text: response,
+        tags: this.detectIntentTags(input),
+      };
+    }
+
+    return {
+      text: response?.text || "",
+      tags: Array.isArray(response?.tags)
+        ? response.tags
+        : this.detectIntentTags(input),
+    };
   }
 
   async loadLocalData() {
@@ -912,23 +1065,49 @@ class ChatBot {
     // services, booking, etc.) always get the curated answer rather than an
     // accidental retrieval snippet.
 
+    // AI software / vendor evaluation
+    if (
+      q.match(
+        /\b(build vs buy|build-or-buy|fine-tun|fine tun|retrieval|rag|api wrapper|openai api|in-house)\b/,
+      )
+    ) {
+      return `The useful question is not only build or buy. It is where the critical decision logic, data sensitivity, review burden, and ongoing operating control should sit.\n\nA fine-tuned agent, a retrieval layer on top of the OpenAI API, and an in-house build solve different problems:\n• Fine-tuning can improve behavior in narrow patterns, but it does not replace workflow control, data governance, or exception handling\n• Retrieval or API-led workflows are often the fastest route when the main need is governed access to trusted knowledge\n• In-house builds make sense when the decision logic, permissions, auditability, or integration burden are too important to outsource\n\nJason usually treats this as AI Software & Vendor Due Diligence if the team is already comparing options, or as part of the Diagnostic Review if the workflow problem is still broader than the tooling choice.`;
+    }
+
+    if (
+      q.match(
+        /\b(vendor|software|platform|copilot|procurement|procure|tooling|vendor diligence|due diligence)\b/,
+      )
+    ) {
+      return `Jason helps teams evaluate what they are actually buying before an AI tool gets embedded into the workflow.\n\nThe key questions are:\n• Is the product fine-tuned, retrieval-based, or mostly a wrapper around a third-party API?\n• Where does company data go, and who can access logs or prompts?\n• What permissions, escalation rules, and failure paths exist?\n• What will real usage cost at production volume?\n• Should this be bought as software, built around the OpenAI API, or kept under tighter internal control?\n\nThe best-fit engagement is usually AI Software & Vendor Due Diligence, or the Diagnostic Review if the workflow problem is still broader than the tooling choice.`;
+    }
+
+    // Customer service / headcount / productivity
+    if (
+      q.match(
+        /\b(customer service|support|ticket|tickets|chatbot|helpdesk|headcount|cost reduction|productivity|service team|call center|contact centre)\b/,
+      )
+    ) {
+      return `Jason can help, but he would usually challenge the starting assumption first.\n\nIf the goal is to reduce customer-service cost or headcount, the first question is often not “which chatbot should we buy?” It is:\n• why customers are contacting support in the first place\n• whether the knowledge base is trustworthy enough for automation\n• where handoffs and escalation rules break\n• whether AI removes real work or only creates more review work\n\nAI usually removes tasks before it removes roles, so the better early test is measurable capacity capture, cleaner escalation, and lower avoidable contact volume. A safer path is often ticket-root-cause analysis, internal support copilots, and controlled escalation before customer-facing AI.`;
+    }
+
     // Services / Consulting
     if (q.match(/\b(service|consult|offer|what.*do|how.*can.*help)\b/)) {
-      return `Jason offers five core engagements:\n\n• Commercial Analytics Health Check — diagnose where forecasting, pricing, margin, CRM, or reporting trust is breaking\n• AI Readiness & Roadmap Sprint — prioritise practical AI use cases against ROI, feasibility, and readiness\n• Commercial Analytics Foundation Fix — repair KPI logic, Power BI governance, CRM quality, and decision inputs\n• First AI Use Case Deployment — build one practical, auditable workflow that survives real business complexity\n• AI Training for Commercial Teams — practical enablement for sales, finance, analysts, managers, and executives\n\nVisit the Services page or use the contact form to discuss the right next step.`;
+      return `Jason offers six core engagements:\n\n• Commercial Analytics Diagnostic Review — the first paid step at EUR 950 net to diagnose where forecasting, pricing, margin, CRM, reporting, service workflow, or AI-tooling trust is breaking\n• AI Software & Vendor Due Diligence — a standalone offer for vendor claims, architecture, data flow, cost, and build-vs-buy fit\n• Decision Opportunity Prioritization Sprint — rank use cases, owners, and the first 90 days\n• Commercial Analytics Foundation Fix — repair KPI logic, Power BI governance, CRM quality, and decision inputs\n• Commercial Workflow Deployment — build one practical, auditable workflow that survives real business complexity\n• Commercial Team Enablement — practical enablement for sales, finance, analysts, managers, and executives\n\nThe public buying path stays simple: Book Fit Call for qualification, then Start Diagnostic Review when the issue is ready for the first paid step.`;
     }
 
     // Pricing / Rates
     if (q.match(/\b(price|cost|rate|fee|budget|how much|charge)\b/)) {
-      return `Pricing depends on scope and complexity, so Jason scopes each engagement after understanding the decision problem first. Most conversations start with a Commercial Analytics Health Check or Roadmap Sprint, then move into foundation repair, first-use-case deployment, or team enablement. Use the contact form to outline the issue and Jason will recommend the right starting point.`;
+      return `Jason now shows only the first paid step publicly.\n\n• Book Fit Call: qualification only\n• Commercial Analytics Diagnostic Review: EUR 950 net\n• AI Software & Vendor Due Diligence: available, but not publicly priced in this phase\n• Larger sprints, builds, and retainers: scoped after diagnosis\n\nThat pricing structure is deliberate. It lowers friction for the first serious step without pretending a responsible implementation quote exists before the workflow, data burden, operating risk, and decision owner are clear.`;
     }
 
-      // Book a Health Check / Schedule
+      // Book a fit call / choose the next step
     if (
       q.match(
         /\b(book|schedule|calendly|appointment)\b|\bhow.{0,20}\b(call|meet|speak)\b/,
       )
     ) {
-      return `To book a Commercial Analytics Health Check:\n\n1. Visit the Contact page on this site\n2. Share the primary issue, current tools, and desired outcome\n3. Jason will reply within 24–48 hours to confirm the next step\n\nOr email ${this.knowledge.email} directly and mention you'd like to discuss a Health Check.`;
+      return `To book a fit call or route the right next step:\n\n1. Visit the Contact page on this site\n2. Share the primary issue, desired outcome, and preferred first step\n3. Jason will reply within 24–48 hours to recommend the right route\n\nThat usually starts with a short fit call or goes straight into the EUR 950 net Commercial Analytics Diagnostic Review if the issue already looks clear enough. From there, Jason can scope vendor diligence, a prioritization sprint, a build discussion, enablement, or a hiring follow-up. Or email ${this.knowledge.email} directly if you prefer.`;
     }
 
     // Availability / Open to opportunities
@@ -937,7 +1116,7 @@ class ChatBot {
         /\b(available|freelance|contract|open to|looking for|hire|opportunity)\b/,
       )
     ) {
-      return `Jason is open to both consulting engagements and senior full-time opportunities in data science and AI leadership. He's based in ${this.knowledge.location} and works with clients across Europe and globally (mostly remote). Use the contact form or book a Health Check to start a conversation.`;
+      return `Jason is open to both consulting engagements and senior full-time opportunities in data science and AI leadership. He's based in ${this.knowledge.location} and works with clients across Europe and globally (mostly remote). Use the contact form to book a fit call, route the right offer, or start a hiring conversation.`;
     }
 
     // Location / Timezone
@@ -993,7 +1172,7 @@ class ChatBot {
 
     // Goodbye
     if (q.match(/\bbye\b|\bgoodbye\b|see you|\blater\b/)) {
-      return `Thanks for chatting. If you\'d like to continue, book a Health Check or use the contact form on this site.`;
+      return `Thanks for chatting. If you\'d like to continue, book a Fit Call or use the contact page to start a Diagnostic Review.`;
     }
 
     // ── Local retrieval (open-ended experience / skills / project questions) ──

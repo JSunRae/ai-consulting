@@ -1,0 +1,524 @@
+{
+  "created_for": "Jason Rae",
+  "date": "2026-05-10",
+  "source_audit": {
+    "local_files_reviewed": [
+      "C:\\Users\\Pilot\\Documents\\Resumes\\Jason_Rae_ATS_Data_Analytics_Resume_v4.txt",
+      "C:\\Users\\Pilot\\Documents\\Vs Code Projects\\AI_Consulting\\README.md",
+      "C:\\Users\\Pilot\\Documents\\Vs Code Projects\\AI_Consulting\\assets\\data\\resume.json",
+      "C:\\Users\\Pilot\\Documents\\Vs Code Projects\\AI_Consulting\\about.html",
+      "C:\\Users\\Pilot\\Documents\\Vs Code Projects\\AI_Consulting\\services.html"
+    ],
+    "positioning_summary": {
+      "core_angle": [
+        "Data and analytics leadership",
+        "Applied AI and GenAI adoption",
+        "Machine learning workflow development",
+        "Business intelligence and executive decision support",
+        "Responsible AI adoption and practical governance",
+        "Automation and AI-enabled process improvement"
+      ],
+      "evidence_backed_strengths": [
+        "13+ years across sales leadership, analytics, and applied AI",
+        "Current EMEA commercial analytics ownership at Medline",
+        "Hands-on Power BI, Python, SQL, ML, and controlled LLM workflows",
+        "Documented business impact in revenue growth, margin logic repair, and analytics transformation"
+      ]
+    }
+  },
+  "top_targets": [
+    "GI + FBKI",
+    "GDS",
+    "Apply AI Alliance",
+    "ISACA + Germany Chapter",
+    "ODI"
+  ],
+  "candidates": [
+    {
+      "name": "Gesellschaft fuer Informatik e.V. (GI)",
+      "region": "Germany",
+      "type": "Professional association membership",
+      "title_options": [
+        "Member"
+      ],
+      "individual_accessible": true,
+      "cost": {
+        "amount": 129,
+        "currency": "EUR",
+        "period": "year",
+        "notes": "Regular membership shown as of 2026-01-01 on GI dues page."
+      },
+      "requirements": [
+        "Personal application",
+        "Membership data",
+        "Payment"
+      ],
+      "application_url": "https://gi.de/antrag/",
+      "public_listing_possible": "unclear",
+      "linkedin_recommendation": "Use plain Member wording. Prefer Organization or About; not Experience unless active role exists.",
+      "risk_rating": "Low",
+      "priority_rating": 5,
+      "recommended_action": "apply_now",
+      "approval_required": true,
+      "source_urls": [
+        "https://gi.de/mitgliedschaft/",
+        "https://gi.de/mitgliedschaft/beitragsinformationen",
+        "https://gi.de/antrag/"
+      ]
+    },
+    {
+      "name": "GI Fachbereich Kuenstliche Intelligenz (FBKI)",
+      "region": "Germany",
+      "type": "AI chapter membership",
+      "title_options": [
+        "FBKI member"
+      ],
+      "individual_accessible": true,
+      "cost": {
+        "amount": null,
+        "currency": "EUR",
+        "period": "year",
+        "notes": "Requires GI membership first; no separate fee verified in this pass."
+      },
+      "requirements": [
+        "GI membership first",
+        "Apply in GI member area"
+      ],
+      "application_url": "https://fb-ki.gi.de/en/fbki-membership",
+      "public_listing_possible": "unclear",
+      "linkedin_recommendation": "Use only after active. Member wording only.",
+      "risk_rating": "Low",
+      "priority_rating": 5,
+      "recommended_action": "apply_now_after_gi",
+      "approval_required": true,
+      "source_urls": [
+        "https://fb-ki.gi.de/en/fbki-membership"
+      ]
+    },
+    {
+      "name": "German Data Science Society (GDS) e.V.",
+      "region": "Germany",
+      "type": "Professional association membership",
+      "title_options": [
+        "Ordentliches Mitglied",
+        "Member"
+      ],
+      "individual_accessible": true,
+      "cost": {
+        "amount": 50,
+        "currency": "EUR",
+        "period": "year",
+        "notes": "Regular member fee shown in dues extract."
+      },
+      "requirements": [
+        "Application",
+        "SEPA / bank details",
+        "Acceptance of membership terms"
+      ],
+      "application_url": "https://gds-society.de/mitgliedschaft/mitglied-werden",
+      "public_listing_possible": "unclear",
+      "linkedin_recommendation": "Use plain Member wording.",
+      "risk_rating": "Low",
+      "priority_rating": 5,
+      "recommended_action": "apply_now",
+      "approval_required": true,
+      "source_urls": [
+        "https://gds-society.de/mitgliedschaft/mitglied-werden",
+        "https://gds-society.de/mitgliedschaft/beitragsordnung"
+      ]
+    },
+    {
+      "name": "Apply AI Alliance",
+      "region": "European Union",
+      "type": "Stakeholder / community registration",
+      "title_options": [
+        "Community participant",
+        "Stakeholder participant"
+      ],
+      "individual_accessible": true,
+      "cost": {
+        "amount": 0,
+        "currency": "EUR",
+        "period": "unknown",
+        "notes": "No fee found on official pages reviewed."
+      },
+      "requirements": [
+        "Platform registration",
+        "Profile setup"
+      ],
+      "application_url": "https://digital-strategy.ec.europa.eu/en/policies/european-ai-alliance",
+      "public_listing_possible": "likely",
+      "linkedin_recommendation": "Do not use Experience for basic signup. Better as Featured or About unless visible contribution exists.",
+      "risk_rating": "Low",
+      "priority_rating": 5,
+      "recommended_action": "register_now",
+      "approval_required": true,
+      "source_urls": [
+        "https://digital-strategy.ec.europa.eu/en/policies/european-ai-alliance",
+        "https://digital-strategy.ec.europa.eu/en/news/commission-launches-apply-ai-alliance-shape-european-ai-policies"
+      ]
+    },
+    {
+      "name": "ISACA + Germany Chapter",
+      "region": "Global / Germany",
+      "type": "Professional membership + chapter membership",
+      "title_options": [
+        "Professional Member"
+      ],
+      "individual_accessible": true,
+      "cost": {
+        "amount": 225,
+        "currency": "USD",
+        "period": "first_year",
+        "notes": "US$145 new professional membership plus Germany chapter dues US$80 from official chapter dues table."
+      },
+      "requirements": [
+        "Profile creation",
+        "Chapter selection",
+        "Payment"
+      ],
+      "application_url": "https://www.isaca.org/membership/become-a-member",
+      "public_listing_possible": "members_only_limited",
+      "linkedin_recommendation": "Good as Organization; do not imply certification or authority.",
+      "risk_rating": "Low-Medium",
+      "priority_rating": 4,
+      "recommended_action": "apply_now_if_governance_priority",
+      "approval_required": true,
+      "source_urls": [
+        "https://www.isaca.org/membership/become-a-member",
+        "https://www.isaca.org/membership",
+        "https://engage.isaca.org/germanychapter/about/aboutchapter"
+      ]
+    },
+    {
+      "name": "Open Data Institute (ODI)",
+      "region": "UK / Global",
+      "type": "Individual membership",
+      "title_options": [
+        "Individual Member"
+      ],
+      "individual_accessible": true,
+      "cost": {
+        "amount": 100,
+        "currency": "GBP",
+        "period": "year",
+        "notes": "Membership page shows GBP100 excl VAT; terms page references GBP120 incl VAT."
+      },
+      "requirements": [
+        "Account creation",
+        "Payment"
+      ],
+      "application_url": "https://theodi.org/membership/",
+      "public_listing_possible": "unclear",
+      "linkedin_recommendation": "Useful for About or Organization section; governance and data-ethics complement.",
+      "risk_rating": "Low-Medium",
+      "priority_rating": 4,
+      "recommended_action": "apply_now_if_budget_ok",
+      "approval_required": true,
+      "source_urls": [
+        "https://theodi.org/membership/",
+        "https://theodi.org/our-policies/odi-membership-terms-and-conditions/"
+      ]
+    },
+    {
+      "name": "KI Bundesverband",
+      "region": "Germany",
+      "type": "Association membership",
+      "title_options": [
+        "Mitglied",
+        "KI-Expert:in"
+      ],
+      "individual_accessible": "exception_only",
+      "cost": {
+        "amount": 100,
+        "currency": "EUR",
+        "period": "year",
+        "notes": "Expert status shown at 100 EUR/year; company rates vary."
+      },
+      "requirements": [
+        "Eligibility fit",
+        "Application",
+        "Likely supporting profile evidence"
+      ],
+      "application_url": "https://ki-verband.de/mitgliedsformular/",
+      "public_listing_possible": "likely_for_companies",
+      "linkedin_recommendation": "Use exact title only if formally accepted.",
+      "risk_rating": "Medium",
+      "priority_rating": 4,
+      "recommended_action": "contact_first",
+      "approval_required": true,
+      "source_urls": [
+        "https://ki-verband.de/mitglied-werden/",
+        "https://ki-verband.de/mitgliedsformular/"
+      ]
+    },
+    {
+      "name": "GDD e.V.",
+      "region": "Germany / DACH",
+      "type": "Data protection and data security association membership",
+      "title_options": [
+        "Personal membership as a private individual"
+      ],
+      "individual_accessible": true,
+      "cost": {
+        "amount": 150,
+        "currency": "EUR",
+        "period": "year",
+        "notes": "Private individual membership rate."
+      },
+      "requirements": [
+        "Membership form",
+        "Payment"
+      ],
+      "application_url": "https://www.gdd.de/en/members/become-a-gdd-member",
+      "public_listing_possible": "opt_in_possible",
+      "linkedin_recommendation": "Use only if Jason wants stronger privacy / governance signalling.",
+      "risk_rating": "Medium",
+      "priority_rating": 3,
+      "recommended_action": "contact_or_apply_selectively",
+      "approval_required": true,
+      "source_urls": [
+        "https://www.gdd.de/en/members/become-a-gdd-member",
+        "https://www.gdd.de/en/"
+      ]
+    },
+    {
+      "name": "INFORMS / INFORMS Analytics Society",
+      "region": "Global",
+      "type": "Analytics professional membership",
+      "title_options": [
+        "Member",
+        "Analytics Society member"
+      ],
+      "individual_accessible": true,
+      "cost": {
+        "amount": null,
+        "currency": "USD",
+        "period": "year",
+        "notes": "Current dues not verified from an official public pricing page in this pass."
+      },
+      "requirements": [
+        "Membership application"
+      ],
+      "application_url": "https://www.informs.org/",
+      "public_listing_possible": "members_only_directory",
+      "linkedin_recommendation": "Credible but less locally relevant than GI/GDS.",
+      "risk_rating": "Low-Medium",
+      "priority_rating": 3,
+      "recommended_action": "contact_first",
+      "approval_required": true,
+      "source_urls": [
+        "https://www.informs.org/",
+        "https://connect.informs.org/analytics/home"
+      ]
+    },
+    {
+      "name": "IEEE Standards Association",
+      "region": "Global",
+      "type": "Standards membership",
+      "title_options": [
+        "IEEE SA Individual Member"
+      ],
+      "individual_accessible": true,
+      "cost": {
+        "amount": 311,
+        "currency": "USD",
+        "period": "year",
+        "notes": "IEEE SA only membership; lower if already an IEEE member."
+      },
+      "requirements": [
+        "Membership application",
+        "Standards work interest"
+      ],
+      "application_url": "https://standards.ieee.org/about/membership/individuals/",
+      "public_listing_possible": "limited",
+      "linkedin_recommendation": "Only worth featuring if Jason contributes to standards work.",
+      "risk_rating": "Medium",
+      "priority_rating": 3,
+      "recommended_action": "explore_first",
+      "approval_required": true,
+      "source_urls": [
+        "https://standards.ieee.org/about/membership/individuals/",
+        "https://standards.ieee.org/faqs/individual-membership/"
+      ]
+    },
+    {
+      "name": "Techstars mentor network",
+      "region": "Global",
+      "type": "Mentor application",
+      "title_options": [
+        "Mentor"
+      ],
+      "individual_accessible": true,
+      "cost": {
+        "amount": 0,
+        "currency": "USD",
+        "period": "unknown",
+        "notes": "No fee found on official pages reviewed."
+      },
+      "requirements": [
+        "Application",
+        "Mentor fit",
+        "Acceptance"
+      ],
+      "application_url": "https://www.techstars.com/mentorship-at-techstars.html",
+      "public_listing_possible": "yes_if_accepted",
+      "linkedin_recommendation": "Use only after formal acceptance.",
+      "risk_rating": "Medium",
+      "priority_rating": 3,
+      "recommended_action": "contact_or_apply_later",
+      "approval_required": true,
+      "source_urls": [
+        "https://www.techstars.com/mentorship-at-techstars.html",
+        "https://www.techstars.com/mentor-faq"
+      ]
+    },
+    {
+      "name": "Founder Institute mentor network",
+      "region": "Global",
+      "type": "Mentor application",
+      "title_options": [
+        "Mentor"
+      ],
+      "individual_accessible": true,
+      "cost": {
+        "amount": 0,
+        "currency": "USD",
+        "period": "unknown",
+        "notes": "No fee found; equity-collective structure disclosed."
+      },
+      "requirements": [
+        "Application",
+        "Mentor agreement review",
+        "Acceptance"
+      ],
+      "application_url": "https://fi.co/mentoring",
+      "public_listing_possible": "yes_if_accepted",
+      "linkedin_recommendation": "Use only after formal acceptance and after reviewing obligations.",
+      "risk_rating": "Medium-High",
+      "priority_rating": 2,
+      "recommended_action": "contact_first_only",
+      "approval_required": true,
+      "source_urls": [
+        "https://fi.co/mentoring",
+        "https://fi.co/faq",
+        "https://fi.co/docs/mentor.pdf"
+      ]
+    },
+    {
+      "name": "GAFAI",
+      "region": "UK / Global",
+      "type": "Community registration / role-branded applications",
+      "title_options": [
+        "Global AI Delegate",
+        "Chief Councilor",
+        "Board Member"
+      ],
+      "individual_accessible": true,
+      "cost": {
+        "amount": null,
+        "currency": "GBP",
+        "period": "unknown",
+        "notes": "Transparent member pricing not verified in this pass."
+      },
+      "requirements": [
+        "Registration or role application"
+      ],
+      "application_url": "https://www.gafai.org/register",
+      "public_listing_possible": "yes",
+      "linkedin_recommendation": "Not recommended due credibility risk.",
+      "risk_rating": "High",
+      "priority_rating": 1,
+      "recommended_action": "do_not_pursue",
+      "approval_required": false,
+      "source_urls": [
+        "https://gafai.org/",
+        "https://www.gafai.org/register",
+        "https://gafai.org/board-member"
+      ]
+    },
+    {
+      "name": "BDVA",
+      "region": "European Union",
+      "type": "Association membership",
+      "title_options": [
+        "Full Member",
+        "Associated Member"
+      ],
+      "individual_accessible": false,
+      "cost": {
+        "amount": null,
+        "currency": "EUR",
+        "period": "year",
+        "notes": "Annual fee stated, but current public amount not verified in this pass."
+      },
+      "requirements": [
+        "Organisation-led membership fit"
+      ],
+      "application_url": "https://bdva.eu/become-member/",
+      "public_listing_possible": "yes_for_organisations",
+      "linkedin_recommendation": "Not a strong personal affiliation move for Jason right now.",
+      "risk_rating": "Medium-High",
+      "priority_rating": 1,
+      "recommended_action": "do_not_pursue",
+      "approval_required": false,
+      "source_urls": [
+        "https://bdva.eu/become-member/",
+        "https://bdva.eu/about/"
+      ]
+    }
+  ],
+  "shortlist": {
+    "apply_register_now": [
+      "GI",
+      "FBKI",
+      "GDS",
+      "Apply AI Alliance",
+      "ISACA + Germany Chapter",
+      "ODI"
+    ],
+    "worth_contacting_first": [
+      "KI Bundesverband",
+      "Techstars mentor network",
+      "GDD e.V.",
+      "INFORMS / INFORMS Analytics Society",
+      "Founder Institute mentor network"
+    ],
+    "do_not_pursue": [
+      "GAFAI",
+      "BDVA"
+    ]
+  },
+  "applications_ready_for_approval": [
+    {
+      "target": "GI",
+      "ready": true,
+      "payment_or_formal_obligation": true
+    },
+    {
+      "target": "FBKI",
+      "ready": true,
+      "payment_or_formal_obligation": true
+    },
+    {
+      "target": "GDS",
+      "ready": true,
+      "payment_or_formal_obligation": true
+    },
+    {
+      "target": "Apply AI Alliance",
+      "ready": true,
+      "payment_or_formal_obligation": false
+    },
+    {
+      "target": "ISACA + Germany Chapter",
+      "ready": true,
+      "payment_or_formal_obligation": true
+    },
+    {
+      "target": "ODI",
+      "ready": true,
+      "payment_or_formal_obligation": true
+    }
+  ]
+}

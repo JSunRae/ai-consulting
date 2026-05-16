@@ -1,0 +1,277 @@
+[
+  {
+    "id": "linkedin-activity-7458621764030349312",
+    "title": "The next important AI skill is not just prompting.",
+    "summary": "The next important AI skill is not just prompting. It is process design. As AI tools move from answering questions to executing workflows, the value shifts. A good AI workflow needs: - clear inputs - clear business ru...",
+    "status": "published",
+    "pillar": "Applied AI strategy",
+    "contentType": "historical",
+    "preparedDate": "2026-05-08",
+    "publishedDate": "2026-05-08",
+    "captureSource": "saved-linkedin-activity-html",
+    "sourceSavedHtml": "Activity _ Jason Rae _ LinkedIn.html",
+    "relativeAgeAtCapture": "18h",
+    "capturedImpressions": 58,
+    "tags": [
+      "Workflow design",
+      "Forecasting"
+    ],
+    "platforms": [
+      {
+        "name": "LinkedIn",
+        "status": "published",
+        "copy": "The next important AI skill is not just prompting.\n\nIt is process design.\n\nAs AI tools move from answering questions to executing workflows, the value shifts.\n\nA good AI workflow needs:\n\n- clear inputs\n- clear business rules\n- clear approval points\n- clear error handling\n- clear success metrics\n- clear ownership\n\nThis matters more than the model demo.\n\nIn forecasting, for example, the workflow might be:\n\n1. Pull current CRM opportunities\n2. Check stage quality\n3. Compare against historical conversion\n4. Identify missing losses\n5. Explain variance\n6. Draft the management narrative\n7. Flag where human review is required\n\nThat is not just a chatbot.\n\nThat is a decision process with AI inside it.\n\nThe companies that win with AI will not be the ones with the most tools.\n\nThey will be the ones that redesign work around clear decisions.",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7458621764030349312/",
+        "publishedAt": "2026-05-08"
+      }
+    ]
+  },
+  {
+    "id": "linkedin-activity-7458048277473689600",
+    "title": "A large customer is not automatically a good sales target.",
+    "summary": "A large customer is not automatically a good sales target. That sounds obvious. But many target lists still start with size: Largest customers. Largest hospitals. Largest regions. Largest historical spend. The better...",
+    "status": "published",
+    "pillar": "Commercial analytics",
+    "contentType": "historical",
+    "preparedDate": "2026-05-07",
+    "publishedDate": "2026-05-07",
+    "captureSource": "saved-linkedin-activity-html",
+    "sourceSavedHtml": "Activity _ Jason Rae _ LinkedIn.html",
+    "relativeAgeAtCapture": "2d",
+    "capturedImpressions": 160,
+    "tags": [
+      "Customer targeting",
+      "Commercial analytics"
+    ],
+    "platforms": [
+      {
+        "name": "LinkedIn",
+        "status": "published",
+        "copy": "A large customer is not automatically a good sales target.\n\nThat sounds obvious.\n\nBut many target lists still start with size:\n\nLargest customers.\nLargest hospitals.\nLargest regions.\nLargest historical spend.\n\nThe better question is:\n\nWhat does this customer actually buy?\n\nAnd then:\n\nWhat do similar customers buy that this customer does not?\n\nThat is where buying-pattern analytics becomes powerful.\n\nA useful model can identify:\n\n- customers with similar purchasing behavior\n- products commonly bought together\n- category gaps\n- underpenetrated accounts\n- likely next-best products\n- margin-relevant opportunities\n- customers worth a sales conversation\n\nThe output should not be:\n\n\u201cThis customer has potential.\u201d\n\nThe output should be:\n\n\u201cThis customer buys A and B. Similar customers also buy C and D. The missing category has value, the pattern is credible, and the next commercial action is clear.\u201d\n\nThat is the difference between a list and a decision system.\n\nCommercial analytics should not just describe the business.\n\nIt should help the business decide where to act next.",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7458048277473689600/",
+        "publishedAt": "2026-05-07"
+      }
+    ]
+  },
+  {
+    "id": "linkedin-activity-7456960847223910400",
+    "title": "If an analyst came to me with a market sizing model based mainly on hospital bed count...",
+    "summary": "If an analyst came to me with a market sizing model based mainly on hospital bed count, I would not tell them to throw it away. But I would tell them not to stop there. Bed count can be a useful starting point, but it...",
+    "status": "published",
+    "pillar": "Forecasting",
+    "contentType": "historical",
+    "preparedDate": "2026-05-04",
+    "publishedDate": "2026-05-04",
+    "captureSource": "saved-linkedin-activity-html",
+    "sourceSavedHtml": "Activity _ Jason Rae _ LinkedIn.html",
+    "relativeAgeAtCapture": "5d",
+    "capturedImpressions": 293,
+    "tags": [
+      "Customer targeting",
+      "Commercial analytics"
+    ],
+    "platforms": [
+      {
+        "name": "LinkedIn",
+        "status": "published",
+        "copy": "If an analyst came to me with a market sizing model based mainly on hospital bed count, I would not tell them to throw it away.\n\nBut I would tell them not to stop there.\n\nBed count can be a useful starting point, but it should not become the main proxy for customer opportunity.\n\nMy first question would be:\n\nWhat does our own customer data already tell us?\n\nBefore asking the sales force to collect more external data, I would start with the buying patterns we already have.\n\nWhich products are bought together?\nWhich categories usually appear in mature accounts?\nWhich accounts are missing products that similar customers already buy?\nWhich customers behave like peers, even if their bed counts are different?\nWhich segments show repeatable patterns of adoption, expansion, or under-penetration?\n\nFrom there, I would build a customer buying-pattern matrix.\n\nNot just customer size.\n\nCustomer behaviour.\n\nThat matrix could show:\n\n* current product penetration\n* category combinations\n* product gaps\n* account maturity\n* peer-group similarity\n* cross-sell potential\n* historical buying progression\n* unusual underperformance versus comparable customers\n\nThen I would use machine learning to classify customers into peer groups based on actual purchasing behaviour.\n\nBecause the best comparison is not always:\n\n\u201cWhich hospitals have the same number of beds?\u201d\n\nIt is often:\n\n\u201cWhich customers behave similarly, and what do the stronger-performing peers buy that this customer does not?\u201d\n\nThat gives sales a much more practical view of opportunity.\n\nNot a generic market estimate.\n\nA targeted account strategy.\n\nBed count may tell you the theoretical size of a customer.\n\nBuying patterns tell you how that customer actually behaves.\n\nAnd good commercial analytics should always move the business closer to action.",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7456960847223910400/",
+        "publishedAt": "2026-05-04"
+      }
+    ]
+  },
+  {
+    "id": "linkedin-activity-7455148978335072257",
+    "title": "AI agents are being marketed as digital workers.",
+    "summary": "AI agents are being marketed as digital workers. That sounds powerful. But inside a real business, the hard question is not: \u201cCan the agent do the task?\u201d The harder questions are: - Does it know the business rule? - D...",
+    "status": "published",
+    "pillar": "Applied AI strategy",
+    "contentType": "historical",
+    "preparedDate": "2026-05-02",
+    "publishedDate": "2026-05-02",
+    "captureSource": "saved-linkedin-activity-html",
+    "sourceSavedHtml": "Activity _ Jason Rae _ LinkedIn.html",
+    "relativeAgeAtCapture": "1w",
+    "capturedImpressions": 131,
+    "tags": [
+      "AI agents",
+      "Workflow design",
+      "Forecasting",
+      "Commercial analytics"
+    ],
+    "platforms": [
+      {
+        "name": "LinkedIn",
+        "status": "published",
+        "copy": "AI agents are being marketed as digital workers.\n\nThat sounds powerful.\n\nBut inside a real business, the hard question is not:\n\n\u201cCan the agent do the task?\u201d\n\nThe harder questions are:\n\n- Does it know the business rule?\n- Does it have the right data?\n- Who approves the output?\n- What happens when the source data is wrong?\n- Can we audit what it did?\n- Can we measure whether the decision improved?\n\nThis is especially important in commercial analytics.\n\nAn agent that summarizes a forecast is useful.\n\nAn agent that explains why the forecast changed, checks CRM quality, compares sales-cycle assumptions, flags missing opportunities and prepares an executive-ready narrative is much more valuable.\n\nBut only if the workflow is designed properly.\n\nThe future is not just \u201cAI agents everywhere.\u201d\n\nThe future is governed, measurable agents embedded into real decision processes.",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7455148978335072257/",
+        "publishedAt": "2026-05-02"
+      }
+    ]
+  },
+  {
+    "id": "linkedin-activity-7454786751375671296",
+    "title": "\u201cJust throw the documents into Copilot.\u201d",
+    "summary": "\u201cJust throw the documents into Copilot.\u201d I hear this a lot. And it makes me nervous. Not because Copilot or similar AI tools are not useful. They are very useful. But uploading documents and asking for a summary is no...",
+    "status": "published",
+    "pillar": "Applied AI governance",
+    "contentType": "historical",
+    "preparedDate": "2026-05-02",
+    "publishedDate": "2026-05-02",
+    "captureSource": "saved-linkedin-activity-html",
+    "sourceSavedHtml": "Activity _ Jason Rae _ LinkedIn.html",
+    "relativeAgeAtCapture": "1w",
+    "capturedImpressions": 384,
+    "tags": [
+      "Customer targeting",
+      "Forecasting",
+      "Copilot"
+    ],
+    "platforms": [
+      {
+        "name": "LinkedIn",
+        "status": "published",
+        "copy": "\u201cJust throw the documents into Copilot.\u201d\n\nI hear this a lot.\n\nAnd it makes me nervous.\n\nNot because Copilot or similar AI tools are not useful.\n\nThey are very useful.\n\nBut uploading documents and asking for a summary is not the same as doing analysis.\n\nEspecially when the output includes:\n\n- numbers\n- percentages\n- financial claims\n- customer trends\n- forecast movements\n- pricing changes\n- margin explanations\n- executive recommendations\n\nA fluent summary can sound right even when the underlying logic is wrong.\n\nThat matters.\n\nBecause with numbers, the risk is not just linguistic.\n\nIt is analytical.\n\nIf AI says \u201csales declined by 3.7% because of churn,\u201d that is not just a sentence.\n\nIt is a claim.\n\nAnd claims need evidence.\n\nThe best thing you can do when using AI on business documents is force it to prove its work:\n\n- quote the source\n- show the calculation\n- list the documents used\n- separate fact from inference\n- flag uncertainty\n- identify missing data\n- show where numbers came from\n- explain what it did not check\n\nAI should not just produce an answer.\n\nIt should produce an auditable path to the answer.\n\nThat is the difference between using AI as a writing assistant and using AI as part of a decision system.",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7454786751375671296/",
+        "publishedAt": "2026-05-02"
+      }
+    ]
+  },
+  {
+    "id": "linkedin-activity-7454424268743966720",
+    "title": "Most companies do not have an AI problem.",
+    "summary": "Most companies do not have an AI problem. They have a decision-system problem. The dashboard exists. The CRM exists. The forecast exists. The pricing file exists. The margin report exists. But the logic underneath is...",
+    "status": "published",
+    "pillar": "Applied AI strategy",
+    "contentType": "historical",
+    "preparedDate": "2026-05-02",
+    "publishedDate": "2026-05-02",
+    "captureSource": "saved-linkedin-activity-html",
+    "sourceSavedHtml": "Activity _ Jason Rae _ LinkedIn.html",
+    "relativeAgeAtCapture": "1w",
+    "capturedImpressions": 434,
+    "tags": [
+      "Customer targeting",
+      "Forecasting",
+      "Decision systems",
+      "Commercial analytics"
+    ],
+    "platforms": [
+      {
+        "name": "LinkedIn",
+        "status": "published",
+        "copy": "Most companies do not have an AI problem.\n\nThey have a decision-system problem.\n\nThe dashboard exists.\nThe CRM exists.\nThe forecast exists.\nThe pricing file exists.\nThe margin report exists.\n\nBut the logic underneath is often fragmented.\n\nSales has one view.\nFinance has another.\nBI is trying to reconcile both.\nLeadership wants a simple answer.\nThe customer reality is more complex than the reporting structure.\n\nThis is where commercial analytics should add value.\n\nNot by creating more dashboards.\n\nBut by connecting the logic between:\n\n- customer behavior\n- product usage\n- pricing\n- margin\n- forecast quality\n- CRM discipline\n- sales capacity\n- executive decisions\n\nAI can help accelerate this.\n\nBut only after the commercial logic is clear.\n\nThe real work is not just building a model.\n\nIt is making sure the model improves the decision.",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7454424268743966720/",
+        "publishedAt": "2026-05-02"
+      }
+    ]
+  },
+  {
+    "id": "linkedin-activity-7425086130791825408",
+    "title": "\u201cCan AI suggest the best price for a sales rep?\u201d",
+    "summary": "\u201cCan AI suggest the best price for a sales rep?\u201d It sounds like a simple question. It\u2019s not. In fact, it\u2019s one of the most complex problems you can give an AI team \u2014 not because of the model, but because of the decisi...",
+    "status": "published",
+    "pillar": "Pricing",
+    "contentType": "historical",
+    "preparedDate": "2026-02-08",
+    "publishedDate": "2026-02-08",
+    "captureSource": "saved-linkedin-activity-html",
+    "sourceSavedHtml": "Activity _ Jason Rae _ LinkedIn.html",
+    "relativeAgeAtCapture": "3mo",
+    "capturedImpressions": 233,
+    "tags": [
+      "Pricing",
+      "Customer targeting"
+    ],
+    "platforms": [
+      {
+        "name": "LinkedIn",
+        "status": "published",
+        "copy": "\u201cCan AI suggest the best price for a sales rep?\u201d\n\nIt sounds like a simple question.\nIt\u2019s not.\n\nIn fact, it\u2019s one of the most complex problems you can give an AI team \u2014 not because of the model, but because of the decisions hiding underneath it.\n\nBefore a single line of code, leaders need to be explicit about things like:\n\u2022 Are we optimizing for margin, revenue, volume, or retention?\n\u2022 Is success defined at deal level, customer level, or portfolio level?\n\u2022 How much price risk is acceptable \u2014 and where?\n\u2022 Do we want consistency across reps, or controlled flexibility?\n\u2022 What happens when a rep disagrees with the recommendation?\n\nIf those questions aren\u2019t answered, the AI won\u2019t be wrong.\n\nIt will be misaligned.\n\nAnd misaligned pricing models don\u2019t fail dramatically.\nThey quietly shift behavior \u2014 eroding margins, distorting incentives, and creating false confidence.\n\nThis is where many AI initiatives struggle.\n\nLeaders ask:\n\u201cCan AI tell reps what price to sell at?\u201d\n\nStronger leaders ask:\n\u2022 \u201cWhat decision do we actually want to improve?\u201d\n\u2022 \u201cWhere should AI guide, and where should humans decide?\u201d\n\u2022 \u201cWhat does a good decision look like under uncertainty?\u201d\n\u2022 \u201cHow will we detect when the model is no longer helping?\u201d\n\nThe best pricing systems don\u2019t output a single number.\n\nThey offer:\n\u2022 Price ranges, not absolutes\n\u2022 Risk signals, not instructions\n\u2022 Context, not commands\n\u2022 Continuous feedback loops, not static rules\n\nAI doesn\u2019t set the price.\n\nIt shapes the decision environment around the person who does.\n\nAnd when leaders frame the problem this way, pricing stops being an AI experiment \u2014 and becomes a durable competitive advantage.",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7425086130791825408/",
+        "publishedAt": "2026-02-08"
+      }
+    ]
+  },
+  {
+    "id": "linkedin-activity-7424731002192797696",
+    "title": "Most people treat AI like a smarter Google.",
+    "summary": "Most people treat AI like a smarter Google. That\u2019s not where the leverage is. The real value appears when you use it as a thinking partner: \u2022 You bring context \u2022 You bring constraints \u2022 You challenge the output \u2022 You...",
+    "status": "published",
+    "pillar": "LinkedIn thought leadership",
+    "contentType": "historical",
+    "preparedDate": "2026-02-08",
+    "publishedDate": "2026-02-08",
+    "captureSource": "saved-linkedin-activity-html",
+    "sourceSavedHtml": "Activity _ Jason Rae _ LinkedIn.html",
+    "relativeAgeAtCapture": "3mo",
+    "capturedImpressions": 282,
+    "tags": [
+      "LinkedIn import"
+    ],
+    "platforms": [
+      {
+        "name": "LinkedIn",
+        "status": "published",
+        "copy": "Most people treat AI like a smarter Google.\n\nThat\u2019s not where the leverage is.\n\nThe real value appears when you use it as a thinking partner:\n\u2022 You bring context\n\u2022 You bring constraints\n\u2022 You challenge the output\n\u2022 You decide what survives\n\nWithout that, you don\u2019t get intelligence \u2014 you get fluent noise.\n\nAI doesn\u2019t make people smarter.\nIt amplifies how they already think.\n\nWhich is why the gap between \u201cAI access\u201d and \u201cAI advantage\u201d keeps growing.",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7424731002192797696/",
+        "publishedAt": "2026-02-08"
+      }
+    ]
+  },
+  {
+    "id": "linkedin-activity-7424361502737948672",
+    "title": "A pattern I keep seeing with AI software purchases:",
+    "summary": "A pattern I keep seeing with AI software purchases: Companies buy capability before they assess fit. An AI model that looks impressive in a demo can quietly fail in production if: \u2022 It wasn\u2019t trained on similar data \u2022...",
+    "status": "published",
+    "pillar": "Pricing",
+    "contentType": "historical",
+    "preparedDate": "2026-02-08",
+    "publishedDate": "2026-02-08",
+    "captureSource": "saved-linkedin-activity-html",
+    "sourceSavedHtml": "Activity _ Jason Rae _ LinkedIn.html",
+    "relativeAgeAtCapture": "3mo",
+    "capturedImpressions": 190,
+    "tags": [
+      "Pricing",
+      "Customer targeting",
+      "Forecasting"
+    ],
+    "platforms": [
+      {
+        "name": "LinkedIn",
+        "status": "published",
+        "copy": "A pattern I keep seeing with AI software purchases:\n\nCompanies buy capability\nbefore they assess fit.\n\nAn AI model that looks impressive in a demo can quietly fail in production if:\n\u2022 It wasn\u2019t trained on similar data\n\u2022 The data distribution shifts\n\u2022 The edge cases matter (they usually do)\n\u2022 No one internally can stress-test the assumptions\n\nThat\u2019s not an AI problem.\nThat\u2019s a governance and ownership problem.\n\nWhat often gets missed is that the real opportunity isn\u2019t in large, generic models at all.\n\nIt\u2019s in small, bespoke models that sit directly inside your own data flows:\n\n\u2022 Price suggestions and margin-risk flags\n\u2022 Forecasting ranges instead of point estimates\n\u2022 Early warning signals when markets move faster than margins\n\u2022 Customer grouping based on buying behavior (no manual segmentation)\n\u2022 Customer-at-risk detection before churn appears in KPIs\n\u2022 Backorder and supply-stress flagging before it hits revenue\n\nThese models don\u2019t need hype.\nThey need context, feedback, and ownership.\n\nAI works best when:\n\u2022 The data is yours\n\u2022 The decision boundary is clear\n\u2022 The outcome is measurable\n\u2022 Humans remain accountable\n\nBuying AI without the right people to assess it is like buying a race car without a driver.\n\nPowerful.\nExpensive.\nAnd very easy to crash.\n\nThe teams getting real value from AI aren\u2019t asking \u201cWhat tool should we buy?\u201d",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7424361502737948672/",
+        "publishedAt": "2026-02-08"
+      }
+    ]
+  },
+  {
+    "id": "linkedin-repost-7455660300327862273",
+    "title": "Jason reposted: Bringing teams together across EMEA always gives a clearer view of where we stand,\u00a0and...",
+    "summary": "Repost from Herv\u00e9 Million. Bringing teams together across EMEA always gives a clearer view of where we stand, and where we\u2019re heading. During the last two weeks, we had Quarter Business Review sessions with all our regions. The discussions show...",
+    "status": "published",
+    "pillar": "LinkedIn repost",
+    "contentType": "historical-repost",
+    "preparedDate": "2026-05-09",
+    "publishedDate": "2026-05-09",
+    "captureSource": "saved-linkedin-activity-html",
+    "sourceSavedHtml": "Activity _ Jason Rae _ LinkedIn.html",
+    "relativeAgeAtCapture": "",
+    "sourceAuthor": "Herv\u00e9 Million",
+    "sourceAuthorSlug": "herve-million",
+    "tags": [
+      "LinkedIn repost"
+    ],
+    "platforms": [
+      {
+        "name": "LinkedIn",
+        "status": "published",
+        "copy": "Bringing teams together across EMEA always gives a clearer view of where we stand,\u00a0and where\u00a0we\u2019re\u00a0heading. During the last two weeks,\u00a0we had\u00a0Quarter Business Review\u00a0sessions with all our regions. The discussions showed that while markets differ, many of the challenges and priorities are shared. The focus\u00a0remains\u00a0on making healthcare systems work better for those delivering care.\u00a0\u00a0 We aligned on the next quarter and challenged our plans against what teams are seeing on the ground. A clear direction, and a lot to work on.#MedlineEurope",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7455660300327862273/",
+        "publishedAt": "2026-05-09"
+      }
+    ]
+  }
+]

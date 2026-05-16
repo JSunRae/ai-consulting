@@ -1,0 +1,44 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run repo preflight
+        run: npm run preflight
+
+      - name: Build public bundle
+        run: npm run build
+
+      - name: Ensure generated assets are committed
+        run: git diff --exit-code -- . ':(exclude)site-dist'
+
+      - name: Compile Python sources
+        run: npm run check:python-compile
+
+      - name: Check JavaScript syntax
+        run: npm run check:js-syntax
+
+      - name: Run automated tests
+        run: npm test

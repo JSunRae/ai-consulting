@@ -1,0 +1,73 @@
+name: social-draft
+
+on:
+  workflow_dispatch:
+    inputs:
+      mock_openai:
+        description: Run with deterministic mock output instead of the OpenAI API
+        required: false
+        default: false
+        type: boolean
+  schedule:
+    - cron: "30 4 * * 1-5"
+
+permissions:
+  contents: write
+
+jobs:
+  draft:
+    runs-on: ubuntu-latest
+    env:
+      SOCIAL_ARCHIVE_PATH: assets/data/social-posts.json
+      SOCIAL_GUIDANCE_PATH: assets/data/social-guidance.json
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install runtime dependency
+        run: python -m pip install python-dotenv==1.0.1
+
+      - name: Generate draft and approval artifact
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          export OPENAI_MODEL="${OPENAI_MODEL:-gpt-5.4}"
+          export SOCIAL_TIMEZONE="${SOCIAL_TIMEZONE:-Europe/Berlin}"
+          export SOCIAL_APPROVAL_MODE="${SOCIAL_APPROVAL_MODE:-Manual review first, auto-post only after quality thresholds are proven}"
+          export SOCIAL_AUTO_POST_ENABLED="${SOCIAL_AUTO_POST_ENABLED:-false}"
+          export SOCIAL_GUIDANCE_PATH="${SOCIAL_GUIDANCE_PATH:-assets/data/social-guidance.json}"
+          args=""
+          if [ "${{ github.event.inputs.mock_openai || 'false' }}" = "true" ]; then
+            args="$args --mock-openai"
+          fi
+          python scripts/social_draft_pipeline.py --approval-dir artifacts/social-approval $args
+
+      - name: Upload approval artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: social-approval-${{ github.run_number }}
+          path: artifacts/social-approval/
+          if-no-files-found: error
+
+      - name: Append latest report to workflow summary
+        run: |
+          latest_report=$(ls -1t artifacts/social-approval/*.md | head -n 1)
+          cat "$latest_report" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Commit archive sync
+        run: |
+          if git diff --quiet -- assets/data/social-posts.json; then
+            echo "No archive changes to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/data/social-posts.json
+          git commit -m "chore: sync social draft archive"
+          git push

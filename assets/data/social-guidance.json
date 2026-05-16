@@ -1,0 +1,37 @@
+{
+  "updatedAt": "2026-05-08T00:00:00+00:00",
+  "operatorNotes": [
+    "Lead with commercial analytics, decision systems, workflow reliability, and governed AI rather than generic model commentary.",
+    "Prefer posts that make Jason sound like an operator with technical depth, not a generic creator reacting to headlines.",
+    "Do not publish content that sounds like hype, startup theatre, or shallow AI trend chasing."
+  ],
+  "priorityTopics": [
+    "forecast governance",
+    "pricing control",
+    "margin interpretation",
+    "CRM discipline",
+    "workflow simplification",
+    "governed AI adoption"
+  ],
+  "avoidTopics": [
+    "generic funding-round reactions",
+    "celebrity AI drama",
+    "hot takes without operating relevance",
+    "claims that imply client specifics"
+  ],
+  "pinnedAngles": [
+    "AI adoption starts with workflow fixes, not theater",
+    "Trusted KPIs start with governance, not more reporting",
+    "Forecast discipline is a behavior problem before it is a model problem"
+  ],
+  "pinnedEvergreenSlug": "",
+  "workflow": {
+    "timezone": "Europe/Berlin",
+    "manualReviewThreshold": 70,
+    "autoScheduleThreshold": 85,
+    "preferredPostingRoute": {
+      "linkedin": "buffer",
+      "x": "buffer"
+    }
+  }
+}

@@ -1,0 +1,3 @@
+id,date,title,summary,launchWave,launchPriority,pillar,contentType,platform,copy,url,tags,status,sourceBlogUrl,targetPageUrl,ctaType,commercialIntent,offerAlignment
+example-post-1,2026-05-01,"Example historical post","Short summary for archive cards","Commercial analytics","LinkedIn","Paste the LinkedIn copy here","https://www.linkedin.com/posts/example","forecasting|analytics",published,
+example-post-1,2026-05-01,"Example historical post","Short summary for archive cards","Commercial analytics","X","Paste the X copy here","https://x.com/example/status/1","forecasting|analytics",published,

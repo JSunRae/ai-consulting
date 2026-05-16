@@ -1,0 +1,260 @@
+# Release Scope Audit
+
+Last updated: 2026-05-12
+
+## Repo State Summary
+
+- Source of truth used for this audit:
+  - `git status --short`
+  - `git status --short --untracked-files=all`
+  - `assets/docs/DEPLOY_SCOPE_MANIFEST.md`
+  - `assets/docs/BROWSER_QA_REPORT.md`
+  - `assets/docs/CHALLENGER_PAGE_AUDIT.md`
+  - `C:\Users\Pilot\Downloads\Ai Consulting Handovers\07-IMPLEMENTATION-WORKQUEUE.md`
+  - `C:\Users\Pilot\Downloads\Ai Consulting Handovers\09-LAUNCH-CHECKLIST.md`
+- Dirty worktree at audit time: `189` paths total
+- Modified: `45`
+- Untracked: `144`
+- Classification rule used:
+  - `include in release`: explicitly listed in the current deploy manifest, or a direct runtime dependency of a listed file that would otherwise create a broken or incomplete public experience
+  - `exclude from release`: unrelated user work, research, job-search material, local state, generated cache, automation/prototype work outside the current commercialization release
+  - `needs-human-decision`: public/runtime or launch-adjacent changes that appear commercialization-related but are not currently approved by the manifest, or manifest-covered assets that look duplicated/non-essential
+
+## Included Files
+
+- `about.html` - Explicitly listed in deploy manifest under core public pages.
+- `blog/index.html` - Explicitly listed in deploy manifest under blog pages.
+- `contact.html` - Explicitly listed in deploy manifest under core public pages.
+- `css/components.css` - Imported by `css/style.css`; contains required social archive styling used by included public pages.
+- `css/style.css` - Explicitly listed in deploy manifest under styles.
+- `index.html` - Explicitly listed in deploy manifest under core public pages.
+- `js/chatbot.js` - Explicitly listed in deploy manifest under front-end logic.
+- `js/forms.js` - Explicitly listed in deploy manifest under front-end logic.
+- `js/main.js` - Explicitly listed in deploy manifest under front-end logic.
+- `portfolio.html` - Explicitly listed in deploy manifest under core public pages.
+- `privacy.html` - Explicitly listed in deploy manifest under core public pages.
+- `resume.html` - Explicitly listed in deploy manifest under core public pages.
+- `services.html` - Explicitly listed in deploy manifest under core public pages.
+- `sitemap.xml` - Explicitly listed in deploy manifest under data and routing assets.
+- `assets/data/social-guidance.json` - Explicitly listed in deploy manifest under data and routing assets.
+- `assets/data/social-posts.json` - Explicitly listed in deploy manifest under data and routing assets.
+- `assets/data/social-sources.json` - Explicitly listed in deploy manifest under data and routing assets.
+- `assets/data/voice-intake-playbook.json` - Explicitly listed in deploy manifest under data and routing assets.
+- `assets/docs/AI-Vendor-Due-Diligence-Checklist.html` - Covered by the manifest wildcard for lead magnets; include only if the release is meant to carry the full lead-magnet collateral set.
+- `assets/docs/AI-Vendor-Due-Diligence-Checklist.md` - Covered by the manifest wildcard for lead magnets.
+- `assets/docs/AI-Vendor-Due-Diligence-Checklist.pdf` - Public asset actively linked from included pages.
+- `assets/docs/BROWSER_QA_REPORT.md` - Explicitly listed in deploy manifest as release evidence.
+- `assets/docs/Build-vs-Buy-AI-Decision-Matrix.md` - Covered by the manifest wildcard for lead magnets.
+- `assets/docs/Build-vs-Buy-AI-Decision-Matrix.pdf` - Public asset actively linked from included pages.
+- `assets/docs/CHALLENGER_DISCOVERY_CALL_SCRIPT.md` - Explicitly listed in deploy manifest under sales assets.
+- `assets/docs/CHALLENGER_PAGE_AUDIT.md` - Explicitly listed in deploy manifest as release evidence.
+- `assets/docs/CHALLENGER_PROPOSAL_TEMPLATE.md` - Explicitly listed in deploy manifest under sales assets.
+- `assets/docs/CHAT_VOICE_ALIGNMENT_AUDIT.md` - Explicitly listed in deploy manifest under sales assets.
+- `assets/docs/DEPLOY_SCOPE_MANIFEST.md` - Explicitly listed in deploy manifest and required for release isolation discipline.
+- `assets/docs/LAUNCH_HARDENING_HANDOVER.md` - Explicitly listed in deploy manifest as release evidence.
+- `assets/docs/LEAD_MAGNET_TRACKING_HOOKS.md` - Explicitly listed in deploy manifest.
+- `assets/docs/OBJECTION_HANDLING_LIBRARY.md` - Explicitly listed in deploy manifest under sales assets.
+- `assets/docs/POST_CALL_SUMMARY_TEMPLATE.md` - Explicitly listed in deploy manifest under sales assets.
+- `assets/docs/RECOMMENDATION_MEMO_TEMPLATE.md` - Explicitly listed in deploy manifest under sales assets.
+- `assets/docs/RELEASE_SCOPE_AUDIT.md` - This audit deliverable; include in the release packet so staging decisions remain traceable.
+- `blog/ai-cost-reduction-reality-check.html` - Explicitly listed in deploy manifest under blog pages.
+- `blog/ai-vendor-due-diligence-checklist.html` - Explicitly listed in deploy manifest under blog pages.
+- `blog/build-vs-buy-ai-decision-matrix.html` - Explicitly listed in deploy manifest under blog pages.
+- `blog/customer-service-ai-checklist-before-chatbot.html` - Explicitly listed in deploy manifest under blog pages.
+- `blog/social-posts.html` - Not listed in manifest, but `blog/index.html` now links to it directly; include to avoid shipping a broken public route.
+- `js/social-archive.js` - Runtime dependency of `blog/social-posts.html`; include with the social archive page.
+
+## Excluded Files
+
+- `.github/copilot-instructions.md` - Repo tooling instructions, not part of the release scope.
+- `.gitignore` - Repo hygiene only; not part of the commercialization release payload.
+- `LINK_AUDIT.md` - Internal audit note, not in manifest and not required for deploy.
+- `README.md` - Repository documentation, not part of the release scope.
+- `assets/docs/AGENT_LEDGER.md` - Internal change log, not part of deploy scope.
+- `assets/docs/BRAND_INTELLIGENCE_BRIEF.md` - Internal strategy doc; not required for the release payload.
+- `assets/docs/SETUP_GUIDE.md` - Internal setup documentation, not part of deploy scope.
+- `assets/docs/TODO.md` - Internal planning doc, not part of release payload.
+- `assets/docs/applications/checkmk-head-of-data-analytics-cover-letter.md` - Job application material unrelated to site release.
+- `generate_portfolio_pages.py` - Local generator script; not required to stage the current release.
+- `netlify.toml` - Adds Netlify Functions directory for a separate voice/functions track; not required for the current manifest-defined release.
+- `package.json` - Tooling changes are for automation workflows outside the current release scope.
+- `requirements-dev.txt` - Development dependency change for automation tooling; not needed for current public-site release.
+- `.env.example` - Environment template for automation/ops, not needed for current release.
+- `.github/workflows/social-draft.yml` - Social automation workflow outside current deploy manifest.
+- `.github/workflows/social-publish.yml` - Social automation workflow outside current deploy manifest.
+- `.netlify/state.json` - Local Netlify state file; exclude from release.
+- `03-Challenger-Audit-Core-Pages-Handover.md` - Handover source file, not release payload.
+- `Research and Documentation/Application Defaults Sheet.md` - Personal operating document unrelated to release.
+- `Research and Documentation/Application Submission Log.md` - Job-search tracking, unrelated to release.
+- `Research and Documentation/Applications/Jason_Rae_JOOR_Head_of_Analytics_Cover_Letter.docx` - Job application artifact, unrelated to release.
+- `Research and Documentation/Applications/Jason_Rae_JOOR_Head_of_Analytics_Resume.docx` - Job application artifact, unrelated to release.
+- `Research and Documentation/Applications/Jason_Rae_TaxDome_Head_of_Analytics_Cover_Letter.docx` - Job application artifact, unrelated to release.
+- `Research and Documentation/Applications/Jason_Rae_TaxDome_Head_of_Analytics_Resume.docx` - Job application artifact, unrelated to release.
+- `Research and Documentation/Applications/Jason_Rae_smallpdf_Head_of_Data_Analytics_Cover_Letter.docx` - Job application artifact, unrelated to release.
+- `Research and Documentation/Applications/Jason_Rae_smallpdf_Head_of_Data_Analytics_Resume.docx` - Job application artifact, unrelated to release.
+- `Research and Documentation/Applications/Jason_Rae_team_blue_Head_of_AI_SaaS_Cover_Letter.docx` - Job application artifact, unrelated to release.
+- `Research and Documentation/Applications/Jason_Rae_team_blue_Head_of_AI_SaaS_Resume.docx` - Job application artifact, unrelated to release.
+- `Research and Documentation/Career Coordination Master Plan.md` - Career planning doc, unrelated to release.
+- `Research and Documentation/Career Search Tracker.md` - Career planning doc, unrelated to release.
+- `Research and Documentation/ChatGPT Voice Roleplay Brief.md` - Private prep note, unrelated to site release.
+- `Research and Documentation/Comprehensive Remaining Work Audit - 2026-05-09.md` - Internal planning doc outside current release scope.
+- `Research and Documentation/First Wave Recruiter Outreach Drafts.md` - Career materials unrelated to release.
+- `Research and Documentation/GitHub Profile Draft.md` - Career materials unrelated to release.
+- `Research and Documentation/Head Hunder Research.md` - Career materials unrelated to release.
+- `Research and Documentation/Historical_Social_Backfill_Blocker.md` - Ops note for social backfill, not part of current release payload.
+- `Research and Documentation/JOOR_Head_of_Analytics_Application_Packet.md` - Job application packet, unrelated to release.
+- `Research and Documentation/Jason_Rae_ATS_Data_Analytics_Resume_v4.docx` - Job application artifact, unrelated to release.
+- `Research and Documentation/Jason_Rae_ATS_Data_Analytics_Resume_v4.pdf` - Job application artifact, unrelated to release.
+- `Research and Documentation/Jason_Rae_ATS_Data_Analytics_Resume_v4.txt` - Job application artifact, unrelated to release.
+- `Research and Documentation/Jason_Rae_Cover_Letter_Template_v4.docx` - Job application artifact, unrelated to release.
+- `Research and Documentation/Jason_Rae_Cover_Letter_Template_v4.pdf` - Job application artifact, unrelated to release.
+- `Research and Documentation/Jason_Rae_Executive_Data_Analytics_Resume_v4.docx` - Job application artifact, unrelated to release.
+- `Research and Documentation/Jason_Rae_Executive_Data_Analytics_Resume_v4.pdf` - Job application artifact, unrelated to release.
+- `Research and Documentation/Jason_Rae_JOOR_Head_of_Analytics_Cover_Letter.docx` - Job application artifact, unrelated to release.
+- `Research and Documentation/Jason_Rae_JOOR_Head_of_Analytics_Cover_Letter.pdf` - Job application artifact, unrelated to release.
+- `Research and Documentation/Jason_Rae_JOOR_Head_of_Analytics_Resume.docx` - Job application artifact, unrelated to release.
+- `Research and Documentation/Jason_Rae_JOOR_Head_of_Analytics_Resume.pdf` - Job application artifact, unrelated to release.
+- `Research and Documentation/Jason_Rae_Role_Tailoring_Master_v4.docx` - Job application artifact, unrelated to release.
+- `Research and Documentation/Jason_Rae_Role_Tailoring_Master_v4.pdf` - Job application artifact, unrelated to release.
+- `Research and Documentation/Jason_Rae_TaxDome_Head_of_Analytics_Cover_Letter.docx` - Job application artifact, unrelated to release.
+- `Research and Documentation/Jason_Rae_TaxDome_Head_of_Analytics_Resume.docx` - Job application artifact, unrelated to release.
+- `Research and Documentation/Jason_Rae_smallpdf_Head_of_Data_Analytics_Cover_Letter.docx` - Job application artifact, unrelated to release.
+- `Research and Documentation/Jason_Rae_smallpdf_Head_of_Data_Analytics_Cover_Letter.pdf` - Job application artifact, unrelated to release.
+- `Research and Documentation/Jason_Rae_smallpdf_Head_of_Data_Analytics_Resume.docx` - Job application artifact, unrelated to release.
+- `Research and Documentation/Jason_Rae_smallpdf_Head_of_Data_Analytics_Resume.pdf` - Job application artifact, unrelated to release.
+- `Research and Documentation/Jason_Rae_team_blue_Head_of_AI_SaaS_Cover_Letter.docx` - Job application artifact, unrelated to release.
+- `Research and Documentation/Jason_Rae_team_blue_Head_of_AI_SaaS_Cover_Letter.pdf` - Job application artifact, unrelated to release.
+- `Research and Documentation/Jason_Rae_team_blue_Head_of_AI_SaaS_Resume.docx` - Job application artifact, unrelated to release.
+- `Research and Documentation/Jason_Rae_team_blue_Head_of_AI_SaaS_Resume.pdf` - Job application artifact, unrelated to release.
+- `Research and Documentation/Lighthouse Summary - 2026-05-12.md` - QA note outside current deploy manifest.
+- `Research and Documentation/LinkedIn_Activity_Extract_20260905.json` - Social backfill input, not current release payload.
+- `Research and Documentation/LinkedIn_Markdown_Activity_Extract_20260509.json` - Social backfill input, not current release payload.
+- `Research and Documentation/LinkedIn_Public_Activity_Extract_20260509.json` - Social backfill input, not current release payload.
+- `Research and Documentation/Private Repo Portfolio Audit.md` - Internal audit note, unrelated to deploy scope.
+- `Research and Documentation/Recruiter Interview and Consulting Call Prep Pack.md` - Career prep material, unrelated to release.
+- `Research and Documentation/Recruiter Outreach Queue.md` - Career planning material, unrelated to release.
+- `Research and Documentation/Remaining Repo Work Plan - 2026-05-09.md` - Internal planning doc outside current release scope.
+- `Research and Documentation/Research - Path to Director AI and Analytics.md` - Career planning material, unrelated to release.
+- `Research and Documentation/SIP_Provider_Research_Prompt.md` - Voice rollout research, outside current release scope.
+- `Research and Documentation/Social_Content_Batch_20260508.md` - Social content planning, not current release payload.
+- `Research and Documentation/Support Needed - 2026-05-12.md` - Internal support note, unrelated to release.
+- `Research and Documentation/TaxDome_Head_of_Analytics_Application_Packet.md` - Job application packet, unrelated to release.
+- `Research and Documentation/Unblock Step By Step - 2026-05-12.md` - Internal ops note, unrelated to release.
+- `Research and Documentation/lighthouse-homepage-20260512.json` - QA artifact, not current release payload.
+- `Research and Documentation/lighthouse-social-archive-20260512.json` - QA artifact, not current release payload.
+- `Research and Documentation/smallpdf_Head_of_Data_Analytics_Application_Packet.md` - Job application packet, unrelated to release.
+- `Research and Documentation/team_blue_Head_of_AI_SaaS_Application_Packet.md` - Job application packet, unrelated to release.
+- `ai_analytics_affiliation_application_status_20260510.md` - Personal affiliation planning, unrelated to release.
+- `ai_analytics_institutional_affiliation_plan_for_jason_20260510.json` - Personal affiliation planning, unrelated to release.
+- `ai_analytics_institutional_affiliation_plan_for_jason_20260510.md` - Personal affiliation planning, unrelated to release.
+- `assets/data/social-channels.example.json` - Example/template file; not required for current release.
+- `assets/data/social-history-template.csv` - Import template; not required for current release.
+- `assets/docs/AI-Vendor-Due-Diligence-Checklist-Printable.html` - Printable helper variant, not listed in manifest and not actively linked from public pages.
+- `assets/docs/Build-vs-Buy-AI-Decision-Matrix-Printable.html` - Printable helper variant, not listed in manifest and not actively linked from public pages.
+- `assets/docs/CHALLENGER_LINKEDIN_LAUNCH_PLAN.md` - Social launch planning doc outside current release scope.
+- `assets/docs/Customer-Service-AI-Checklist.md` - Internal/source content doc; not in current deploy manifest.
+- `assets/docs/DEPLOY_AND_AUTOMATION_RUNBOOK.md` - Broader ops runbook; outside current manifest-defined release.
+- `assets/docs/GERMAN_LOCALIZATION_ROADMAP.md` - Future roadmap doc, not current release payload.
+- `assets/docs/OFFER_OPERATING_PLAYBOOK.md` - Internal operating doc; not part of current release payload.
+- `assets/docs/REPO_FINISH_PROMPTS.md` - Internal prompt backlog, not release payload.
+- `assets/docs/RELEASE_DECISION_QUEUE.md` - Internal release-management note, not part of the manifest-defined release payload.
+- `assets/docs/RELEASE_MODE_RECOMMENDATION.md` - Internal release-management note, not part of the manifest-defined release payload.
+- `assets/docs/RELEASE_SMOKE_TEST_REPORT.md` - Internal release-management note, not part of the manifest-defined release payload.
+- `assets/docs/RELEASE_STAGE_COMMANDS.md` - Internal release-management note, not part of the manifest-defined release payload.
+- `assets/docs/SOCIAL_AUTOMATION_IMPLEMENTATION_BRIEF.md` - Automation planning doc outside current release scope.
+- `assets/docs/SOCIAL_CONTENT_OPERATING_PLAN.md` - Automation/content ops plan outside current release scope.
+- `assets/docs/TWILIO_OPENAI_SIP_PHASE1_PLAN.md` - Voice rollout planning doc outside current release scope.
+- `assets/docs/VOICE_CALL_AGENT_IMPLEMENTATION_BRIEF.md` - Voice rollout planning doc outside current release scope.
+- `assets/docs/VOICE_CALL_OPERATING_PLAYBOOK.md` - Voice rollout planning doc outside current release scope.
+- `assets/docs/VOICE_CALL_TEST_PLAN.md` - Voice rollout planning doc outside current release scope.
+- `assets/docs/WQ24_FINAL_STATUS.md` - Internal release-management note, not part of the manifest-defined release payload.
+- `netlify/functions/_shared/voice-agent.mjs` - Voice backend scaffold outside current manifest-defined release.
+- `netlify/functions/voice-incoming.mjs` - Voice backend scaffold outside current manifest-defined release.
+- `netlify/functions/voice-summary.mjs` - Voice backend scaffold outside current manifest-defined release.
+- `package-lock.json` - Dependency lockfile for automation/voice track, not required for the current manifest-defined release.
+- `phonebot/.env.example` - Prototype environment template outside current release scope.
+- `phonebot/README.md` - Prototype documentation outside current release scope.
+- `phonebot/openai-connector.js` - Prototype code outside current release scope.
+- `phonebot/server.js` - Prototype code outside current release scope.
+- `scripts/__pycache__/extract_linkedin_saved_activity.cpython-312.pyc` - Generated cache file; exclude from release.
+- `scripts/__pycache__/generate_social_content_batch.cpython-312.pyc` - Generated cache file; exclude from release.
+- `scripts/__pycache__/import_linkedin_activity_markdown.cpython-312.pyc` - Generated cache file; exclude from release.
+- `scripts/__pycache__/import_linkedin_public_activity_json.cpython-312.pyc` - Generated cache file; exclude from release.
+- `scripts/__pycache__/repo_preflight.cpython-312.pyc` - Generated cache file; exclude from release.
+- `scripts/__pycache__/social_archive_admin.cpython-312.pyc` - Generated cache file; exclude from release.
+- `scripts/__pycache__/social_archive_import.cpython-312.pyc` - Generated cache file; exclude from release.
+- `scripts/__pycache__/social_buffer_publish.cpython-312.pyc` - Generated cache file; exclude from release.
+- `scripts/__pycache__/social_draft_pipeline.cpython-312.pyc` - Generated cache file; exclude from release.
+- `scripts/extract_linkedin_saved_activity.py` - Social automation/import tooling outside current manifest-defined release.
+- `scripts/generate_job_application_docs.py` - Job application tooling unrelated to release.
+- `scripts/generate_social_content_batch.py` - Social automation tooling outside current release scope.
+- `scripts/import_linkedin_activity_markdown.py` - Social import tooling outside current release scope.
+- `scripts/import_linkedin_public_activity_json.py` - Social import tooling outside current release scope.
+- `scripts/repo_preflight.py` - Repo support tooling; useful operationally, but not part of the release payload.
+- `scripts/social_archive_admin.py` - Social automation tooling outside current release scope.
+- `scripts/social_archive_import.py` - Social automation tooling outside current release scope.
+- `scripts/social_buffer_publish.py` - Social automation tooling outside current release scope.
+- `scripts/social_draft_pipeline.py` - Social automation tooling outside current release scope.
+
+## Needs-Human-Decision
+
+- `404.html` - Public-facing page with CTA/email normalization changes, but omitted from the current manifest.
+- `assets/data/projects.json` - Public runtime data for portfolio/chatbot; changes are commercialization-related, but the file is not in the current manifest.
+- `assets/data/resume.json` - Public runtime data for chatbot/resume content; omitted from current manifest despite user-facing impact.
+- `assets/docs/Jason-Rae-Resume.pdf` - Public downloadable asset linked from included pages, but omitted from manifest; decide whether resume collateral is in this release.
+- `assets/images/og-image.svg` - Public sharing asset with branding terminology updates, but not listed in manifest.
+- `blog/5-ways-gpt4-transforms-business-analytics.html` - Legacy public article received commercialization edits, but is outside current manifest and may now overlap with a new slug.
+- `blog/deterministic-llm-programming-production-ai.html` - Legacy public article has CTA/branding updates, but is omitted from manifest.
+- `blog/enterprise-ai-adoption-commercial-analytics.html` - Legacy public article has CTA/branding updates, but is omitted from manifest.
+- `blog/how-to-evaluate-ai-projects-roi.html` - Legacy public article has CTA/offer-ladder updates, but is omitted from manifest.
+- `blog/pl-attribution-fx-errors-data-analytics.html` - Legacy public article has CTA/branding updates, but is omitted from manifest.
+- `blog/power-bi-vs-tableau-2024-comparison.html` - Legacy public article has CTA/branding updates, but is omitted from manifest.
+- `blog/reducing-report-volume-95-percent-case-study.html` - Legacy public article has CTA/branding updates, but is omitted from manifest.
+- `js/decision-network.js` - Public runtime script loaded by main site pages; changes appear launch-related, but the file is omitted from manifest.
+- `js/portfolio.js` - Public runtime script for portfolio UX; changes align CTA language with commercialization work, but the file is omitted from manifest.
+- `portfolio/ai-desktop-agent-orchestrator.html` - Public case-study page has commercialization edits, but portfolio child pages are omitted from manifest.
+- `portfolio/ai-memoir-narrative-pipeline.html` - Public case-study page has commercialization edits, but portfolio child pages are omitted from manifest.
+- `portfolio/algorithmic-trading-ai.html` - Public case-study page has commercialization edits, but portfolio child pages are omitted from manifest.
+- `portfolio/multilingual-travel-authorization-saas.html` - Public case-study page has commercialization edits, but portfolio child pages are omitted from manifest.
+- `blog/5-ways-llm-workflows-transform-business-analytics.html` - New public article slug likely replaces or duplicates the modified GPT-4 article; release should not guess which slug is canonical.
+
+## Surprises / Risks
+
+- `blog/index.html` now links to `blog/social-posts.html`, but the current manifest does not list `blog/social-posts.html` or `js/social-archive.js`.
+- The current manifest omits several public/runtime files that clearly contain commercialization edits:
+  - `404.html`
+  - `assets/data/projects.json`
+  - `assets/data/resume.json`
+  - `assets/docs/Jason-Rae-Resume.pdf`
+  - `assets/images/og-image.svg`
+  - `js/decision-network.js`
+  - `js/portfolio.js`
+  - `portfolio/*.html`
+  - multiple legacy `blog/*.html` pages with CTA and branding normalization
+- There is a likely duplicate or migration conflict around the LLM workflows article:
+  - modified `blog/5-ways-gpt4-transforms-business-analytics.html`
+  - untracked `blog/5-ways-llm-workflows-transform-business-analytics.html`
+  - staging both without an explicit slug/canonical decision risks duplicate content and confusing internal links.
+- The lead-magnet wildcard in the manifest appears broader than the rendered public usage:
+  - public pages actively link the PDF assets
+  - the source `.md` files and helper `.html` variants look repo-useful, but not deploy-essential
+  - `assets/docs/AI-Vendor-Due-Diligence-Checklist.html` is included above because it matches the current manifest, but it should be reviewed before staging if the goal is a lean production deploy
+- `netlify.toml`, `.github/workflows/*`, `netlify/functions/*`, `package.json`, `package-lock.json`, `requirements-dev.txt`, and `phonebot/*` form a separate automation/voice track that is not approved by the current manifest.
+- `.netlify/state.json` and `scripts/__pycache__/*` are release-noise and should stay out of any staged set.
+
+## Recommended Release Scope
+
+- Strict release candidate for the current commercialization manifest:
+  - Stage every file in `Included Files`.
+  - Do not stage anything in `Excluded Files`.
+  - Leave `Needs-Human-Decision` untouched until explicitly resolved.
+- Default decisions I recommend before staging:
+  - Confirm whether runtime data and collateral belong in this release: `assets/data/projects.json`, `assets/data/resume.json`, `assets/docs/Jason-Rae-Resume.pdf`, `assets/images/og-image.svg`.
+  - Decide whether portfolio child pages and portfolio runtime JS should ship with `portfolio.html`; the current worktree strongly suggests they were edited as part of the same commercialization pass.
+  - Decide whether the legacy CTA-normalized blog pages are part of this release, or whether the manifest intentionally limits launch scope to the four new teaching pages plus blog index.
+  - Resolve the `5-ways-gpt4...` versus `5-ways-llm-workflows...` slug decision before staging either file.
+  - If the goal is a lean production deploy rather than a full repo release packet, consider trimming manifest-covered but non-essential collateral variants and stage the PDF lead magnets rather than every source/helper format.
+- Safe staging rule for another agent:
+  - Use a path-by-path stage list from `Included Files` only.
+  - Treat every path in `Needs-Human-Decision` as blocked until a human confirms `include` or `exclude`.
+  - Never bulk-stage the dirty worktree.

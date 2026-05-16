@@ -1,0 +1,84 @@
+JASON RAE
+Senior Data Analyst EMEA | Commercial Analytics Architect | Applied AI & Decision Intelligence
+Stuttgart, Germany | Jason_C_Rae@Outlook.com | jasonrae.ai | linkedin.com/in/jason-c-rae | github.com/JSunRae
+
+TARGET ROLE ALIGNMENT
+Director of Data Analytics | Head of Commercial Analytics | BI & AI Transformation Lead | Applied AI / Decision Intelligence
+
+EXECUTIVE PROFILE
+Commercial analytics and applied AI leader with 13+ years across sales leadership, EMEA analytics, pricing, forecasting, margin analysis, CRM governance, BI modernization and data transformation. Known for turning fragmented commercial data and inconsistent logic into trusted decision systems for Sales, Finance, BI, IT and executive stakeholders. Combines director-level commercial judgment with hands-on delivery in Power BI, Python, SQL, machine learning and LLM workflows.
+
+SELECTED IMPACT METRICS
+- 13+ years across commercial leadership, analytics and applied AI.
+- Delivered €3M sales growth versus an initial target of approximately €300k.
+- Generated €1.3M UK sales growth in 2023, approximately 4x target.
+- Turned around Inside Sales growth from 4% to 57% across 38 customer markets.
+- Grew territory revenue from $1.4M to $4.2M in two years.
+- Achieved 35% territory profitability, the highest in Australia.
+- Corrected 10+ years of FX reporting methodology errors.
+
+CORE SKILLS AND KEYWORDS
+Analytics Leadership: commercial analytics architecture, KPI governance, executive reporting, stakeholder management, decision systems, data quality, BI modernization.
+Technical Delivery: Power BI, Python, SQL, machine learning, LLM workflows, semantic search, automation, validation gates.
+Commercial Domains: forecasting, pricing intelligence, margin analysis, CRM analytics, incentive logic, sales analytics, customer lifecycle analytics.
+Transformation: cross-functional governance, process redesign, AI adoption, training, operating models, business review narratives.
+
+PROFESSIONAL EXPERIENCE
+
+Senior Data Analyst EMEA | Medline | Stuttgart, Germany | Jan 2026 - Present
+- Own EMEA commercial analytics across gross margin walks, pricing intelligence, forecasting, CRM analytics, opportunity identification and executive business reviews.
+- Build Power BI, Python, SQL, machine learning and LLM workflows that convert fragmented commercial data into auditable, decision-ready outputs.
+- Partner with Sales, Finance, BI, IT and leadership teams to improve margin visibility, forecast quality, pricing interpretation and commercial decision speed.
+- Translate complex commercial data into executive narratives connecting revenue, margin, price, volume, mix, FX and customer behavior.
+
+Senior Data Analyst Europe | Medline | Germany, Hybrid | Oct 2022 - Jan 2026
+- Delivered €1.3M UK sales growth in 2023, approximately 4x above target, by combining commercial execution, analytics and AI-enabled opportunity identification while reporting to the SVP Sales Europe.
+- Built Europe's contribution to a global AI initiative, designing a training model to develop AI consultants who bridge departments, translate business needs and accelerate adoption.
+- Corrected 10+ years of FX methodology errors and rebuilt Price / Volume / FX decomposition logic with correct interaction effects.
+- Designed an enterprise-grade bonus payment system and led cross-functional problem solving across Sales, Finance, BI and IT to improve trust in commercial performance data.
+
+Inside Sales Department Manager / BDM UK | Medline | Warrington, UK | Oct 2020 - Sep 2022
+- Launched a new UK Inside Sales department and delivered €3M sales growth versus an initial target of approximately €300k through data-driven segmentation, targeting and execution.
+- Built segmentation, market analysis, forecasting and backorder analytics to prioritize accounts, identify opportunities and guide sales strategy.
+- Identified 120 new distributors and secured 33 new accounts under pandemic and GDPR constraints.
+- Corrected costing discrepancies that led to double-digit cost-basis improvement and more accurate pricing decisions.
+
+Inside Sales Department Manager Australia | Medline | Kings Park, Australia | Nov 2016 - Sep 2020
+- Led a full operational turnaround of the Inside Sales division across 38 customer markets, increasing growth from 4% to 57%.
+- Architected a Customer Management System combining customer segmentation, workflow automation, sales reporting and structured data management.
+- Built scalable reporting frameworks that improved account visibility, customer prioritization, pipeline discipline and commercial accountability.
+- Transformed customer service staff into high-performing sales professionals through structured coaching, performance metrics and data-led account planning.
+
+Account Manager Australia NSW and ACT | Medline | Canberra, Australia | Jul 2014 - Oct 2016
+- Grew territory revenue from $1.4M to $4.2M in two years while achieving 35% profitability, the highest territory profitability in Australia.
+- Used account analysis, customer segmentation, pricing discipline and opportunity prioritization to drive profitable growth across NSW and ACT.
+- Recognized as Account Manager of the Year and earned two STAR Award trips for exceptional performance.
+
+Inside Sales Establishment / Manager Australia | Medline | Greater Sydney Area | May 2012 - Jun 2014
+- Pioneered the Inside Sales function for Australia, using customer analysis and market segmentation to identify growth opportunities and guide commercial strategy.
+- Built early reporting, pipeline tracking and performance-management processes to improve visibility for leadership.
+- Trained team members to adopt metrics-driven sales processes and structured customer management practices.
+
+Sales Coordinator | Belgravia Leisure | Greater Sydney Area | Dec 2010 - May 2012
+- Developed membership structures, sales reporting and campaign processes for the launch and operation of a new $20M Aquatic Centre.
+- Used customer and campaign data to support targeted promotions, membership acquisition, retention activity and reporting discipline.
+
+Pilot | Royal Australian Air Force | New South Wales, Australia | Jan 2005 - Sep 2008
+- Completed military pilot training in a high-performance environment requiring discipline, rapid learning, procedural accuracy and decision-making under pressure.
+- Developed systems thinking through aviation training, instrument interpretation, risk management and operational planning.
+
+SELECTED AI AND TECHNICAL PROOF OF WORK
+- ML research and governance platform: TensorFlow research system with experiment tracking, data-quality controls, candidate evaluation, rule-based promotion gates and controlled execution-path testing.
+- Document intelligence workflow: LLM-assisted retrieval and writing pipeline using semantic search, controlled patching, validation rules and DOCX export.
+- AI workflow orchestration and SaaS automation: Python-based agent coordination, task/status scoring, cost tracking, policy-monitoring automation, authentication, payments and end-to-end testing.
+
+EDUCATION
+Bachelor of Technology (Aviation), Australian Defence Force Academy (UNSW), 2008
+Honors: Commandant Commendation; Deputy Commandant Commendation x3
+
+CREDENTIALS
+Python | Machine Learning | Microsoft Excel | VBA | PSS Selling | The Challenger Sale
+
+LANGUAGES
+English: native | German: working proficiency
+

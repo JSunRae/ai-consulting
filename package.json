@@ -1,7 +1,7 @@
 {
   "name": "jason-rae-commercial-analytics",
   "version": "1.0.0",
-  "description": "Personal website and commercial analytics decision-systems consulting platform for Jason Rae - Senior Data Analyst EMEA, Commercial Analytics Architect, and Applied AI & Decision Intelligence Leader",
+  "description": "Personal website and commercial analytics decision-systems consulting platform for Jason Rae - Commercial Analytics & Applied AI Leader",
   "author": "Jason Rae",
   "license": "MIT",
   "homepage": "https://jasonrae.ai",
@@ -17,17 +17,33 @@
     "resume"
   ],
   "scripts": {
-    "start": "serve .",
+    "start": "serve site-dist",
     "dev": "live-server --port=3000",
-    "build": "python generate_portfolio_pages.py",
-    "deploy:gh-pages": "gh-pages -d .",
-    "deploy:netlify": "netlify deploy --prod"
+    "build": "python scripts/build_public_bundle.py",
+    "build:content": "python generate_portfolio_pages.py",
+    "check:js-syntax": "node scripts/check_js_syntax.mjs",
+    "check:python-compile": "python -m compileall -q scripts generate_portfolio_pages.py",
+    "check:release-scope": "python scripts/release_scope_check.py",
+    "social:draft": "python scripts/social_draft_pipeline.py",
+    "social:approve": "python scripts/social_archive_admin.py approve",
+    "social:publish": "python scripts/social_archive_admin.py publish",
+    "social:buffer": "python scripts/social_buffer_publish.py --publish --sync",
+    "social:import": "python scripts/social_archive_import.py",
+    "social:import:linkedin-md": "python scripts/import_linkedin_activity_markdown.py",
+    "social:import:linkedin-public": "python scripts/import_linkedin_public_activity_json.py",
+    "preflight": "python scripts/repo_preflight.py",
+    "test": "node --test tests/*.test.mjs",
+    "verify": "npm run preflight && npm run build && npm run check:python-compile && npm run check:js-syntax && npm test",
+    "deploy:gh-pages": "gh-pages -d site-dist",
+    "deploy:netlify": "netlify deploy --prod --dir=site-dist"
   },
   "devDependencies": {
-    "netlify-cli": "^17.34.1",
-    "live-server": "^1.2.2",
     "gh-pages": "^6.1.1",
+    "live-server": "^1.2.2",
+    "netlify-cli": "^17.34.1",
     "serve": "^14.2.3"
+  },
+  "dependencies": {
+    "@netlify/blobs": "^10.7.6"
   }
 }
-

@@ -1,0 +1,75 @@
+{
+  "feeds": [
+    {
+      "name": "OpenAI",
+      "url": "https://openai.com/news/rss.xml",
+      "weight": 1.0,
+      "tags": ["AI", "LLM"]
+    },
+    {
+      "name": "Anthropic",
+      "url": "https://www.anthropic.com/news/rss.xml",
+      "weight": 0.95,
+      "tags": ["AI", "Safety"]
+    },
+    {
+      "name": "Google DeepMind",
+      "url": "https://deepmind.google/discover/blog/rss.xml",
+      "weight": 0.9,
+      "tags": ["AI", "Research"]
+    },
+    {
+      "name": "Hugging Face",
+      "url": "https://huggingface.co/blog/feed.xml",
+      "weight": 0.85,
+      "tags": ["Open models", "ML"]
+    },
+    {
+      "name": "Databricks",
+      "url": "https://www.databricks.com/blog/feed",
+      "weight": 0.85,
+      "tags": ["Data", "AI"]
+    },
+    {
+      "name": "Snowflake",
+      "url": "https://www.snowflake.com/blog/feed/",
+      "weight": 0.8,
+      "tags": ["Data", "Analytics"]
+    },
+    {
+      "name": "VentureBeat AI",
+      "url": "https://venturebeat.com/category/ai/feed/",
+      "weight": 0.7,
+      "tags": ["News", "AI"]
+    }
+  ],
+  "evergreen": [
+    {
+      "slug": "forecast-discipline-is-a-behavior-problem-before-it-is-a-model-problem",
+      "title": "Forecast discipline is a behavior problem before it is a model problem",
+      "summary": "A point of view on why forecast quality usually breaks in stage discipline, ownership, and review rhythm before it breaks in math.",
+      "pillar": "Forecast governance",
+      "contentType": "evergreen",
+      "tags": ["Forecasting", "CRM", "Governance"],
+      "sourceBlogUrl": "/services.html"
+    },
+    {
+      "slug": "pricing-control-matters-more-than-pricing-theory-in-messy-markets",
+      "title": "Pricing control matters more than pricing theory in messy markets",
+      "summary": "A commercial analytics viewpoint about why discount control, attribution clarity, and operating discipline usually create more value than theoretical pricing sophistication.",
+      "pillar": "Pricing control",
+      "contentType": "evergreen",
+      "tags": ["Pricing", "Margin", "Commercial analytics"],
+      "sourceBlogUrl": "/services.html"
+    },
+    {
+      "slug": "trusted-kpis-start-with-governance-not-more-reporting",
+      "title": "Trusted KPIs start with governance, not more reporting",
+      "summary": "A leadership angle on why metric trust comes from ownership, definitions, and review logic before it comes from another dashboard layer.",
+      "pillar": "Decision governance",
+      "contentType": "evergreen",
+      "tags": ["KPIs", "Reporting", "Governance"],
+      "sourceBlogUrl": "/portfolio.html#commercial-analytics-foundation"
+    }
+  ]
+}

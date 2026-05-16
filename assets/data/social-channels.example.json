@@ -1,0 +1,9 @@
+{
+  "buffer": {
+    "organizationId": "optional-buffer-organization-id",
+    "channels": {
+      "LinkedIn": "buffer-linkedin-channel-id",
+      "X": "buffer-x-channel-id"
+    }
+  }
+}

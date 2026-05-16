@@ -1,23 +1,28 @@
 ﻿# Pre-Launch Setup Guide
 
-Use this guide when the real Formspree ID, final booking decision, LinkedIn partner ID, and final visual assets are ready.
+Use this guide for the remaining external launch tasks: booking choice, DNS cutover, optional tracking, and final visual assets.
 
 ## Pre-Launch Setup Checklist
 
-### Step 1: Formspree (Contact Form)
+### Step 0: Automation Secrets
 
-- Go to [https://formspree.io](https://formspree.io) and sign in.
-- Create a new form named `Jason Rae Commercial Analytics Health Check`.
-- Copy the form ID (the 8 characters after `/f/` in the form URL).
-- Open `js/forms.js` and replace `'xeqkyzoq'` with the real ID.
-- If newsletter signups should use a separate endpoint, update `FORMSPREE_ID_NEWSLETTER` too.
-- Test the form on `contact.html` locally.
+- If you implement the social-content workflow, start from `.env.example` at the repo root and create a local `.env` file.
+- Store the real `OPENAI_API_KEY` only in `.env` locally or in your scheduler / hosting provider secret store.
+- Do not place live keys in HTML, client-side JavaScript, or `assets/data/*.json` because this site is static and public.
+- Keep `SOCIAL_AUTO_POST_ENABLED=false` until the quality gate and approval flow are proven.
+
+### Step 1: Formspree (Already Live)
+
+- The live Formspree ID is already wired into `js/forms.js`.
+- Contact and newsletter submissions currently share the same live endpoint.
+- If newsletter signups should use a separate endpoint later, update `FORMSPREE_ID_NEWSLETTER` only.
+- Keep a real test submission in Formspree as part of post-deploy verification.
 
 ### Step 2: Calendly
 
 - Go to [https://calendly.com](https://calendly.com) and sign in.
 - Claim or replace the placeholder handle `jason-rae-ai-consulting`.
-- Create an event type named `Commercial Analytics Health Check` (30 min).
+- Create an event type named `Commercial Analytics Diagnostic Review` (30 min).
 - If direct booking should be enabled, replace the scheduling-request CTA in `contact.html` with the live Calendly URL.
 - If booking should stay email-led, leave the current scheduling-request flow in place.
 
@@ -44,11 +49,12 @@ Use this guide when the real Formspree ID, final booking decision, LinkedIn part
 - Publish directory: `.`
 - Add the custom domain `jasonrae.ai` in Netlify.
 - In Cloudflare DNS, create the apex record as either:
-	- flattened `CNAME` / `ALIAS` for `jasonrae.ai` -> `apex-loadbalancer.netlify.com`, or
-	- fallback `A` record for `jasonrae.ai` -> `75.2.60.5`
+  - flattened `CNAME` / `ALIAS` for `jasonrae.ai` -> `apex-loadbalancer.netlify.com`, or
+  - fallback `A` record for `jasonrae.ai` -> `75.2.60.5`
 - In Cloudflare DNS, create `CNAME` for `www` -> `jasonrae-ai.netlify.app`.
 - If Cloudflare proxying causes validation trouble during initial setup, temporarily use DNS-only until Netlify verifies the domain, then re-enable proxying if desired.
 - Keep `jasonrae.ai` as the canonical production hostname across the site metadata.
+- If Netlify Scheduled Functions or another hosted workflow is used later, set the same secret values there instead of committing them.
 
 ### Step 6: Post-Deploy Verification
 

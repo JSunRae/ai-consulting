@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Vendor Due Diligence Checklist</title>
+    <style>
+      @page {
+        size: A4;
+        margin: 16mm;
+      }
+
+      :root {
+        --ink: #142033;
+        --muted: #5a6575;
+        --line: #d7deea;
+        --panel: #f5f7fb;
+        --accent: #0f6c7a;
+        --accent-soft: #dff4f7;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        color: var(--ink);
+        line-height: 1.45;
+        background: #ffffff;
+      }
+
+      .cover,
+      .page {
+        width: 100%;
+      }
+
+      .cover {
+        min-height: calc(297mm - 32mm);
+        padding: 14mm;
+        border: 1px solid var(--line);
+        background: linear-gradient(165deg, #eef4fb 0%, #ffffff 48%, #eef7f5 100%);
+      }
+
+      .eyebrow {
+        display: inline-block;
+        padding: 5px 10px;
+        border-radius: 999px;
+        background: var(--accent-soft);
+        color: var(--accent);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 18px 0 12px;
+        font-size: 34px;
+        line-height: 1.08;
+      }
+
+      h2 {
+        margin: 0 0 8px;
+        font-size: 20px;
+      }
+
+      h3 {
+        margin: 0 0 6px;
+        font-size: 15px;
+      }
+
+      p {
+        margin: 0 0 10px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .lead {
+        max-width: 560px;
+        font-size: 15px;
+        color: var(--ink);
+      }
+
+      .meta {
+        margin-top: 18px;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .meta-card,
+      .panel {
+        padding: 12px;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.88);
+      }
+
+      .meta-card strong,
+      .panel strong,
+      .section strong {
+        color: var(--ink);
+      }
+
+      .page {
+        page-break-before: always;
+      }
+
+      .section {
+        margin-top: 18px;
+        padding: 14px;
+        border: 1px solid var(--line);
+        background: #ffffff;
+      }
+
+      .section-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      ul {
+        margin: 8px 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      li {
+        position: relative;
+        margin-bottom: 7px;
+        padding-left: 22px;
+        font-size: 12.5px;
+        color: var(--ink);
+      }
+
+      li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 1px;
+        width: 12px;
+        height: 12px;
+        border: 1.4px solid #7f8da3;
+        border-radius: 3px;
+      }
+
+      .footer-note {
+        margin-top: 16px;
+        padding: 12px;
+        background: var(--panel);
+        border-left: 4px solid var(--accent);
+      }
+
+      .decision-grid {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .decision-grid div {
+        padding: 12px 10px;
+        border: 1px solid var(--line);
+        text-align: center;
+        font-size: 12px;
+        font-weight: 700;
+        color: var(--ink);
+      }
+
+      .small {
+        font-size: 11.5px;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="cover">
+      <span class="eyebrow">Buyer Aid</span>
+      <h1>AI Vendor Due Diligence Checklist</h1>
+      <p class="lead">
+        Use this before you approve a pilot, sign a contract, or let an AI tool into a live workflow.
+        The goal is not to admire the demo. The goal is to understand what you are actually buying,
+        where the risk sits, and whether the workflow can absorb it.
+      </p>
+
+      <div class="meta">
+        <div class="meta-card">
+          <strong>Best for</strong>
+          <p>Leadership, finance, BI, procurement, and operations teams evaluating AI software.</p>
+        </div>
+        <div class="meta-card">
+          <strong>Use when</strong>
+          <p>A vendor pitch is moving faster than the commercial, security, or workflow questions.</p>
+        </div>
+        <div class="meta-card">
+          <strong>Prepared by</strong>
+          <p>Jason Rae<br />Commercial Analytics & Applied AI Leader</p>
+        </div>
+      </div>
+
+      <div class="section" style="margin-top: 22px;">
+        <h2>How to use this checklist</h2>
+        <p>
+          Use the sections below in architecture review, procurement, finance sign-off, or pilot-governance meetings.
+          If key answers remain vague, the buying process is probably moving too early.
+        </p>
+      </div>
+    </section>
+
+    <section class="page">
+      <div class="section-grid">
+        <section class="section">
+          <h3>1. Commercial fit</h3>
+          <ul>
+            <li>What business decision or workflow should improve?</li>
+            <li>What problem makes this worth solving now?</li>
+            <li>Which business metric should move if it works?</li>
+            <li>Who owns the result after go-live?</li>
+          </ul>
+        </section>
+
+        <section class="section">
+          <h3>2. Product architecture</h3>
+          <ul>
+            <li>Is it fine-tuned, retrieval-based, prompt-orchestrated, or mostly a wrapper?</li>
+            <li>Which model providers sit underneath the product?</li>
+            <li>What proprietary logic belongs to the vendor?</li>
+            <li>What happens when the model is uncertain or wrong?</li>
+          </ul>
+        </section>
+
+        <section class="section">
+          <h3>3. Data flow and security</h3>
+          <ul>
+            <li>Where does user input go?</li>
+            <li>Is company data sent to a third-party provider?</li>
+            <li>Are prompts or outputs logged or stored?</li>
+            <li>Is any layer using your data for training?</li>
+            <li>Which subprocessors are involved?</li>
+            <li>Where is the data hosted geographically?</li>
+          </ul>
+        </section>
+
+        <section class="section">
+          <h3>4. Permissions and governance</h3>
+          <ul>
+            <li>Does the system respect document-level and role-level permissions?</li>
+            <li>Can it retrieve information users should not see?</li>
+            <li>Can risky actions be blocked, escalated, or reversed?</li>
+            <li>Does it support auditability after an incident?</li>
+          </ul>
+        </section>
+
+        <section class="section">
+          <h3>5. Output reliability</h3>
+          <ul>
+            <li>Does the system cite sources when it answers from company knowledge?</li>
+            <li>Are the citations actually grounded?</li>
+            <li>What are the known failure modes?</li>
+            <li>What abstention or escalation mechanisms exist?</li>
+            <li>How much human review still remains per trusted output?</li>
+          </ul>
+        </section>
+
+        <section class="section">
+          <h3>6. Workflow fit</h3>
+          <ul>
+            <li>Is the workflow stable enough to automate safely?</li>
+            <li>What exception rate exists today?</li>
+            <li>Will the tool remove work or shift work into cleanup?</li>
+            <li>What approvals, handoffs, and ownership changes are required?</li>
+            <li>Which systems must it integrate with?</li>
+          </ul>
+        </section>
+
+        <section class="section">
+          <h3>7. Cost and scalability</h3>
+          <ul>
+            <li>What is the license cost?</li>
+            <li>What usage-based costs sit underneath it?</li>
+            <li>What happens at real production volume?</li>
+            <li>Have retries, long context windows, and heavy document loads been modeled?</li>
+            <li>What support and monitoring burden remains internally?</li>
+          </ul>
+        </section>
+
+        <section class="section">
+          <h3>8. Build vs buy</h3>
+          <ul>
+            <li>Is the workflow generic enough for off-the-shelf software?</li>
+            <li>Is tighter internal control safer than a vendor layer?</li>
+            <li>Would a lean API workflow solve the problem more cleanly?</li>
+            <li>What is the switching cost if the tool underperforms?</li>
+          </ul>
+        </section>
+      </div>
+
+      <section class="section">
+        <h2>9. Go / no-go gate</h2>
+        <div class="decision-grid">
+          <div>Proceed now</div>
+          <div>Proceed with controls</div>
+          <div>Run a contained pilot</div>
+          <div>Re-scope before buying</div>
+          <div>Reject</div>
+        </div>
+      </section>
+
+      <div class="footer-note">
+        <strong>Final test:</strong>
+        <p class="small" style="margin-top: 6px;">
+          If the vendor cannot explain what the system really is, where your data goes, how it fails,
+          what it costs at scale, and why the workflow can absorb it, you are probably not ready to buy.
+        </p>
+      </div>
+    </section>
+  </body>
+</html>

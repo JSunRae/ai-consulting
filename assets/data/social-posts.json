@@ -1,0 +1,1156 @@
+{
+  "updatedAt": "2026-05-12T18:49:09.491361Z",
+  "archiveScope": [
+    "historical imports",
+    "approved drafts",
+    "scheduled posts",
+    "published URLs",
+    "launch-ready LinkedIn sequence"
+  ],
+  "workflow": {
+    "timezone": "Europe/Berlin",
+    "morningResearchTime": "06:30",
+    "approvalMode": "Manual review first, auto-post only after quality thresholds are proven",
+    "postingPolicy": "Prioritize worthwhile news; fall back to evergreen commercial analytics and applied AI viewpoints when the news cycle is weak",
+    "runtime": "GitHub Actions",
+    "draftPipeline": "OpenAI draft generation -> approval artifact -> archive sync",
+    "autoPostEnabled": false
+  },
+  "archiveNotes": [
+    "Historical LinkedIn activity is partially backfilled already; deeper LinkedIn history and X history are still pending.",
+    "Published social URLs should be written back into each record after posting succeeds.",
+    "Morning draft runs generate a private approval artifact and only sync high-enough scoring drafts into the public archive.",
+    "Public LinkedIn recent activity backfill now supplements saved HTML imports when public item pages are reachable.",
+    "Structured markdown exports can now be imported directly into the social archive.",
+    "Launch-ready posts now store CTA routing, commercial intent, and suggested schedule on the archive record itself.",
+    "Email nurture, advanced campaign measurement, and stakeholder-specific landing pages remain deferred in this phase."
+  ],
+  "channels": {
+    "linkedin": "https://www.linkedin.com/in/jason-c-rae/",
+    "x": "https://x.com/JSunRae"
+  },
+  "posts": [
+    {
+      "id": "launch-01-before-you-buy-ai-software-ask-what-you-are-buying",
+      "title": "Before you buy AI software, ask what you are actually buying",
+      "summary": "Launch-priority Challenger post for software-selection conversations. Designed to create demand for vendor diligence and build-vs-buy advisory.",
+      "status": "ready",
+      "launchWave": "linkedin-launch-q2-2026",
+      "launchPriority": 1,
+      "pillar": "AI software diligence",
+      "contentType": "evergreen",
+      "preparedDate": "2026-05-09",
+      "sourceBlogUrl": "/blog/ai-vendor-due-diligence-checklist.html",
+      "targetPageUrl": "/assets/docs/AI-Vendor-Due-Diligence-Checklist.pdf",
+      "ctaType": "download-checklist",
+      "commercialIntent": "lead-magnet",
+      "offerAlignment": "AI Vendor Due Diligence Checklist",
+      "schedule": {
+        "status": "planned",
+        "timezone": "Europe/Berlin",
+        "platforms": [
+          {
+            "name": "LinkedIn",
+            "route": "manual",
+            "suggestedAt": "2026-05-14T08:15:00+02:00"
+          }
+        ]
+      },
+      "tags": [
+        "AI software",
+        "Vendor diligence",
+        "Build vs buy"
+      ],
+      "platforms": [
+        {
+          "name": "LinkedIn",
+          "status": "ready",
+          "copy": "Before you buy AI software, ask what you are actually buying.\n\nNot all \u201cAI products\u201d are the same.\n\nSome are:\n- fine-tuned for a narrow behavior\n- retrieval-based on top of your documents\n- orchestration layers around a major model\n- thin wrappers around an API call\n\nThose differences matter.\n\nThey affect:\n- where your data goes\n- how permissions are handled\n- what happens when the model fails\n- what the usage cost looks like at scale\n- whether the product creates any durable advantage at all\n\nThe demo usually shows the best-case answer.\n\nThe buying decision should focus on the operating reality around the answer.\n\nIf the vendor cannot explain architecture, failure modes, logging, permissions, and production cost clearly, the product may not be ready for a serious workflow."
+        }
+      ]
+    },
+    {
+      "id": "launch-02-start-with-avoidable-contacts-not-support-headcount",
+      "title": "Wanting to reduce customer-service headcount? Start with avoidable contacts",
+      "summary": "Customer-service AI reframe aimed at support leaders, operations leaders, and cost-reduction conversations.",
+      "status": "ready",
+      "launchWave": "linkedin-launch-q2-2026",
+      "launchPriority": 2,
+      "pillar": "Customer service AI",
+      "contentType": "evergreen",
+      "preparedDate": "2026-05-09",
+      "sourceBlogUrl": "/blog/customer-service-ai-checklist-before-chatbot.html",
+      "targetPageUrl": "/blog/customer-service-ai-checklist-before-chatbot.html",
+      "ctaType": "read-guide",
+      "commercialIntent": "education-to-diagnostic",
+      "offerAlignment": "Customer Service AI Workflow Guide",
+      "schedule": {
+        "status": "planned",
+        "timezone": "Europe/Berlin",
+        "platforms": [
+          {
+            "name": "LinkedIn",
+            "route": "manual",
+            "suggestedAt": "2026-05-19T08:15:00+02:00"
+          }
+        ]
+      },
+      "tags": [
+        "Customer service AI",
+        "Workflow design",
+        "Operations"
+      ],
+      "platforms": [
+        {
+          "name": "LinkedIn",
+          "status": "ready",
+          "copy": "Wanting to reduce customer-service headcount with AI?\n\nStart with a harder question:\n\nWhy are customers contacting support in the first place?\n\nIf the ticket volume is driven by:\n- unclear invoices\n- weak onboarding\n- poor product documentation\n- missing order visibility\n- messy escalation rules\n\nthen a chatbot may automate the symptom before you fix the cause.\n\nThat can lower visible cost on first contact while increasing repeat contacts, frustration, and cleanup work behind the scenes.\n\nThe safer first move is often:\n1. classify ticket demand\n2. identify avoidable contacts\n3. improve internal knowledge access\n4. design escalation properly\n5. then automate the right interactions\n\nA chatbot is not a customer-service strategy."
+        }
+      ]
+    },
+    {
+      "id": "launch-03-fine-tuned-does-not-automatically-mean-better",
+      "title": "Fine-tuned does not automatically mean better",
+      "summary": "Architecture-education post that helps prospects evaluate vendor claims without drowning them in technical detail.",
+      "status": "ready",
+      "launchWave": "linkedin-launch-q2-2026",
+      "launchPriority": 3,
+      "pillar": "AI architecture",
+      "contentType": "evergreen",
+      "preparedDate": "2026-05-09",
+      "sourceBlogUrl": "/blog/ai-vendor-due-diligence-checklist.html",
+      "targetPageUrl": "/assets/docs/AI-Vendor-Due-Diligence-Checklist.pdf",
+      "ctaType": "download-checklist",
+      "commercialIntent": "lead-magnet",
+      "offerAlignment": "AI Vendor Due Diligence Checklist",
+      "schedule": {
+        "status": "planned",
+        "timezone": "Europe/Berlin",
+        "platforms": [
+          {
+            "name": "LinkedIn",
+            "route": "manual",
+            "suggestedAt": "2026-05-21T08:15:00+02:00"
+          }
+        ]
+      },
+      "tags": [
+        "Fine-tuning",
+        "RAG",
+        "AI architecture"
+      ],
+      "platforms": [
+        {
+          "name": "LinkedIn",
+          "status": "ready",
+          "copy": "\u201cFine-tuned\u201d does not automatically mean better.\n\nBuyers hear the phrase and assume the product must be more specialized.\n\nSometimes that is true.\n\nBut in many business workflows, the real question is not whether the model was fine-tuned.\n\nIt is:\n- what information the system can retrieve\n- whether that information is current\n- whether permissions are respected\n- how the system behaves when the answer is unclear\n\nIf the challenge is company-specific knowledge, retrieval quality and data hygiene may matter more than fine-tuning.\n\nThe model is only one part of the product.\n\nFor real commercial use, the surrounding system design usually matters more than the label in the pitch deck."
+        }
+      ]
+    },
+    {
+      "id": "launch-04-ai-savings-are-theoretical-until-roles-change",
+      "title": "AI savings are often theoretical until roles change",
+      "summary": "CFO-safe productivity and ROI post designed to challenge shallow labor-savings assumptions.",
+      "status": "ready",
+      "launchWave": "linkedin-launch-q2-2026",
+      "launchPriority": 4,
+      "pillar": "AI ROI",
+      "contentType": "evergreen",
+      "preparedDate": "2026-05-09",
+      "sourceBlogUrl": "/blog/ai-cost-reduction-reality-check.html",
+      "targetPageUrl": "/contact.html?service=diagnostic-review&source=linkedin-launch&source_path=%2Flinkedin-launch&offer=diagnostic-review&cta=Start%20Diagnostic%20Review&section=linkedin-launch",
+      "ctaType": "start-diagnostic-review",
+      "commercialIntent": "diagnostic",
+      "offerAlignment": "Commercial Analytics Diagnostic Review",
+      "schedule": {
+        "status": "planned",
+        "timezone": "Europe/Berlin",
+        "platforms": [
+          {
+            "name": "LinkedIn",
+            "route": "manual",
+            "suggestedAt": "2026-05-26T08:15:00+02:00"
+          }
+        ]
+      },
+      "tags": [
+        "AI ROI",
+        "Headcount",
+        "Productivity"
+      ],
+      "platforms": [
+        {
+          "name": "LinkedIn",
+          "status": "ready",
+          "copy": "AI savings are often theoretical until roles change.\n\nA team can save 20 minutes here and 15 minutes there and still produce no real financial benefit.\n\nWhy?\n\nBecause time savings do not automatically become cost savings.\n\nUnless management decides how the capacity will be captured, AI may create convenience without changing the operating model.\n\nThat is why I ask three questions early:\n1. Which tasks disappear?\n2. Which new review tasks appear?\n3. Who owns the benefit after the workflow changes?\n\nIf nobody can answer those clearly, the ROI case is probably still optimistic rather than commercial."
+        }
+      ]
+    },
+    {
+      "id": "launch-05-the-cheapest-ai-tool-can-be-the-most-expensive",
+      "title": "The cheapest AI tool can be the most expensive one",
+      "summary": "Procurement-oriented post focused on hidden operating cost, review burden, and trusted output economics.",
+      "status": "ready",
+      "launchWave": "linkedin-launch-q2-2026",
+      "launchPriority": 5,
+      "pillar": "AI procurement",
+      "contentType": "evergreen",
+      "preparedDate": "2026-05-09",
+      "sourceBlogUrl": "/blog/ai-vendor-due-diligence-checklist.html",
+      "targetPageUrl": "/assets/docs/AI-Vendor-Due-Diligence-Checklist.pdf",
+      "ctaType": "download-checklist",
+      "commercialIntent": "lead-magnet",
+      "offerAlignment": "AI Vendor Due Diligence Checklist",
+      "schedule": {
+        "status": "planned",
+        "timezone": "Europe/Berlin",
+        "platforms": [
+          {
+            "name": "LinkedIn",
+            "route": "manual",
+            "suggestedAt": "2026-05-28T08:15:00+02:00"
+          }
+        ]
+      },
+      "tags": [
+        "AI procurement",
+        "Total cost of ownership",
+        "Trusted output"
+      ],
+      "platforms": [
+        {
+          "name": "LinkedIn",
+          "status": "ready",
+          "copy": "The cheapest AI tool can be the most expensive one.\n\nLicence cost is only part of the picture.\n\nThe real cost is often hidden in:\n- human review time\n- escalation cleanup\n- integration work\n- exception handling\n- compliance controls\n- poor answers that sound confident\n\nThat is why cost per licence is a weak buying metric.\n\nThe better question is:\n\nWhat is the cost per trusted output?\n\nA cheaper tool that creates constant checking, rework, and risk can destroy the business case quietly."
+        }
+      ]
+    },
+    {
+      "id": "launch-06-if-ai-cannot-help-your-team-first-do-not-put-it-in-front-of-customers",
+      "title": "If the AI cannot help your own team first, do not put it in front of customers",
+      "summary": "Internal-first customer-service AI post designed to steer automation conversations toward lower-risk workflow learning and diagnostic work.",
+      "status": "ready",
+      "launchWave": "linkedin-launch-q2-2026",
+      "launchPriority": 6,
+      "pillar": "Customer service AI",
+      "contentType": "evergreen",
+      "preparedDate": "2026-05-12",
+      "sourceBlogUrl": "/blog/customer-service-ai-checklist-before-chatbot.html",
+      "targetPageUrl": "/contact.html?service=diagnostic-review&source=linkedin-launch&source_path=%2Flinkedin-launch&offer=diagnostic-review&cta=Start%20Diagnostic%20Review&section=linkedin-launch",
+      "ctaType": "start-diagnostic-review",
+      "commercialIntent": "diagnostic",
+      "offerAlignment": "Commercial Analytics Diagnostic Review",
+      "schedule": {
+        "status": "planned",
+        "timezone": "Europe/Berlin",
+        "platforms": [
+          {
+            "name": "LinkedIn",
+            "route": "manual",
+            "suggestedAt": "2026-06-02T08:15:00+02:00"
+          }
+        ]
+      },
+      "tags": [
+        "Customer service AI",
+        "Internal copilots",
+        "Workflow design"
+      ],
+      "platforms": [
+        {
+          "name": "LinkedIn",
+          "status": "ready",
+          "copy": "If the AI cannot help your own trained team first, do not put it in front of customers.\n\nThat sounds strict, but it is useful discipline.\n\nAn internal copilot lets you learn:\n- where the knowledge base is weak\n- where escalation rules fail\n- which prompts create risk\n- where staff still need evidence or traceability\n\nThat is a much safer learning environment than a public-facing bot.\n\nCustomer-facing AI should come after the business understands where the system is helpful, where it is fragile, and where a human needs to step in."
+        }
+      ]
+    },
+    {
+      "id": "launch-07-the-model-name-tells-you-less-than-you-think",
+      "title": "The model name tells you less than you think",
+      "summary": "Authority-building architecture post that reinforces why workflow design and controls matter more than model branding in enterprise buying.",
+      "status": "ready",
+      "launchWave": "linkedin-launch-q2-2026",
+      "launchPriority": 7,
+      "pillar": "AI architecture",
+      "contentType": "evergreen",
+      "preparedDate": "2026-05-12",
+      "sourceBlogUrl": "/blog/ai-vendor-due-diligence-checklist.html",
+      "targetPageUrl": "/assets/docs/AI-Vendor-Due-Diligence-Checklist.pdf",
+      "ctaType": "download-checklist",
+      "commercialIntent": "authority-builder",
+      "offerAlignment": "AI Vendor Due Diligence Checklist",
+      "schedule": {
+        "status": "planned",
+        "timezone": "Europe/Berlin",
+        "platforms": [
+          {
+            "name": "LinkedIn",
+            "route": "manual",
+            "suggestedAt": "2026-06-04T08:15:00+02:00"
+          }
+        ]
+      },
+      "tags": [
+        "AI architecture",
+        "Enterprise buying",
+        "System design"
+      ],
+      "platforms": [
+        {
+          "name": "LinkedIn",
+          "status": "ready",
+          "copy": "The model name tells you less than you think.\n\nTwo vendors can use the same underlying model and produce very different outcomes.\n\nWhy?\n\nBecause enterprise value usually sits in the surrounding system:\n- retrieval quality\n- permissions\n- logging\n- UX\n- validation\n- escalation\n- workflow fit\n\nBuyers often anchor on 'it uses GPT' or 'it uses Claude.'\n\nThat is too shallow.\n\nThe model matters.\n\nBut the system around the model is where most of the operational value or risk actually lives."
+        }
+      ]
+    },
+    {
+      "id": "launch-08-do-not-start-with-a-chatbot-start-with-the-decision",
+      "title": "Do not start with a chatbot. Start with the decision",
+      "summary": "Broad Challenger positioning post that redirects automation conversations from tool selection toward business decision quality and diagnostic work.",
+      "status": "ready",
+      "launchWave": "linkedin-launch-q2-2026",
+      "launchPriority": 8,
+      "pillar": "Decision-first AI",
+      "contentType": "evergreen",
+      "preparedDate": "2026-05-12",
+      "sourceBlogUrl": "/blog/customer-service-ai-checklist-before-chatbot.html",
+      "targetPageUrl": "/contact.html?service=diagnostic-review&source=linkedin-launch&source_path=%2Flinkedin-launch&offer=diagnostic-review&cta=Start%20Diagnostic%20Review&section=linkedin-launch",
+      "ctaType": "start-diagnostic-review",
+      "commercialIntent": "diagnostic",
+      "offerAlignment": "Commercial Analytics Diagnostic Review",
+      "schedule": {
+        "status": "planned",
+        "timezone": "Europe/Berlin",
+        "platforms": [
+          {
+            "name": "LinkedIn",
+            "route": "manual",
+            "suggestedAt": "2026-06-09T08:15:00+02:00"
+          }
+        ]
+      },
+      "tags": [
+        "Decision systems",
+        "Workflow design",
+        "AI strategy"
+      ],
+      "platforms": [
+        {
+          "name": "LinkedIn",
+          "status": "ready",
+          "copy": "Do not start with a chatbot.\n\nStart with the decision you want to improve.\n\nThat might be:\n- faster support resolution\n- cleaner pricing exceptions\n- fewer forecast surprises\n- better account prioritization\n- faster executive reporting\n\nOnce the decision is clear, the rest becomes much easier to judge:\n- what data is needed\n- what level of AI is appropriate\n- what should stay human\n- what good performance looks like\n\nTool-first projects drift because success was never defined properly.\n\nDecision-first projects usually find the right level of automation much faster."
+        }
+      ]
+    },
+    {
+      "id": "launch-09-review-burden-kills-more-ai-roi-than-most-teams-admit",
+      "title": "Review burden kills more AI ROI than most teams admit",
+      "summary": "Operational ROI post that moves AI value conversations away from demo output toward trusted effort and review cost.",
+      "status": "ready",
+      "launchWave": "linkedin-launch-q2-2026",
+      "launchPriority": 9,
+      "pillar": "AI ROI",
+      "contentType": "evergreen",
+      "preparedDate": "2026-05-12",
+      "sourceBlogUrl": "/blog/ai-cost-reduction-reality-check.html",
+      "targetPageUrl": "/contact.html?service=diagnostic-review&source=linkedin-launch&source_path=%2Flinkedin-launch&offer=diagnostic-review&cta=Start%20Diagnostic%20Review&section=linkedin-launch",
+      "ctaType": "start-diagnostic-review",
+      "commercialIntent": "diagnostic",
+      "offerAlignment": "Commercial Analytics Diagnostic Review",
+      "schedule": {
+        "status": "planned",
+        "timezone": "Europe/Berlin",
+        "platforms": [
+          {
+            "name": "LinkedIn",
+            "route": "manual",
+            "suggestedAt": "2026-06-11T08:15:00+02:00"
+          }
+        ]
+      },
+      "tags": [
+        "AI ROI",
+        "Review burden",
+        "Trusted effort"
+      ],
+      "platforms": [
+        {
+          "name": "LinkedIn",
+          "status": "ready",
+          "copy": "Review burden kills more AI ROI than most teams admit.\n\nWhen an AI system produces a result that still needs heavy checking, the business has not removed work.\n\nIt has changed the shape of work.\n\nThat is not always bad.\n\nBut it needs to be measured honestly.\n\nIf every output still requires:\n- fact checking\n- approval\n- source tracing\n- exception handling\n\nthen the labour case may be much weaker than the demo suggests.\n\nGood AI design is not only about generating outputs.\n\nIt is about reducing trusted effort."
+        }
+      ]
+    },
+    {
+      "id": "launch-10-a-good-ai-vendor-should-explain-how-the-system-fails",
+      "title": "A good AI vendor should explain how the system fails",
+      "summary": "Closing vendor-diligence post for the first launch wave. Designed to convert buying curiosity into a concrete diligence conversation.",
+      "status": "ready",
+      "launchWave": "linkedin-launch-q2-2026",
+      "launchPriority": 10,
+      "pillar": "AI software diligence",
+      "contentType": "evergreen",
+      "preparedDate": "2026-05-12",
+      "sourceBlogUrl": "/blog/ai-vendor-due-diligence-checklist.html",
+      "targetPageUrl": "/contact.html?service=vendor-diligence&source=linkedin-launch&source_path=%2Flinkedin-launch&offer=vendor-diligence&cta=Book%20Fit%20Call&section=linkedin-launch",
+      "ctaType": "book-fit-call",
+      "commercialIntent": "vendor-diligence",
+      "offerAlignment": "AI Software & Vendor Due Diligence",
+      "schedule": {
+        "status": "planned",
+        "timezone": "Europe/Berlin",
+        "platforms": [
+          {
+            "name": "LinkedIn",
+            "route": "manual",
+            "suggestedAt": "2026-06-16T08:15:00+02:00"
+          }
+        ]
+      },
+      "tags": [
+        "Vendor diligence",
+        "AI risk",
+        "Failure modes"
+      ],
+      "platforms": [
+        {
+          "name": "LinkedIn",
+          "status": "ready",
+          "copy": "A good AI vendor should explain how the system fails.\n\nThe demo shows success cases.\n\nThe buying conversation should test failure cases.\n\nAsk:\n- when does the system abstain?\n- when does it escalate?\n- what happens when data is missing?\n- how are permissions enforced?\n- what gets logged?\n- how do we audit a bad answer later?\n\nIf the vendor cannot answer those clearly, the product may not be ready for a critical business workflow.\n\nThe most dangerous AI output is not the one that crashes.\n\nIt is the one that sounds right, gets trusted, and quietly drives the wrong action."
+        }
+      ]
+    },
+    {
+      "id": "ai-adoption-starts-with-workflow-not-theater",
+      "title": "AI adoption starts with workflow fixes, not theater",
+      "summary": "An evergreen thought-leadership angle built from the enterprise AI adoption article. Suitable when the news cycle is weak and the goal is to reinforce Jason's operating model for commercial teams.",
+      "status": "ready",
+      "pillar": "AI adoption",
+      "contentType": "evergreen",
+      "preparedDate": "2026-05-07",
+      "sourceBlogUrl": "/blog/enterprise-ai-adoption-commercial-analytics.html",
+      "tags": [
+        "AI adoption",
+        "Commercial teams",
+        "Enablement"
+      ],
+      "platforms": [
+        {
+          "name": "LinkedIn",
+          "status": "ready",
+          "copy": "Most enterprise AI rollouts fail for a simple reason: they start with tools instead of workflows.\n\nCommercial teams do not need another demo. They need 3 things: a painful decision bottleneck, cleaner operating logic, and a repeatable habit that saves time in the real week.\n\nThat is why I prefer starting with forecasting, pricing, margin, CRM governance, and executive reporting before chasing broad AI adoption narratives. Fix the data and decision path first. Then layer AI where it compounds.\n\nIf the workflow is still broken, the model just helps you fail faster."
+        },
+        {
+          "name": "X",
+          "status": "ready",
+          "copy": "Enterprise AI adoption usually fails because it starts with tools, not workflows.\n\nStart with one broken commercial decision loop: forecasting, pricing, margin, CRM, or reporting.\n\nFix the logic. Build the habit. Then add AI where it compounds.\n\nIf the workflow is broken, the model just helps you fail faster."
+        }
+      ]
+    },
+    {
+      "id": "deterministic-llm-systems-beat-clever-demos",
+      "title": "Deterministic LLM systems beat clever demos",
+      "summary": "A build-capability post that translates Jason's production AI engineering point of view into short-form copy for both channels.",
+      "status": "ready",
+      "pillar": "Applied AI engineering",
+      "contentType": "evergreen",
+      "preparedDate": "2026-05-07",
+      "sourceBlogUrl": "/blog/deterministic-llm-programming-production-ai.html",
+      "tags": [
+        "LLM systems",
+        "Reliability",
+        "Production AI"
+      ],
+      "platforms": [
+        {
+          "name": "LinkedIn",
+          "status": "ready",
+          "copy": "The difference between an impressive LLM demo and a production AI system is usually not the model. It is the operating discipline around it.\n\nI trust LLM software when it has typed outputs, validation layers, observability, rollback-safe writes, and clear failure paths.\n\nThat is the difference between 'it answered well in the meeting' and 'it still works next month when the inputs get ugly.'\n\nApplied AI leadership is not just prompt quality. It is how reliably you can turn messy language into governed business action."
+        },
+        {
+          "name": "X",
+          "status": "ready",
+          "copy": "A good LLM demo is easy. A reliable LLM system is engineering.\n\nThings I care about more than prompt cleverness:\n- typed outputs\n- validation layers\n- observability\n- rollback-safe writes\n- explicit failure paths\n\nThat is how AI survives messy real-world inputs."
+        }
+      ]
+    },
+    {
+      "id": "ai-roi-needs-cfo-grade-metrics",
+      "title": "AI ROI needs CFO-grade metrics, not optimism",
+      "summary": "A finance-safe narrative for Jason's commercial analytics audience. Best used when AI funding conversations dominate the news but few teams can show true business impact.",
+      "status": "ready",
+      "pillar": "Commercial analytics",
+      "contentType": "evergreen",
+      "preparedDate": "2026-05-07",
+      "sourceBlogUrl": "/blog/how-to-evaluate-ai-projects-roi.html",
+      "tags": [
+        "AI ROI",
+        "Decision systems",
+        "Finance"
+      ],
+      "platforms": [
+        {
+          "name": "LinkedIn",
+          "status": "ready",
+          "copy": "If an AI project cannot survive CFO-level scrutiny, it is not ready for scale.\n\nI look for 5 things when evaluating AI ROI:\n1. Time saved in a real workflow\n2. Error reduction in decision logic\n3. Incremental revenue or margin impact\n4. Adoption consistency across teams\n5. Ongoing operating cost, not just pilot cost\n\nToo many teams still report AI success like a demo day. Commercial leaders need evidence that holds up in budgeting, forecasting, and execution."
+        },
+        {
+          "name": "X",
+          "status": "ready",
+          "copy": "AI ROI is not 'people liked the pilot.'\n\nIt is workflow time saved, errors removed, margin or revenue impact, adoption consistency, and full operating cost.\n\nIf the ROI case would not survive a CFO review, it is probably not an ROI case yet."
+        }
+      ]
+    },
+    {
+      "id": "broken-pl-logic-destroys-good-decisions",
+      "title": "Broken P&L logic destroys good decisions",
+      "summary": "A short-form commercial analytics post based on the P&L attribution article. Useful for reinforcing Jason's differentiation around logic fixes and governed metrics.",
+      "status": "queue",
+      "pillar": "Decision governance",
+      "contentType": "evergreen",
+      "preparedDate": "2026-05-07",
+      "sourceBlogUrl": "/blog/pl-attribution-fx-errors-data-analytics.html",
+      "tags": [
+        "P&L attribution",
+        "FX",
+        "Governance"
+      ],
+      "platforms": [
+        {
+          "name": "LinkedIn",
+          "status": "draft",
+          "copy": "A surprising amount of commercial reporting is directionally wrong because the bridge logic underneath it was never challenged properly.\n\nPrice, volume, mix, FX, and interaction effects sound technical until they distort a market decision, a bonus conversation, or a board narrative.\n\nOne of the highest-value analytics moves is not a new dashboard. It is correcting the logic that leadership has been trusting for years."
+        },
+        {
+          "name": "X",
+          "status": "draft",
+          "copy": "Some of the biggest analytics wins are invisible.\n\nNot a new dashboard. Not a new model.\n\nJust fixing broken price-volume-FX logic that leaders have trusted for years.\n\nBad decision logic scales quietly until someone audits the math."
+        }
+      ]
+    },
+    {
+      "id": "reporting-noise-is-a-commercial-cost",
+      "title": "Reporting noise is a commercial cost",
+      "summary": "A case-study style post derived from the report reduction article. Useful for positioning Jason as someone who reduces complexity before adding more tooling.",
+      "status": "queue",
+      "pillar": "Workflow simplification",
+      "contentType": "case-study",
+      "preparedDate": "2026-05-07",
+      "sourceBlogUrl": "/blog/reducing-report-volume-95-percent-case-study.html",
+      "tags": [
+        "Reporting",
+        "Automation",
+        "Commercial focus"
+      ],
+      "platforms": [
+        {
+          "name": "LinkedIn",
+          "status": "draft",
+          "copy": "Too many analytics teams are buried under reporting volume that no longer serves a real decision.\n\nWhen reporting sprawl takes over, leaders stop trusting the outputs, analysts stop focusing on the highest-value questions, and operational noise becomes normalized.\n\nOne of the fastest routes to commercial impact is often subtraction: retire duplication, simplify the metric layer, and make the remaining insights sharper."
+        },
+        {
+          "name": "X",
+          "status": "draft",
+          "copy": "Reporting volume is not proof of analytical maturity. Often it is proof of drift.\n\nCut duplication. Rebuild the metric layer. Make fewer outputs matter more.\n\nNoise is a commercial cost."
+        }
+      ]
+    },
+    {
+      "id": "linkedin-activity-7458621764030349312",
+      "title": "The next important AI skill is not just prompting.",
+      "summary": "The next important AI skill is not just prompting. It is process design. As AI tools move from answering questions to executing workflows, the value shifts. A good AI workflow needs: - clear inputs - clear business ru...",
+      "status": "published",
+      "pillar": "Applied AI strategy",
+      "contentType": "historical",
+      "preparedDate": "2026-05-08",
+      "publishedDate": "2026-05-08",
+      "captureSource": "saved-linkedin-activity-html",
+      "sourceSavedHtml": "Activity _ Jason Rae _ LinkedIn.html",
+      "relativeAgeAtCapture": "18h",
+      "capturedImpressions": 58,
+      "tags": [
+        "Workflow design",
+        "Forecasting"
+      ],
+      "platforms": [
+        {
+          "name": "LinkedIn",
+          "status": "published",
+          "copy": "The next important AI skill is not just prompting.\n\nIt is process design.\n\nAs AI tools move from answering questions to executing workflows, the value shifts.\n\nA good AI workflow needs:\n\n- clear inputs\n- clear business rules\n- clear approval points\n- clear error handling\n- clear success metrics\n- clear ownership\n\nThis matters more than the model demo.\n\nIn forecasting, for example, the workflow might be:\n\n1. Pull current CRM opportunities\n2. Check stage quality\n3. Compare against historical conversion\n4. Identify missing losses\n5. Explain variance\n6. Draft the management narrative\n7. Flag where human review is required\n\nThat is not just a chatbot.\n\nThat is a decision process with AI inside it.\n\nThe companies that win with AI will not be the ones with the most tools.\n\nThey will be the ones that redesign work around clear decisions.",
+          "url": "https://www.linkedin.com/feed/update/urn:li:activity:7458621764030349312/",
+          "publishedAt": "2026-05-08"
+        }
+      ]
+    },
+    {
+      "id": "linkedin-activity-7458048277473689600",
+      "title": "A large customer is not automatically a good sales target.",
+      "summary": "A large customer is not automatically a good sales target. That sounds obvious. But many target lists still start with size: Largest customers. Largest hospitals. Largest regions. Largest historical spend. The better...",
+      "status": "published",
+      "pillar": "Commercial analytics",
+      "contentType": "historical",
+      "preparedDate": "2026-05-07",
+      "publishedDate": "2026-05-07",
+      "captureSource": "saved-linkedin-activity-html",
+      "sourceSavedHtml": "Activity _ Jason Rae _ LinkedIn.html",
+      "relativeAgeAtCapture": "2d",
+      "capturedImpressions": 160,
+      "tags": [
+        "Customer targeting",
+        "Commercial analytics"
+      ],
+      "platforms": [
+        {
+          "name": "LinkedIn",
+          "status": "published",
+          "copy": "A large customer is not automatically a good sales target.\n\nThat sounds obvious.\n\nBut many target lists still start with size:\n\nLargest customers.\nLargest hospitals.\nLargest regions.\nLargest historical spend.\n\nThe better question is:\n\nWhat does this customer actually buy?\n\nAnd then:\n\nWhat do similar customers buy that this customer does not?\n\nThat is where buying-pattern analytics becomes powerful.\n\nA useful model can identify:\n\n- customers with similar purchasing behavior\n- products commonly bought together\n- category gaps\n- underpenetrated accounts\n- likely next-best products\n- margin-relevant opportunities\n- customers worth a sales conversation\n\nThe output should not be:\n\n\u201cThis customer has potential.\u201d\n\nThe output should be:\n\n\u201cThis customer buys A and B. Similar customers also buy C and D. The missing category has value, the pattern is credible, and the next commercial action is clear.\u201d\n\nThat is the difference between a list and a decision system.\n\nCommercial analytics should not just describe the business.\n\nIt should help the business decide where to act next.",
+          "url": "https://www.linkedin.com/feed/update/urn:li:activity:7458048277473689600/",
+          "publishedAt": "2026-05-07"
+        }
+      ]
+    },
+    {
+      "id": "linkedin-activity-7456960847223910400",
+      "title": "If an analyst came to me with a market sizing model based mainly on hospital bed count...",
+      "summary": "If an analyst came to me with a market sizing model based mainly on hospital bed count, I would not tell them to throw it away. But I would tell them not to stop there. Bed count can be a useful starting point, but it...",
+      "status": "published",
+      "pillar": "Forecasting",
+      "contentType": "historical",
+      "preparedDate": "2026-05-04",
+      "publishedDate": "2026-05-04",
+      "captureSource": "saved-linkedin-activity-html",
+      "sourceSavedHtml": "Activity _ Jason Rae _ LinkedIn.html",
+      "relativeAgeAtCapture": "5d",
+      "capturedImpressions": 293,
+      "tags": [
+        "Customer targeting",
+        "Commercial analytics"
+      ],
+      "platforms": [
+        {
+          "name": "LinkedIn",
+          "status": "published",
+          "copy": "If an analyst came to me with a market sizing model based mainly on hospital bed count, I would not tell them to throw it away.\n\nBut I would tell them not to stop there.\n\nBed count can be a useful starting point, but it should not become the main proxy for customer opportunity.\n\nMy first question would be:\n\nWhat does our own customer data already tell us?\n\nBefore asking the sales force to collect more external data, I would start with the buying patterns we already have.\n\nWhich products are bought together?\nWhich categories usually appear in mature accounts?\nWhich accounts are missing products that similar customers already buy?\nWhich customers behave like peers, even if their bed counts are different?\nWhich segments show repeatable patterns of adoption, expansion, or under-penetration?\n\nFrom there, I would build a customer buying-pattern matrix.\n\nNot just customer size.\n\nCustomer behaviour.\n\nThat matrix could show:\n\n* current product penetration\n* category combinations\n* product gaps\n* account maturity\n* peer-group similarity\n* cross-sell potential\n* historical buying progression\n* unusual underperformance versus comparable customers\n\nThen I would use machine learning to classify customers into peer groups based on actual purchasing behaviour.\n\nBecause the best comparison is not always:\n\n\u201cWhich hospitals have the same number of beds?\u201d\n\nIt is often:\n\n\u201cWhich customers behave similarly, and what do the stronger-performing peers buy that this customer does not?\u201d\n\nThat gives sales a much more practical view of opportunity.\n\nNot a generic market estimate.\n\nA targeted account strategy.\n\nBed count may tell you the theoretical size of a customer.\n\nBuying patterns tell you how that customer actually behaves.\n\nAnd good commercial analytics should always move the business closer to action.",
+          "url": "https://www.linkedin.com/feed/update/urn:li:activity:7456960847223910400/",
+          "publishedAt": "2026-05-04"
+        }
+      ]
+    },
+    {
+      "id": "linkedin-activity-7455148978335072257",
+      "title": "AI agents are being marketed as digital workers.",
+      "summary": "AI agents are being marketed as digital workers. That sounds powerful. But inside a real business, the hard question is not: \u201cCan the agent do the task?\u201d The harder questions are: - Does it know the business rule? - D...",
+      "status": "published",
+      "pillar": "Applied AI strategy",
+      "contentType": "historical",
+      "preparedDate": "2026-05-02",
+      "publishedDate": "2026-05-02",
+      "captureSource": "saved-linkedin-activity-html",
+      "sourceSavedHtml": "Activity _ Jason Rae _ LinkedIn.html",
+      "relativeAgeAtCapture": "1w",
+      "capturedImpressions": 131,
+      "tags": [
+        "AI agents",
+        "Workflow design",
+        "Forecasting",
+        "Commercial analytics"
+      ],
+      "platforms": [
+        {
+          "name": "LinkedIn",
+          "status": "published",
+          "copy": "AI agents are being marketed as digital workers.\n\nThat sounds powerful.\n\nBut inside a real business, the hard question is not:\n\n\u201cCan the agent do the task?\u201d\n\nThe harder questions are:\n\n- Does it know the business rule?\n- Does it have the right data?\n- Who approves the output?\n- What happens when the source data is wrong?\n- Can we audit what it did?\n- Can we measure whether the decision improved?\n\nThis is especially important in commercial analytics.\n\nAn agent that summarizes a forecast is useful.\n\nAn agent that explains why the forecast changed, checks CRM quality, compares sales-cycle assumptions, flags missing opportunities and prepares an executive-ready narrative is much more valuable.\n\nBut only if the workflow is designed properly.\n\nThe future is not just \u201cAI agents everywhere.\u201d\n\nThe future is governed, measurable agents embedded into real decision processes.",
+          "url": "https://www.linkedin.com/feed/update/urn:li:activity:7455148978335072257/",
+          "publishedAt": "2026-05-02"
+        }
+      ]
+    },
+    {
+      "id": "linkedin-activity-7454786751375671296",
+      "title": "\u201cJust throw the documents into Copilot.\u201d",
+      "summary": "\u201cJust throw the documents into Copilot.\u201d I hear this a lot. And it makes me nervous. Not because Copilot or similar AI tools are not useful. They are very useful. But uploading documents and asking for a summary is no...",
+      "status": "published",
+      "pillar": "Applied AI governance",
+      "contentType": "historical",
+      "preparedDate": "2026-05-02",
+      "publishedDate": "2026-05-02",
+      "captureSource": "saved-linkedin-activity-html",
+      "sourceSavedHtml": "Activity _ Jason Rae _ LinkedIn.html",
+      "relativeAgeAtCapture": "1w",
+      "capturedImpressions": 384,
+      "tags": [
+        "Customer targeting",
+        "Forecasting",
+        "Copilot"
+      ],
+      "platforms": [
+        {
+          "name": "LinkedIn",
+          "status": "published",
+          "copy": "\u201cJust throw the documents into Copilot.\u201d\n\nI hear this a lot.\n\nAnd it makes me nervous.\n\nNot because Copilot or similar AI tools are not useful.\n\nThey are very useful.\n\nBut uploading documents and asking for a summary is not the same as doing analysis.\n\nEspecially when the output includes:\n\n- numbers\n- percentages\n- financial claims\n- customer trends\n- forecast movements\n- pricing changes\n- margin explanations\n- executive recommendations\n\nA fluent summary can sound right even when the underlying logic is wrong.\n\nThat matters.\n\nBecause with numbers, the risk is not just linguistic.\n\nIt is analytical.\n\nIf AI says \u201csales declined by 3.7% because of churn,\u201d that is not just a sentence.\n\nIt is a claim.\n\nAnd claims need evidence.\n\nThe best thing you can do when using AI on business documents is force it to prove its work:\n\n- quote the source\n- show the calculation\n- list the documents used\n- separate fact from inference\n- flag uncertainty\n- identify missing data\n- show where numbers came from\n- explain what it did not check\n\nAI should not just produce an answer.\n\nIt should produce an auditable path to the answer.\n\nThat is the difference between using AI as a writing assistant and using AI as part of a decision system.",
+          "url": "https://www.linkedin.com/feed/update/urn:li:activity:7454786751375671296/",
+          "publishedAt": "2026-05-02"
+        }
+      ]
+    },
+    {
+      "id": "linkedin-activity-7454424268743966720",
+      "title": "Most companies do not have an AI problem.",
+      "summary": "Most companies do not have an AI problem. They have a decision-system problem. The dashboard exists. The CRM exists. The forecast exists. The pricing file exists. The margin report exists. But the logic underneath is...",
+      "status": "published",
+      "pillar": "Applied AI strategy",
+      "contentType": "historical",
+      "preparedDate": "2026-05-02",
+      "publishedDate": "2026-05-02",
+      "captureSource": "saved-linkedin-activity-html",
+      "sourceSavedHtml": "Activity _ Jason Rae _ LinkedIn.html",
+      "relativeAgeAtCapture": "1w",
+      "capturedImpressions": 434,
+      "tags": [
+        "Customer targeting",
+        "Forecasting",
+        "Decision systems",
+        "Commercial analytics"
+      ],
+      "platforms": [
+        {
+          "name": "LinkedIn",
+          "status": "published",
+          "copy": "Most companies do not have an AI problem.\n\nThey have a decision-system problem.\n\nThe dashboard exists.\nThe CRM exists.\nThe forecast exists.\nThe pricing file exists.\nThe margin report exists.\n\nBut the logic underneath is often fragmented.\n\nSales has one view.\nFinance has another.\nBI is trying to reconcile both.\nLeadership wants a simple answer.\nThe customer reality is more complex than the reporting structure.\n\nThis is where commercial analytics should add value.\n\nNot by creating more dashboards.\n\nBut by connecting the logic between:\n\n- customer behavior\n- product usage\n- pricing\n- margin\n- forecast quality\n- CRM discipline\n- sales capacity\n- executive decisions\n\nAI can help accelerate this.\n\nBut only after the commercial logic is clear.\n\nThe real work is not just building a model.\n\nIt is making sure the model improves the decision.",
+          "url": "https://www.linkedin.com/feed/update/urn:li:activity:7454424268743966720/",
+          "publishedAt": "2026-05-02"
+        }
+      ]
+    },
+    {
+      "id": "linkedin-activity-7425086130791825408",
+      "title": "\u201cCan AI suggest the best price for a sales rep?\u201d",
+      "summary": "\u201cCan AI suggest the best price for a sales rep?\u201d It sounds like a simple question. It\u2019s not. In fact, it\u2019s one of the most complex problems you can give an AI team \u2014 not because of the model, but because of the decisi...",
+      "status": "published",
+      "pillar": "Pricing",
+      "contentType": "historical",
+      "preparedDate": "2026-02-08",
+      "publishedDate": "2026-02-08",
+      "captureSource": "saved-linkedin-activity-html",
+      "sourceSavedHtml": "Activity _ Jason Rae _ LinkedIn.html",
+      "relativeAgeAtCapture": "3mo",
+      "capturedImpressions": 233,
+      "tags": [
+        "Pricing",
+        "Customer targeting"
+      ],
+      "platforms": [
+        {
+          "name": "LinkedIn",
+          "status": "published",
+          "copy": "\u201cCan AI suggest the best price for a sales rep?\u201d\n\nIt sounds like a simple question.\nIt\u2019s not.\n\nIn fact, it\u2019s one of the most complex problems you can give an AI team \u2014 not because of the model, but because of the decisions hiding underneath it.\n\nBefore a single line of code, leaders need to be explicit about things like:\n\u2022 Are we optimizing for margin, revenue, volume, or retention?\n\u2022 Is success defined at deal level, customer level, or portfolio level?\n\u2022 How much price risk is acceptable \u2014 and where?\n\u2022 Do we want consistency across reps, or controlled flexibility?\n\u2022 What happens when a rep disagrees with the recommendation?\n\nIf those questions aren\u2019t answered, the AI won\u2019t be wrong.\n\nIt will be misaligned.\n\nAnd misaligned pricing models don\u2019t fail dramatically.\nThey quietly shift behavior \u2014 eroding margins, distorting incentives, and creating false confidence.\n\nThis is where many AI initiatives struggle.\n\nLeaders ask:\n\u201cCan AI tell reps what price to sell at?\u201d\n\nStronger leaders ask:\n\u2022 \u201cWhat decision do we actually want to improve?\u201d\n\u2022 \u201cWhere should AI guide, and where should humans decide?\u201d\n\u2022 \u201cWhat does a good decision look like under uncertainty?\u201d\n\u2022 \u201cHow will we detect when the model is no longer helping?\u201d\n\nThe best pricing systems don\u2019t output a single number.\n\nThey offer:\n\u2022 Price ranges, not absolutes\n\u2022 Risk signals, not instructions\n\u2022 Context, not commands\n\u2022 Continuous feedback loops, not static rules\n\nAI doesn\u2019t set the price.\n\nIt shapes the decision environment around the person who does.\n\nAnd when leaders frame the problem this way, pricing stops being an AI experiment \u2014 and becomes a durable competitive advantage.",
+          "url": "https://www.linkedin.com/feed/update/urn:li:activity:7425086130791825408/",
+          "publishedAt": "2026-02-08"
+        }
+      ]
+    },
+    {
+      "id": "linkedin-activity-7424731002192797696",
+      "title": "Most people treat AI like a smarter Google.",
+      "summary": "Most people treat AI like a smarter Google. That\u2019s not where the leverage is. The real value appears when you use it as a thinking partner: \u2022 You bring context \u2022 You bring constraints \u2022 You challenge the output \u2022 You...",
+      "status": "published",
+      "pillar": "LinkedIn thought leadership",
+      "contentType": "historical",
+      "preparedDate": "2026-02-08",
+      "publishedDate": "2026-02-08",
+      "captureSource": "saved-linkedin-activity-html",
+      "sourceSavedHtml": "Activity _ Jason Rae _ LinkedIn.html",
+      "relativeAgeAtCapture": "3mo",
+      "capturedImpressions": 282,
+      "tags": [
+        "LinkedIn import"
+      ],
+      "platforms": [
+        {
+          "name": "LinkedIn",
+          "status": "published",
+          "copy": "Most people treat AI like a smarter Google.\n\nThat\u2019s not where the leverage is.\n\nThe real value appears when you use it as a thinking partner:\n\u2022 You bring context\n\u2022 You bring constraints\n\u2022 You challenge the output\n\u2022 You decide what survives\n\nWithout that, you don\u2019t get intelligence \u2014 you get fluent noise.\n\nAI doesn\u2019t make people smarter.\nIt amplifies how they already think.\n\nWhich is why the gap between \u201cAI access\u201d and \u201cAI advantage\u201d keeps growing.",
+          "url": "https://www.linkedin.com/feed/update/urn:li:activity:7424731002192797696/",
+          "publishedAt": "2026-02-08"
+        }
+      ]
+    },
+    {
+      "id": "linkedin-activity-7424361502737948672",
+      "title": "A pattern I keep seeing with AI software purchases:",
+      "summary": "A pattern I keep seeing with AI software purchases: Companies buy capability before they assess fit. An AI model that looks impressive in a demo can quietly fail in production if: \u2022 It wasn\u2019t trained on similar data \u2022...",
+      "status": "published",
+      "pillar": "Pricing",
+      "contentType": "historical",
+      "preparedDate": "2026-02-08",
+      "publishedDate": "2026-02-08",
+      "captureSource": "saved-linkedin-activity-html",
+      "sourceSavedHtml": "Activity _ Jason Rae _ LinkedIn.html",
+      "relativeAgeAtCapture": "3mo",
+      "capturedImpressions": 190,
+      "tags": [
+        "Pricing",
+        "Customer targeting",
+        "Forecasting"
+      ],
+      "platforms": [
+        {
+          "name": "LinkedIn",
+          "status": "published",
+          "copy": "A pattern I keep seeing with AI software purchases:\n\nCompanies buy capability\nbefore they assess fit.\n\nAn AI model that looks impressive in a demo can quietly fail in production if:\n\u2022 It wasn\u2019t trained on similar data\n\u2022 The data distribution shifts\n\u2022 The edge cases matter (they usually do)\n\u2022 No one internally can stress-test the assumptions\n\nThat\u2019s not an AI problem.\nThat\u2019s a governance and ownership problem.\n\nWhat often gets missed is that the real opportunity isn\u2019t in large, generic models at all.\n\nIt\u2019s in small, bespoke models that sit directly inside your own data flows:\n\n\u2022 Price suggestions and margin-risk flags\n\u2022 Forecasting ranges instead of point estimates\n\u2022 Early warning signals when markets move faster than margins\n\u2022 Customer grouping based on buying behavior (no manual segmentation)\n\u2022 Customer-at-risk detection before churn appears in KPIs\n\u2022 Backorder and supply-stress flagging before it hits revenue\n\nThese models don\u2019t need hype.\nThey need context, feedback, and ownership.\n\nAI works best when:\n\u2022 The data is yours\n\u2022 The decision boundary is clear\n\u2022 The outcome is measurable\n\u2022 Humans remain accountable\n\nBuying AI without the right people to assess it is like buying a race car without a driver.\n\nPowerful.\nExpensive.\nAnd very easy to crash.\n\nThe teams getting real value from AI aren\u2019t asking \u201cWhat tool should we buy?\u201d",
+          "url": "https://www.linkedin.com/feed/update/urn:li:activity:7424361502737948672/",
+          "publishedAt": "2026-02-08"
+        }
+      ]
+    },
+    {
+      "id": "linkedin-repost-7455660300327862273",
+      "title": "Jason reposted: Bringing teams together across EMEA always gives a clearer view of where we stand,\u00a0and...",
+      "summary": "Repost from Herv\u00e9 Million. Bringing teams together across EMEA always gives a clearer view of where we stand, and where we\u2019re heading. During the last two weeks, we had Quarter Business Review sessions with all our regions. The discussions show...",
+      "status": "published",
+      "pillar": "LinkedIn repost",
+      "contentType": "historical-repost",
+      "preparedDate": "2026-05-09",
+      "publishedDate": "2026-05-09",
+      "captureSource": "saved-linkedin-activity-html",
+      "sourceSavedHtml": "Activity _ Jason Rae _ LinkedIn.html",
+      "relativeAgeAtCapture": "",
+      "sourceAuthor": "Herv\u00e9 Million",
+      "sourceAuthorSlug": "herve-million",
+      "tags": [
+        "LinkedIn repost"
+      ],
+      "platforms": [
+        {
+          "name": "LinkedIn",
+          "status": "published",
+          "copy": "Bringing teams together across EMEA always gives a clearer view of where we stand,\u00a0and where\u00a0we\u2019re\u00a0heading. During the last two weeks,\u00a0we had\u00a0Quarter Business Review\u00a0sessions with all our regions. The discussions showed that while markets differ, many of the challenges and priorities are shared. The focus\u00a0remains\u00a0on making healthcare systems work better for those delivering care.\u00a0\u00a0 We aligned on the next quarter and challenged our plans against what teams are seeing on the ground. A clear direction, and a lot to work on.#MedlineEurope",
+          "url": "https://www.linkedin.com/feed/update/urn:li:activity:7455660300327862273/",
+          "publishedAt": "2026-05-09"
+        }
+      ]
+    },
+    {
+      "id": "linkedin-activity-7424003432828551168",
+      "title": "One thing I\u2019ve learned using AI heavily: There are many things it\u2019s bad at, and pretend...",
+      "summary": "One thing I\u2019ve learned using AI heavily: There are many things it\u2019s bad at, and pretending otherwise slows teams down. I don\u2019t use AI to: \u2022 Decide strategy \u2022 Resolve ambiguity \u2022 Replace domain judgment \u2022 Make final ca...",
+      "status": "published",
+      "pillar": "LinkedIn thought leadership",
+      "contentType": "historical",
+      "preparedDate": "2026-02-08",
+      "publishedDate": "2026-02-08",
+      "captureSource": "public-linkedin-activity-page",
+      "sourcePage": "https://www.linkedin.com/in/jason-c-rae/recent-activity/all/",
+      "relativeAgeAtCapture": "3mo",
+      "activityType": "Posted by",
+      "tags": [
+        "Strategy"
+      ],
+      "platforms": [
+        {
+          "name": "LinkedIn",
+          "status": "published",
+          "copy": "One thing I\u2019ve learned using AI heavily: There are many things it\u2019s bad at, and pretending otherwise slows teams down. I don\u2019t use AI to: \u2022 Decide strategy \u2022 Resolve ambiguity \u2022 Replace domain judgment \u2022 Make final calls that carry accountability I do use it to: \u2022 Stress-test assumptions \u2022 Surface second-order effects \u2022 Explore edge cases quickly \u2022 Compress thinking cycles AI accelerates thinking. It doesn\u2019t own outcomes. The fastest teams aren\u2019t the ones using AI everywhere. They\u2019re the ones who know exactly where not to use it.",
+          "url": "https://www.linkedin.com/posts/jason-c-rae_one-thing-ive-learned-using-ai-heavily-activity-7424003432828551168-kjyf",
+          "publishedAt": "2026-02-08"
+        }
+      ]
+    },
+    {
+      "id": "linkedin-share-7421462085051764737",
+      "title": "Jason shared: This isn\u2019t \u201ctime spent chatting.\u201d It\u2019s deliberate use. Top 0.1% of users. ~10,000 messa...",
+      "summary": "This isn\u2019t \u201ctime spent chatting.\u201d It\u2019s deliberate use. Top 0.1% of users. ~10,000 messages. Hundreds of focused conversations. Very few images. Almost no fluff. What this really represents is how I use AI: \u2022 To think...",
+      "status": "published",
+      "pillar": "LinkedIn share",
+      "contentType": "historical-share",
+      "preparedDate": "2026-02-08",
+      "publishedDate": "2026-02-08",
+      "captureSource": "public-linkedin-activity-page",
+      "sourcePage": "https://www.linkedin.com/in/jason-c-rae/recent-activity/all/",
+      "relativeAgeAtCapture": "3mo",
+      "activityType": "Shared by",
+      "tags": [
+        "LinkedIn share"
+      ],
+      "platforms": [
+        {
+          "name": "LinkedIn",
+          "status": "published",
+          "copy": "This isn\u2019t \u201ctime spent chatting.\u201d It\u2019s deliberate use. Top 0.1% of users. ~10,000 messages. Hundreds of focused conversations. Very few images. Almost no fluff. What this really represents is how I use AI: \u2022 To think, not to replace thinking \u2022 To pressure-test ideas, not generate noise \u2022 To design systems, not chase prompts \u2022 To clarify strategy, architecture, and trade-offs \u2022 To move faster after I understand the problem Most AI usage today optimizes for novelty. Real value comes from alignment: objectives, constraints, and feedback loops. AI doesn\u2019t fail \u2014 objectives do. Reasoning is cheap. Integration is hard. Used properly, AI becomes a force multiplier for judgment, not a substitute for it. The gap between \u201cAI adoption\u201d and \u201cAI advantage\u201d is still very wide. And that gap is where the work is.",
+          "url": "https://www.linkedin.com/posts/jason-c-rae_this-isnt-time-spent-chatting-its-deliberate-activity-7421462085051764737-Y2Zx",
+          "publishedAt": "2026-02-08"
+        }
+      ]
+    },
+    {
+      "id": "linkedin-activity-7420012668457136129",
+      "title": "Most companies are adopting AI. Very few are integrating it. Adoption looks like: \u2022 add...",
+      "summary": "Most companies are adopting AI. Very few are integrating it. Adoption looks like: \u2022 adding an LLM to a workflow \u2022 building a chatbot \u2022 generating content faster \u2022 \u201cAI\u201d features bolted onto existing processes Integrati...",
+      "status": "published",
+      "pillar": "Applied AI strategy",
+      "contentType": "historical",
+      "preparedDate": "2026-02-08",
+      "publishedDate": "2026-02-08",
+      "captureSource": "public-linkedin-activity-page",
+      "sourcePage": "https://www.linkedin.com/in/jason-c-rae/recent-activity/all/",
+      "relativeAgeAtCapture": "3mo",
+      "activityType": "Posted by",
+      "tags": [
+        "Workflow design",
+        "Decision systems"
+      ],
+      "platforms": [
+        {
+          "name": "LinkedIn",
+          "status": "published",
+          "copy": "Most companies are adopting AI. Very few are integrating it. Adoption looks like: \u2022 adding an LLM to a workflow \u2022 building a chatbot \u2022 generating content faster \u2022 \u201cAI\u201d features bolted onto existing processes Integration looks like: \u2022 clear decision rights (who owns outcomes) \u2022 real feedback loops (what happens when it\u2019s wrong) \u2022 strong evaluation (not vibes-based demos) \u2022 the right model for the task (often not an LLM) \u2022 monitoring, drift detection, retraining or policy updates This is where people overestimate their understanding. They think AI projects are software launches. They\u2019re not. Software is deterministic. AI is probabilistic \u2014 and will shift as the world shifts. If you treat AI like normal software, you\u2019ll get a normal outcome: a clever pilot that never becomes reliable enough to matter.",
+          "url": "https://www.linkedin.com/posts/jason-c-rae_most-companies-are-adopting-ai-very-few-activity-7420012668457136129-fmxT",
+          "publishedAt": "2026-02-08"
+        }
+      ]
+    },
+    {
+      "id": "linkedin-activity-7419287810819440640",
+      "title": "We\u2019re entering a weird era where \u201creasoning\u201d is becoming cheap. You can buy impressive...",
+      "summary": "We\u2019re entering a weird era where \u201creasoning\u201d is becoming cheap. You can buy impressive reasoning output on demand. But alignment \u2014 getting systems to consistently serve the right intent in the real world \u2014 is still ha...",
+      "status": "published",
+      "pillar": "LinkedIn thought leadership",
+      "contentType": "historical",
+      "preparedDate": "2026-02-08",
+      "publishedDate": "2026-02-08",
+      "captureSource": "public-linkedin-activity-page",
+      "sourcePage": "https://www.linkedin.com/in/jason-c-rae/recent-activity/all/",
+      "relativeAgeAtCapture": "3mo",
+      "activityType": "Posted by",
+      "tags": [
+        "LinkedIn import"
+      ],
+      "platforms": [
+        {
+          "name": "LinkedIn",
+          "status": "published",
+          "copy": "We\u2019re entering a weird era where \u201creasoning\u201d is becoming cheap. You can buy impressive reasoning output on demand. But alignment \u2014 getting systems to consistently serve the right intent in the real world \u2014 is still hard. Because alignment isn\u2019t about cleverness. It\u2019s about: \u2022 incentives (loss/reward functions) \u2022 context (what \u201cgood\u201d means here) \u2022 constraints (safety, compliance, brand, risk) \u2022 feedback loops (how the system learns from outcomes) That\u2019s why many AI pilots look great in a sandbox, then fall apart in production. The capability is there. The integration isn\u2019t. If you want AI to work, stop asking \u201cCan it reason?\u201d Ask \u201cCan we define success, constrain it, and measure impact after deployment?\u201d",
+          "url": "https://www.linkedin.com/posts/jason-c-rae_were-entering-a-weird-era-where-reasoning-activity-7419287810819440640-t350",
+          "publishedAt": "2026-02-08"
+        }
+      ]
+    },
+    {
+      "id": "linkedin-like-7417880358676885504",
+      "title": "Jason liked: Excited to share that I have been appointed Vice President, Sales and Marketing EMEA at...",
+      "summary": "Excited to share that I have been appointed Vice President, Sales and Marketing EMEA at Medline. Over the past several years, I have had the opportunity to work closely with outstanding teams across Europe, the Middle...",
+      "status": "published",
+      "pillar": "LinkedIn like",
+      "contentType": "historical-like",
+      "preparedDate": "2026-02-08",
+      "publishedDate": "2026-02-08",
+      "captureSource": "public-linkedin-activity-page",
+      "sourcePage": "https://www.linkedin.com/in/jason-c-rae/recent-activity/all/",
+      "relativeAgeAtCapture": "3mo",
+      "activityType": "Liked by",
+      "tags": [
+        "LinkedIn like"
+      ],
+      "platforms": [
+        {
+          "name": "LinkedIn",
+          "status": "published",
+          "copy": "Excited to share that I have been appointed Vice President, Sales and Marketing EMEA at Medline. Over the past several years, I have had the opportunity to work closely with outstanding teams across Europe, the Middle East, and Africa. Most recently, as Vice President, Sales and General Manager MEA, I gained valuable experience across diverse markets and healthcare systems. This experience continues to shape my leadership approach. In this new role, I look forward to collaborating even more closely with our EMEA teams to strengthen our sales strategy, support sustainable growth, and remain responsive to the evolving needs of healthcare providers throughout the region. Thank you to the Medline leadership team for their trust and support, and to our teams across EMEA. I am excited about what we will achieve together. https://lnkd.in/eDWfMdK8",
+          "url": "https://www.linkedin.com/posts/antonio-garcia-paine-829b5a16_excited-to-share-that-i-have-been-appointed-activity-7417880358676885504-S-uQ",
+          "publishedAt": "2026-02-08"
+        }
+      ],
+      "sourceAuthor": "Antonio Garcia Paine"
+    },
+    {
+      "id": "linkedin-activity-7418200436056313856",
+      "title": "lot of \u201cAI failures\u201d aren\u2019t model failures. They\u2019re objective failures. Teams optimise...",
+      "summary": "lot of \u201cAI failures\u201d aren\u2019t model failures. They\u2019re objective failures. Teams optimise what\u2019s measurable: \u2022 accuracy \u2022 response time \u2022 click-through \u2022 cost reduction \u2026and then act surprised when the system produces: \u2022...",
+      "status": "published",
+      "pillar": "Commercial analytics",
+      "contentType": "historical",
+      "preparedDate": "2026-02-08",
+      "publishedDate": "2026-02-08",
+      "captureSource": "public-linkedin-activity-page",
+      "sourcePage": "https://www.linkedin.com/in/jason-c-rae/recent-activity/all/",
+      "relativeAgeAtCapture": "3mo",
+      "activityType": "Posted by",
+      "tags": [
+        "Decision systems"
+      ],
+      "platforms": [
+        {
+          "name": "LinkedIn",
+          "status": "published",
+          "copy": "lot of \u201cAI failures\u201d aren\u2019t model failures. They\u2019re objective failures. Teams optimise what\u2019s measurable: \u2022 accuracy \u2022 response time \u2022 click-through \u2022 cost reduction \u2026and then act surprised when the system produces: \u2022 confident nonsense \u2022 misaligned decisions \u2022 short-term wins and long-term damage That\u2019s not the AI being \u201cwrong.\u201d That\u2019s the AI doing exactly what you asked\u2014just not what you meant. In business, the real question isn\u2019t \u201cIs the model good?\u201d It\u2019s: \u2022 What is it rewarded for? \u2022 What constraints are explicit? \u2022 What trade-offs are encoded? (speed vs quality, growth vs margin, automation vs risk) Most people think they can assess AI projects by demo quality. Demos are theatre. AI success is usually determined before training starts \u2014 in the objective function, data definitions, and feedback loop design.",
+          "url": "https://www.linkedin.com/posts/jason-c-rae_lot-of-ai-failures-arent-model-failures-activity-7418200436056313856-EdAP",
+          "publishedAt": "2026-02-08"
+        }
+      ]
+    },
+    {
+      "id": "linkedin-like-7417188818790924288",
+      "title": "Jason liked: We have officially opened our new office in Riyadh, marking our first permanent presenc...",
+      "summary": "We have officially opened our new office in Riyadh, marking our first permanent presence in the Kingdom of Saudi Arabia and a major milestone for Medline in the region. Our new Riyadh office strengthens our ability to...",
+      "status": "published",
+      "pillar": "LinkedIn like",
+      "contentType": "historical-like",
+      "preparedDate": "2026-02-08",
+      "publishedDate": "2026-02-08",
+      "captureSource": "public-linkedin-activity-page",
+      "sourcePage": "https://www.linkedin.com/in/jason-c-rae/recent-activity/all/",
+      "relativeAgeAtCapture": "3mo",
+      "activityType": "Liked by",
+      "tags": [
+        "LinkedIn like"
+      ],
+      "platforms": [
+        {
+          "name": "LinkedIn",
+          "status": "published",
+          "copy": "We have officially opened our new office in Riyadh, marking our first permanent presence in the Kingdom of Saudi Arabia and a major milestone for Medline in the region. Our new Riyadh office strengthens our ability to support healthcare providers with faster response times, closer collaboration and on-the-ground expertise. The Riyadh team brings together colleagues across Management, Business Development, Product Management, Regulatory Affairs and Human Resources, with support available in both Arabic and English.",
+          "url": "https://www.linkedin.com/posts/medline-middle-east-africa_newoffice-medlinemea-newbeginings-activity-7417188818790924288-ua6v",
+          "publishedAt": "2026-02-08"
+        }
+      ],
+      "sourceAuthor": "Medline Middle East & Africa"
+    },
+    {
+      "id": "linkedin-activity-7416445899821780993",
+      "title": "Most people think \u201cAI\u201d means LLMs. That\u2019s like thinking \u201ctransport\u201d means planes. LLMs...",
+      "summary": "Most people think \u201cAI\u201d means LLMs. That\u2019s like thinking \u201ctransport\u201d means planes. LLMs are great at language-shaped work: \u2022 drafting, summarising, rewriting \u2022 search + synthesis (with sources) \u2022 turning messy human in...",
+      "status": "published",
+      "pillar": "Applied AI governance",
+      "contentType": "historical",
+      "preparedDate": "2026-02-08",
+      "publishedDate": "2026-02-08",
+      "captureSource": "public-linkedin-activity-page",
+      "sourcePage": "https://www.linkedin.com/in/jason-c-rae/recent-activity/all/",
+      "relativeAgeAtCapture": "3mo",
+      "activityType": "Posted by",
+      "tags": [
+        "Workflow design",
+        "Forecasting",
+        "Copilot",
+        "Decision systems",
+        "Strategy"
+      ],
+      "platforms": [
+        {
+          "name": "LinkedIn",
+          "status": "published",
+          "copy": "Most people think \u201cAI\u201d means LLMs. That\u2019s like thinking \u201ctransport\u201d means planes. LLMs are great at language-shaped work: \u2022 drafting, summarising, rewriting \u2022 search + synthesis (with sources) \u2022 turning messy human intent into structured outputs \u2022 copilots for analysis, coding, documentation But a huge chunk of business value still comes from non-LLM AI: \u2022 forecasting (time series, causal models) \u2022 propensity / churn (classification, uplift) \u2022 pricing (elasticity, constrained optimisation) \u2022 fraud / anomaly detection (statistical + ML) \u2022 recommendations (ranking, retrieval) \u2022 operations (OR, simulation, queuing, routing) Where AI tends to disappoint is where leaders think it\u2019s intelligent: \u2022 ownership of decisions \u2022 accountability \u2022 \u201cunderstanding\u201d strategy or nuance \u2022 high-stakes judgement without feedback loops If you want real ROI, stop asking \u201cWhich LLM?\u201d Start asking: \u201cWhich problem class is this?\u201d Because the best solution is often not an LLM \u2014 it\u2019s the right model + the right workflow + the right controls.",
+          "url": "https://www.linkedin.com/posts/jason-c-rae_most-people-think-ai-means-llms-that-activity-7416445899821780993-iC_M",
+          "publishedAt": "2026-02-08"
+        }
+      ]
+    },
+    {
+      "id": "linkedin-activity-7414939128456359936",
+      "title": "Why mistaking tools for intelligence is risky \u2014 especially in business The biggest risk...",
+      "summary": "Why mistaking tools for intelligence is risky \u2014 especially in business The biggest risk with modern AI in business isn\u2019t job replacement. It\u2019s misalignment. LLMs are powerful tools, but they don\u2019t understand your stra...",
+      "status": "published",
+      "pillar": "LinkedIn thought leadership",
+      "contentType": "historical",
+      "preparedDate": "2026-01-09",
+      "publishedDate": "2026-01-09",
+      "captureSource": "public-linkedin-activity-page",
+      "sourcePage": "https://www.linkedin.com/in/jason-c-rae/recent-activity/all/",
+      "relativeAgeAtCapture": "4mo",
+      "activityType": "Posted by",
+      "tags": [
+        "Decision systems",
+        "Strategy"
+      ],
+      "platforms": [
+        {
+          "name": "LinkedIn",
+          "status": "published",
+          "copy": "Why mistaking tools for intelligence is risky \u2014 especially in business The biggest risk with modern AI in business isn\u2019t job replacement. It\u2019s misalignment. LLMs are powerful tools, but they don\u2019t understand your strategy, your risk tolerance, or your downstream consequences. They optimize their objective function \u2014 not your desired outcomes. When we treat these systems as \u201cintelligent,\u201d we start: \u2022 delegating judgment instead of decisions \u2022 trusting outputs without validating incentives \u2022 assuming correctness where there is only optimization This is where business risk appears. Using AI well isn\u2019t about plugging in the most capable model. It\u2019s about using the right tool, in the right place, with the right loss/reward function. If the objective function doesn\u2019t encode what you actually care about: \u2022 profit vs growth \u2022 speed vs accuracy \u2022 exploration vs control the system will optimize the wrong thing \u2014 very efficiently. That doesn\u2019t mean the model failed. It means we misunderstood the tool. Real business intelligence comes from: \u2022 clear objectives \u2022 explicit constraints \u2022 human ownership of outcomes \u2022 continuous validation against real-world impact AI should amplify intent, not replace it. Until systems can understand consequences and adapt autonomously, the most important intelligence in the loop is still human.",
+          "url": "https://www.linkedin.com/posts/jason-c-rae_why-mistaking-tools-for-intelligence-is-risky-activity-7414939128456359936-ApAI",
+          "publishedAt": "2026-01-09"
+        }
+      ]
+    },
+    {
+      "id": "linkedin-share-7413836661110943744",
+      "title": "Jason shared: Is it really AI? Large Language Models are often labeled Artificial Intelligence. I thi...",
+      "summary": "Is it really AI? Large Language Models are often labeled Artificial Intelligence. I think that label is premature. What we mostly have today is the appearance of intelligence. LLMs can produce intelligent-looking outp...",
+      "status": "published",
+      "pillar": "LinkedIn share",
+      "contentType": "historical-share",
+      "preparedDate": "2026-01-09",
+      "publishedDate": "2026-01-09",
+      "captureSource": "public-linkedin-activity-page",
+      "sourcePage": "https://www.linkedin.com/in/jason-c-rae/recent-activity/all/",
+      "relativeAgeAtCapture": "4mo",
+      "activityType": "Shared by",
+      "tags": [
+        "LinkedIn share"
+      ],
+      "platforms": [
+        {
+          "name": "LinkedIn",
+          "status": "published",
+          "copy": "Is it really AI? Large Language Models are often labeled Artificial Intelligence. I think that label is premature. What we mostly have today is the appearance of intelligence. LLMs can produce intelligent-looking outputs, but they do not: \u2022 learn continuously from interaction \u2022 revise their internal models through experience \u2022 form goals or evaluate outcomes in the world What looks like learning is offline training plus inference over a fixed model. What looks like reasoning is pattern-based inference without understanding. What looks like decision-making is optimization without agency. So where is the line? Appearance of Intelligence - A system shows the appearance of intelligence when it: \u2022 generates outputs indistinguishable from intelligent behavior \u2022 adapts responses without adapting itself \u2022 performs reasoning-like tasks without autonomy or grounding \u2022 This is where LLMs sit today. Artificial Intelligence (proper) - A system earns the label Artificial Intelligence when it: \u2022 learns from interaction with its environment \u2022 updates its internal world model autonomously \u2022 evaluates outcomes and corrects itself \u2022 pursues goals beyond a single prompt or session \u2022 At this point, intelligence is no longer just simulated \u2014 it is implemented. Artificial General Intelligence (AGI) - AGI is not \u201ca bigger model\u201d or \u201cbetter benchmarks\u201d. AGI would be a system that: \u2022 learns across domains, not tasks \u2022 transfers knowledge without retraining \u2022 forms and revises goals \u2022 builds persistent memory and identity \u2022 understands cause and effect through interaction \u2022 improves itself without human orchestration In short: AGI is an autonomous, self-improving learning agent with a grounded model of the world. Until systems cross that threshold, calling them AGI \u2014 or even fully intelligent \u2014 risks confusing capability with cognition. LLMs are remarkable. But intelligence is not just what a system produces \u2014 it\u2019s what it can become on its own. Curious where others would draw this line",
+          "url": "https://www.linkedin.com/posts/jason-c-rae_is-it-really-ai-large-language-models-are-activity-7413836661110943744-ZiMZ",
+          "publishedAt": "2026-01-09"
+        }
+      ]
+    },
+    {
+      "id": "linkedin-activity-7399549829867266048",
+      "title": "OpenAI\u2019s Strategy Is Clear \u2014 But Is It Sustainable? It\u2019s becoming obvious that OpenAI i...",
+      "summary": "OpenAI\u2019s Strategy Is Clear \u2014 But Is It Sustainable? It\u2019s becoming obvious that OpenAI isn\u2019t just trying to build great models \u2014 they\u2019re trying to make their product synonymous with work itself. Integration into every...",
+      "status": "published",
+      "pillar": "Applied AI governance",
+      "contentType": "historical",
+      "preparedDate": "2025-12-10",
+      "publishedDate": "2025-12-10",
+      "captureSource": "public-linkedin-activity-page",
+      "sourcePage": "https://www.linkedin.com/in/jason-c-rae/recent-activity/all/",
+      "relativeAgeAtCapture": "5mo",
+      "activityType": "Posted by",
+      "tags": [
+        "Workflow design",
+        "Copilot",
+        "Strategy"
+      ],
+      "platforms": [
+        {
+          "name": "LinkedIn",
+          "status": "published",
+          "copy": "OpenAI\u2019s Strategy Is Clear \u2014 But Is It Sustainable? It\u2019s becoming obvious that OpenAI isn\u2019t just trying to build great models \u2014 they\u2019re trying to make their product synonymous with work itself. Integration into every workflow, every application, every moment of productivity. A strategy built on ubiquity first, profit later. And they\u2019re willing to lose money for years to make that happen. Because once people, teams, and companies rely on a tool daily, switching becomes almost impossible. But there\u2019s a critical question nobody seems to be asking: Can OpenAI outspend companies like Google, who can embed AI into profitable products at global scale without burning billions? Google doesn\u2019t need to monetise every model directly. They can fold intelligence into Search, Docs, Gmail, Android \u2014 instantly deployed to billions. Their cost of distribution is effectively zero. Their moat is enormous. And they can afford to absorb AI costs indefinitely. So while OpenAI races to become the \u201coperating system of work,\u201d Google can simply outlast them. But here\u2019s the bigger point: This entire focus on copilots and productivity tools won\u2019t deliver AGI. Not even close. In my view, the next major leap \u2014 the next \u201cTransformer moment\u201d \u2014 is far more likely to come from teams like DeepMind, who continue to push the frontier of machine learning beyond language: \u2022 protein folding \u2022 self-play reinforcement learning \u2022 model-based reasoning \u2022 novel architectures outside the LLM paradigm These are not incremental productivity improvements. These are scientific breakthroughs that give us entirely new learning principles. OpenAI has chosen the path of productisation. DeepMind has chosen the path of discovery. One creates dependence. The other creates breakthroughs. And if history tells us anything, true paradigm shifts rarely come from the team optimising for market share. They come from the team exploring the edges of what\u2019s possible.#AI#OpenAI#DeepMind#AGI#MachineLearning#Innovation#Strategy#FutureOfWork",
+          "url": "https://www.linkedin.com/posts/jason-c-rae_ai-openai-deepmind-activity-7399549829867266048-8YRX",
+          "publishedAt": "2025-12-10"
+        }
+      ]
+    },
+    {
+      "id": "linkedin-activity-7391009509856530432",
+      "title": "One of the biggest costs in any business isn\u2019t always on the balance sheet \u2014 it\u2019s in th...",
+      "summary": "One of the biggest costs in any business isn\u2019t always on the balance sheet \u2014 it\u2019s in the time and effort that never gets measured. Across large organizations, analysts and teams quietly spend hours every week adjustin...",
+      "status": "published",
+      "pillar": "Commercial analytics",
+      "contentType": "historical",
+      "preparedDate": "2025-11-10",
+      "publishedDate": "2025-11-10",
+      "captureSource": "public-linkedin-activity-page",
+      "sourcePage": "https://www.linkedin.com/in/jason-c-rae/recent-activity/all/",
+      "relativeAgeAtCapture": "6mo",
+      "activityType": "Posted by",
+      "tags": [
+        "Commercial analytics"
+      ],
+      "platforms": [
+        {
+          "name": "LinkedIn",
+          "status": "published",
+          "copy": "One of the biggest costs in any business isn\u2019t always on the balance sheet \u2014 it\u2019s in the time and effort that never gets measured. Across large organizations, analysts and teams quietly spend hours every week adjusting numbers, reformatting data, reconciling mismatched definitions, or reproducing the same reports. From a distance, everything looks fine \u2014 dashboards are delivered, metrics are shared, insights circulate. But underneath, enormous manual effort is holding it all together. The real opportunity isn\u2019t just in building more reports \u2014 it\u2019s in building smarter processes. When we connect systems, standardize logic, and align how we work, we unlock capacity we didn\u2019t know we had. Data efficiency doesn\u2019t make headlines \u2014 but it quietly powers everything that does.#DataEfficiency#DigitalTransformation#AnalyticsLeadership#ProcessImprovement",
+          "url": "https://www.linkedin.com/posts/jason-c-rae_dataefficiency-digitaltransformation-analyticsleadership-activity-7391009509856530432-BIso",
+          "publishedAt": "2025-11-10"
+        }
+      ]
+    }
+  ]
+}

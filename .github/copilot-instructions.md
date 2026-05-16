@@ -51,7 +51,7 @@ This is a personal website/portfolio for Jason Rae, a Senior Data Analyst EMEA, 
 
 ### 3. Daily AI Stack Section
 - Visual display of AI tools used daily
-- GPT-4, LangChain, Power BI, Python, TensorFlow, etc.
+- LLM APIs, LangChain, Power BI, Python, TensorFlow, etc.
 
 ### 4. Lead Capture
 - Contact forms on multiple pages
@@ -97,12 +97,12 @@ AI_Consulting/
 ### Professional Summary
 - **Title**: Senior Data Analyst EMEA | Commercial Analytics Architect | Applied AI & Decision Intelligence Leader
 - **Location**: Stuttgart area, Germany
-- **Experience**: 13+ years across sales leadership, commercial analytics, pricing, forecasting, margin analysis, CRM governance, and applied AI
+- **Experience**: 13+ years across commercial leadership and analytics, including pricing, forecasting, margin analysis, CRM governance, and applied AI
 - **Current Role**: Senior Data Analyst EMEA at Medline (Jan 2026-Present)
 - **Previous**: Senior Data Analyst Europe, Inside Sales Department Manager / BDM UK, Inside Sales Department Manager, Account Manager at Medline
 
 ### Key Achievements
-- Delivered €3M sales growth against an initial target of roughly €300k
+- Personally generated €3M sales growth against an initial target of roughly €300k
 - Generated €1.3M UK sales growth in 2023, approximately 4× above target
 - Turned around Inside Sales growth from 4% to 57% across 38 markets
 - Grew an Australian territory from $1.4M to $4.2M with 35% profitability
@@ -110,7 +110,7 @@ AI_Consulting/
 - Helped realign CRM and forecasting processes across European markets
 
 ### Daily AI Stack
-- GPT-4 (OpenAI)
+- LLM APIs (OpenAI-compatible)
 - LangChain
 - Microsoft Power BI
 - Python (pandas, scikit-learn, TensorFlow)

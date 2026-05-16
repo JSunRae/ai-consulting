@@ -1,13 +1,13 @@
 {
   "personalInfo": {
     "name": "Jason Rae",
-    "title": "Senior Data Analyst EMEA | Commercial Analytics Architect | Applied AI & Decision Intelligence Leader",
+    "title": "Commercial Analytics & Applied AI Leader | Leading EMEA Commercial & Sales Analytics",
     "location": "Stuttgart, Germany",
-    "email": "jason@jasonrae.ai",
+    "email": "Jason_C_Rae@Outlook.com",
     "linkedin": "https://www.linkedin.com/in/jason-c-rae/",
     "github": "https://github.com/JSunRae",
     "website": "jasonrae.ai",
-    "summary": "Commercial analytics and applied AI leader with 13+ years across sales leadership, EMEA analytics, pricing, forecasting, margin analysis, CRM governance, acquisition integration and data transformation. Proven record of building commercial systems from zero, improving sales performance, correcting broken reporting logic and translating fragmented data into trusted executive decision systems. Brings hands-on BI, analytics engineering, automation, and applied AI capability in service of clearer commercial decisions across Sales, Finance, BI and executive stakeholder environments."
+    "summary": "Commercial analytics and applied AI leader with 13+ years across commercial leadership and analytics, including EMEA analytics, pricing, forecasting, margin analysis, CRM governance, acquisition integration and data transformation. Proven record of building commercial systems from zero, improving sales performance, correcting broken reporting logic and translating fragmented data into trusted executive decision systems. Brings hands-on BI, analytics engineering, automation, and applied AI capability in service of clearer commercial decisions across Sales, Finance, BI and executive stakeholder environments."
   },
   "experience": [
     {
@@ -18,7 +18,7 @@
       "startDate": "2026-01",
       "endDate": null,
       "current": true,
-      "description": "Own and develop EMEA commercial analytics architecture across gross margin walks, pricing intelligence, forecasting, CRM analytics, opportunity identification, incentives and executive business review support. Build decision-ready reporting, automation, and analytical workflows across Power BI, Python, SQL, ML, and deterministic GPT-4 where they improve auditability and speed.",
+      "description": "Own and develop EMEA commercial analytics architecture across gross margin walks, pricing intelligence, forecasting, CRM analytics, opportunity identification, incentives and executive business review support. Build decision-ready reporting, automation, and analytical workflows across Power BI, Python, SQL, ML, and controlled LLM systems where they improve auditability and speed.",
       "achievements": [
         {
           "text": "Own and develop EMEA commercial analytics architecture across gross margin walks, pricing intelligence, forecasting, CRM analytics and executive business review support",
@@ -26,7 +26,7 @@
           "category": "analytics"
         },
         {
-          "text": "Build decision-ready reporting, automation, and analytical workflows across Power BI, Python, SQL, ML, and deterministic GPT-4 where they improve auditability and speed",
+          "text": "Build decision-ready reporting, automation, and analytical workflows across Power BI, Python, SQL, ML, and controlled LLM systems where they improve auditability and speed",
           "metric": "Power BI",
           "category": "innovation"
         },
@@ -105,7 +105,7 @@
         "Python",
         "Power BI",
         "SQL",
-        "GPT-4",
+        "LLM APIs",
         "LangChain",
         "Excel VBA",
         "Machine Learning"
@@ -122,7 +122,7 @@
       "description": "Selected to launch a new Inside Sales department for UK market expansion. Overcame pandemic and GDPR constraints to build a high-performing channel, independently out-performing all European sales representatives.",
       "achievements": [
         {
-          "text": "Achieved €3M in sales growth against an initial annual target of ~€300k — surpassing the combined performance of all European Sales Representatives",
+          "text": "Personally generated €3M in sales growth against an initial annual target of ~€300k — surpassing the combined performance of all European Sales Representatives",
           "metric": "€3M",
           "category": "impact"
         },
@@ -291,7 +291,7 @@
     "ai_ml": {
       "category": "AI & Machine Learning",
       "items": [
-        { "name": "GPT-4 / LLMs", "level": 95 },
+        { "name": "LLM APIs & orchestration", "level": 95 },
         { "name": "Deterministic LLM Programming", "level": 95 },
         { "name": "LangChain", "level": 85 },
         { "name": "scikit-learn", "level": 90 },
@@ -344,9 +344,9 @@
   ],
   "dailyAIStack": [
     {
-      "name": "GPT-4 (OpenAI API)",
+      "name": "LLM APIs (OpenAI-compatible)",
       "category": "LLM",
-      "usage": "Executive-ready drafting, deterministic AI workflows, case-study writing, and practical AI enablement"
+      "usage": "Executive-ready drafting, governed LLM workflows, case-study writing, and practical AI enablement"
     },
     {
       "name": "Power BI",
@@ -356,7 +356,7 @@
     {
       "name": "Python",
       "category": "Language",
-      "usage": "Commercial analytics automation, deterministic LLM pipelines, data transformation, and model development"
+      "usage": "Commercial analytics automation, controlled LLM pipelines, data transformation, and model development"
     },
     {
       "name": "SQL",
@@ -407,9 +407,9 @@
     {
       "id": "ai-memoir-pipeline",
       "title": "AI Memoir & Narrative Pipeline (Bibliography)",
-      "summary": "Deterministic GPT-4 proof of work showing retrieval-grounded generation, atomic patching, quality gates, and auditable LLM workflow design rather than prompt-and-pray experimentation.",
+      "summary": "Deterministic document-intelligence proof of work showing retrieval-grounded generation, atomic patching, quality gates, and auditable LLM workflow design rather than prompt-and-pray experimentation.",
       "technologies": [
-        "GPT-4",
+        "LLM APIs",
         "FAISS",
         "sentence-transformers",
         "spaCy",

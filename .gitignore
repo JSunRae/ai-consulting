@@ -16,6 +16,7 @@ Thumbs.db
 # Build outputs
 dist/
 build/
+site-dist/
 
 # Environment
 .env
@@ -32,3 +33,10 @@ assets/docs/private/
 # Temporary files
 *.tmp
 *.temp
+tmp/
+__pycache__/
+.netlify/
+data/voice-summary-store/
+
+# Local and CI-generated approval artifacts
+artifacts/
