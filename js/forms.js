@@ -8,7 +8,7 @@
   const DEFAULT_RATE_SECONDS = 45;
 
   const OFFER_LABELS = {
-    "fit-call": "Start Conversation",
+    "fit-call": "Book Fit Call",
     "diagnostic-review": "Commercial Analytics Diagnostic Review",
     "vendor-diligence": "AI Software & Vendor Due Diligence",
     "prioritization-sprint": "Decision Opportunity Prioritization Sprint",
