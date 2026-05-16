@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Vendor Due Diligence Checklist | Jason Rae</title>
+    <meta
+      name="description"
+      content="A practical AI vendor due diligence checklist for leaders evaluating copilots, agent platforms, document AI, or workflow tools with AI built in."
+    />
+              href="../assets/docs/AI-Vendor-Due-Diligence-Checklist.pdf"
+      name="keywords"
+      content="AI vendor due diligence, AI software checklist, build vs buy AI, RAG vs fine tuning, AI procurement, Jason Rae"
+    />
+    <meta name="author" content="Jason Rae" />
+    <link
+      rel="canonical"
+      href="https://jasonrae.ai/blog/ai-vendor-due-diligence-checklist.html"
+    />
+              href="../assets/docs/AI-Vendor-Due-Diligence-Checklist.pdf"
+    <meta
+      property="og:title"
+      content="AI Vendor Due Diligence Checklist | Jason Rae"
+    />
+    <meta
+      property="og:description"
+      content="Before you buy AI software, ask what you are actually buying. A practical checklist for architecture, data flow, permissions, failure modes, and cost."
+    />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="https://jasonrae.ai/blog/ai-vendor-due-diligence-checklist.html"
+    />
+    <meta
+      property="og:image"
+      content="https://jasonrae.ai/assets/images/og-image.png"
+    />
+    <meta
+      property="og:image:alt"
+      content="Jason Rae — Commercial Analytics &amp; Applied AI Leader"
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="AI Vendor Due Diligence Checklist | Jason Rae"
+    />
+    <meta
+      name="twitter:description"
+      content="Use this checklist before buying AI software or approving a pilot."
+    />
+    <meta
+      name="twitter:image"
+      content="https://jasonrae.ai/assets/images/og-image.png"
+    />
+
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    />
+
+    <script src="../js/theme-init.js"></script>
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/solid.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/brands.min.css"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "AI Vendor Due Diligence Checklist",
+        "description": "A practical AI vendor due diligence checklist for leaders evaluating copilots, agent platforms, document AI, or workflow tools with AI built in.",
+        "url": "https://jasonrae.ai/blog/ai-vendor-due-diligence-checklist.html",
+        "datePublished": "2026-05-09",
+        "dateModified": "2026-05-09",
+        "author": {
+          "@type": "Person",
+          "name": "Jason Rae",
+          "url": "https://jasonrae.ai"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Jason Rae",
+          "url": "https://jasonrae.ai"
+        },
+        "image": "https://jasonrae.ai/assets/images/og-image.png",
+        "inLanguage": "en"
+      }
+    </script>
+  </head>
+  <body>
+    <header class="header" id="header">
+      <div class="container header-inner">
+        <a href="../index.html" class="logo">
+          <div class="logo-icon">JR</div>
+          <span>Jason Rae</span>
+        </a>
+
+        <nav class="nav">
+          <ul class="nav-links" id="nav-links">
+            <li><a href="../index.html" class="nav-link">Home</a></li>
+            <li><a href="../about.html" class="nav-link">About</a></li>
+            <li><a href="../portfolio.html" class="nav-link">Portfolio</a></li>
+            <li><a href="../services.html" class="nav-link">Services</a></li>
+            <li><a href="../resume.html" class="nav-link">Resume</a></li>
+            <li><a href="index.html" class="nav-link active">Blog</a></li>
+            <li><a href="../contact.html" class="nav-link">Contact</a></li>
+            <li class="nav-cta-item">
+              <a href="../contact.html" class="btn btn-primary nav-cta"
+                >Book Fit Call</a
+              >
+            </li>
+          </ul>
+          <button
+            class="mobile-menu-toggle"
+            id="mobile-menu-toggle"
+            type="button"
+            aria-label="Toggle menu"
+            aria-controls="nav-links"
+            aria-expanded="false"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <section class="section blog-hero single">
+      <div class="container">
+        <span class="section-label">Lead Magnet</span>
+        <h1>AI Vendor Due Diligence Checklist</h1>
+        <p class="lead">
+          Before you buy AI software, ask what you are actually buying. This
+          checklist is designed for leaders evaluating copilots, agent
+          platforms, document AI, or workflow tools with AI built in.
+        </p>
+        <div class="blog-meta">
+          <div class="author-info">
+            <p class="author-name"><a href="../about.html">Jason Rae</a></p>
+            <p class="author-role">
+              Commercial Analytics &amp; Applied AI Leader
+            </p>
+          </div>
+          <div class="meta-details">
+            <time datetime="2026-05-09">Published: May 9, 2026</time>
+            <span>Reading time: 9 minutes</span>
+          </div>
+        </div>
+        <div
+          class="blog-hero-image placeholder-image gradient-2"
+          aria-hidden="true"
+        ></div>
+      </div>
+    </section>
+
+    <article class="section blog-article">
+      <div class="container">
+        <div class="article-content">
+          <div class="lead-magnet-card lead-magnet-stack">
+            <div>
+              <p class="section-label">Download Checklist</p>
+              <h3>Pressure-test the tool before the pilot inherits the risk.</h3>
+              <p class="lead-magnet-teach">
+                Use the written version in internal procurement, architecture review, or leadership discussions when the demo looks strong but the operating reality is still unclear.
+              </p>
+            </div>
+            <div class="lead-magnet-commercial">
+              <strong>Why this matters commercially</strong>
+              <p>
+                Teams do not usually regret asking harder diligence questions. They regret committing to software before they understand data flow, failure modes, and workflow ownership.
+              </p>
+            </div>
+            <div class="lead-magnet-actions">
+              <a
+                href="../assets/docs/AI-Vendor-Due-Diligence-Checklist.pdf"
+                class="btn btn-primary"
+                download
+                data-track="lead-magnet-download"
+                data-source-page="blog/ai-vendor-due-diligence-checklist.html"
+                data-content-pillar="vendor-diligence"
+                data-follow-up-intent="ai-software-diligence"
+                >Download Checklist</a
+              >
+              <a
+                href="../contact.html?service=vendor-diligence&source=blog/ai-vendor-due-diligence-checklist.html&source_path=/blog/ai-vendor-due-diligence-checklist.html&offer=vendor-diligence&cta=Start%20Conversation&section=vendor-diligence-top"
+                class="btn btn-secondary"
+                >Book Fit Call</a
+              >
+            </div>
+            <div class="lead-magnet-meta">
+              <span>Content pillar: vendor-diligence</span>
+              <span>Intent: AI software diligence</span>
+            </div>
+          </div>
+
+          <p>
+            A surprising amount of AI buying still happens backward. A vendor
+            shows a strong demo, internal enthusiasm builds, and the commercial
+            conversation starts from capability rather than operating reality.
+            That is exactly how businesses end up with expensive pilots that
+            never become reliable workflow infrastructure.
+          </p>
+          <p>
+            The first reframe is simple: most buyers should not start by asking
+            whether the AI looks impressive. They should start by asking what
+            kind of system it actually is, what commercial problem it is
+            supposed to improve, and what risk or operating burden sits around
+            the model.
+          </p>
+
+          <h2>1. Start with the commercial problem, not the category</h2>
+          <p>
+            “We need an AI tool” is not a buying case. Neither is “the market
+            is moving.” A serious purchase starts with one explicit workflow or
+            decision problem.
+          </p>
+          <ul>
+            <li>What decision or workflow should improve?</li>
+            <li>What is broken today?</li>
+            <li>What measurable business outcome would make this worth funding?</li>
+            <li>Who owns that result after go-live?</li>
+          </ul>
+          <p>
+            If those answers are weak, the buying process is probably happening
+            too early.
+          </p>
+
+          <h2>2. Ask what the product really is</h2>
+          <p>
+            This is where many teams stay too shallow. “It uses GPT” or “it is
+            fine-tuned” is not enough.
+          </p>
+          <p>You need to understand whether the product is mainly:</p>
+          <ul>
+            <li>a fine-tuned model for a narrow behavior</li>
+            <li>a retrieval layer over your content</li>
+            <li>an orchestration layer around a major model provider</li>
+            <li>a thin wrapper around an API call</li>
+          </ul>
+          <p>
+            Those are not semantic differences. They change data flow, control,
+            defensibility, switching cost, and the amount of vendor substance
+            you are really paying for.
+          </p>
+
+          <h2>3. Force the data-flow conversation early</h2>
+          <p>
+            Leaders often assume that if the feature sits inside a known
+            platform, the data risk is understood. That assumption is weak.
+          </p>
+          <p>Before approving the product, clarify:</p>
+          <ul>
+            <li>where input data goes</li>
+            <li>whether a third-party model provider receives it</li>
+            <li>whether prompts and outputs are stored or logged</li>
+            <li>who can access those logs</li>
+            <li>whether any layer uses data for training</li>
+            <li>which subprocessors are involved</li>
+          </ul>
+          <p>
+            If the answers are vague, the buying process is not ready to
+            progress.
+          </p>
+
+          <h2>4. Check permissions and failure modes, not just features</h2>
+          <p>
+            A polished interface is not the same thing as a controlled business
+            system. For knowledge tools, copilots, and agents, you need to ask:
+          </p>
+          <ul>
+            <li>Does the system respect document-level permissions?</li>
+            <li>Can it surface content users should not see?</li>
+            <li>What happens when confidence is low?</li>
+            <li>Does it abstain, escalate, or hallucinate?</li>
+            <li>Can a bad answer be traced after an incident?</li>
+          </ul>
+          <p>
+            The strongest vendors can explain their failure modes clearly. Weak
+            ones retreat into demo language.
+          </p>
+
+          <h2>5. Model the real cost, not only the licence</h2>
+          <p>
+            Some AI products are cheap to start and expensive to run. That cost
+            growth often appears only after the workflow is live.
+          </p>
+          <ul>
+            <li>How does cost scale with production volume?</li>
+            <li>What happens with long documents, retries, or heavy context?</li>
+            <li>How much human review is still required?</li>
+            <li>What internal support or monitoring burden remains?</li>
+          </ul>
+          <p>
+            Licence cost is visible. Review cost, exception handling, and usage
+            growth are usually where the business case degrades.
+          </p>
+
+          <h2>6. Separate build-vs-buy from vendor-vs-vendor</h2>
+          <p>
+            Many teams compare vendors before they have even decided whether the
+            workflow belongs in off-the-shelf software at all. Sometimes the
+            right answer is a vendor product. Sometimes it is a lighter OpenAI
+            API workflow with tighter internal control. Sometimes the workflow
+            is not stable enough to automate seriously yet.
+          </p>
+          <p>
+            The correct question is not “should we buy AI?” It is “where should
+            the critical logic, risk, and operating ownership live?”
+          </p>
+
+          <h2>7. Use a go / no-go gate</h2>
+          <p>
+            The final decision should not be vague enthusiasm. It should be one
+            of five outcomes:
+          </p>
+          <ul>
+            <li>proceed now</li>
+            <li>proceed with controls</li>
+            <li>run a contained pilot first</li>
+            <li>re-scope the workflow before buying</li>
+            <li>reject</li>
+          </ul>
+          <p>
+            That keeps the commercial decision explicit and protects teams from
+            sleepwalking into avoidable complexity.
+          </p>
+
+          <h2>Conclusion</h2>
+          <p>
+            The most useful AI buying question is not “which tool has AI?” It
+            is “which system can improve this workflow without creating hidden
+            cost, governance risk, or fragile dependency?”
+          </p>
+          <p>
+            Use the checklist, push the vendor harder than they expect, and
+            force the workflow conversation before the software conversation
+            gets too far ahead.
+          </p>
+
+          <div class="lead-magnet-card lead-magnet-stack">
+            <div>
+              <p class="section-label">Next step</p>
+              <h3>Need the build-vs-buy decision before you pressure-test vendors?</h3>
+              <p class="lead-magnet-teach">
+                Use the decision matrix when the team is still unclear whether the workflow belongs in vendor software,
+                a lean API workflow, or a higher-control internal path.
+              </p>
+            </div>
+            <div class="lead-magnet-actions">
+              <a
+                href="build-vs-buy-ai-decision-matrix.html"
+                class="btn btn-primary"
+                >Open Decision Matrix Guide</a
+              >
+              <a
+                href="../contact.html?service=vendor-diligence&source=blog/ai-vendor-due-diligence-checklist.html&source_path=/blog/ai-vendor-due-diligence-checklist.html&offer=vendor-diligence&cta=Start%20Conversation&section=vendor-diligence-bottom"
+                class="btn btn-secondary"
+                >Book Fit Call</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <section class="section related-posts">
+      <div class="container">
+        <h2>You Might Also Like</h2>
+        <div class="related-grid">
+          <article>
+            <h3>
+              <a href="customer-service-ai-checklist-before-chatbot.html"
+                >Customer Service AI: 10 Questions Before You Launch a Chatbot</a
+              >
+            </h3>
+            <p>
+              A practical guide to avoiding customer-service automation that
+              scales frustration.
+            </p>
+          </article>
+          <article>
+            <h3>
+              <a href="ai-cost-reduction-reality-check.html"
+                >The AI Cost Reduction Reality Check</a
+              >
+            </h3>
+            <p>
+              Why productivity gains do not automatically become financial
+              savings.
+            </p>
+          </article>
+          <article>
+            <h3>
+              <a href="build-vs-buy-ai-decision-matrix.html"
+                >Build-vs-Buy AI Decision Matrix</a
+              >
+            </h3>
+            <p>
+              Use this when the team still needs to decide where the workflow should live before vendor comparison starts.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section blog-cta">
+      <div class="container">
+        <div class="cta-card">
+          <p class="section-label">Buying AI software?</p>
+          <h2>
+            I help teams understand what they are actually buying before the
+            workflow inherits the risk.
+          </h2>
+          <p>
+            Use the checklist internally, then bring me in when you need a real
+            buy / pilot / reject recommendation.
+          </p>
+          <div class="cta-actions">
+            <a
+              href="../contact.html?service=vendor-diligence&source=blog/ai-vendor-due-diligence-checklist.html&source_path=/blog/ai-vendor-due-diligence-checklist.html&offer=vendor-diligence&cta=Start%20Conversation&section=blog-cta"
+              class="btn btn-primary"
+              >Book Fit Call</a
+            >
+            <a
+              href="../assets/docs/AI-Vendor-Due-Diligence-Checklist.pdf"
+              class="btn btn-secondary"
+              download
+              data-track="lead-magnet-download"
+              data-source-page="blog/ai-vendor-due-diligence-checklist.html"
+              data-content-pillar="vendor-diligence"
+              data-follow-up-intent="ai-software-diligence"
+              >Download Checklist</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer-content">
+        <div class="footer-social">
+          <a
+            href="https://www.linkedin.com/in/jason-c-rae/"
+            target="_blank"
+            rel="noopener"
+            aria-label="LinkedIn"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a
+            href="https://github.com/JSunRae"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="mailto:Jason_C_Rae@Outlook.com" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+        <p class="footer-text">
+          Designed &amp; Built by Jason Rae<br />
+          &copy; <span id="footer-year">2026</span> All rights reserved.<br />
+          <a href="../privacy.html" class="footer-link"
+            >Privacy &amp; Data Notice</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <div class="chat-widget" id="chat-widget">
+      <div
+        class="chat-window"
+        id="chat-window"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="chat-window-title"
+        aria-hidden="true"
+      >
+        <div class="chat-header">
+          <div class="chat-header-title" id="chat-window-title">
+            <span class="chat-status"></span>
+            Jason's AI Assistant
+          </div>
+          <button class="modal-close" id="chat-close" aria-label="Close chat">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div
+          class="chat-messages"
+          id="chat-messages"
+          aria-live="polite"
+          aria-relevant="additions"
+        >
+          <div class="chat-message bot">
+            Hi! 👋 I'm Jason's AI assistant. Ask about AI software diligence,
+            vendor risk, or how Jason helps evaluate build-vs-buy decisions.
+          </div>
+        </div>
+        <div class="chat-suggestions" id="chat-suggestions">
+          <button
+            class="chat-suggestion"
+            data-question="What should we check before buying AI software?"
+          >
+            Buying AI software?
+          </button>
+          <button
+            class="chat-suggestion"
+            data-question="What is the difference between fine-tuning and retrieval?"
+          >
+            Fine-tuning vs retrieval?
+          </button>
+          <button
+            class="chat-suggestion"
+            data-question="Can Jason help decide between a vendor tool and an internal AI build?"
+          >
+            Build vs buy?
+          </button>
+        </div>
+        <div class="chat-input-container">
+          <input
+            type="text"
+            class="chat-input"
+            id="chat-input"
+            placeholder="Type your question..."
+            autocomplete="off"
+          />
+          <label for="chat-input" class="sr-only">Message</label>
+          <button class="chat-send" id="chat-send" aria-label="Send message">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </div>
+      </div>
+      <button
+        class="chat-toggle"
+        id="chat-toggle"
+        aria-label="Open chat"
+        aria-expanded="false"
+        aria-controls="chat-window"
+      >
+        <i class="fas fa-comments"></i>
+      </button>
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/chatbot.js"></script>
+    <script src="../js/animations.js"></script>
+  </body>
+</html>
