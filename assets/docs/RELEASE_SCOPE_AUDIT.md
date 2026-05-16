@@ -41,6 +41,8 @@ Include changed files only when they materially affect one of the following:
   - Runtime dependency of the public social archive page.
 - `assets/data/social-posts.public.json`: include
   - Public archive data source used by `js/social-archive.js`.
+- `scripts/build_public_bundle.py`: include
+  - Required for Netlify branch and preview builds because `netlify.toml` invokes it directly.
 - portfolio detail pages under `portfolio/`: include
   - Public routes changed and should remain consistent with the new portfolio framing.
 

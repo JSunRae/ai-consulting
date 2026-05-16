@@ -101,6 +101,7 @@ This gives us a release candidate that is reviewable and deployable without drag
 
 - `netlify.toml`
 - `sitemap.xml`
+- `scripts/build_public_bundle.py`
 - `assets/docs/BROWSER_QA_REPORT.md`
 - `assets/docs/DEPLOY_SCOPE_MANIFEST.md`
 - `assets/docs/RELEASE_SCOPE_AUDIT.md`
