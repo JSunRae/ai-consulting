@@ -90,6 +90,7 @@ This branch is the operational isolation for WQ-24.
 
 - `netlify.toml`
 - `sitemap.xml`
+- `scripts/build_public_bundle.py`
 
 ### Release evidence and control docs
 
@@ -120,6 +121,7 @@ Do not include these classes of files in this release branch:
 - `assets/images/og-image.svg`: included because it affects public shareability and brand presentation.
 - `blog/social-posts.html` and `js/social-archive.js`: included because `blog/index.html` links to the archive.
 - `assets/data/social-posts.public.json`: included because the public archive reads this file directly.
+- `scripts/build_public_bundle.py`: included because Netlify uses it as the branch build command via `netlify.toml`.
 
 ## Non-Blocking Launch Inputs
 
