@@ -8,12 +8,414 @@ document.addEventListener("DOMContentLoaded", function () {
   initMobileMenu();
   initSmoothScroll();
   initActiveNavLink();
+  updateDefaultConsultationLabels();
+  initConsultationLinks();
+  initEventTracking();
   initPrintButtons();
   initFormHandling();
   initContactInquiryPrefill();
   initThemeToggle();
+  initBackToTopButton();
   initCopyrightYear();
+  initYearBasedExperienceCounters();
+  loadDecisionFieldExperience();
 });
+
+function initYearBasedExperienceCounters() {
+  const currentYear = new Date().getFullYear();
+
+  document.querySelectorAll("[data-years-since]").forEach((element) => {
+    const startYear = Number(element.getAttribute("data-years-since"));
+    const suffix = element.getAttribute("data-years-suffix") || "+";
+
+    if (!Number.isFinite(startYear)) {
+      return;
+    }
+
+    const elapsedYears = Math.max(0, currentYear - startYear);
+    element.textContent = `${elapsedYears}${suffix}`;
+  });
+}
+
+function loadDecisionFieldExperience() {
+  if (typeof window.initDecisionFieldExperience === "function") {
+    window.initDecisionFieldExperience();
+    return;
+  }
+
+  if (window.__decisionFieldScriptLoading) {
+    return;
+  }
+
+  window.__decisionFieldScriptLoading = true;
+
+  const script = document.createElement("script");
+  script.src = "/js/decision-network.js";
+  script.async = true;
+  script.onload = () => {
+    window.__decisionFieldScriptLoading = false;
+    if (typeof window.initDecisionFieldExperience === "function") {
+      window.initDecisionFieldExperience();
+    }
+  };
+  script.onerror = () => {
+    window.__decisionFieldScriptLoading = false;
+  };
+
+  document.head.appendChild(script);
+}
+
+function updateDefaultConsultationLabels() {
+  document.querySelectorAll(".nav-cta").forEach((anchor) => {
+    setAnchorLabel(anchor, "Start Conversation");
+  });
+
+  document.querySelectorAll('a[href*="contact.html"]').forEach((anchor) => {
+    const href = anchor.getAttribute("href") || "";
+    if (/service=/i.test(href)) {
+      return;
+    }
+
+    const label = normalizeConsultationText(anchor.textContent);
+    if (
+      // Legacy CTA labels retained so stale pages still normalize cleanly.
+      label === "Book Health Check" ||
+      label === "Book a Commercial Analytics Health Check" ||
+      label === "Organise Consultation" ||
+      label === "Book a Strategy Call" ||
+      label === "Book a BI Strategy Call" ||
+      label === "Book a Finance Analytics Review" ||
+      label === "Book an AI Enablement Workshop" ||
+      label === "Book an LLM Architecture Session" ||
+      label === "Start an Architecture Review" ||
+      label === "Schedule a Workshop" ||
+      label === "Start the Conversation"
+    ) {
+      setAnchorLabel(anchor, "Start Conversation");
+    }
+  });
+}
+
+function initConsultationLinks() {
+  const currentPath = window.location.pathname || "/";
+  const sourcePage = currentPath.split("/").pop() || "index.html";
+
+  document.querySelectorAll('a[href*="contact.html"]').forEach((anchor) => {
+    try {
+      const url = new URL(anchor.getAttribute("href"), window.location.href);
+      if (url.origin !== window.location.origin) {
+        return;
+      }
+
+      if (!/\/contact\.html$/i.test(url.pathname)) {
+        return;
+      }
+
+      const normalizedService = normalizeOfferId(
+        url.searchParams.get("service") || url.searchParams.get("offer"),
+      );
+      if (normalizedService) {
+        url.searchParams.set("service", normalizedService);
+      }
+
+      const ctaLabel = normalizeConsultationText(
+        anchor.getAttribute("data-track-label") ||
+          anchor.textContent ||
+          anchor.getAttribute("aria-label") ||
+          "Contact CTA",
+      );
+      const offerId = inferOfferId(anchor, normalizedService);
+      const sourceSection = getNearestSectionLabel(anchor);
+
+      if (!url.searchParams.has("source")) {
+        url.searchParams.set("source", sourcePage);
+      }
+      if (!url.searchParams.has("source_path")) {
+        url.searchParams.set("source_path", currentPath);
+      }
+      if (ctaLabel && !url.searchParams.has("cta")) {
+        url.searchParams.set("cta", ctaLabel.slice(0, 90));
+      }
+      if (offerId) {
+        url.searchParams.set("offer", offerId);
+      }
+      if (sourceSection && !url.searchParams.has("section")) {
+        url.searchParams.set("section", sourceSection.slice(0, 90));
+      }
+
+      anchor.setAttribute("href", `${url.pathname}${url.search}${url.hash}`);
+    } catch (error) {
+      console.warn("Unable to annotate contact CTA:", error);
+    }
+  });
+}
+
+function normalizeOfferId(value) {
+  const key = normalizeConsultationText(value).toLowerCase();
+  const offerMap = {
+    "fit-call": "fit-call",
+    "diagnostic-review": "diagnostic-review",
+    "health-check": "diagnostic-review",
+    "commercial analytics health check": "diagnostic-review",
+    "commercial analytics diagnostic review": "diagnostic-review",
+    "vendor-diligence": "vendor-diligence",
+    "ai-software": "vendor-diligence",
+    "ai software & vendor due diligence": "vendor-diligence",
+    "ai software and vendor due diligence": "vendor-diligence",
+    "prioritization-sprint": "prioritization-sprint",
+    strategy: "prioritization-sprint",
+    roadmap: "prioritization-sprint",
+    "decision opportunity prioritization sprint": "prioritization-sprint",
+    "foundation-fix": "foundation-fix",
+    foundation: "foundation-fix",
+    "commercial analytics foundation fix": "foundation-fix",
+    "workflow-deployment": "workflow-deployment",
+    automation: "workflow-deployment",
+    "use-case": "workflow-deployment",
+    "commercial workflow deployment": "workflow-deployment",
+    "team-enablement": "team-enablement",
+    training: "team-enablement",
+    enablement: "team-enablement",
+    "commercial team enablement": "team-enablement",
+    "download-checklist": "download-checklist",
+    job: "hiring-conversation",
+    jobs: "hiring-conversation",
+    hiring: "hiring-conversation",
+    "job-opportunity": "hiring-conversation",
+    "hiring-conversation": "hiring-conversation",
+  };
+
+  return offerMap[key] || "";
+}
+
+function inferOfferId(anchor, serviceParam) {
+  const directMap = {
+    "diagnostic-review": "diagnostic-review",
+    "vendor-diligence": "vendor-diligence",
+    "prioritization-sprint": "prioritization-sprint",
+    "foundation-fix": "foundation-fix",
+    "workflow-deployment": "workflow-deployment",
+    "team-enablement": "team-enablement",
+    "download-checklist": "download-checklist",
+    "hiring-conversation": "hiring-conversation",
+  };
+
+  const normalizedService = normalizeOfferId(serviceParam);
+  if (normalizedService && directMap[normalizedService]) {
+    return directMap[normalizedService];
+  }
+
+  const explicit = anchor.getAttribute("data-offer");
+  if (explicit) {
+    const normalizedExplicit = normalizeOfferId(explicit);
+    if (normalizedExplicit) {
+      return normalizedExplicit;
+    }
+  }
+
+  const label = normalizeConsultationText(anchor.textContent).toLowerCase();
+  const labelMap = [
+    [/health check|diagnostic review|discovery/, "diagnostic-review"],
+    [/vendor|diligence|software/, "vendor-diligence"],
+    [/roadmap|sprint|prioritization/, "prioritization-sprint"],
+    [/foundation|kpi|reporting repair/, "foundation-fix"],
+    [/workflow|automation|document intelligence|compliance workflow|build/, "workflow-deployment"],
+    [/enablement|workshop|training/, "team-enablement"],
+    [/checklist|download/, "download-checklist"],
+    [/audit/, "diagnostic-review"],
+    [/job|hiring|role/, "hiring-conversation"],
+    [/fit call|consultation|contact/, "fit-call"],
+  ];
+
+  const matched = labelMap.find(([pattern]) => pattern.test(label));
+  return matched ? matched[1] : "fit-call";
+}
+
+function getNearestSectionLabel(anchor) {
+  const scope = anchor.closest("section, article, aside, .card, .cta-card");
+  if (!scope) {
+    return "";
+  }
+
+  const heading = scope.querySelector(
+    "h1, h2, h3, .section-title, .contact-title, .card-title, .section-label",
+  );
+  return heading ? normalizeConsultationText(heading.textContent) : "";
+}
+
+function setAnchorLabel(anchor, label) {
+  if (!anchor) {
+    return;
+  }
+
+  const icon = anchor.querySelector("i");
+  anchor.innerHTML = icon ? `${icon.outerHTML} ${label}` : label;
+}
+
+function normalizeConsultationText(value) {
+  return String(value || "").replace(/\s+/g, " ").trim();
+}
+
+function initEventTracking() {
+  bootstrapTrackingLayer();
+  initClickTracking();
+}
+
+function bootstrapTrackingLayer() {
+  if (typeof window.jrTrackEvent === "function") {
+    return;
+  }
+
+  window.dataLayer = window.dataLayer || [];
+  window.__jrTrackingLog = window.__jrTrackingLog || [];
+
+  window.jrTrackEvent = function jrTrackEvent(eventName, detail = {}) {
+    const payload = {
+      event: eventName,
+      event_name: eventName,
+      source_page: window.location.pathname.split("/").pop() || "index.html",
+      source_path: window.location.pathname || "/",
+      timestamp: new Date().toISOString(),
+      ...detail,
+    };
+
+    window.__jrTrackingLog.push(payload);
+    window.dataLayer.push(payload);
+
+    if (typeof window.gtag === "function") {
+      window.gtag("event", eventName, payload);
+    }
+
+    window.dispatchEvent(
+      new CustomEvent("jr:track", {
+        detail: payload,
+      }),
+    );
+
+    return payload;
+  };
+}
+
+function initClickTracking() {
+  document.addEventListener("click", (event) => {
+    const target = event.target.closest("a, button");
+    if (!target) {
+      return;
+    }
+
+    const payload = buildTrackingPayload(target);
+    if (!payload) {
+      return;
+    }
+
+    window.jrTrackEvent(payload.eventName, payload.detail);
+  });
+}
+
+function buildTrackingPayload(target) {
+  const href = target.getAttribute("href") || "";
+  const urlDetails = parseTrackingUrl(href);
+  const label = normalizeConsultationText(
+    target.getAttribute("data-track-label") ||
+      target.textContent ||
+      target.getAttribute("aria-label") ||
+      target.getAttribute("title") ||
+      "CTA",
+  );
+  const section =
+    target.getAttribute("data-section") || getNearestSectionLabel(target) || "";
+  const explicitTrack = target.getAttribute("data-track") || "";
+  const offer =
+    normalizeOfferId(target.getAttribute("data-offer") || "") ||
+    normalizeOfferId(urlDetails.offer || urlDetails.service || "") ||
+    inferOfferId(target, urlDetails.offer || urlDetails.service || "");
+  const destination = urlDetails.pathname || (href ? safelyResolvePathname(href) : "");
+
+  if (
+    explicitTrack === "lead-magnet-download" ||
+    /AI-Vendor-Due-Diligence-Checklist\.pdf/i.test(href)
+  ) {
+    return {
+      eventName: "checklist_download",
+      detail: {
+        label,
+        href,
+        destination,
+        section,
+        offer: offer || "download-checklist",
+        track_type: explicitTrack || "download",
+        content_pillar: target.getAttribute("data-content-pillar") || "",
+        follow_up_intent: target.getAttribute("data-follow-up-intent") || "",
+      },
+    };
+  }
+
+  if (/contact\.html/i.test(href) || target.classList.contains("nav-cta")) {
+    return {
+      eventName: "cta_click",
+      detail: {
+        label,
+        href,
+        destination,
+        section,
+        offer,
+        track_type: explicitTrack || "contact-cta",
+      },
+    };
+  }
+
+  return null;
+}
+
+function safelyResolvePathname(href) {
+  try {
+    return new URL(href, window.location.href).pathname;
+  } catch (error) {
+    return href;
+  }
+}
+
+function parseTrackingUrl(href) {
+  try {
+    const url = new URL(href, window.location.href);
+    return {
+      pathname: url.pathname,
+      offer: url.searchParams.get("offer") || "",
+      service: url.searchParams.get("service") || "",
+    };
+  } catch (error) {
+    return {
+      pathname: "",
+      offer: "",
+      service: "",
+    };
+  }
+}
+
+function initBackToTopButton() {
+  if (document.getElementById("back-to-top")) {
+    return;
+  }
+
+  const button = document.createElement("button");
+  button.type = "button";
+  button.id = "back-to-top";
+  button.className = "back-to-top";
+  button.setAttribute("aria-label", "Back to top");
+  button.innerHTML = '<i class="fas fa-arrow-up" aria-hidden="true"></i>';
+
+  button.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  const toggleVisibility = () => {
+    button.classList.toggle("is-visible", window.scrollY > 520);
+  };
+
+  window.addEventListener("scroll", toggleVisibility, { passive: true });
+  toggleVisibility();
+  document.body.appendChild(button);
+}
 
 /**
  * Header scroll effects
@@ -319,7 +721,7 @@ function initFormHandling() {
         showFormStatus(
           statusEl,
           form.dataset.errorMessage ||
-            "Something went wrong. Please email jason@jasonrae.ai.",
+            "Something went wrong. Please email Jason_C_Rae@Outlook.com.",
           "error",
         );
       } finally {
@@ -380,26 +782,25 @@ function initContactInquiryPrefill() {
   if (!inquirySelect) return;
 
   const params = new URLSearchParams(window.location.search);
-  const serviceParam = params.get("service");
+  const serviceParam = normalizeOfferId(
+    params.get("service") || params.get("offer"),
+  );
   if (!serviceParam) return;
 
   const optionMap = {
-    "health-check": "health-check",
-    strategy: "roadmap",
-    roadmap: "roadmap",
-    foundation: "foundation",
+    "diagnostic-review": "diagnostic-review",
+    "vendor-diligence": "vendor-diligence",
+    "prioritization-sprint": "prioritization-sprint",
+    "foundation-fix": "foundation-fix",
     analytics: "power-bi",
     forecasting: "forecasting",
     pricing: "pricing",
     margin: "margin",
     crm: "crm",
     "power-bi": "power-bi",
-    automation: "use-case",
-    "use-case": "use-case",
-    training: "training",
-    job: "job-opportunity",
-    jobs: "job-opportunity",
-    hiring: "job-opportunity",
+    "workflow-deployment": "workflow-deployment",
+    "team-enablement": "team-enablement",
+    "hiring-conversation": "job-opportunity",
   };
 
   const mappedValue = optionMap[serviceParam.toLowerCase()];
@@ -766,3 +1167,4 @@ function initCopyrightYear() {
   const yearEl = document.getElementById("footer-year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 }
+

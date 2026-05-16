@@ -135,7 +135,7 @@
         const fallback = document.createElement("p");
         fallback.className = "portfolio-fallback-message";
         fallback.innerHTML =
-          'Portfolio projects are temporarily unavailable. Please <a href="contact.html">book a health check</a> or get in touch to discuss project details.';
+          'Portfolio projects are temporarily unavailable. Please <a href="contact.html">book a fit call</a> or get in touch to discuss project details.';
         fallback.style.cssText =
           "text-align:center;color:var(--color-text-secondary,#8892b0);padding:2rem 0;grid-column:1/-1;";
         grid.appendChild(fallback);

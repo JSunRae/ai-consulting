@@ -2,13 +2,22 @@
 // Contact and newsletter endpoints are configured below.
 (function () {
   const SCAFFOLD_FORMSPREE_ID = "xeqkyzoq";
-  // Contact and newsletter currently share the same live Formspree endpoint.
-  // If newsletter signups should use a separate endpoint later, replace only
-  // FORMSPREE_ID_NEWSLETTER with that form's 8-character ID.
   const FORMSPREE_ID = "mgodlwlv";
   const FORMSPREE_ID_NEWSLETTER = "mgodlwlv";
   const FORMSPREE_BASE_URL = "https://formspree.io/f/";
   const DEFAULT_RATE_SECONDS = 45;
+
+  const OFFER_LABELS = {
+    "fit-call": "Start Conversation",
+    "diagnostic-review": "Commercial Analytics Diagnostic Review",
+    "vendor-diligence": "AI Software & Vendor Due Diligence",
+    "prioritization-sprint": "Decision Opportunity Prioritization Sprint",
+    "foundation-fix": "Commercial Analytics Foundation Fix",
+    "workflow-deployment": "Commercial Workflow Deployment",
+    "team-enablement": "Commercial Team Enablement",
+    "download-checklist": "Download Checklist",
+    "hiring-conversation": "Hiring Conversation",
+  };
 
   document.addEventListener("DOMContentLoaded", () => {
     warnIfPlaceholdersActive();
@@ -17,10 +26,61 @@
     prefillInquiryFromQuery();
   });
 
+  function normalizeInquiryKey(value) {
+    const key = String(value || "").trim().toLowerCase();
+    const optionMap = {
+      "fit-call": "fit-call",
+      "diagnostic-review": "diagnostic-review",
+      "health-check": "diagnostic-review",
+      "commercial analytics health check": "diagnostic-review",
+      "commercial analytics diagnostic review": "diagnostic-review",
+      "vendor-diligence": "vendor-diligence",
+      "ai-software": "vendor-diligence",
+      "ai software & vendor due diligence": "vendor-diligence",
+      "ai software and vendor due diligence": "vendor-diligence",
+      strategy: "prioritization-sprint",
+      roadmap: "prioritization-sprint",
+      "prioritization-sprint": "prioritization-sprint",
+      "decision opportunity prioritization sprint": "prioritization-sprint",
+      foundation: "foundation-fix",
+      "foundation-fix": "foundation-fix",
+      "commercial analytics foundation fix": "foundation-fix",
+      analytics: "power-bi",
+      forecasting: "forecasting",
+      pricing: "pricing",
+      margin: "margin",
+      crm: "crm",
+      "power-bi": "power-bi",
+      automation: "workflow-deployment",
+      "use-case": "workflow-deployment",
+      "workflow-deployment": "workflow-deployment",
+      "commercial workflow deployment": "workflow-deployment",
+      training: "team-enablement",
+      enablement: "team-enablement",
+      "team-enablement": "team-enablement",
+      "commercial team enablement": "team-enablement",
+      job: "job-opportunity",
+      jobs: "job-opportunity",
+      hiring: "job-opportunity",
+      "hiring-conversation": "job-opportunity",
+      "job-opportunity": "job-opportunity",
+      "customer-service-ai": "customer-service-ai",
+      "cost-reduction": "cost-reduction",
+      other: "other",
+    };
+
+    return optionMap[key] || "";
+  }
+
+  function getOfferLabel(value) {
+    return OFFER_LABELS[String(value || "").trim().toLowerCase()] || value;
+  }
+
   function initFormspreeForms() {
     const forms = document.querySelectorAll(
       'form[data-form-handler="formspree"]',
     );
+
     forms.forEach((form) => {
       const formspreeId = getFormspreeId(form);
       if (formspreeId && !isScaffoldFormspreeId(formspreeId)) {
@@ -54,9 +114,10 @@
       if (handleFallbackSubmission(form)) {
         return;
       }
+
       updateStatus(
         form,
-        "Form submission is not live yet. Please email jason@jasonrae.ai while the production endpoint is being configured.",
+        "Form submission is not live yet. Please email Jason_C_Rae@Outlook.com while the production endpoint is being configured.",
         "error",
       );
       return;
@@ -98,6 +159,7 @@
         if (response.ok) {
           return response.json().catch(() => ({}));
         }
+
         const errorData = await response.json().catch(() => ({}));
         const message =
           errorData?.errors?.[0]?.message ||
@@ -147,7 +209,7 @@
       return false;
     }
 
-    const recipient = form.dataset.fallbackEmail || "jason@jasonrae.ai";
+    const recipient = form.dataset.fallbackEmail || "Jason_C_Rae@Outlook.com";
     const formData = new FormData(form);
     const subject =
       formData.get("subject") || form.dataset.fallbackSubject || "Website inquiry";
@@ -181,7 +243,9 @@
       }
 
       const value = String(rawValue).trim();
-      if (!value) continue;
+      if (!value) {
+        continue;
+      }
 
       const label = key
         .replace(/([A-Z])/g, " $1")
@@ -201,6 +265,7 @@
   function showSuccessState(form) {
     const successMessage =
       form.dataset.successMessage || "Thanks for reaching out!";
+    emitFormTrackingEvent(form, "form_submit_success");
     clearValidationState(form);
     updateStatus(form, successMessage, "success");
     const successSelector = form.dataset.successTarget;
@@ -214,6 +279,27 @@
     } else {
       form.reset();
     }
+  }
+
+  function emitFormTrackingEvent(form, eventName) {
+    if (typeof window.jrTrackEvent !== "function") {
+      return;
+    }
+
+    const inquiryField = form.querySelector('[name="inquiry"]');
+    const preferredStepField = form.querySelector('[name="preferredStep"]');
+    const sourceOfferField = form.querySelector('[name="source_offer"]');
+    const sourceCtaField = form.querySelector('[name="source_cta"]');
+    const sourceSectionField = form.querySelector('[name="source_section"]');
+
+    window.jrTrackEvent(eventName, {
+      form_id: form.id || form.getAttribute("name") || "form",
+      inquiry: inquiryField?.value || "",
+      preferred_step: preferredStepField?.value || "",
+      source_offer: sourceOfferField?.value || "",
+      source_cta: sourceCtaField?.value || "",
+      source_section: sourceSectionField?.value || "",
+    });
   }
 
   function updateStatus(form, message, state) {
@@ -305,32 +391,97 @@
 
   function prefillInquiryFromQuery() {
     const inquirySelect = document.getElementById("inquiry");
+    const preferredStepSelect = document.getElementById("preferredStep");
+    const intakeSummary = document.getElementById("contact-intake-summary");
     if (!inquirySelect) return;
+
     const params = new URLSearchParams(window.location.search);
-    const serviceParam = params.get("service");
-    if (!serviceParam) return;
-    const optionMap = {
-      "health-check": "health-check",
-      strategy: "roadmap",
-      roadmap: "roadmap",
-      foundation: "foundation",
-      analytics: "power-bi",
-      forecasting: "forecasting",
-      pricing: "pricing",
-      margin: "margin",
-      crm: "crm",
-      "power-bi": "power-bi",
-      automation: "use-case",
-      "use-case": "use-case",
-      training: "training",
-      job: "job-opportunity",
-      jobs: "job-opportunity",
-      hiring: "job-opportunity",
+    const serviceParam = normalizeInquiryKey(
+      params.get("service") || params.get("offer") || "",
+    );
+
+    const preferredStepMap = {
+      "diagnostic-review": "diagnostic-review",
+      "vendor-diligence": "fit-call",
+      "customer-service-ai": "recommend-best-fit",
+      "cost-reduction": "recommend-best-fit",
+      "prioritization-sprint": "fit-call",
+      "foundation-fix": "fit-call",
+      "workflow-deployment": "fit-call",
+      "team-enablement": "fit-call",
+      "job-opportunity": "hiring-conversation",
     };
-    const mappedValue = optionMap[serviceParam.toLowerCase()];
-    if (mappedValue) {
-      inquirySelect.value = mappedValue;
+
+    if (serviceParam) {
+      inquirySelect.value = serviceParam;
     }
+
+    if (preferredStepSelect && !preferredStepSelect.value) {
+      preferredStepSelect.value =
+        preferredStepMap[inquirySelect.value] || "organise-consultation";
+    }
+
+    const trackedFields = {
+      source_page: params.get("source") || "contact.html",
+      source_path: params.get("source_path") || window.location.pathname,
+      source_offer: normalizeInquiryKey(params.get("offer") || serviceParam) || "",
+      source_cta: params.get("cta") || "",
+      source_section: params.get("section") || "",
+    };
+
+    Object.entries(trackedFields).forEach(([name, value]) => {
+      const field = document.querySelector(`[name="${name}"]`);
+      if (field) {
+        field.value = value;
+      }
+    });
+
+    syncInquirySubject(inquirySelect);
+
+    if (intakeSummary) {
+      const fragments = [];
+      if (trackedFields.source_offer) {
+        fragments.push(`Offer: ${getOfferLabel(trackedFields.source_offer)}`);
+      }
+      if (trackedFields.source_cta) {
+        fragments.push(`Clicked: ${trackedFields.source_cta}`);
+      }
+      if (
+        trackedFields.source_page &&
+        trackedFields.source_page !== "contact.html"
+      ) {
+        fragments.push(`From: ${trackedFields.source_page}`);
+      }
+
+      if (fragments.length) {
+        intakeSummary.hidden = false;
+        intakeSummary.textContent = fragments.join(" | ");
+      } else {
+        intakeSummary.hidden = true;
+      }
+    }
+
+    inquirySelect.addEventListener("change", () => {
+      if (preferredStepSelect) {
+        preferredStepSelect.value =
+          preferredStepMap[inquirySelect.value] ||
+          preferredStepSelect.value ||
+          "recommend-best-fit";
+      }
+      syncInquirySubject(inquirySelect);
+    });
+  }
+
+  function syncInquirySubject(inquirySelect) {
+    const subjectField = document.querySelector('[name="subject"]');
+    if (!subjectField) {
+      return;
+    }
+
+    const selectedLabel = inquirySelect.selectedOptions?.[0]?.textContent?.trim();
+    subjectField.value = selectedLabel
+      ? `New offer inquiry - ${selectedLabel}`
+      : "New offer inquiry";
   }
 
   function getStatusElement(form) {
@@ -479,17 +630,6 @@
     return field.value.trim();
   }
 
-  // ---------------------------------------------------------------------------
-  // Placeholder / dev-mode hardening
-  // ---------------------------------------------------------------------------
-
-  /**
-   * Called once on DOMContentLoaded.
-   * - Shows a sticky red banner (+ console error) if the scaffold Formspree ID
-   *   is still active, so the site never silently ships with test endpoints.
-   * - Wires up console warnings for Calendly links marked data-placeholder="true"
-   *   when running outside the production hostname.
-   */
   function warnIfPlaceholdersActive() {
     const issues = [];
     const forms = Array.from(
@@ -516,12 +656,10 @@
 
     if (FORMSPREE_ID === SCAFFOLD_FORMSPREE_ID && hasUnprotectedScaffoldForm) {
       issues.push(
-        'FORMSPREE_ID in <code style="background:rgba(0,0,0,.25);padding:1px 4px;border-radius:3px;">js/forms.js</code> ' +
-          "still uses the scaffold Formspree ID — replace it before launch.",
+        'FORMSPREE_ID in <code style="background:rgba(0,0,0,.25);padding:1px 4px;border-radius:3px;">js/forms.js</code> still uses the scaffold Formspree ID — replace it before launch.',
       );
       console.error(
-        `%c[DEV WARNING] FORMSPREE_ID is still set to the scaffold ID "${SCAFFOLD_FORMSPREE_ID}". ` +
-          "Update FORMSPREE_ID in js/forms.js before going live.",
+        `%c[DEV WARNING] FORMSPREE_ID is still set to the scaffold ID "${SCAFFOLD_FORMSPREE_ID}". Update FORMSPREE_ID in js/forms.js before going live.`,
         "background:#ff3b30;color:#fff;font-size:14px;font-weight:bold;padding:4px 8px;",
       );
     }
@@ -531,17 +669,13 @@
       hasUnprotectedScaffoldForm
     ) {
       issues.push(
-        'FORMSPREE_ID_NEWSLETTER in <code style="background:rgba(0,0,0,.25);padding:1px 4px;border-radius:3px;">js/forms.js</code> ' +
-          "still uses the scaffold Formspree ID — replace it if newsletter signups should go to a separate form.",
+        'FORMSPREE_ID_NEWSLETTER in <code style="background:rgba(0,0,0,.25);padding:1px 4px;border-radius:3px;">js/forms.js</code> still uses the scaffold Formspree ID — replace it if newsletter signups should go to a separate form.',
       );
       console.warn(
-        `[DEV WARNING] FORMSPREE_ID_NEWSLETTER is still set to the scaffold ID "${SCAFFOLD_FORMSPREE_ID}". ` +
-          "Update it if newsletter signups should use a different Formspree form.",
+        `[DEV WARNING] FORMSPREE_ID_NEWSLETTER is still set to the scaffold ID "${SCAFFOLD_FORMSPREE_ID}". Update it if newsletter signups should use a different Formspree form.`,
       );
     }
 
-    // Scan every Formspree form whose action is already hardcoded in HTML and flag
-    // actions that still carry the known-placeholder ID used during scaffolding.
     forms.forEach((form) => {
       const formspreeId = getFormspreeId(form);
       const label = form.id || form.getAttribute("name") || "unknown form";
@@ -560,13 +694,10 @@
       }
 
       issues.push(
-        `Form <strong>${label}</strong> still uses the scaffold Formspree ID ` +
-          `(<code style="background:rgba(0,0,0,.25);padding:1px 4px;border-radius:3px;">${SCAFFOLD_FORMSPREE_ID}</code>) — ` +
-          "verify this is the correct production endpoint.",
+        `Form <strong>${label}</strong> still uses the scaffold Formspree ID (<code style="background:rgba(0,0,0,.25);padding:1px 4px;border-radius:3px;">${SCAFFOLD_FORMSPREE_ID}</code>) — verify this is the correct production endpoint.`,
       );
       console.warn(
-        `[DEV WARNING] Form "${label}" action still references the scaffold Formspree ID "${SCAFFOLD_FORMSPREE_ID}". ` +
-          "Confirm this is the correct production endpoint before launch.",
+        `[DEV WARNING] Form "${label}" action still references the scaffold Formspree ID "${SCAFFOLD_FORMSPREE_ID}". Confirm this is the correct production endpoint before launch.`,
         form,
       );
     });
@@ -574,25 +705,22 @@
     if (issues.length && !isProduction) {
       injectDevWarningBanner(
         "&#9888;&#xFE0F; <strong>DEV WARNING — forms need attention before launch:</strong> " +
-          issues.map((i) => `<br>&nbsp;&nbsp;• ${i}`).join(""),
+          issues.map((issue) => `<br>&nbsp;&nbsp;• ${issue}`).join(""),
       );
     }
 
     if (!issues.length && formsUsingScaffoldFallback.length && !isProduction) {
       console.info(
-        "[DEV INFO] Formspree placeholder IDs remain in use, but every public form has a working mailto fallback.",
+        "[DEV INFO] Formspree placeholder IDs remain in use, but every affected form still has a working mailto fallback.",
       );
     }
 
     initCalendlyWarnings(isProduction);
   }
 
-  /**
-   * Prepends a dismissible sticky banner to <body> with the given HTML message.
-   * @param {string} htmlMessage - Inner HTML for the banner text.
-   */
   function injectDevWarningBanner(htmlMessage) {
-    if (document.getElementById("dev-warning-banner")) return; // already present
+    if (document.getElementById("dev-warning-banner")) return;
+
     const banner = document.createElement("div");
     banner.id = "dev-warning-banner";
     banner.setAttribute("role", "alert");
@@ -628,11 +756,6 @@
     document.body.prepend(banner);
   }
 
-  /**
-   * Attaches click-time console warnings to every Calendly anchor tagged with
-   * data-placeholder="true", but only when NOT on the production hostname.
-   * This avoids noise in production while making dev/staging issues obvious.
-   */
   function initCalendlyWarnings(isProduction) {
     if (isProduction) return;
 
@@ -641,11 +764,11 @@
       .forEach((link) => {
         link.addEventListener("click", () => {
           console.warn(
-            "[DEV WARNING] Calendly link clicked in a non-production environment. " +
-              "Verify that the URL below is the correct live Calendly handle before launch:",
+            "[DEV WARNING] Calendly link clicked in a non-production environment. Verify that the URL below is the correct live Calendly handle before launch:",
             link.href,
           );
         });
       });
   }
 })();
+
