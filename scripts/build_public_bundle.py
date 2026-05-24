@@ -51,6 +51,12 @@ PUBLIC_DATA_FILES = [
     "social-posts.public.json",
 ]
 
+PRIVATE_DOC_MARKERS = (
+    "private/",
+    "applications/",
+    "APPLICATION_TRACKER.md",
+)
+
 
 def run_portfolio_generation() -> None:
     subprocess.run(
@@ -72,7 +78,9 @@ def build_public_social_archive() -> None:
             "posts": [post for post in posts if post.get("status") == "published"],
         }
     elif public_path.exists():
-        public_payload = json.loads(public_path.read_text(encoding="utf-8"))
+        # Do not rewrite the checked-in public archive when the private source file
+        # is absent; the bundle can consume the existing public-safe file as-is.
+        return
     else:
         raise FileNotFoundError(
             "Neither assets/data/social-posts.json nor assets/data/social-posts.public.json exists.",
@@ -117,9 +125,27 @@ def copy_public_assets() -> None:
         copy_file(str(Path("assets") / "docs" / file_name))
 
 
+def assert_public_manifest_safe() -> None:
+    for file_name in PUBLIC_DOC_FILES:
+        normalized = file_name.replace("\\", "/")
+        if any(marker in normalized for marker in PRIVATE_DOC_MARKERS):
+            raise RuntimeError(f"Private document leaked into PUBLIC_DOC_FILES: {file_name}")
+
+
+def assert_dist_safe() -> None:
+    for marker in PRIVATE_DOC_MARKERS:
+        if list(DIST_DIR.rglob(f"*{marker.split('/')[-1]}*")) and marker.endswith("APPLICATION_TRACKER.md"):
+            raise RuntimeError("Private application tracker leaked into site-dist")
+
+    for forbidden_dir in (DIST_DIR / "assets" / "docs" / "private", DIST_DIR / "assets" / "docs" / "applications"):
+        if forbidden_dir.exists():
+            raise RuntimeError(f"Private docs leaked into public bundle: {forbidden_dir}")
+
+
 def main() -> None:
     run_portfolio_generation()
     build_public_social_archive()
+    assert_public_manifest_safe()
     ensure_dist_root()
 
     for relative_path in ROOT_FILES:
@@ -129,6 +155,7 @@ def main() -> None:
         copy_tree(relative_path)
 
     copy_public_assets()
+    assert_dist_safe()
     print(f"Public bundle built at {DIST_DIR}")
 
 

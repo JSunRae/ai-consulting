@@ -16,6 +16,8 @@ Thumbs.db
 # Build outputs
 dist/
 build/
+site-dist/
+__pycache__/
 
 # Environment
 .env

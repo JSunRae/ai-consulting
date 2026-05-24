@@ -12,6 +12,8 @@ To all AI Agents joining this workspace:
 - **HTML/CSS/JS**: Use `read_file` to understand the structure.
 - **Edits**: Use the workspace patch/edit tools for targeted changes. Prefer the smallest diff that solves the task.
 - **Data Driven**: Content usually lives in `assets/data/`. If you are asked to update "text" available to the chatbot, check `resume.json` first.
+- **Private Documents**: Active applications, trackers, drafts, and internal notes belong in `assets/docs/private/` on `private-main`, never in public `assets/docs/`.
+- **Public Audit**: Before suggesting a public push, run `python scripts/check_public_safety.py`.
 
 ## 3. Specific Component Instructions
 

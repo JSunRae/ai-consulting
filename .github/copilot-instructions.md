@@ -12,6 +12,13 @@ This is a personal website/portfolio for Jason Rae, a Senior Data Analyst EMEA, 
 - **Fonts**: Google Fonts (professional sans-serif)
 - **Hosting**: Static site (can deploy to GitHub Pages, Netlify, or Vercel)
 
+## Public/Private Content Rules
+
+- This repository has a public branch and a private branch.
+- Public-safe website content stays in the normal tracked paths.
+- Job applications, application trackers, internal drafts, and other private documents belong only in `assets/docs/private/` on `private-main`.
+- Before proposing a public push, run `python scripts/check_public_safety.py`.
+
 ## Design Guidelines
 
 ### Visual Identity

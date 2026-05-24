@@ -19,6 +19,13 @@ Registrar: Cloudflare Registrar
 - **Blog** - SEO-targeted articles in `blog/`
 - **Responsive Design** - Mobile-first, `css/responsive.css` utility layer, tested down to 320 px
 
+## Public vs Private Content
+
+- Public branch content must remain safe to publish as a website or portfolio repo.
+- Public-safe assets stay in `assets/data/`, public page files, and the explicitly allowlisted docs in `assets/docs/`.
+- Private-only materials such as active job applications, search trackers, drafts, and internal notes belong under `assets/docs/private/` on `private-main`.
+- Before any public push, run `python scripts/check_public_safety.py`.
+
 ## 🎥 Optional: Hero Avatar Intro Video (Synthesia / HeyGen)
 
 - Target: 30–45 seconds, calm/confident/non-salesy.
@@ -162,6 +169,7 @@ npm run deploy:netlify
 6. After DNS resolves, verify HTTPS, forms, sitemap, and crawlability.
 
 > Do not store personal registrant address, phone number, or email in repo files. Keep public project docs limited to domain ownership status and deployment steps.
+> Do not store active application packets or job-search trackers in public paths. Keep them under `assets/docs/private/` on the private branch only.
 
 ## 📝 Customizing Content
 
