@@ -1,4 +1,4 @@
-﻿# Jason Rae - Commercial Analytics & Applied AI Website
+# Jason Rae - Commercial Analytics & Applied AI Website
 
 A professional website serving as both a digital resume and a commercial decision-systems platform for Jason Rae, a Commercial Analytics & Applied AI Leader based near Stuttgart, Germany.
 
@@ -183,8 +183,8 @@ Netlify production settings:
 
 ## 📋 Closeout Checklist
 
-See [`assets/docs/TODO.md`](assets/docs/TODO.md) for the full consolidated pre-launch checklist.
-For the exact handoff steps when real IDs and URLs are ready, use [`assets/docs/SETUP_GUIDE.md`](assets/docs/SETUP_GUIDE.md).
+See [`internal-docs/TODO.md`](internal-docs/TODO.md) for the full consolidated pre-launch checklist.
+For the exact handoff steps when real IDs and URLs are ready, use [`internal-docs/SETUP_GUIDE.md`](internal-docs/SETUP_GUIDE.md).
 
 ## 📧 Contact
 
