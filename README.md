@@ -1,6 +1,6 @@
 ﻿# Jason Rae - Commercial Analytics & Applied AI Website
 
-A professional website serving as both a digital resume and a commercial decision-systems platform for Jason Rae, Senior Data Analyst EMEA, Commercial Analytics Architect, and Applied AI & Decision Intelligence Leader based near Stuttgart, Germany.
+A professional website serving as both a digital resume and a commercial decision-systems platform for Jason Rae, a Commercial Analytics & Applied AI Leader based near Stuttgart, Germany.
 
 Production domain: [jasonrae.ai](https://jasonrae.ai)
 Registrar: Cloudflare Registrar
@@ -15,7 +15,7 @@ Registrar: Cloudflare Registrar
 - **Interactive AI Chatbot** - Answers questions about Jason's experience and skills (powered by `assets/data/resume.json`)
 - **Portfolio Showcase** - Proof-of-work landing page, structured data, and case-study metadata generated from `assets/data/projects.json`
 - **Selected Delivery Stack** - Technical platforms framed behind the commercial decision work
-- **Lead Capture** - Commercial Analytics Health Check intake, Formspree-ready forms with email fallback, email-led booking flow, newsletter signup
+- **Lead Capture** - Diagnostic review intake, Formspree-ready forms with email fallback, email-led contact flow, newsletter signup
 - **Blog** - SEO-targeted articles in `blog/`
 - **Responsive Design** - Mobile-first, `css/responsive.css` utility layer, tested down to 320 px
 
@@ -23,7 +23,7 @@ Registrar: Cloudflare Registrar
 
 - Target: 30–45 seconds, calm/confident/non-salesy.
 - Positioning line: "Commercial operator to analytics architect to applied AI leader."
-- The homepage hero (`index.html`) includes a styled placeholder block you can replace with a real `<video>` tag (MP4/WebM) or a provider embed snippet.
+- The homepage hero can support a future `<video>` tag (MP4/WebM) or provider embed snippet, but no live hero video is required for the current launch.
 
 ## 📁 Project Structure
 
@@ -58,6 +58,7 @@ AI_Consulting/
     │   ├── og-image.png           # Open Graph image (1200×630)
     │   ├── og-image.svg           # Source SVG for og-image
     │   ├── favicon.svg            # SVG favicon (512×512)
+    │   ├── jason-profile-photo.jpg
     │   ├── profile-placeholder.svg
     │   └── hero-video-placeholder.svg
     ├── docs/
@@ -71,7 +72,7 @@ AI_Consulting/
 
 ## 🛠️ Tech Stack
 
-- HTML5, CSS3, JavaScript (Vanilla — no framework, no build step)
+- HTML5, CSS3, JavaScript (Vanilla)
 - CSS Custom Properties for theming
 - Font Awesome icons (CDN)
 - Google Fonts — Inter + JetBrains Mono
@@ -96,10 +97,10 @@ AI_Consulting/
 
 ## 🚀 Running Locally
 
-The site is static, but the portfolio and case-study metadata are generated from `assets/data/projects.json`.
+The site is static, but the portfolio sections, case-study metadata, and deploy-ready public bundle are generated from repo source files.
 
 ```bash
-# Refresh generated portfolio and case-study HTML after editing project data
+# Refresh generated portfolio content and rebuild the Netlify-ready public bundle
 npm run build
 ```
 
@@ -107,7 +108,9 @@ After that, pick any local serving method:
 
 ```bash
 # Option 1 — npm (recommended, uses package.json scripts)
-npm run build           # regenerate portfolio landing page + case-study metadata from JSON
+npm run build           # regenerate portfolio content + rebuild site-dist
+npm run build:portfolio # regenerate portfolio landing page + case-study metadata only
+npm run check:preflight # verify deploy-critical files and public-content rules
 npm start              # serve . — serves the site locally
 npm run dev            # npx live-server with auto-reload on port 3000
 
@@ -120,15 +123,15 @@ python -m http.server 8000
 
 Then open `http://localhost:3000` (or the port shown in the terminal).
 
-## ⚙️ Environment Variables / IDs to Set Before Deploying
+## ⚙️ Runtime Defaults And Optional Overrides
 
-These are the remaining values or decisions to confirm before going live:
+These are the current runtime defaults for the finished repo-side workstream. Only change them if the live operating setup changes later:
 
 | Location | Placeholder / Default | What to Set |
 | --- | --- | --- |
-| `js/forms.js` | `'xeqkyzoq'` (Formspree form ID) | Your production Formspree form ID |
-| `contact.html` booking CTA | Email-led scheduling is currently live | Replace only if you want direct Calendly booking |
-| Optional LinkedIn Insight Tag snippet | Not installed by default | Add only if campaigns require it and you have a real LinkedIn partner ID |
+| `js/forms.js` | Live Formspree endpoint is already configured; scaffold ID remains only as a safety constant | Only update this if the production Formspree endpoint or newsletter routing changes |
+| `contact.html` booking CTA | Email-led scheduling is the current workstream default | Replace only if you want direct Calendly booking later |
+| Optional LinkedIn Insight Tag snippet | Intentionally disabled for this workstream | Add only if campaigns require it and you have a real LinkedIn partner ID |
 | All `<meta property="og:image">` tags | Use the absolute production URL | Keep `https://jasonrae.ai/assets/images/og-image.png` on every page |
 | `assets/data/resume.json` | Current public-safe version | Keep synchronized with resume copy and downloadable PDF |
 | `assets/data/projects.json` | Public-safe case study data | Keep synchronized with portfolio framing and chatbot responses |
@@ -145,12 +148,18 @@ npm run deploy:netlify
 
 > The site is fully static, but the checked-in security headers are configured in `netlify.toml`. Other hosts can serve the files, but equivalent CSP and security headers should be configured separately.
 
+Netlify production settings:
+
+- Build command: `npm run build`
+- Publish directory: `site-dist`
+
 ### Current Domain Status
 
 - `jasonrae.ai` is now owned and registered through Cloudflare Registrar.
 - The site code already targets `https://jasonrae.ai` in canonical URLs, sitemap entries, robots.txt, and Open Graph metadata.
 - GitHub repo is live at `https://github.com/JSunRae/ai-consulting` and the Netlify project is live at `https://jasonrae-ai.netlify.app`.
-- The remaining launch work is Cloudflare DNS verification so `jasonrae.ai` and `www.jasonrae.ai` point at Netlify and HTTPS can provision.
+- Repo-side commercialization implementation is complete.
+- The only remaining website-release validation item is a real-device Safari smoke test covering layout, navigation, chat, and form behavior.
 
 ### Recommended Production Setup
 
@@ -160,18 +169,19 @@ npm run deploy:netlify
 4. In Cloudflare DNS, point the apex domain to `apex-loadbalancer.netlify.com` using a flattened `CNAME` / `ALIAS` if available, or fallback `A 75.2.60.5` if not.
 5. In Cloudflare DNS, point `www` to `jasonrae-ai.netlify.app` with a `CNAME`.
 6. After DNS resolves, verify HTTPS, forms, sitemap, and crawlability.
+7. Run one real-device Safari pass on `index.html`, `services.html`, and `contact.html`.
 
 > Do not store personal registrant address, phone number, or email in repo files. Keep public project docs limited to domain ownership status and deployment steps.
 
 ## 📝 Customizing Content
 
 1. Update personal information directly in HTML files or via `assets/data/*.json`
-2. After changing `assets/data/projects.json`, run `npm run build` to regenerate `portfolio.html` and case-study metadata blocks
+2. After changing `assets/data/projects.json`, run `npm run build` to regenerate portfolio content and rebuild `site-dist`
 3. Modify colors in `css/variables.css`
 4. Add project images to `assets/images/projects/`
 5. Update chatbot knowledge by editing `assets/data/resume.json` and `assets/data/projects.json`
 
-## 📋 Pre-Launch Checklist
+## 📋 Closeout Checklist
 
 See [`assets/docs/TODO.md`](assets/docs/TODO.md) for the full consolidated pre-launch checklist.
 For the exact handoff steps when real IDs and URLs are ready, use [`assets/docs/SETUP_GUIDE.md`](assets/docs/SETUP_GUIDE.md).

@@ -1,36 +1,34 @@
 ﻿# Pre-Launch Setup Guide
 
-Use this guide when the real Formspree ID, final booking decision, LinkedIn partner ID, and final visual assets are ready.
+Use this guide for optional follow-up changes after the current commercialization workstream. The current site already runs with live Formspree submission, email-led scheduling, disabled LinkedIn tracking, and the shipped profile image.
 
 ## Pre-Launch Setup Checklist
 
-### Step 1: Formspree (Contact Form)
+### Step 1: Formspree (Only if the endpoint changes later)
 
-- Go to [https://formspree.io](https://formspree.io) and sign in.
-- Create a new form named `Jason Rae Commercial Analytics Health Check`.
-- Copy the form ID (the 8 characters after `/f/` in the form URL).
-- Open `js/forms.js` and replace `'xeqkyzoq'` with the real ID.
-- If newsletter signups should use a separate endpoint, update `FORMSPREE_ID_NEWSLETTER` too.
-- Test the form on `contact.html` locally.
+- The current site already submits successfully through the live Formspree endpoint.
+- Only revisit this if the production form ID or newsletter routing changes.
+- If that happens, update `js/forms.js` and rerun a real submission test on `contact.html`.
 
-### Step 2: Calendly
+### Step 2: Calendly (Optional future change)
 
 - Go to [https://calendly.com](https://calendly.com) and sign in.
 - Claim or replace the placeholder handle `jason-rae-ai-consulting`.
-- Create an event type named `Commercial Analytics Health Check` (30 min).
-- If direct booking should be enabled, replace the scheduling-request CTA in `contact.html` with the live Calendly URL.
-- If booking should stay email-led, leave the current scheduling-request flow in place.
+- Create an event type named `Commercial Analytics Diagnostic Review` (30 min).
+- The current workstream default is to keep booking email-led.
+- Only replace the current flow if a separate decision is made to enable direct booking.
 
 ### Step 3: Profile Photo
 
 - Prepare a professional headshot, ideally 800x800 WebP under 120 KB.
 - Save it as `profile-photo.webp` in `assets/images/`.
-- Replace `assets/images/profile-placeholder.svg` in `about.html`.
+- Replace `assets/images/jason-profile-photo.jpg` in `about.html`.
 - Update the alt text to match the final preferred public title.
 
-### Step 4: LinkedIn Insight Tag
+### Step 4: LinkedIn Insight Tag (Optional future change)
 
-- Only keep this if LinkedIn campaigns are part of launch.
+- The current workstream default is to leave this disabled.
+- Only enable it if LinkedIn campaigns become part of a later acquisition track.
 - In LinkedIn Campaign Manager, copy the Insight Tag partner ID.
 - The placeholder tracking snippet has already been removed from public pages.
 - If LinkedIn tracking is needed, add the official Insight Tag snippet back with the real partner ID.
@@ -40,12 +38,12 @@ Use this guide when the real Formspree ID, final booking decision, LinkedIn part
 
 - Push the latest changes to GitHub.
 - In Netlify, create a new site from the repo.
-- Build command: `npm run build` or leave blank for a static deploy.
-- Publish directory: `.`
+- Build command: `npm run build`
+- Publish directory: `site-dist`
 - Add the custom domain `jasonrae.ai` in Netlify.
 - In Cloudflare DNS, create the apex record as either:
-	- flattened `CNAME` / `ALIAS` for `jasonrae.ai` -> `apex-loadbalancer.netlify.com`, or
-	- fallback `A` record for `jasonrae.ai` -> `75.2.60.5`
+  - flattened `CNAME` / `ALIAS` for `jasonrae.ai` -> `apex-loadbalancer.netlify.com`, or
+  - fallback `A` record for `jasonrae.ai` -> `75.2.60.5`
 - In Cloudflare DNS, create `CNAME` for `www` -> `jasonrae-ai.netlify.app`.
 - If Cloudflare proxying causes validation trouble during initial setup, temporarily use DNS-only until Netlify verifies the domain, then re-enable proxying if desired.
 - Keep `jasonrae.ai` as the canonical production hostname across the site metadata.
@@ -53,16 +51,17 @@ Use this guide when the real Formspree ID, final booking decision, LinkedIn part
 ### Step 6: Post-Deploy Verification
 
 - Submit a real test inquiry through `contact.html`.
-- If direct booking is enabled, click through the Calendly path.
+- If direct booking is enabled later, click through the Calendly path.
 - Verify there are no CSP errors for LinkedIn if the tracking tag is enabled.
 - Confirm `https://jasonrae.ai` resolves to the live site and serves a valid certificate.
 - Decide whether `www.jasonrae.ai` should redirect to `jasonrae.ai` or remain unused.
 - Add the domain in Google Search Console and submit `sitemap.xml`.
 - Run a Lighthouse pass on the deployed site.
+- Run one real-device Safari pass on an iPhone or iPad to confirm layout, nav, chat, and form behavior.
 
 ## Quick Find
 
 - `xeqkyzoq` -> scaffold Formspree ID in `js/forms.js`
 - `Request Scheduling Link` -> current email-led booking CTA in `contact.html`
-- `profile-placeholder.svg` -> current headshot placeholder
+- `jason-profile-photo.jpg` -> current live profile image
 - `jasonrae.ai` -> owned domain, registered at Cloudflare, ready to point at Netlify

@@ -89,7 +89,9 @@ function updateDefaultConsultationLabels() {
       label === "Book an LLM Architecture Session" ||
       label === "Start an Architecture Review" ||
       label === "Schedule a Workshop" ||
-      label === "Start the Conversation"
+      label === "Start the Conversation" ||
+      label === "Start Conversation" ||
+      label === "Book Fit Call"
     ) {
       setAnchorLabel(anchor, "Book Fit Call");
     }

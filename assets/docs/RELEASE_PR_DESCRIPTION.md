@@ -50,7 +50,7 @@ This gives us a release candidate that is reviewable and deployable without drag
 ### Blog and teaching content
 
 - `blog/index.html`
-- `blog/5-ways-gpt4-transforms-business-analytics.html`
+- `blog/5-ways-gpt4-transforms-business-analytics.html` (legacy redirect to the canonical LLM article)
 - `blog/5-ways-llm-workflows-transform-business-analytics.html`
 - `blog/ai-cost-reduction-reality-check.html`
 - `blog/ai-vendor-due-diligence-checklist.html`
@@ -87,12 +87,7 @@ This gives us a release candidate that is reviewable and deployable without drag
 
 ### Public downloads and share assets
 
-- `assets/docs/AI-Vendor-Due-Diligence-Checklist-Printable.html`
-- `assets/docs/AI-Vendor-Due-Diligence-Checklist.html`
-- `assets/docs/AI-Vendor-Due-Diligence-Checklist.md`
 - `assets/docs/AI-Vendor-Due-Diligence-Checklist.pdf`
-- `assets/docs/Build-vs-Buy-AI-Decision-Matrix-Printable.html`
-- `assets/docs/Build-vs-Buy-AI-Decision-Matrix.md`
 - `assets/docs/Build-vs-Buy-AI-Decision-Matrix.pdf`
 - `assets/docs/Jason-Rae-Resume.pdf`
 - `assets/images/og-image.svg`
@@ -109,6 +104,11 @@ This gives us a release candidate that is reviewable and deployable without drag
 - `assets/docs/RELEASE_STAGE_COMMANDS.md`
 - `assets/docs/TODO.md`
 - `assets/docs/WQ24_FINAL_STATUS.md`
+
+Public-bundle note:
+
+- The production bundle only publishes the three PDF assets under `assets/docs/`.
+- Release-control Markdown files remain in-branch review support and are not runtime-critical.
 
 ## Explicitly Out Of Scope
 

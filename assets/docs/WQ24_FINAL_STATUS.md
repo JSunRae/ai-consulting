@@ -1,43 +1,65 @@
 # WQ-24 Final Status
 
-Last updated: 2026-05-16
+Last updated: 2026-05-29
 
 ## Decision
 
-WQ-24 is now `Done`.
+WQ-24 is `Done` for the isolated commercialization release branch.
 
-## Why It Is Done
+The only remaining gate is hosted preview sign-off outside the repo-local execution path.
 
-The release-isolation requirement is now satisfied operationally, not just conceptually.
+## What Changed Since The Prior Status
 
-### Decision Test
+The earlier `In Progress` judgment was based on a mixed dirty worktree in the main repository context.
 
-- unrelated repo changes are clearly separated from release scope: `Yes`
-  - The full mixed worktree was preserved on `codex/snapshot-all-changes-20260516` and pushed to `origin`.
-  - The clean release candidate work now lives on `codex/commercialization-release-20260516`.
-  - Only approved public/runtime files plus release-control evidence were brought onto the release branch.
-- a safe staging procedure exists: `Yes`
-  - `assets/docs/DEPLOY_SCOPE_MANIFEST.md` now reflects the actual branch-isolation model.
-  - `assets/docs/RELEASE_STAGE_COMMANDS.md` records the branch strategy and validation steps.
-- release smoke test passed or only non-blocking issues remain: `Yes`
-  - `assets/docs/BROWSER_QA_REPORT.md` records the broader browser QA pass.
-  - `assets/docs/RELEASE_SMOKE_TEST_REPORT.md` exists and records `GO` with no blockers.
-- no unresolved needs-human-decision items block the release candidate: `Yes`
-  - The previously disputed runtime/shareability files are explicitly resolved in `assets/docs/RELEASE_SCOPE_AUDIT.md`.
-  - External launch inputs and the physical-device Safari pass are retained as non-blocking operational follow-ups rather than release-scope blockers.
+That is no longer the controlling state for this workstream.
 
-## Non-Blocking Follow-Ups
+The current release path is now anchored to the isolated branch:
 
-These items remain open, but they do not block the static-site commercialization release branch:
+- branch: `codex/commercialization-release-20260516`
+- release summary: `assets/docs/RELEASE_PR_DESCRIPTION.md`
+- scope audit: `assets/docs/RELEASE_SCOPE_AUDIT.md`
+- staging guide: `assets/docs/RELEASE_STAGE_COMMANDS.md`
+- smoke evidence: `assets/docs/RELEASE_SMOKE_TEST_REPORT.md`
+- preview gate: `assets/docs/PREVIEW_DEPLOY_SMOKE_CHECKLIST.md`
 
-1. Choose whether to keep email-led scheduling or add a direct booking flow.
-2. Decide whether to reintroduce LinkedIn tracking later.
-3. Run a physical-device Safari smoke test as a post-release validation step.
-4. Decide whether to extend the public social archive beyond the current published-safe subset.
+## Closure Test
+
+- release scope isolated from unrelated local work: `Yes`
+  - the release candidate now lives on a dedicated branch rather than the original mixed dirty worktree
+  - the branch diff against `main` is limited to public/runtime release files plus release-control docs
+- staging and review procedure documented: `Yes`
+  - `assets/docs/DEPLOY_SCOPE_MANIFEST.md` and `assets/docs/RELEASE_STAGE_COMMANDS.md` now act as the operational source of truth
+- branch-level validation recorded: `Yes`
+  - `assets/docs/BROWSER_QA_REPORT.md` records rendered browser QA
+  - `assets/docs/RELEASE_SMOKE_TEST_REPORT.md` records release-candidate smoke results
+  - `python scripts/repo_preflight.py` passes on the current branch state
+- remaining open items are non-blocking for branch-local closure: `Yes`
+  - repo-local validation, bundle validation, and CTA normalization follow-up are complete
+  - hosted preview verification remains the final external merge gate
+  - broader social automation, phone, and career-material work stays outside this workstream
+
+## Final Next Steps For This Workstream
+
+1. Keep release-control docs aligned with the isolated branch state.
+2. Use the documented pathspec-only staging flow if additional release review is needed.
+3. Treat hosted preview deploy verification as the final merge gate, not repo-cleanliness work.
+
+## Status Of Those Next Steps
+
+1. Release-control docs refreshed: `Done`
+2. Branch-specific staging guidance present: `Done`
+3. Preview deploy checklist present and current: `Done`
+4. Repo-local smoke revalidation and CTA normalization follow-up: `Done`
+5. Hosted preview verification executed: `Pending external URL/sign-off`
 
 ## Tracker Alignment
 
-- `C:\Users\Pilot\Downloads\Ai Consulting Handovers\07-IMPLEMENTATION-WORKQUEUE.md`: WQ-24 should read `Done`
-- `C:\Users\Pilot\Downloads\Ai Consulting Handovers\09-LAUNCH-CHECKLIST.md`: `Deploy scope isolated from unrelated changes` should read `Done`
+- `07-IMPLEMENTATION-WORKQUEUE.md`: WQ-24 is `Done`
+- `09-LAUNCH-CHECKLIST.md`: `Deploy scope isolated from unrelated changes` is `Done`
 
-These trackers should now match this memo.
+## Non-Blocking Follow-Ups
+
+- Netlify preview deploy sign-off using `assets/docs/PREVIEW_DEPLOY_SMOKE_CHECKLIST.md`
+- optional physical-device Safari check
+- any later expansion of social, voice, or operator tooling should happen in separate workstreams

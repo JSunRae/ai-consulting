@@ -1,28 +1,69 @@
 # Deploy Scope Manifest
 
-Last updated: 2026-05-16
+Last updated: 2026-05-29
 
-## Scope Basis
+## Current Control State
 
-- Base commit for release isolation: `c96ededc0421f8246c4c789c7f2f0d6d3527f495`
-- Safety snapshot branch preserving the full dirty worktree: `codex/snapshot-all-changes-20260516`
-- Isolated release branch: `codex/commercialization-release-20260516`
-- Release principle approved by owner:
-  - include all changed public/runtime files that materially affect live UX, routing, or shareability
-  - preserve unrelated work separately rather than mixing it into the release branch
+This manifest now reflects the isolated release branch, not the original mixed dirty worktree.
 
-## Release Model
+- branch under release control: `codex/commercialization-release-20260516`
+- base branch: `main`
+- current head: `7258edd8c560648929669d1c49ad9b3ab1438fcb`
+- controlling staging guide: `assets/docs/RELEASE_STAGE_COMMANDS.md`
+- controlling audit: `assets/docs/RELEASE_SCOPE_AUDIT.md`
 
-This branch is the operational isolation for WQ-24.
+The older 2026-05-12 mixed-worktree analysis is no longer the active release-control basis for WQ-24.
 
-- Unrelated tracked work was preserved on the snapshot branch and pushed to `origin`.
-- The release branch was created from the pre-snapshot base commit.
-- Only the approved public/runtime files and the release-control evidence files were brought onto this branch.
-- Local untracked artifacts such as `site-dist/`, `tmp/`, `artifacts/`, and `__pycache__/` are not part of the release scope and must not be staged.
+## Workstream Next Steps
 
-## Included Release Scope
+These are the true next steps for WQ-24 on the isolated branch.
 
-### Core pages
+1. Reconfirm the branch still passes the release gates.
+2. Reconfirm the branch diff against `main` is still coherent release scope.
+3. Reconfirm the public social archive is published-safe.
+4. Keep release-control docs aligned with the live branch state.
+5. Treat preview deploy smoke validation as the final merge gate.
+
+## Status Of Those Next Steps
+
+1. Release gates rechecked: `Done`
+
+- `python scripts/repo_preflight.py` passed on 2026-05-28.
+- `npm run check:preflight` passed on 2026-05-28.
+- `npm run build` passed on 2026-05-29.
+
+1. Branch diff rechecked: `Done`
+
+- `git diff --name-status main...HEAD` still shows a coherent branch-level release surface.
+
+1. Public social archive rechecked: `Done`
+
+- public archive payload is `assets/data/social-posts.public.json`
+- no `draft`, `queue`, `ready`, or `scheduled` statuses appear in that public file
+- public route files remain:
+  - `blog/social-posts.html`
+  - `js/social-archive.js`
+  - `assets/data/social-posts.public.json`
+
+1. Release-control docs refreshed: `Done`
+
+- this manifest now points to the branch-isolated control state
+- `assets/docs/RELEASE_SCOPE_AUDIT.md` is refreshed to the same branch basis
+- `assets/docs/RELEASE_SMOKE_TEST_REPORT.md` now records the 2026-05-29 CTA-normalization follow-up
+
+1. Final merge gate identified: `Done`
+
+- the remaining gate is `assets/docs/PREVIEW_DEPLOY_SMOKE_CHECKLIST.md`
+- this is now an external validation step, not a repo-hygiene investigation step
+- branch-local runtime cleanup and rebuilt-bundle verification are complete
+
+## Branch Release Scope
+
+Use the branch-specific release scope below. Do not use blanket staging commands.
+
+### Must-Stage
+
+These are the current release-branch runtime and public-surface files.
 
 - `404.html`
 - `about.html`
@@ -32,11 +73,9 @@ This branch is the operational isolation for WQ-24.
 - `privacy.html`
 - `resume.html`
 - `services.html`
-
-### Blog and content routes
-
 - `blog/index.html`
-- `blog/5-ways-gpt4-transforms-business-analytics.html`
+- `blog/social-posts.html`
+- `blog/5-ways-gpt4-transforms-business-analytics.html` (legacy redirect shim to the canonical LLM article)
 - `blog/5-ways-llm-workflows-transform-business-analytics.html`
 - `blog/ai-cost-reduction-reality-check.html`
 - `blog/ai-vendor-due-diligence-checklist.html`
@@ -48,17 +87,6 @@ This branch is the operational isolation for WQ-24.
 - `blog/pl-attribution-fx-errors-data-analytics.html`
 - `blog/power-bi-vs-tableau-2024-comparison.html`
 - `blog/reducing-report-volume-95-percent-case-study.html`
-- `blog/social-posts.html`
-
-### Portfolio detail pages
-
-- `portfolio/ai-desktop-agent-orchestrator.html`
-- `portfolio/ai-memoir-narrative-pipeline.html`
-- `portfolio/algorithmic-trading-ai.html`
-- `portfolio/multilingual-travel-authorization-saas.html`
-
-### Front-end runtime assets
-
 - `css/components.css`
 - `css/style.css`
 - `js/chatbot.js`
@@ -67,69 +95,234 @@ This branch is the operational isolation for WQ-24.
 - `js/main.js`
 - `js/portfolio.js`
 - `js/social-archive.js`
-
-### Public runtime data
-
 - `assets/data/projects.json`
 - `assets/data/resume.json`
 - `assets/data/social-posts.public.json`
-
-### Public downloadable and share assets
-
-- `assets/docs/AI-Vendor-Due-Diligence-Checklist-Printable.html`
-- `assets/docs/AI-Vendor-Due-Diligence-Checklist.html`
-- `assets/docs/AI-Vendor-Due-Diligence-Checklist.md`
 - `assets/docs/AI-Vendor-Due-Diligence-Checklist.pdf`
-- `assets/docs/Build-vs-Buy-AI-Decision-Matrix-Printable.html`
-- `assets/docs/Build-vs-Buy-AI-Decision-Matrix.md`
 - `assets/docs/Build-vs-Buy-AI-Decision-Matrix.pdf`
 - `assets/docs/Jason-Rae-Resume.pdf`
 - `assets/images/og-image.svg`
-
-### Routing and deploy control
-
+- `portfolio/ai-desktop-agent-orchestrator.html`
+- `portfolio/ai-memoir-narrative-pipeline.html`
+- `portfolio/algorithmic-trading-ai.html`
+- `portfolio/multilingual-travel-authorization-saas.html`
 - `netlify.toml`
-- `sitemap.xml`
 - `scripts/build_public_bundle.py`
+- `sitemap.xml`
 
-### Release evidence and control docs
+Public social archive files are intentionally included on this branch because the archive now ships from a published-safe dataset.
 
+- `blog/social-posts.html`
+- `js/social-archive.js`
+- `assets/data/social-posts.public.json`
+
+Public `assets/docs/` payload is intentionally limited to the three PDF downloads above. Helper HTML, Markdown, and release-control docs under `assets/docs/` are branch-support files only and must not be treated as public runtime.
+
+### Optional-But-Related
+
+These files support the release process or preserve internal provenance, but they are not required for the public runtime payload.
+
+Release-control and repo-support files:
+
+- `.gitignore`
+- `LINK_AUDIT.md`
+- `README.md`
+- `generate_portfolio_pages.py`
+- `package.json`
+- `package-lock.json`
+- `requirements-dev.txt`
 - `assets/docs/BROWSER_QA_REPORT.md`
+- `assets/docs/DEPLOY_SCOPE_MANIFEST.md`
+- `assets/docs/PREVIEW_DEPLOY_SMOKE_CHECKLIST.md`
+- `assets/docs/RELEASE_PR_DESCRIPTION.md`
 - `assets/docs/RELEASE_SCOPE_AUDIT.md`
 - `assets/docs/RELEASE_SMOKE_TEST_REPORT.md`
 - `assets/docs/RELEASE_STAGE_COMMANDS.md`
 - `assets/docs/WQ24_FINAL_STATUS.md`
+
+Internal commercialization docs and handover assets:
+
+- `assets/docs/AGENT_LEDGER.md`
+- `assets/docs/BRAND_INTELLIGENCE_BRIEF.md`
+- `assets/docs/CHALLENGER_DISCOVERY_CALL_SCRIPT.md`
+- `assets/docs/CHALLENGER_LINKEDIN_LAUNCH_PLAN.md`
+- `assets/docs/CHALLENGER_PAGE_AUDIT.md`
+- `assets/docs/CHALLENGER_PROPOSAL_TEMPLATE.md`
+- `assets/docs/CHAT_VOICE_ALIGNMENT_AUDIT.md`
+- `assets/docs/Customer-Service-AI-Checklist.md`
+- `assets/docs/DEPLOY_AND_AUTOMATION_RUNBOOK.md`
+- `assets/docs/GERMAN_LOCALIZATION_ROADMAP.md`
+- `assets/docs/LAUNCH_HARDENING_HANDOVER.md`
+- `assets/docs/LEAD_MAGNET_TRACKING_HOOKS.md`
+- `assets/docs/OBJECTION_HANDLING_LIBRARY.md`
+- `assets/docs/OFFER_OPERATING_PLAYBOOK.md`
+- `assets/docs/POST_CALL_SUMMARY_TEMPLATE.md`
+- `assets/docs/RECOMMENDATION_MEMO_TEMPLATE.md`
+- `assets/docs/REPO_FINISH_PROMPTS.md`
+- `assets/docs/SETUP_GUIDE.md`
+- `assets/docs/SOCIAL_AUTOMATION_IMPLEMENTATION_BRIEF.md`
+- `assets/docs/SOCIAL_CONTENT_OPERATING_PLAN.md`
+- `assets/docs/TWILIO_OPENAI_SIP_PHASE1_PLAN.md`
+- `assets/docs/VOICE_CALL_AGENT_IMPLEMENTATION_BRIEF.md`
+- `assets/docs/VOICE_CALL_OPERATING_PLAYBOOK.md`
+- `assets/docs/VOICE_CALL_TEST_PLAN.md`
+
+Automation and operator tooling that remain outside the public runtime payload:
+
+- `.env.example`
+- `.github/workflows/social-draft.yml`
+- `.github/workflows/social-publish.yml`
+- `assets/data/social-channels.example.json`
+- `assets/data/social-guidance.json`
+- `assets/data/social-history-template.csv`
+- `assets/data/social-sources.json`
+- `scripts/extract_linkedin_saved_activity.py`
+- `scripts/generate_social_content_batch.py`
+- `scripts/import_linkedin_activity_markdown.py`
+- `scripts/import_linkedin_public_activity_json.py`
+- `scripts/repo_preflight.py`
+- `scripts/social_archive_admin.py`
+- `scripts/social_archive_import.py`
+- `scripts/social_buffer_publish.py`
+- `scripts/social_draft_pipeline.py`
+
+### Do-Not-Stage
+
+These files are unrelated, local-state, scratch, or outside the isolated website-release branch scope.
+
+- `.github/copilot-instructions.md`
+- `.netlify/state.json`
+- `03-Challenger-Audit-Core-Pages-Handover.md`
+- `Research and Documentation/`
+- `ai_analytics_affiliation_application_status_20260510.md`
+- `ai_analytics_institutional_affiliation_plan_for_jason_20260510.json`
+- `ai_analytics_institutional_affiliation_plan_for_jason_20260510.md`
 - `assets/docs/TODO.md`
+- `assets/docs/applications/checkmk-head-of-data-analytics-cover-letter.md`
+- `scripts/__pycache__/`
+- `scripts/generate_job_application_docs.py`
 
-## Explicit Exclusions
+### Needs Human Decision Before Release
 
-Do not include these classes of files in this release branch:
+These are commercialization-adjacent files that are still intentionally outside the current release scope.
 
-- career and job-application material under `Research and Documentation/`
-- social automation and operator tooling
-- voice backend and phonebot implementation files
-- repo support files that do not affect the live site runtime
-- local generated artifacts and caches
-- any file not explicitly copied onto `codex/commercialization-release-20260516`
+Internal social-automation state:
 
-## Resolved Scope Decisions
+- `assets/data/social-posts.json`
 
-- `404.html`: included because it is public-facing and changed.
-- `assets/data/projects.json`: included because portfolio pages and chatbot runtime depend on it.
-- `assets/data/resume.json`: included because resume content and chatbot runtime depend on it.
-- `assets/docs/Jason-Rae-Resume.pdf`: included because it is linked from `index.html` and `resume.html`.
-- `assets/images/og-image.svg`: included because it affects public shareability and brand presentation.
-- `blog/social-posts.html` and `js/social-archive.js`: included because `blog/index.html` links to the archive.
-- `assets/data/social-posts.public.json`: included because the public archive reads this file directly.
-- `scripts/build_public_bundle.py`: included because Netlify uses it as the branch build command via `netlify.toml`.
+Reason:
 
-## Non-Blocking Launch Inputs
+- the public branch now uses `assets/data/social-posts.public.json`
+- `assets/data/social-posts.json` remains internal operating state and should not be published as part of this workstream
 
-These items remain operational or post-launch concerns, but they do not block the static-site commercialization release branch:
+Voice and phone intake surface:
 
-- final booking-flow preference
-- LinkedIn tracking decision
-- physical-device Safari smoke test
-- broader phone rollout inputs
+- `assets/data/voice-intake-playbook.json`
+- `netlify/functions/_shared/voice-agent.mjs`
+- `netlify/functions/voice-incoming.mjs`
+- `netlify/functions/voice-summary.mjs`
+- `phonebot/.env.example`
+- `phonebot/README.md`
+- `phonebot/openai-connector.js`
+- `phonebot/server.js`
 
-They should remain tracked, but they do not reopen WQ-24.
+Reason:
+
+- These files create or document a voice/phone workflow surface that is operational, environment-dependent, and not required for the safe minimal site release.
+- They are commercialization-related, but they are not part of the default public deploy scope.
+
+## Commercialization-Related But Internal-Only
+
+Treat the following as internal-only unless the user explicitly wants repo history, operator docs, and automation assets included in the release branch.
+
+- All files under `assets/docs/` listed in `Optional-But-Related`, except the public-facing lead magnet and resume assets listed in `Must-Stage`
+- `.env.example`
+- `.github/workflows/social-draft.yml`
+- `.github/workflows/social-publish.yml`
+- `assets/data/social-channels.example.json`
+- `assets/data/social-guidance.json`
+- `assets/data/social-history-template.csv`
+- `assets/data/social-sources.json`
+- `assets/data/social-posts.json`
+- All staged-safe script files listed in `Optional-But-Related`
+- All voice and phone files listed under `Needs Human Decision Before Release`
+
+These files support commercialization operations, QA, content systems, sales process, or future automation. They are not required to put the public site live.
+
+## Exact Release Recommendation
+
+### Safe Minimal Release Scope
+
+Current recommendation for WQ-24 on this branch.
+
+- Stage only `Must-Stage`.
+- Optionally include release-control docs from `Optional-But-Related` if the PR should carry its audit trail.
+- Do not stage anything in `Do-Not-Stage`.
+- Leave `assets/data/social-posts.json` and the voice/phone track out of the release.
+
+PowerShell staging command:
+
+```powershell
+git add -- `
+  404.html `
+  about.html `
+  contact.html `
+  index.html `
+  portfolio.html `
+  privacy.html `
+  resume.html `
+  services.html `
+  blog/5-ways-gpt4-transforms-business-analytics.html `
+  blog/5-ways-llm-workflows-transform-business-analytics.html `
+  blog/ai-cost-reduction-reality-check.html `
+  blog/ai-vendor-due-diligence-checklist.html `
+  blog/build-vs-buy-ai-decision-matrix.html `
+  blog/customer-service-ai-checklist-before-chatbot.html `
+  blog/deterministic-llm-programming-production-ai.html `
+  blog/enterprise-ai-adoption-commercial-analytics.html `
+  blog/how-to-evaluate-ai-projects-roi.html `
+  blog/pl-attribution-fx-errors-data-analytics.html `
+  blog/power-bi-vs-tableau-2024-comparison.html `
+  blog/reducing-report-volume-95-percent-case-study.html `
+  css/components.css `
+  css/style.css `
+  js/chatbot.js `
+  js/decision-network.js `
+  js/forms.js `
+  js/main.js `
+  js/portfolio.js `
+  js/social-archive.js `
+  assets/data/projects.json `
+  assets/data/resume.json `
+  assets/data/social-posts.public.json `
+  assets/docs/AI-Vendor-Due-Diligence-Checklist.pdf `
+  assets/docs/Build-vs-Buy-AI-Decision-Matrix.pdf `
+  assets/docs/Jason-Rae-Resume.pdf `
+  assets/images/og-image.svg `
+  portfolio/ai-desktop-agent-orchestrator.html `
+  portfolio/ai-memoir-narrative-pipeline.html `
+  portfolio/algorithmic-trading-ai.html `
+  portfolio/multilingual-travel-authorization-saas.html `
+  blog/social-posts.html `
+  netlify.toml `
+  scripts/build_public_bundle.py `
+  sitemap.xml
+```
+
+### Fuller Release Scope If Docs And Operational Assets Are Wanted
+
+Use this only if the user wants internal provenance, QA evidence, and release-control documentation versioned alongside the public branch payload.
+
+- Stage everything in `Must-Stage`.
+- Add files from `Optional-But-Related`.
+- Keep `Do-Not-Stage` excluded.
+- Keep `Needs Human Decision Before Release` excluded until explicitly approved.
+
+This is the correct choice if the goal is not just a public-site deploy, but also a fuller repo-state handover of commercialization operations.
+
+## Final Judgment
+
+- WQ-24 status: branch-side repo hygiene work is complete.
+- Safe default: stage the branch release scope only.
+- Remaining merge gate: preview deploy smoke validation.
+- Separate risk bucket: internal social state plus voice and phone workflow files remain outside this release branch scope.

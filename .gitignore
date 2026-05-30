@@ -16,6 +16,12 @@ Thumbs.db
 # Build outputs
 dist/
 build/
+site-dist/
+artifacts/
+tmp/
+__pycache__/
+.mypy_cache/
+.netlify/
 
 # Environment
 .env
@@ -25,9 +31,12 @@ build/
 # Logs
 logs/
 *.log
+phonebot/*.log
 
 # Private documents
 assets/docs/private/
+Research and Documentation/
+test_notification.py
 
 # Temporary files
 *.tmp

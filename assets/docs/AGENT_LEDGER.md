@@ -23,3 +23,4 @@ Use this ledger to track which AI agent (or human) is working on which task to a
 
 - **One file, one agent**: Do not edit a file if another agent has it "In Progress".
 - **Read before write**: Always read `TODO.md` before starting work to ensure you aren't doing duplicate work.
+- **Mailbox access note**: Jason's email review may be available through `Composio MCP` even when Outlook mailbox-read tools are not exposed directly in the current Codex tool list. Before concluding that inbox review is blocked, check whether Composio mailbox tools are available for `pilot_jrae@hotmail.com` and `Jason_C_Rae@outlook.com`.

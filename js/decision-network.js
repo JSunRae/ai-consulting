@@ -37,14 +37,26 @@
 		".stack-featured",
 		".projects-cta-panel",
 		".hero-panel",
+		".hero-recruiter-card",
+		".hero-cta",
 		".newsletter-card",
+		".newsletter-box",
 		".timeline-item",
 		".card",
 		".value-card",
+		".page-intro-panel",
 		".process-step",
+		".lead-magnet-card",
+		".lead-magnet-actions",
 		".service-card",
 		".contact-info-card",
+		".contact-form-card",
+		".contact-method",
 		".blog-card",
+		".blog-hero",
+		".social-summary-card",
+		".social-filter-toolbar",
+		".social-archive-callout",
 	].join(", ");
 
 	const SERVICE_PARAM_MAPPINGS = {
@@ -410,6 +422,14 @@
 			return this.getInteractiveControl(target) || this.getHoverSurface(target);
 		}
 
+		getSignalContext(target) {
+			if (!(target instanceof Element)) {
+				return null;
+			}
+
+			return this.getHoverSurface(target) || target.closest("section, article, aside");
+		}
+
 		getHoverSurface(target) {
 			if (!(target instanceof Element)) {
 				return null;
@@ -448,6 +468,7 @@
 			if (!source) {
 				return null;
 			}
+			const context = this.getSignalContext(target) || this.getSignalContext(source);
 
 			const candidates = [];
 			const text = this.getSignalText(source, Boolean(surface));
@@ -455,8 +476,17 @@
 			const dataKeyword = source.getAttribute("data-network-keyword");
 			const dataCategory = source.getAttribute("data-category") || source.getAttribute("data-filter");
 			const href = source.getAttribute("href");
+			const contextKeyword = context?.getAttribute("data-network-keyword");
+			const contextCategory = context?.getAttribute("data-category") || context?.getAttribute("data-filter");
+			const contextText = context && context !== source ? this.getSignalText(context, true) : "";
 
 			[dataKeyword, dataCategory, aria, text].forEach((value) => {
+				if (value) {
+					candidates.push(value);
+				}
+			});
+
+			[contextKeyword, contextCategory, contextText].forEach((value) => {
 				if (value) {
 					candidates.push(value);
 				}
@@ -503,7 +533,8 @@
 				}
 			}
 
-			const rect = source.getBoundingClientRect();
+			const anchorSource = control && context ? context : source;
+			const rect = anchorSource.getBoundingClientRect();
 			return {
 				control: source,
 				kind: surface ? "surface" : "control",
@@ -878,9 +909,9 @@
 			} else {
 				const scrollable = Math.max(this.metrics.heightTotal - window.innerHeight, 1);
 				this.state.scrollProgress = this.clamp(window.scrollY / scrollable, 0, 1);
-				this.state.clusterProgress = 0.08 + this.smoothStep(0.02, 0.76, this.state.scrollProgress) * 0.38;
-				this.state.weightProgress = 0.04 + this.smoothStep(0.18, 0.92, this.state.scrollProgress) * 0.24;
-				this.state.clarityProgress = 0.06 + this.smoothStep(0.48, 1, this.state.scrollProgress) * 0.16;
+				this.state.clusterProgress = 0.14 + this.smoothStep(0.02, 0.72, this.state.scrollProgress) * 0.46;
+				this.state.weightProgress = 0.08 + this.smoothStep(0.14, 0.88, this.state.scrollProgress) * 0.32;
+				this.state.clarityProgress = 0.08 + this.smoothStep(0.4, 0.96, this.state.scrollProgress) * 0.24;
 				this.state.visibility = 1;
 			}
 
@@ -993,12 +1024,14 @@
 				const weighted = states.weighted[index];
 				const converged = states.converged[index];
 
-				let x = this.mix(sparse.x, clustered.x, this.state.clusterProgress);
-				let y = this.mix(sparse.y, clustered.y, this.state.clusterProgress);
+				const clusterStrength = this.mode === "stage" ? this.state.clusterProgress : this.clamp(this.state.clusterProgress * 1.14, 0, 1);
+				let x = this.mix(sparse.x, clustered.x, clusterStrength);
+				let y = this.mix(sparse.y, clustered.y, clusterStrength);
 				x = this.mix(x, weighted.x, this.state.weightProgress);
 				y = this.mix(y, weighted.y, this.state.weightProgress);
-				x = this.mix(x, converged.x, this.state.collapse * (this.mode === "stage" ? 1 : 0.55));
-				y = this.mix(y, converged.y, this.state.collapse * (this.mode === "stage" ? 1 : 0.55));
+				const collapseStrength = this.state.collapse * (this.mode === "stage" ? 1 : 0.84);
+				x = this.mix(x, converged.x, collapseStrength);
+				y = this.mix(y, converged.y, collapseStrength);
 
 				x *= this.metrics.width;
 				y *= this.metrics.height;

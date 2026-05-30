@@ -1,16 +1,16 @@
 {
-  "updatedAt": "2026-05-12T18:49:09.491361Z",
+  "updatedAt": "2026-05-16T08:09:22.984808+00:00",
   "posts": [
     {
       "id": "linkedin-repost-7455660300327862273",
-      "title": "Jason reposted: Bringing teams together across EMEA always gives a clearer view of where we stand,\u00a0and...",
-      "summary": "Repost from Herv\u00e9 Million. Bringing teams together across EMEA always gives a clearer view of where we stand, and where we\u2019re heading. During the last two weeks, we had Quarter Business Review sessions with all our regions. The discussions show...",
+      "title": "Jason reposted: Bringing teams together across EMEA always gives a clearer view of where we stand, and...",
+      "summary": "Repost from Hervé Million. Bringing teams together across EMEA always gives a clearer view of where we stand, and where we’re heading. During the last two weeks, we had Quarter Business Review sessions with all our regions. The discussions show...",
       "status": "published",
       "pillar": "LinkedIn repost",
       "contentType": "historical-repost",
       "preparedDate": "2026-05-09",
       "publishedDate": "2026-05-09",
-      "sourceAuthor": "Herv\u00e9 Million",
+      "sourceAuthor": "Hervé Million",
       "tags": [
         "LinkedIn repost"
       ],
@@ -18,7 +18,7 @@
         {
           "name": "LinkedIn",
           "status": "published",
-          "copy": "Bringing teams together across EMEA always gives a clearer view of where we stand,\u00a0and where\u00a0we\u2019re\u00a0heading. During the last two weeks,\u00a0we had\u00a0Quarter Business Review\u00a0sessions with all our regions. The discussions showed that while markets differ, many of the challenges and priorities are shared. The focus\u00a0remains\u00a0on making healthcare systems work better for those delivering care.\u00a0\u00a0 We aligned on the next quarter and challenged our plans against what teams are seeing on the ground. A clear direction, and a lot to work on.#MedlineEurope",
+          "copy": "Bringing teams together across EMEA always gives a clearer view of where we stand, and where we’re heading. During the last two weeks, we had Quarter Business Review sessions with all our regions. The discussions showed that while markets differ, many of the challenges and priorities are shared. The focus remains on making healthcare systems work better for those delivering care.   We aligned on the next quarter and challenged our plans against what teams are seeing on the ground. A clear direction, and a lot to work on.#MedlineEurope",
           "url": "https://www.linkedin.com/feed/update/urn:li:activity:7455660300327862273/",
           "publishedAt": "2026-05-09"
         }
@@ -64,7 +64,7 @@
         {
           "name": "LinkedIn",
           "status": "published",
-          "copy": "A large customer is not automatically a good sales target.\n\nThat sounds obvious.\n\nBut many target lists still start with size:\n\nLargest customers.\nLargest hospitals.\nLargest regions.\nLargest historical spend.\n\nThe better question is:\n\nWhat does this customer actually buy?\n\nAnd then:\n\nWhat do similar customers buy that this customer does not?\n\nThat is where buying-pattern analytics becomes powerful.\n\nA useful model can identify:\n\n- customers with similar purchasing behavior\n- products commonly bought together\n- category gaps\n- underpenetrated accounts\n- likely next-best products\n- margin-relevant opportunities\n- customers worth a sales conversation\n\nThe output should not be:\n\n\u201cThis customer has potential.\u201d\n\nThe output should be:\n\n\u201cThis customer buys A and B. Similar customers also buy C and D. The missing category has value, the pattern is credible, and the next commercial action is clear.\u201d\n\nThat is the difference between a list and a decision system.\n\nCommercial analytics should not just describe the business.\n\nIt should help the business decide where to act next.",
+          "copy": "A large customer is not automatically a good sales target.\n\nThat sounds obvious.\n\nBut many target lists still start with size:\n\nLargest customers.\nLargest hospitals.\nLargest regions.\nLargest historical spend.\n\nThe better question is:\n\nWhat does this customer actually buy?\n\nAnd then:\n\nWhat do similar customers buy that this customer does not?\n\nThat is where buying-pattern analytics becomes powerful.\n\nA useful model can identify:\n\n- customers with similar purchasing behavior\n- products commonly bought together\n- category gaps\n- underpenetrated accounts\n- likely next-best products\n- margin-relevant opportunities\n- customers worth a sales conversation\n\nThe output should not be:\n\n“This customer has potential.”\n\nThe output should be:\n\n“This customer buys A and B. Similar customers also buy C and D. The missing category has value, the pattern is credible, and the next commercial action is clear.”\n\nThat is the difference between a list and a decision system.\n\nCommercial analytics should not just describe the business.\n\nIt should help the business decide where to act next.",
           "url": "https://www.linkedin.com/feed/update/urn:li:activity:7458048277473689600/",
           "publishedAt": "2026-05-07"
         }
@@ -87,7 +87,7 @@
         {
           "name": "LinkedIn",
           "status": "published",
-          "copy": "If an analyst came to me with a market sizing model based mainly on hospital bed count, I would not tell them to throw it away.\n\nBut I would tell them not to stop there.\n\nBed count can be a useful starting point, but it should not become the main proxy for customer opportunity.\n\nMy first question would be:\n\nWhat does our own customer data already tell us?\n\nBefore asking the sales force to collect more external data, I would start with the buying patterns we already have.\n\nWhich products are bought together?\nWhich categories usually appear in mature accounts?\nWhich accounts are missing products that similar customers already buy?\nWhich customers behave like peers, even if their bed counts are different?\nWhich segments show repeatable patterns of adoption, expansion, or under-penetration?\n\nFrom there, I would build a customer buying-pattern matrix.\n\nNot just customer size.\n\nCustomer behaviour.\n\nThat matrix could show:\n\n* current product penetration\n* category combinations\n* product gaps\n* account maturity\n* peer-group similarity\n* cross-sell potential\n* historical buying progression\n* unusual underperformance versus comparable customers\n\nThen I would use machine learning to classify customers into peer groups based on actual purchasing behaviour.\n\nBecause the best comparison is not always:\n\n\u201cWhich hospitals have the same number of beds?\u201d\n\nIt is often:\n\n\u201cWhich customers behave similarly, and what do the stronger-performing peers buy that this customer does not?\u201d\n\nThat gives sales a much more practical view of opportunity.\n\nNot a generic market estimate.\n\nA targeted account strategy.\n\nBed count may tell you the theoretical size of a customer.\n\nBuying patterns tell you how that customer actually behaves.\n\nAnd good commercial analytics should always move the business closer to action.",
+          "copy": "If an analyst came to me with a market sizing model based mainly on hospital bed count, I would not tell them to throw it away.\n\nBut I would tell them not to stop there.\n\nBed count can be a useful starting point, but it should not become the main proxy for customer opportunity.\n\nMy first question would be:\n\nWhat does our own customer data already tell us?\n\nBefore asking the sales force to collect more external data, I would start with the buying patterns we already have.\n\nWhich products are bought together?\nWhich categories usually appear in mature accounts?\nWhich accounts are missing products that similar customers already buy?\nWhich customers behave like peers, even if their bed counts are different?\nWhich segments show repeatable patterns of adoption, expansion, or under-penetration?\n\nFrom there, I would build a customer buying-pattern matrix.\n\nNot just customer size.\n\nCustomer behaviour.\n\nThat matrix could show:\n\n* current product penetration\n* category combinations\n* product gaps\n* account maturity\n* peer-group similarity\n* cross-sell potential\n* historical buying progression\n* unusual underperformance versus comparable customers\n\nThen I would use machine learning to classify customers into peer groups based on actual purchasing behaviour.\n\nBecause the best comparison is not always:\n\n“Which hospitals have the same number of beds?”\n\nIt is often:\n\n“Which customers behave similarly, and what do the stronger-performing peers buy that this customer does not?”\n\nThat gives sales a much more practical view of opportunity.\n\nNot a generic market estimate.\n\nA targeted account strategy.\n\nBed count may tell you the theoretical size of a customer.\n\nBuying patterns tell you how that customer actually behaves.\n\nAnd good commercial analytics should always move the business closer to action.",
           "url": "https://www.linkedin.com/feed/update/urn:li:activity:7456960847223910400/",
           "publishedAt": "2026-05-04"
         }
@@ -96,7 +96,7 @@
     {
       "id": "linkedin-activity-7455148978335072257",
       "title": "AI agents are being marketed as digital workers.",
-      "summary": "AI agents are being marketed as digital workers. That sounds powerful. But inside a real business, the hard question is not: \u201cCan the agent do the task?\u201d The harder questions are: - Does it know the business rule? - D...",
+      "summary": "AI agents are being marketed as digital workers. That sounds powerful. But inside a real business, the hard question is not: “Can the agent do the task?” The harder questions are: - Does it know the business rule? - D...",
       "status": "published",
       "pillar": "Applied AI strategy",
       "contentType": "historical",
@@ -112,7 +112,7 @@
         {
           "name": "LinkedIn",
           "status": "published",
-          "copy": "AI agents are being marketed as digital workers.\n\nThat sounds powerful.\n\nBut inside a real business, the hard question is not:\n\n\u201cCan the agent do the task?\u201d\n\nThe harder questions are:\n\n- Does it know the business rule?\n- Does it have the right data?\n- Who approves the output?\n- What happens when the source data is wrong?\n- Can we audit what it did?\n- Can we measure whether the decision improved?\n\nThis is especially important in commercial analytics.\n\nAn agent that summarizes a forecast is useful.\n\nAn agent that explains why the forecast changed, checks CRM quality, compares sales-cycle assumptions, flags missing opportunities and prepares an executive-ready narrative is much more valuable.\n\nBut only if the workflow is designed properly.\n\nThe future is not just \u201cAI agents everywhere.\u201d\n\nThe future is governed, measurable agents embedded into real decision processes.",
+          "copy": "AI agents are being marketed as digital workers.\n\nThat sounds powerful.\n\nBut inside a real business, the hard question is not:\n\n“Can the agent do the task?”\n\nThe harder questions are:\n\n- Does it know the business rule?\n- Does it have the right data?\n- Who approves the output?\n- What happens when the source data is wrong?\n- Can we audit what it did?\n- Can we measure whether the decision improved?\n\nThis is especially important in commercial analytics.\n\nAn agent that summarizes a forecast is useful.\n\nAn agent that explains why the forecast changed, checks CRM quality, compares sales-cycle assumptions, flags missing opportunities and prepares an executive-ready narrative is much more valuable.\n\nBut only if the workflow is designed properly.\n\nThe future is not just “AI agents everywhere.”\n\nThe future is governed, measurable agents embedded into real decision processes.",
           "url": "https://www.linkedin.com/feed/update/urn:li:activity:7455148978335072257/",
           "publishedAt": "2026-05-02"
         }
@@ -120,8 +120,8 @@
     },
     {
       "id": "linkedin-activity-7454786751375671296",
-      "title": "\u201cJust throw the documents into Copilot.\u201d",
-      "summary": "\u201cJust throw the documents into Copilot.\u201d I hear this a lot. And it makes me nervous. Not because Copilot or similar AI tools are not useful. They are very useful. But uploading documents and asking for a summary is no...",
+      "title": "“Just throw the documents into Copilot.”",
+      "summary": "“Just throw the documents into Copilot.” I hear this a lot. And it makes me nervous. Not because Copilot or similar AI tools are not useful. They are very useful. But uploading documents and asking for a summary is no...",
       "status": "published",
       "pillar": "Applied AI governance",
       "contentType": "historical",
@@ -136,7 +136,7 @@
         {
           "name": "LinkedIn",
           "status": "published",
-          "copy": "\u201cJust throw the documents into Copilot.\u201d\n\nI hear this a lot.\n\nAnd it makes me nervous.\n\nNot because Copilot or similar AI tools are not useful.\n\nThey are very useful.\n\nBut uploading documents and asking for a summary is not the same as doing analysis.\n\nEspecially when the output includes:\n\n- numbers\n- percentages\n- financial claims\n- customer trends\n- forecast movements\n- pricing changes\n- margin explanations\n- executive recommendations\n\nA fluent summary can sound right even when the underlying logic is wrong.\n\nThat matters.\n\nBecause with numbers, the risk is not just linguistic.\n\nIt is analytical.\n\nIf AI says \u201csales declined by 3.7% because of churn,\u201d that is not just a sentence.\n\nIt is a claim.\n\nAnd claims need evidence.\n\nThe best thing you can do when using AI on business documents is force it to prove its work:\n\n- quote the source\n- show the calculation\n- list the documents used\n- separate fact from inference\n- flag uncertainty\n- identify missing data\n- show where numbers came from\n- explain what it did not check\n\nAI should not just produce an answer.\n\nIt should produce an auditable path to the answer.\n\nThat is the difference between using AI as a writing assistant and using AI as part of a decision system.",
+          "copy": "“Just throw the documents into Copilot.”\n\nI hear this a lot.\n\nAnd it makes me nervous.\n\nNot because Copilot or similar AI tools are not useful.\n\nThey are very useful.\n\nBut uploading documents and asking for a summary is not the same as doing analysis.\n\nEspecially when the output includes:\n\n- numbers\n- percentages\n- financial claims\n- customer trends\n- forecast movements\n- pricing changes\n- margin explanations\n- executive recommendations\n\nA fluent summary can sound right even when the underlying logic is wrong.\n\nThat matters.\n\nBecause with numbers, the risk is not just linguistic.\n\nIt is analytical.\n\nIf AI says “sales declined by 3.7% because of churn,” that is not just a sentence.\n\nIt is a claim.\n\nAnd claims need evidence.\n\nThe best thing you can do when using AI on business documents is force it to prove its work:\n\n- quote the source\n- show the calculation\n- list the documents used\n- separate fact from inference\n- flag uncertainty\n- identify missing data\n- show where numbers came from\n- explain what it did not check\n\nAI should not just produce an answer.\n\nIt should produce an auditable path to the answer.\n\nThat is the difference between using AI as a writing assistant and using AI as part of a decision system.",
           "url": "https://www.linkedin.com/feed/update/urn:li:activity:7454786751375671296/",
           "publishedAt": "2026-05-02"
         }
@@ -169,8 +169,8 @@
     },
     {
       "id": "linkedin-activity-7425086130791825408",
-      "title": "\u201cCan AI suggest the best price for a sales rep?\u201d",
-      "summary": "\u201cCan AI suggest the best price for a sales rep?\u201d It sounds like a simple question. It\u2019s not. In fact, it\u2019s one of the most complex problems you can give an AI team \u2014 not because of the model, but because of the decisi...",
+      "title": "“Can AI suggest the best price for a sales rep?”",
+      "summary": "“Can AI suggest the best price for a sales rep?” It sounds like a simple question. It’s not. In fact, it’s one of the most complex problems you can give an AI team — not because of the model, but because of the decisi...",
       "status": "published",
       "pillar": "Pricing",
       "contentType": "historical",
@@ -184,7 +184,7 @@
         {
           "name": "LinkedIn",
           "status": "published",
-          "copy": "\u201cCan AI suggest the best price for a sales rep?\u201d\n\nIt sounds like a simple question.\nIt\u2019s not.\n\nIn fact, it\u2019s one of the most complex problems you can give an AI team \u2014 not because of the model, but because of the decisions hiding underneath it.\n\nBefore a single line of code, leaders need to be explicit about things like:\n\u2022 Are we optimizing for margin, revenue, volume, or retention?\n\u2022 Is success defined at deal level, customer level, or portfolio level?\n\u2022 How much price risk is acceptable \u2014 and where?\n\u2022 Do we want consistency across reps, or controlled flexibility?\n\u2022 What happens when a rep disagrees with the recommendation?\n\nIf those questions aren\u2019t answered, the AI won\u2019t be wrong.\n\nIt will be misaligned.\n\nAnd misaligned pricing models don\u2019t fail dramatically.\nThey quietly shift behavior \u2014 eroding margins, distorting incentives, and creating false confidence.\n\nThis is where many AI initiatives struggle.\n\nLeaders ask:\n\u201cCan AI tell reps what price to sell at?\u201d\n\nStronger leaders ask:\n\u2022 \u201cWhat decision do we actually want to improve?\u201d\n\u2022 \u201cWhere should AI guide, and where should humans decide?\u201d\n\u2022 \u201cWhat does a good decision look like under uncertainty?\u201d\n\u2022 \u201cHow will we detect when the model is no longer helping?\u201d\n\nThe best pricing systems don\u2019t output a single number.\n\nThey offer:\n\u2022 Price ranges, not absolutes\n\u2022 Risk signals, not instructions\n\u2022 Context, not commands\n\u2022 Continuous feedback loops, not static rules\n\nAI doesn\u2019t set the price.\n\nIt shapes the decision environment around the person who does.\n\nAnd when leaders frame the problem this way, pricing stops being an AI experiment \u2014 and becomes a durable competitive advantage.",
+          "copy": "“Can AI suggest the best price for a sales rep?”\n\nIt sounds like a simple question.\nIt’s not.\n\nIn fact, it’s one of the most complex problems you can give an AI team — not because of the model, but because of the decisions hiding underneath it.\n\nBefore a single line of code, leaders need to be explicit about things like:\n• Are we optimizing for margin, revenue, volume, or retention?\n• Is success defined at deal level, customer level, or portfolio level?\n• How much price risk is acceptable — and where?\n• Do we want consistency across reps, or controlled flexibility?\n• What happens when a rep disagrees with the recommendation?\n\nIf those questions aren’t answered, the AI won’t be wrong.\n\nIt will be misaligned.\n\nAnd misaligned pricing models don’t fail dramatically.\nThey quietly shift behavior — eroding margins, distorting incentives, and creating false confidence.\n\nThis is where many AI initiatives struggle.\n\nLeaders ask:\n“Can AI tell reps what price to sell at?”\n\nStronger leaders ask:\n• “What decision do we actually want to improve?”\n• “Where should AI guide, and where should humans decide?”\n• “What does a good decision look like under uncertainty?”\n• “How will we detect when the model is no longer helping?”\n\nThe best pricing systems don’t output a single number.\n\nThey offer:\n• Price ranges, not absolutes\n• Risk signals, not instructions\n• Context, not commands\n• Continuous feedback loops, not static rules\n\nAI doesn’t set the price.\n\nIt shapes the decision environment around the person who does.\n\nAnd when leaders frame the problem this way, pricing stops being an AI experiment — and becomes a durable competitive advantage.",
           "url": "https://www.linkedin.com/feed/update/urn:li:activity:7425086130791825408/",
           "publishedAt": "2026-02-08"
         }
@@ -193,7 +193,7 @@
     {
       "id": "linkedin-activity-7424731002192797696",
       "title": "Most people treat AI like a smarter Google.",
-      "summary": "Most people treat AI like a smarter Google. That\u2019s not where the leverage is. The real value appears when you use it as a thinking partner: \u2022 You bring context \u2022 You bring constraints \u2022 You challenge the output \u2022 You...",
+      "summary": "Most people treat AI like a smarter Google. That’s not where the leverage is. The real value appears when you use it as a thinking partner: • You bring context • You bring constraints • You challenge the output • You...",
       "status": "published",
       "pillar": "LinkedIn thought leadership",
       "contentType": "historical",
@@ -206,7 +206,7 @@
         {
           "name": "LinkedIn",
           "status": "published",
-          "copy": "Most people treat AI like a smarter Google.\n\nThat\u2019s not where the leverage is.\n\nThe real value appears when you use it as a thinking partner:\n\u2022 You bring context\n\u2022 You bring constraints\n\u2022 You challenge the output\n\u2022 You decide what survives\n\nWithout that, you don\u2019t get intelligence \u2014 you get fluent noise.\n\nAI doesn\u2019t make people smarter.\nIt amplifies how they already think.\n\nWhich is why the gap between \u201cAI access\u201d and \u201cAI advantage\u201d keeps growing.",
+          "copy": "Most people treat AI like a smarter Google.\n\nThat’s not where the leverage is.\n\nThe real value appears when you use it as a thinking partner:\n• You bring context\n• You bring constraints\n• You challenge the output\n• You decide what survives\n\nWithout that, you don’t get intelligence — you get fluent noise.\n\nAI doesn’t make people smarter.\nIt amplifies how they already think.\n\nWhich is why the gap between “AI access” and “AI advantage” keeps growing.",
           "url": "https://www.linkedin.com/feed/update/urn:li:activity:7424731002192797696/",
           "publishedAt": "2026-02-08"
         }
@@ -215,7 +215,7 @@
     {
       "id": "linkedin-activity-7424361502737948672",
       "title": "A pattern I keep seeing with AI software purchases:",
-      "summary": "A pattern I keep seeing with AI software purchases: Companies buy capability before they assess fit. An AI model that looks impressive in a demo can quietly fail in production if: \u2022 It wasn\u2019t trained on similar data \u2022...",
+      "summary": "A pattern I keep seeing with AI software purchases: Companies buy capability before they assess fit. An AI model that looks impressive in a demo can quietly fail in production if: • It wasn’t trained on similar data •...",
       "status": "published",
       "pillar": "Pricing",
       "contentType": "historical",
@@ -230,7 +230,7 @@
         {
           "name": "LinkedIn",
           "status": "published",
-          "copy": "A pattern I keep seeing with AI software purchases:\n\nCompanies buy capability\nbefore they assess fit.\n\nAn AI model that looks impressive in a demo can quietly fail in production if:\n\u2022 It wasn\u2019t trained on similar data\n\u2022 The data distribution shifts\n\u2022 The edge cases matter (they usually do)\n\u2022 No one internally can stress-test the assumptions\n\nThat\u2019s not an AI problem.\nThat\u2019s a governance and ownership problem.\n\nWhat often gets missed is that the real opportunity isn\u2019t in large, generic models at all.\n\nIt\u2019s in small, bespoke models that sit directly inside your own data flows:\n\n\u2022 Price suggestions and margin-risk flags\n\u2022 Forecasting ranges instead of point estimates\n\u2022 Early warning signals when markets move faster than margins\n\u2022 Customer grouping based on buying behavior (no manual segmentation)\n\u2022 Customer-at-risk detection before churn appears in KPIs\n\u2022 Backorder and supply-stress flagging before it hits revenue\n\nThese models don\u2019t need hype.\nThey need context, feedback, and ownership.\n\nAI works best when:\n\u2022 The data is yours\n\u2022 The decision boundary is clear\n\u2022 The outcome is measurable\n\u2022 Humans remain accountable\n\nBuying AI without the right people to assess it is like buying a race car without a driver.\n\nPowerful.\nExpensive.\nAnd very easy to crash.\n\nThe teams getting real value from AI aren\u2019t asking \u201cWhat tool should we buy?\u201d",
+          "copy": "A pattern I keep seeing with AI software purchases:\n\nCompanies buy capability\nbefore they assess fit.\n\nAn AI model that looks impressive in a demo can quietly fail in production if:\n• It wasn’t trained on similar data\n• The data distribution shifts\n• The edge cases matter (they usually do)\n• No one internally can stress-test the assumptions\n\nThat’s not an AI problem.\nThat’s a governance and ownership problem.\n\nWhat often gets missed is that the real opportunity isn’t in large, generic models at all.\n\nIt’s in small, bespoke models that sit directly inside your own data flows:\n\n• Price suggestions and margin-risk flags\n• Forecasting ranges instead of point estimates\n• Early warning signals when markets move faster than margins\n• Customer grouping based on buying behavior (no manual segmentation)\n• Customer-at-risk detection before churn appears in KPIs\n• Backorder and supply-stress flagging before it hits revenue\n\nThese models don’t need hype.\nThey need context, feedback, and ownership.\n\nAI works best when:\n• The data is yours\n• The decision boundary is clear\n• The outcome is measurable\n• Humans remain accountable\n\nBuying AI without the right people to assess it is like buying a race car without a driver.\n\nPowerful.\nExpensive.\nAnd very easy to crash.\n\nThe teams getting real value from AI aren’t asking “What tool should we buy?”",
           "url": "https://www.linkedin.com/feed/update/urn:li:activity:7424361502737948672/",
           "publishedAt": "2026-02-08"
         }
@@ -238,8 +238,8 @@
     },
     {
       "id": "linkedin-activity-7424003432828551168",
-      "title": "One thing I\u2019ve learned using AI heavily: There are many things it\u2019s bad at, and pretend...",
-      "summary": "One thing I\u2019ve learned using AI heavily: There are many things it\u2019s bad at, and pretending otherwise slows teams down. I don\u2019t use AI to: \u2022 Decide strategy \u2022 Resolve ambiguity \u2022 Replace domain judgment \u2022 Make final ca...",
+      "title": "One thing I’ve learned using AI heavily: There are many things it’s bad at, and pretend...",
+      "summary": "One thing I’ve learned using AI heavily: There are many things it’s bad at, and pretending otherwise slows teams down. I don’t use AI to: • Decide strategy • Resolve ambiguity • Replace domain judgment • Make final ca...",
       "status": "published",
       "pillar": "LinkedIn thought leadership",
       "contentType": "historical",
@@ -252,7 +252,7 @@
         {
           "name": "LinkedIn",
           "status": "published",
-          "copy": "One thing I\u2019ve learned using AI heavily: There are many things it\u2019s bad at, and pretending otherwise slows teams down. I don\u2019t use AI to: \u2022 Decide strategy \u2022 Resolve ambiguity \u2022 Replace domain judgment \u2022 Make final calls that carry accountability I do use it to: \u2022 Stress-test assumptions \u2022 Surface second-order effects \u2022 Explore edge cases quickly \u2022 Compress thinking cycles AI accelerates thinking. It doesn\u2019t own outcomes. The fastest teams aren\u2019t the ones using AI everywhere. They\u2019re the ones who know exactly where not to use it.",
+          "copy": "One thing I’ve learned using AI heavily: There are many things it’s bad at, and pretending otherwise slows teams down. I don’t use AI to: • Decide strategy • Resolve ambiguity • Replace domain judgment • Make final calls that carry accountability I do use it to: • Stress-test assumptions • Surface second-order effects • Explore edge cases quickly • Compress thinking cycles AI accelerates thinking. It doesn’t own outcomes. The fastest teams aren’t the ones using AI everywhere. They’re the ones who know exactly where not to use it.",
           "url": "https://www.linkedin.com/posts/jason-c-rae_one-thing-ive-learned-using-ai-heavily-activity-7424003432828551168-kjyf",
           "publishedAt": "2026-02-08"
         }
@@ -260,8 +260,8 @@
     },
     {
       "id": "linkedin-share-7421462085051764737",
-      "title": "Jason shared: This isn\u2019t \u201ctime spent chatting.\u201d It\u2019s deliberate use. Top 0.1% of users. ~10,000 messa...",
-      "summary": "This isn\u2019t \u201ctime spent chatting.\u201d It\u2019s deliberate use. Top 0.1% of users. ~10,000 messages. Hundreds of focused conversations. Very few images. Almost no fluff. What this really represents is how I use AI: \u2022 To think...",
+      "title": "Jason shared: This isn’t “time spent chatting.” It’s deliberate use. Top 0.1% of users. ~10,000 messa...",
+      "summary": "This isn’t “time spent chatting.” It’s deliberate use. Top 0.1% of users. ~10,000 messages. Hundreds of focused conversations. Very few images. Almost no fluff. What this really represents is how I use AI: • To think...",
       "status": "published",
       "pillar": "LinkedIn share",
       "contentType": "historical-share",
@@ -274,7 +274,7 @@
         {
           "name": "LinkedIn",
           "status": "published",
-          "copy": "This isn\u2019t \u201ctime spent chatting.\u201d It\u2019s deliberate use. Top 0.1% of users. ~10,000 messages. Hundreds of focused conversations. Very few images. Almost no fluff. What this really represents is how I use AI: \u2022 To think, not to replace thinking \u2022 To pressure-test ideas, not generate noise \u2022 To design systems, not chase prompts \u2022 To clarify strategy, architecture, and trade-offs \u2022 To move faster after I understand the problem Most AI usage today optimizes for novelty. Real value comes from alignment: objectives, constraints, and feedback loops. AI doesn\u2019t fail \u2014 objectives do. Reasoning is cheap. Integration is hard. Used properly, AI becomes a force multiplier for judgment, not a substitute for it. The gap between \u201cAI adoption\u201d and \u201cAI advantage\u201d is still very wide. And that gap is where the work is.",
+          "copy": "This isn’t “time spent chatting.” It’s deliberate use. Top 0.1% of users. ~10,000 messages. Hundreds of focused conversations. Very few images. Almost no fluff. What this really represents is how I use AI: • To think, not to replace thinking • To pressure-test ideas, not generate noise • To design systems, not chase prompts • To clarify strategy, architecture, and trade-offs • To move faster after I understand the problem Most AI usage today optimizes for novelty. Real value comes from alignment: objectives, constraints, and feedback loops. AI doesn’t fail — objectives do. Reasoning is cheap. Integration is hard. Used properly, AI becomes a force multiplier for judgment, not a substitute for it. The gap between “AI adoption” and “AI advantage” is still very wide. And that gap is where the work is.",
           "url": "https://www.linkedin.com/posts/jason-c-rae_this-isnt-time-spent-chatting-its-deliberate-activity-7421462085051764737-Y2Zx",
           "publishedAt": "2026-02-08"
         }
@@ -282,8 +282,8 @@
     },
     {
       "id": "linkedin-activity-7420012668457136129",
-      "title": "Most companies are adopting AI. Very few are integrating it. Adoption looks like: \u2022 add...",
-      "summary": "Most companies are adopting AI. Very few are integrating it. Adoption looks like: \u2022 adding an LLM to a workflow \u2022 building a chatbot \u2022 generating content faster \u2022 \u201cAI\u201d features bolted onto existing processes Integrati...",
+      "title": "Most companies are adopting AI. Very few are integrating it. Adoption looks like: • add...",
+      "summary": "Most companies are adopting AI. Very few are integrating it. Adoption looks like: • adding an LLM to a workflow • building a chatbot • generating content faster • “AI” features bolted onto existing processes Integrati...",
       "status": "published",
       "pillar": "Applied AI strategy",
       "contentType": "historical",
@@ -297,7 +297,7 @@
         {
           "name": "LinkedIn",
           "status": "published",
-          "copy": "Most companies are adopting AI. Very few are integrating it. Adoption looks like: \u2022 adding an LLM to a workflow \u2022 building a chatbot \u2022 generating content faster \u2022 \u201cAI\u201d features bolted onto existing processes Integration looks like: \u2022 clear decision rights (who owns outcomes) \u2022 real feedback loops (what happens when it\u2019s wrong) \u2022 strong evaluation (not vibes-based demos) \u2022 the right model for the task (often not an LLM) \u2022 monitoring, drift detection, retraining or policy updates This is where people overestimate their understanding. They think AI projects are software launches. They\u2019re not. Software is deterministic. AI is probabilistic \u2014 and will shift as the world shifts. If you treat AI like normal software, you\u2019ll get a normal outcome: a clever pilot that never becomes reliable enough to matter.",
+          "copy": "Most companies are adopting AI. Very few are integrating it. Adoption looks like: • adding an LLM to a workflow • building a chatbot • generating content faster • “AI” features bolted onto existing processes Integration looks like: • clear decision rights (who owns outcomes) • real feedback loops (what happens when it’s wrong) • strong evaluation (not vibes-based demos) • the right model for the task (often not an LLM) • monitoring, drift detection, retraining or policy updates This is where people overestimate their understanding. They think AI projects are software launches. They’re not. Software is deterministic. AI is probabilistic — and will shift as the world shifts. If you treat AI like normal software, you’ll get a normal outcome: a clever pilot that never becomes reliable enough to matter.",
           "url": "https://www.linkedin.com/posts/jason-c-rae_most-companies-are-adopting-ai-very-few-activity-7420012668457136129-fmxT",
           "publishedAt": "2026-02-08"
         }
@@ -305,8 +305,8 @@
     },
     {
       "id": "linkedin-activity-7419287810819440640",
-      "title": "We\u2019re entering a weird era where \u201creasoning\u201d is becoming cheap. You can buy impressive...",
-      "summary": "We\u2019re entering a weird era where \u201creasoning\u201d is becoming cheap. You can buy impressive reasoning output on demand. But alignment \u2014 getting systems to consistently serve the right intent in the real world \u2014 is still ha...",
+      "title": "We’re entering a weird era where “reasoning” is becoming cheap. You can buy impressive...",
+      "summary": "We’re entering a weird era where “reasoning” is becoming cheap. You can buy impressive reasoning output on demand. But alignment — getting systems to consistently serve the right intent in the real world — is still ha...",
       "status": "published",
       "pillar": "LinkedIn thought leadership",
       "contentType": "historical",
@@ -319,7 +319,7 @@
         {
           "name": "LinkedIn",
           "status": "published",
-          "copy": "We\u2019re entering a weird era where \u201creasoning\u201d is becoming cheap. You can buy impressive reasoning output on demand. But alignment \u2014 getting systems to consistently serve the right intent in the real world \u2014 is still hard. Because alignment isn\u2019t about cleverness. It\u2019s about: \u2022 incentives (loss/reward functions) \u2022 context (what \u201cgood\u201d means here) \u2022 constraints (safety, compliance, brand, risk) \u2022 feedback loops (how the system learns from outcomes) That\u2019s why many AI pilots look great in a sandbox, then fall apart in production. The capability is there. The integration isn\u2019t. If you want AI to work, stop asking \u201cCan it reason?\u201d Ask \u201cCan we define success, constrain it, and measure impact after deployment?\u201d",
+          "copy": "We’re entering a weird era where “reasoning” is becoming cheap. You can buy impressive reasoning output on demand. But alignment — getting systems to consistently serve the right intent in the real world — is still hard. Because alignment isn’t about cleverness. It’s about: • incentives (loss/reward functions) • context (what “good” means here) • constraints (safety, compliance, brand, risk) • feedback loops (how the system learns from outcomes) That’s why many AI pilots look great in a sandbox, then fall apart in production. The capability is there. The integration isn’t. If you want AI to work, stop asking “Can it reason?” Ask “Can we define success, constrain it, and measure impact after deployment?”",
           "url": "https://www.linkedin.com/posts/jason-c-rae_were-entering-a-weird-era-where-reasoning-activity-7419287810819440640-t350",
           "publishedAt": "2026-02-08"
         }
@@ -350,8 +350,8 @@
     },
     {
       "id": "linkedin-activity-7418200436056313856",
-      "title": "lot of \u201cAI failures\u201d aren\u2019t model failures. They\u2019re objective failures. Teams optimise...",
-      "summary": "lot of \u201cAI failures\u201d aren\u2019t model failures. They\u2019re objective failures. Teams optimise what\u2019s measurable: \u2022 accuracy \u2022 response time \u2022 click-through \u2022 cost reduction \u2026and then act surprised when the system produces: \u2022...",
+      "title": "lot of “AI failures” aren’t model failures. They’re objective failures. Teams optimise...",
+      "summary": "lot of “AI failures” aren’t model failures. They’re objective failures. Teams optimise what’s measurable: • accuracy • response time • click-through • cost reduction …and then act surprised when the system produces: •...",
       "status": "published",
       "pillar": "Commercial analytics",
       "contentType": "historical",
@@ -364,7 +364,7 @@
         {
           "name": "LinkedIn",
           "status": "published",
-          "copy": "lot of \u201cAI failures\u201d aren\u2019t model failures. They\u2019re objective failures. Teams optimise what\u2019s measurable: \u2022 accuracy \u2022 response time \u2022 click-through \u2022 cost reduction \u2026and then act surprised when the system produces: \u2022 confident nonsense \u2022 misaligned decisions \u2022 short-term wins and long-term damage That\u2019s not the AI being \u201cwrong.\u201d That\u2019s the AI doing exactly what you asked\u2014just not what you meant. In business, the real question isn\u2019t \u201cIs the model good?\u201d It\u2019s: \u2022 What is it rewarded for? \u2022 What constraints are explicit? \u2022 What trade-offs are encoded? (speed vs quality, growth vs margin, automation vs risk) Most people think they can assess AI projects by demo quality. Demos are theatre. AI success is usually determined before training starts \u2014 in the objective function, data definitions, and feedback loop design.",
+          "copy": "lot of “AI failures” aren’t model failures. They’re objective failures. Teams optimise what’s measurable: • accuracy • response time • click-through • cost reduction …and then act surprised when the system produces: • confident nonsense • misaligned decisions • short-term wins and long-term damage That’s not the AI being “wrong.” That’s the AI doing exactly what you asked—just not what you meant. In business, the real question isn’t “Is the model good?” It’s: • What is it rewarded for? • What constraints are explicit? • What trade-offs are encoded? (speed vs quality, growth vs margin, automation vs risk) Most people think they can assess AI projects by demo quality. Demos are theatre. AI success is usually determined before training starts — in the objective function, data definitions, and feedback loop design.",
           "url": "https://www.linkedin.com/posts/jason-c-rae_lot-of-ai-failures-arent-model-failures-activity-7418200436056313856-EdAP",
           "publishedAt": "2026-02-08"
         }
@@ -395,8 +395,8 @@
     },
     {
       "id": "linkedin-activity-7416445899821780993",
-      "title": "Most people think \u201cAI\u201d means LLMs. That\u2019s like thinking \u201ctransport\u201d means planes. LLMs...",
-      "summary": "Most people think \u201cAI\u201d means LLMs. That\u2019s like thinking \u201ctransport\u201d means planes. LLMs are great at language-shaped work: \u2022 drafting, summarising, rewriting \u2022 search + synthesis (with sources) \u2022 turning messy human in...",
+      "title": "Most people think “AI” means LLMs. That’s like thinking “transport” means planes. LLMs...",
+      "summary": "Most people think “AI” means LLMs. That’s like thinking “transport” means planes. LLMs are great at language-shaped work: • drafting, summarising, rewriting • search + synthesis (with sources) • turning messy human in...",
       "status": "published",
       "pillar": "Applied AI governance",
       "contentType": "historical",
@@ -413,7 +413,7 @@
         {
           "name": "LinkedIn",
           "status": "published",
-          "copy": "Most people think \u201cAI\u201d means LLMs. That\u2019s like thinking \u201ctransport\u201d means planes. LLMs are great at language-shaped work: \u2022 drafting, summarising, rewriting \u2022 search + synthesis (with sources) \u2022 turning messy human intent into structured outputs \u2022 copilots for analysis, coding, documentation But a huge chunk of business value still comes from non-LLM AI: \u2022 forecasting (time series, causal models) \u2022 propensity / churn (classification, uplift) \u2022 pricing (elasticity, constrained optimisation) \u2022 fraud / anomaly detection (statistical + ML) \u2022 recommendations (ranking, retrieval) \u2022 operations (OR, simulation, queuing, routing) Where AI tends to disappoint is where leaders think it\u2019s intelligent: \u2022 ownership of decisions \u2022 accountability \u2022 \u201cunderstanding\u201d strategy or nuance \u2022 high-stakes judgement without feedback loops If you want real ROI, stop asking \u201cWhich LLM?\u201d Start asking: \u201cWhich problem class is this?\u201d Because the best solution is often not an LLM \u2014 it\u2019s the right model + the right workflow + the right controls.",
+          "copy": "Most people think “AI” means LLMs. That’s like thinking “transport” means planes. LLMs are great at language-shaped work: • drafting, summarising, rewriting • search + synthesis (with sources) • turning messy human intent into structured outputs • copilots for analysis, coding, documentation But a huge chunk of business value still comes from non-LLM AI: • forecasting (time series, causal models) • propensity / churn (classification, uplift) • pricing (elasticity, constrained optimisation) • fraud / anomaly detection (statistical + ML) • recommendations (ranking, retrieval) • operations (OR, simulation, queuing, routing) Where AI tends to disappoint is where leaders think it’s intelligent: • ownership of decisions • accountability • “understanding” strategy or nuance • high-stakes judgement without feedback loops If you want real ROI, stop asking “Which LLM?” Start asking: “Which problem class is this?” Because the best solution is often not an LLM — it’s the right model + the right workflow + the right controls.",
           "url": "https://www.linkedin.com/posts/jason-c-rae_most-people-think-ai-means-llms-that-activity-7416445899821780993-iC_M",
           "publishedAt": "2026-02-08"
         }
@@ -421,8 +421,8 @@
     },
     {
       "id": "linkedin-activity-7414939128456359936",
-      "title": "Why mistaking tools for intelligence is risky \u2014 especially in business The biggest risk...",
-      "summary": "Why mistaking tools for intelligence is risky \u2014 especially in business The biggest risk with modern AI in business isn\u2019t job replacement. It\u2019s misalignment. LLMs are powerful tools, but they don\u2019t understand your stra...",
+      "title": "Why mistaking tools for intelligence is risky — especially in business The biggest risk...",
+      "summary": "Why mistaking tools for intelligence is risky — especially in business The biggest risk with modern AI in business isn’t job replacement. It’s misalignment. LLMs are powerful tools, but they don’t understand your stra...",
       "status": "published",
       "pillar": "LinkedIn thought leadership",
       "contentType": "historical",
@@ -436,7 +436,7 @@
         {
           "name": "LinkedIn",
           "status": "published",
-          "copy": "Why mistaking tools for intelligence is risky \u2014 especially in business The biggest risk with modern AI in business isn\u2019t job replacement. It\u2019s misalignment. LLMs are powerful tools, but they don\u2019t understand your strategy, your risk tolerance, or your downstream consequences. They optimize their objective function \u2014 not your desired outcomes. When we treat these systems as \u201cintelligent,\u201d we start: \u2022 delegating judgment instead of decisions \u2022 trusting outputs without validating incentives \u2022 assuming correctness where there is only optimization This is where business risk appears. Using AI well isn\u2019t about plugging in the most capable model. It\u2019s about using the right tool, in the right place, with the right loss/reward function. If the objective function doesn\u2019t encode what you actually care about: \u2022 profit vs growth \u2022 speed vs accuracy \u2022 exploration vs control the system will optimize the wrong thing \u2014 very efficiently. That doesn\u2019t mean the model failed. It means we misunderstood the tool. Real business intelligence comes from: \u2022 clear objectives \u2022 explicit constraints \u2022 human ownership of outcomes \u2022 continuous validation against real-world impact AI should amplify intent, not replace it. Until systems can understand consequences and adapt autonomously, the most important intelligence in the loop is still human.",
+          "copy": "Why mistaking tools for intelligence is risky — especially in business The biggest risk with modern AI in business isn’t job replacement. It’s misalignment. LLMs are powerful tools, but they don’t understand your strategy, your risk tolerance, or your downstream consequences. They optimize their objective function — not your desired outcomes. When we treat these systems as “intelligent,” we start: • delegating judgment instead of decisions • trusting outputs without validating incentives • assuming correctness where there is only optimization This is where business risk appears. Using AI well isn’t about plugging in the most capable model. It’s about using the right tool, in the right place, with the right loss/reward function. If the objective function doesn’t encode what you actually care about: • profit vs growth • speed vs accuracy • exploration vs control the system will optimize the wrong thing — very efficiently. That doesn’t mean the model failed. It means we misunderstood the tool. Real business intelligence comes from: • clear objectives • explicit constraints • human ownership of outcomes • continuous validation against real-world impact AI should amplify intent, not replace it. Until systems can understand consequences and adapt autonomously, the most important intelligence in the loop is still human.",
           "url": "https://www.linkedin.com/posts/jason-c-rae_why-mistaking-tools-for-intelligence-is-risky-activity-7414939128456359936-ApAI",
           "publishedAt": "2026-01-09"
         }
@@ -458,7 +458,7 @@
         {
           "name": "LinkedIn",
           "status": "published",
-          "copy": "Is it really AI? Large Language Models are often labeled Artificial Intelligence. I think that label is premature. What we mostly have today is the appearance of intelligence. LLMs can produce intelligent-looking outputs, but they do not: \u2022 learn continuously from interaction \u2022 revise their internal models through experience \u2022 form goals or evaluate outcomes in the world What looks like learning is offline training plus inference over a fixed model. What looks like reasoning is pattern-based inference without understanding. What looks like decision-making is optimization without agency. So where is the line? Appearance of Intelligence - A system shows the appearance of intelligence when it: \u2022 generates outputs indistinguishable from intelligent behavior \u2022 adapts responses without adapting itself \u2022 performs reasoning-like tasks without autonomy or grounding \u2022 This is where LLMs sit today. Artificial Intelligence (proper) - A system earns the label Artificial Intelligence when it: \u2022 learns from interaction with its environment \u2022 updates its internal world model autonomously \u2022 evaluates outcomes and corrects itself \u2022 pursues goals beyond a single prompt or session \u2022 At this point, intelligence is no longer just simulated \u2014 it is implemented. Artificial General Intelligence (AGI) - AGI is not \u201ca bigger model\u201d or \u201cbetter benchmarks\u201d. AGI would be a system that: \u2022 learns across domains, not tasks \u2022 transfers knowledge without retraining \u2022 forms and revises goals \u2022 builds persistent memory and identity \u2022 understands cause and effect through interaction \u2022 improves itself without human orchestration In short: AGI is an autonomous, self-improving learning agent with a grounded model of the world. Until systems cross that threshold, calling them AGI \u2014 or even fully intelligent \u2014 risks confusing capability with cognition. LLMs are remarkable. But intelligence is not just what a system produces \u2014 it\u2019s what it can become on its own. Curious where others would draw this line",
+          "copy": "Is it really AI? Large Language Models are often labeled Artificial Intelligence. I think that label is premature. What we mostly have today is the appearance of intelligence. LLMs can produce intelligent-looking outputs, but they do not: • learn continuously from interaction • revise their internal models through experience • form goals or evaluate outcomes in the world What looks like learning is offline training plus inference over a fixed model. What looks like reasoning is pattern-based inference without understanding. What looks like decision-making is optimization without agency. So where is the line? Appearance of Intelligence - A system shows the appearance of intelligence when it: • generates outputs indistinguishable from intelligent behavior • adapts responses without adapting itself • performs reasoning-like tasks without autonomy or grounding • This is where LLMs sit today. Artificial Intelligence (proper) - A system earns the label Artificial Intelligence when it: • learns from interaction with its environment • updates its internal world model autonomously • evaluates outcomes and corrects itself • pursues goals beyond a single prompt or session • At this point, intelligence is no longer just simulated — it is implemented. Artificial General Intelligence (AGI) - AGI is not “a bigger model” or “better benchmarks”. AGI would be a system that: • learns across domains, not tasks • transfers knowledge without retraining • forms and revises goals • builds persistent memory and identity • understands cause and effect through interaction • improves itself without human orchestration In short: AGI is an autonomous, self-improving learning agent with a grounded model of the world. Until systems cross that threshold, calling them AGI — or even fully intelligent — risks confusing capability with cognition. LLMs are remarkable. But intelligence is not just what a system produces — it’s what it can become on its own. Curious where others would draw this line",
           "url": "https://www.linkedin.com/posts/jason-c-rae_is-it-really-ai-large-language-models-are-activity-7413836661110943744-ZiMZ",
           "publishedAt": "2026-01-09"
         }
@@ -466,8 +466,8 @@
     },
     {
       "id": "linkedin-activity-7399549829867266048",
-      "title": "OpenAI\u2019s Strategy Is Clear \u2014 But Is It Sustainable? It\u2019s becoming obvious that OpenAI i...",
-      "summary": "OpenAI\u2019s Strategy Is Clear \u2014 But Is It Sustainable? It\u2019s becoming obvious that OpenAI isn\u2019t just trying to build great models \u2014 they\u2019re trying to make their product synonymous with work itself. Integration into every...",
+      "title": "OpenAI’s Strategy Is Clear — But Is It Sustainable? It’s becoming obvious that OpenAI i...",
+      "summary": "OpenAI’s Strategy Is Clear — But Is It Sustainable? It’s becoming obvious that OpenAI isn’t just trying to build great models — they’re trying to make their product synonymous with work itself. Integration into every...",
       "status": "published",
       "pillar": "Applied AI governance",
       "contentType": "historical",
@@ -482,7 +482,7 @@
         {
           "name": "LinkedIn",
           "status": "published",
-          "copy": "OpenAI\u2019s Strategy Is Clear \u2014 But Is It Sustainable? It\u2019s becoming obvious that OpenAI isn\u2019t just trying to build great models \u2014 they\u2019re trying to make their product synonymous with work itself. Integration into every workflow, every application, every moment of productivity. A strategy built on ubiquity first, profit later. And they\u2019re willing to lose money for years to make that happen. Because once people, teams, and companies rely on a tool daily, switching becomes almost impossible. But there\u2019s a critical question nobody seems to be asking: Can OpenAI outspend companies like Google, who can embed AI into profitable products at global scale without burning billions? Google doesn\u2019t need to monetise every model directly. They can fold intelligence into Search, Docs, Gmail, Android \u2014 instantly deployed to billions. Their cost of distribution is effectively zero. Their moat is enormous. And they can afford to absorb AI costs indefinitely. So while OpenAI races to become the \u201coperating system of work,\u201d Google can simply outlast them. But here\u2019s the bigger point: This entire focus on copilots and productivity tools won\u2019t deliver AGI. Not even close. In my view, the next major leap \u2014 the next \u201cTransformer moment\u201d \u2014 is far more likely to come from teams like DeepMind, who continue to push the frontier of machine learning beyond language: \u2022 protein folding \u2022 self-play reinforcement learning \u2022 model-based reasoning \u2022 novel architectures outside the LLM paradigm These are not incremental productivity improvements. These are scientific breakthroughs that give us entirely new learning principles. OpenAI has chosen the path of productisation. DeepMind has chosen the path of discovery. One creates dependence. The other creates breakthroughs. And if history tells us anything, true paradigm shifts rarely come from the team optimising for market share. They come from the team exploring the edges of what\u2019s possible.#AI#OpenAI#DeepMind#AGI#MachineLearning#Innovation#Strategy#FutureOfWork",
+          "copy": "OpenAI’s Strategy Is Clear — But Is It Sustainable? It’s becoming obvious that OpenAI isn’t just trying to build great models — they’re trying to make their product synonymous with work itself. Integration into every workflow, every application, every moment of productivity. A strategy built on ubiquity first, profit later. And they’re willing to lose money for years to make that happen. Because once people, teams, and companies rely on a tool daily, switching becomes almost impossible. But there’s a critical question nobody seems to be asking: Can OpenAI outspend companies like Google, who can embed AI into profitable products at global scale without burning billions? Google doesn’t need to monetise every model directly. They can fold intelligence into Search, Docs, Gmail, Android — instantly deployed to billions. Their cost of distribution is effectively zero. Their moat is enormous. And they can afford to absorb AI costs indefinitely. So while OpenAI races to become the “operating system of work,” Google can simply outlast them. But here’s the bigger point: This entire focus on copilots and productivity tools won’t deliver AGI. Not even close. In my view, the next major leap — the next “Transformer moment” — is far more likely to come from teams like DeepMind, who continue to push the frontier of machine learning beyond language: • protein folding • self-play reinforcement learning • model-based reasoning • novel architectures outside the LLM paradigm These are not incremental productivity improvements. These are scientific breakthroughs that give us entirely new learning principles. OpenAI has chosen the path of productisation. DeepMind has chosen the path of discovery. One creates dependence. The other creates breakthroughs. And if history tells us anything, true paradigm shifts rarely come from the team optimising for market share. They come from the team exploring the edges of what’s possible.#AI#OpenAI#DeepMind#AGI#MachineLearning#Innovation#Strategy#FutureOfWork",
           "url": "https://www.linkedin.com/posts/jason-c-rae_ai-openai-deepmind-activity-7399549829867266048-8YRX",
           "publishedAt": "2025-12-10"
         }
@@ -490,8 +490,8 @@
     },
     {
       "id": "linkedin-activity-7391009509856530432",
-      "title": "One of the biggest costs in any business isn\u2019t always on the balance sheet \u2014 it\u2019s in th...",
-      "summary": "One of the biggest costs in any business isn\u2019t always on the balance sheet \u2014 it\u2019s in the time and effort that never gets measured. Across large organizations, analysts and teams quietly spend hours every week adjustin...",
+      "title": "One of the biggest costs in any business isn’t always on the balance sheet — it’s in th...",
+      "summary": "One of the biggest costs in any business isn’t always on the balance sheet — it’s in the time and effort that never gets measured. Across large organizations, analysts and teams quietly spend hours every week adjustin...",
       "status": "published",
       "pillar": "Commercial analytics",
       "contentType": "historical",
@@ -504,7 +504,7 @@
         {
           "name": "LinkedIn",
           "status": "published",
-          "copy": "One of the biggest costs in any business isn\u2019t always on the balance sheet \u2014 it\u2019s in the time and effort that never gets measured. Across large organizations, analysts and teams quietly spend hours every week adjusting numbers, reformatting data, reconciling mismatched definitions, or reproducing the same reports. From a distance, everything looks fine \u2014 dashboards are delivered, metrics are shared, insights circulate. But underneath, enormous manual effort is holding it all together. The real opportunity isn\u2019t just in building more reports \u2014 it\u2019s in building smarter processes. When we connect systems, standardize logic, and align how we work, we unlock capacity we didn\u2019t know we had. Data efficiency doesn\u2019t make headlines \u2014 but it quietly powers everything that does.#DataEfficiency#DigitalTransformation#AnalyticsLeadership#ProcessImprovement",
+          "copy": "One of the biggest costs in any business isn’t always on the balance sheet — it’s in the time and effort that never gets measured. Across large organizations, analysts and teams quietly spend hours every week adjusting numbers, reformatting data, reconciling mismatched definitions, or reproducing the same reports. From a distance, everything looks fine — dashboards are delivered, metrics are shared, insights circulate. But underneath, enormous manual effort is holding it all together. The real opportunity isn’t just in building more reports — it’s in building smarter processes. When we connect systems, standardize logic, and align how we work, we unlock capacity we didn’t know we had. Data efficiency doesn’t make headlines — but it quietly powers everything that does.#DataEfficiency#DigitalTransformation#AnalyticsLeadership#ProcessImprovement",
           "url": "https://www.linkedin.com/posts/jason-c-rae_dataefficiency-digitaltransformation-analyticsleadership-activity-7391009509856530432-BIso",
           "publishedAt": "2025-11-10"
         }

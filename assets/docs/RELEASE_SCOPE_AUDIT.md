@@ -1,82 +1,155 @@
 # Release Scope Audit
 
-Last updated: 2026-05-16
+Last updated: 2026-05-28
 
-## Objective
+## Current Branch Context
 
-Reconcile the previous release-scope disagreements and record the final include/exclude decisions used to create the isolated release branch.
+- Branch under audit: `codex/commercialization-release-20260516`
+- Audit basis:
+  - `git rev-parse HEAD`
+  - `git diff --name-status main...HEAD`
+  - `python scripts/repo_preflight.py`
+  - `npm run check:preflight`
+  - `assets/docs/DEPLOY_SCOPE_MANIFEST.md`
+  - `assets/docs/RELEASE_STAGE_COMMANDS.md`
+  - `assets/docs/PREVIEW_DEPLOY_SMOKE_CHECKLIST.md`
+- Branch head at refresh time: `7258edd8c560648929669d1c49ad9b3ab1438fcb`
 
-## Branch Evidence
+## Next Steps For This Workstream
 
-- Full local work preserved and synced on `origin/codex/snapshot-all-changes-20260516`
-- Clean release branch created from base commit `c96ededc0421f8246c4c789c7f2f0d6d3527f495`
-- Isolated release branch name: `codex/commercialization-release-20260516`
+The next steps are release-control checks, not feature work.
 
-## Final Inclusion Rule
+1. Reconfirm the branch still passes the technical release gates.
+2. Reconfirm the branch diff against `main` is still coherent release scope.
+3. Reconfirm the public social archive is safe for public release.
+4. Keep release-control docs aligned with the live branch state.
+5. Treat preview deploy validation as the final merge gate.
 
-Include changed files only when they materially affect one of the following:
+## Status Of Those Next Steps
 
-- live user experience
-- public routing
-- chatbot or page runtime behavior
-- public downloads
-- public shareability metadata/assets
-- release-control evidence required to prove the branch is isolated
+1. Technical release gates rechecked: `Done`
 
-## Resolved Previously Disputed Files
+- `python scripts/repo_preflight.py` passed on 2026-05-28.
+- `npm run check:preflight` passed on 2026-05-28.
 
-- `404.html`: include
-  - Public route and CTA surface changed.
-- `assets/data/projects.json`: include
-  - Required by portfolio rendering and chatbot data loading.
-- `assets/data/resume.json`: include
-  - Required by resume content and chatbot data loading.
-- `assets/docs/Jason-Rae-Resume.pdf`: include
-  - Linked directly from `index.html` and `resume.html`.
-- `assets/images/og-image.svg`: include
-  - Public-facing sharing asset with updated branding.
-- `blog/social-posts.html`: include
-  - Linked from `blog/index.html`.
-- `js/social-archive.js`: include
-  - Runtime dependency of the public social archive page.
-- `assets/data/social-posts.public.json`: include
-  - Public archive data source used by `js/social-archive.js`.
-- `scripts/build_public_bundle.py`: include
-  - Required for Netlify branch and preview builds because `netlify.toml` invokes it directly.
-- portfolio detail pages under `portfolio/`: include
-  - Public routes changed and should remain consistent with the new portfolio framing.
+1. Branch diff rechecked: `Done`
 
-## Included Release Scope
+- `git diff --name-status main...HEAD` still shows a coherent website-release branch.
+- The branch diff remains concentrated in public pages, runtime assets, published-safe social archive files, release-control docs, and build-path files.
 
-The full included scope is defined in:
+1. Public social archive rechecked: `Done`
 
-- `assets/docs/DEPLOY_SCOPE_MANIFEST.md`
+- `assets/data/social-posts.public.json` contains published entries only.
+- No `draft`, `queue`, `ready`, or `scheduled` statuses appear in the public archive payload.
+- `assets/data/social-posts.json` remains internal operating state and is outside the public release scope.
 
-That manifest is now the authoritative file list for the release branch.
+1. Release-control docs refreshed: `Done`
 
-## Excluded Scope Classes
+- `assets/docs/DEPLOY_SCOPE_MANIFEST.md` now reflects the branch-isolated control state.
+- `assets/docs/RELEASE_STAGE_COMMANDS.md` remains the pathspec source of truth for staging the branch payload.
 
-The following remain intentionally excluded:
+1. Final merge gate identified: `Done`
 
-- personal and career application materials
-- social automation infrastructure
-- voice backend and phonebot implementation
-- internal strategy docs not needed for runtime or release proof
-- local generated artifacts, caches, screenshots, and `site-dist` output
+- `assets/docs/PREVIEW_DEPLOY_SMOKE_CHECKLIST.md` is the remaining merge gate.
+- This is now an external validation step, not a repo-scope investigation step.
 
-## Reconciliation Outcome
+## Current Judgment
 
-The earlier disagreement between `Must-Stage` and `Needs-Human-Decision` is resolved.
+The workstream has moved from repo-hygiene cleanup into release-candidate control.
 
-- The public/runtime files listed above are now explicitly approved and included.
-- The excluded classes remain out of scope.
-- No unresolved file-level release decision remains for WQ-24.
+That means:
 
-## Remaining Non-Scope Concerns
+- the release branch is already the isolation mechanism
+- the public social archive is no longer a blocker on this branch because it ships from a published-safe payload
+- the remaining gate is preview deploy validation, not further triage of unrelated repo files
 
-These items remain operational follow-ups, not release-scope blockers:
+## Branch Release Scope Summary
 
-- owner decision on direct booking versus email-led scheduling
-- LinkedIn tracking reintroduction decision
-- physical-device Safari smoke test
-- expanded short-form social backfill
+Current release-branch payload includes:
+
+- core public pages:
+  - `404.html`
+  - `index.html`
+  - `services.html`
+  - `contact.html`
+  - `about.html`
+  - `resume.html`
+  - `portfolio.html`
+  - `privacy.html`
+- blog and teaching pages:
+  - `blog/index.html`
+  - `blog/5-ways-gpt4-transforms-business-analytics.html` (legacy redirect shim to `blog/5-ways-llm-workflows-transform-business-analytics.html`)
+  - `blog/5-ways-llm-workflows-transform-business-analytics.html`
+  - `blog/deterministic-llm-programming-production-ai.html`
+  - `blog/enterprise-ai-adoption-commercial-analytics.html`
+  - `blog/how-to-evaluate-ai-projects-roi.html`
+  - `blog/pl-attribution-fx-errors-data-analytics.html`
+  - `blog/power-bi-vs-tableau-2024-comparison.html`
+  - `blog/reducing-report-volume-95-percent-case-study.html`
+  - `blog/ai-vendor-due-diligence-checklist.html`
+  - `blog/build-vs-buy-ai-decision-matrix.html`
+  - `blog/customer-service-ai-checklist-before-chatbot.html`
+  - `blog/ai-cost-reduction-reality-check.html`
+  - `blog/social-posts.html`
+- public runtime assets:
+  - `css/style.css`
+  - `css/components.css`
+  - `js/main.js`
+  - `js/forms.js`
+  - `js/chatbot.js`
+  - `js/decision-network.js`
+  - `js/portfolio.js`
+  - `js/social-archive.js`
+  - `assets/data/projects.json`
+  - `assets/data/resume.json`
+  - `assets/data/social-posts.public.json`
+  - `assets/images/og-image.svg`
+- public collateral:
+  - `assets/docs/AI-Vendor-Due-Diligence-Checklist.pdf`
+  - `assets/docs/Build-vs-Buy-AI-Decision-Matrix.pdf`
+  - `assets/docs/Jason-Rae-Resume.pdf`
+- portfolio case-study pages:
+  - `portfolio/ai-desktop-agent-orchestrator.html`
+  - `portfolio/ai-memoir-narrative-pipeline.html`
+  - `portfolio/algorithmic-trading-ai.html`
+  - `portfolio/multilingual-travel-authorization-saas.html`
+- release/runtime support:
+  - `netlify.toml`
+  - `scripts/build_public_bundle.py`
+  - `sitemap.xml`
+
+Notes:
+
+- The old GPT-4 blog slug now exists only as a redirect-preservation route; the canonical article URL is `blog/5-ways-llm-workflows-transform-business-analytics.html`.
+- The build path only publishes the three PDF files under `assets/docs/`; helper HTML, Markdown, and release-control docs are not public-runtime critical.
+
+## Explicitly Out Of Scope For This Workstream
+
+Keep these outside the WQ-24 website release branch scope:
+
+- internal social state:
+  - `assets/data/social-posts.json`
+- voice and phone rollout:
+  - `phonebot/`
+  - `netlify/functions/`
+  - `assets/data/voice-intake-playbook.json`
+- broader automation and ops tracks:
+  - `.github/workflows/`
+  - `.env.example`
+  - most files under `scripts/` other than `scripts/build_public_bundle.py`
+- career, research, and application materials:
+  - `Research and Documentation/`
+  - `assets/docs/applications/`
+  - affiliation-planning files
+
+## Recommended Operator Action
+
+Use the branch-specific pathspec flow in `assets/docs/RELEASE_STAGE_COMMANDS.md`.
+
+Do not reopen WQ-24 by expanding into voice, internal social automation state, or unrelated job-search materials.
+
+The correct remaining action is:
+
+1. deploy the branch preview
+2. run `assets/docs/PREVIEW_DEPLOY_SMOKE_CHECKLIST.md`
+3. merge only if that checklist passes

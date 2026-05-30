@@ -4,6 +4,7 @@ import html
 import json
 import re
 from pathlib import Path
+from urllib.parse import urlencode
 
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -51,6 +52,52 @@ def replace_once(content: str, pattern: str, replacement: str) -> str:
     return updated
 
 
+def validate_cta_actions(actions: list[dict], context: str) -> None:
+    for action in actions:
+        if not action.get("label"):
+            raise ValueError(f"Missing CTA label for {context}")
+        if not action.get("service"):
+            raise ValueError(f"Missing CTA service for {context}")
+        if not action.get("section"):
+            raise ValueError(f"Missing CTA section for {context}")
+
+
+def build_contact_href(contact_path: str, source: str, source_path: str, action: dict) -> str:
+    params = {
+        "service": action["service"],
+        "source": source,
+        "source_path": source_path,
+        "offer": action.get("offer", action["service"]),
+        "cta": action["label"],
+        "section": action["section"],
+    }
+    return f"{contact_path}?{urlencode(params)}"
+
+
+def render_contact_actions(
+    actions: list[dict],
+    contact_path: str,
+    source: str,
+    source_path: str,
+) -> str:
+    if not actions:
+        return ""
+
+    rendered = []
+    for action in actions:
+        variant = action.get("variant", "secondary")
+        button_class = "btn btn-primary" if variant == "primary" else "btn btn-secondary"
+        rendered.append(
+            f"                <a href=\"{escape(build_contact_href(contact_path, source, source_path, action))}\" class=\"{button_class}\">{escape(action['label'])}</a>"
+        )
+
+    return (
+        "\n              <div class=\"case-study-actions\">\n"
+        + "\n".join(rendered)
+        + "\n              </div>"
+    )
+
+
 def validate_data(data: dict) -> None:
     category_ids = {category["id"] for category in data["categories"]}
 
@@ -67,12 +114,17 @@ def validate_data(data: dict) -> None:
                 raise FileNotFoundError(
                     f"Missing case-study file for {project['id']}: {project['caseStudyUrl']}"
                 )
+            validate_cta_actions(
+                project["detailPage"].get("ctaActions", []),
+                f"project detailPage {project['id']}",
+            )
 
     for case_study in data.get("caseStudies", []):
         if case_study["category"] not in category_ids:
             raise ValueError(f"Unknown case-study category: {case_study['id']}")
         if not case_study.get("displayCategory"):
             raise ValueError(f"Missing displayCategory for case study: {case_study['id']}")
+        validate_cta_actions(case_study.get("ctaActions", []), f"case study {case_study['id']}")
 
 
 def category_name_map(data: dict) -> dict[str, str]:
@@ -212,12 +264,34 @@ def render_case_study_card(case_study: dict) -> str:
     highlights = "\n".join(
         f"                <li>{escape(highlight)}</li>" for highlight in case_study["highlights"]
     )
-    return f"""          <article class=\"project-card reveal\" data-category=\"{escape(case_study['category'])}\" id=\"{escape(case_study['id'])}\">\n            <div class=\"project-content\">\n              <p class=\"project-type\">{escape(case_study['displayCategory'])}</p>\n              <h3 class=\"project-title\">{escape(case_study['title'])}</h3>\n              <p class=\"project-desc\">{escape(case_study['description'])}</p>\n              <ul class=\"list-check\" style=\"margin-bottom: 0\">\n{highlights}\n              </ul>\n            </div>\n          </article>"""
+    actions = render_contact_actions(
+        case_study.get("ctaActions", []),
+        "contact.html",
+        "portfolio.html",
+        "/portfolio.html",
+    )
+    return f"""          <article class=\"project-card reveal\" data-category=\"{escape(case_study['category'])}\" id=\"{escape(case_study['id'])}\">\n            <div class=\"project-content\">\n              <p class=\"project-type\">{escape(case_study['displayCategory'])}</p>\n              <h3 class=\"project-title\">{escape(case_study['title'])}</h3>\n              <p class=\"project-desc\">{escape(case_study['description'])}</p>\n              <ul class=\"list-check\" style=\"margin-bottom: 0\">\n{highlights}\n              </ul>{actions}\n            </div>\n          </article>"""
 
 
 def render_sanitized_case_studies(case_studies: list[dict]) -> str:
     cards = "\n\n".join(render_case_study_card(case_study) for case_study in case_studies)
-    return f"""    <section\n      class=\"section\"\n      style=\"background-color: var(--color-bg-secondary)\"\n    >\n      <div class=\"container\">\n        <h2 class=\"numbered-heading\" data-number=\"01\">\n          Commercial Decision Problems Solved\n        </h2>\n        <p style=\"max-width: 800px; margin-bottom: var(--space-8)\">\n          Public-safe summaries of forecasting, pricing, margin, CRM, governance, and workflow problems repaired in live operating environments.\n        </p>\n\n        <div class=\"projects-grid\">\n{cards}\n        </div>\n      </div>\n    </section>"""
+    return f"""    <section
+      class=\"section\"
+      style=\"background-color: var(--color-bg-secondary)\"
+    >
+      <div class=\"container\">
+        <h2 class=\"numbered-heading\" data-number=\"01\">
+          Commercial Decision Problems Solved
+        </h2>
+        <p style=\"max-width: 800px; margin-bottom: var(--space-8)\">
+          Public-safe summaries of forecasting, pricing, margin, CRM, governance, and workflow problems repaired in live operating environments.
+        </p>
+
+        <div class=\"projects-grid\">
+{cards}
+        </div>
+      </div>
+    </section>"""
 
 
 def generate_portfolio_page(data: dict) -> None:
@@ -293,7 +367,13 @@ def render_case_study_sidebar(project: dict) -> str:
     technologies = "\n".join(
         f"              <span class=\"tag\">{escape(technology)}</span>" for technology in project["technologies"]
     )
-    return f"""        <aside class=\"case-study-sidebar\">\n          <div class=\"card reveal\">\n            <h2 class=\"card-title\">Results &amp; Metrics</h2>\n            <div class=\"metric-list\">\n{metrics}\n            </div>\n          </div>\n\n          <div class=\"card reveal\">\n            <h2 class=\"card-title\">Project Highlights</h2>\n            <ul class=\"list-check\" style=\"margin-bottom: 0\">\n{highlights}\n            </ul>\n          </div>\n\n          <div class=\"card reveal\">\n            <h2 class=\"card-title\">Technologies</h2>\n            <div class=\"tags\">\n{technologies}\n            </div>\n          </div>\n\n          <div class=\"card reveal\">\n            <h2 class=\"card-title\">Call To Action</h2>\n            <p>\n              If you need production-grade decision systems rather than another isolated pilot, start with a Health Check.\n            </p>\n            <div class=\"case-study-actions\">\n              <a href=\"../contact.html\" class=\"btn btn-primary\">{escape(detail['ctaLabel'])}</a>\n            </div>\n          </div>\n        </aside>"""
+    actions = render_contact_actions(
+        detail.get("ctaActions", []),
+        "../contact.html",
+        project["caseStudyUrl"],
+        f"/{project['caseStudyUrl']}",
+    )
+    return f"""        <aside class=\"case-study-sidebar\">\n          <div class=\"card reveal\">\n            <h2 class=\"card-title\">Results &amp; Metrics</h2>\n            <div class=\"metric-list\">\n{metrics}\n            </div>\n          </div>\n\n          <div class=\"card reveal\">\n            <h2 class=\"card-title\">Project Highlights</h2>\n            <ul class=\"list-check\" style=\"margin-bottom: 0\">\n{highlights}\n            </ul>\n          </div>\n\n          <div class=\"card reveal\">\n            <h2 class=\"card-title\">Technologies</h2>\n            <div class=\"tags\">\n{technologies}\n            </div>\n          </div>\n\n          <div class=\"card reveal\">\n            <h2 class=\"card-title\">Call To Action</h2>\n            <p>\n              If you need production-grade decision systems rather than another isolated pilot, start with a diagnostic review or conversation about the workflow.\n            </p>\n{actions}\n          </div>\n        </aside>"""
 
 
 def generate_case_study_pages(data: dict) -> None:

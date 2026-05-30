@@ -53,7 +53,21 @@
         "applicationCategory": "BusinessApplication",
         "operatingSystem": "Windows, WSL, Linux",
         "schemaDescription": "A full-stack algorithmic trading ecosystem spanning TensorFlow signal generation, IBKR execution, Databento market data ingestion, JSON-Logic promotion gates, and FastAPI notifications.",
-        "ctaLabel": "Start Diagnostic Review"
+        "ctaLabel": "Start Diagnostic Review",
+        "ctaActions": [
+          {
+            "label": "Start Diagnostic Review",
+            "service": "diagnostic-review",
+            "section": "algorithmic-trading-ai-primary",
+            "variant": "primary"
+          },
+          {
+            "label": "Book Fit Call",
+            "service": "workflow-deployment",
+            "section": "algorithmic-trading-ai-secondary",
+            "variant": "secondary"
+          }
+        ]
       },
       "image": "assets/images/projects/project-trading-ai.svg",
       "demoUrl": null,
@@ -110,7 +124,22 @@
         "applicationCategory": "BusinessApplication",
         "operatingSystem": "Cross-platform",
         "schemaDescription": "A deterministic LLM narrative pipeline that ingests long-form source material, retrieves relevant context semantically, applies structured chapter patches, and validates output quality before export.",
-        "ctaLabel": "Discuss Your Document Intelligence Workflow"
+        "ctaLabel": "Discuss Your Document Intelligence Workflow",
+        "ctaActions": [
+          {
+            "label": "Book Fit Call",
+            "service": "workflow-deployment",
+            "section": "ai-memoir-pipeline-primary",
+            "variant": "primary",
+            "offer": "workflow-deployment"
+          },
+          {
+            "label": "Start Diagnostic Review",
+            "service": "diagnostic-review",
+            "section": "ai-memoir-pipeline-secondary",
+            "variant": "secondary"
+          }
+        ]
       },
       "image": "assets/images/projects/project-biography-writer.svg",
       "demoUrl": null,
@@ -167,7 +196,21 @@
         "applicationCategory": "DeveloperApplication",
         "operatingSystem": "Windows",
         "schemaDescription": "A Python automation framework that orchestrates multiple AI coding agents across virtual desktops, monitors approval states visually, generates prompts from project docs, and scores transcript quality.",
-        "ctaLabel": "Start Diagnostic Review"
+        "ctaLabel": "Start Diagnostic Review",
+        "ctaActions": [
+          {
+            "label": "Start Diagnostic Review",
+            "service": "diagnostic-review",
+            "section": "desktop-agent-automation-primary",
+            "variant": "primary"
+          },
+          {
+            "label": "Book Fit Call",
+            "service": "workflow-deployment",
+            "section": "desktop-agent-automation-secondary",
+            "variant": "secondary"
+          }
+        ]
       },
       "image": "assets/images/projects/project-productivity-suite.svg",
       "demoUrl": null,
@@ -225,7 +268,21 @@
         "applicationCategory": "BusinessApplication",
         "operatingSystem": "Web",
         "schemaDescription": "A multilingual travel authorization SaaS that combines guided application flows, LLM-powered policy monitoring, payments, authentication, and compliance-aware UX.",
-        "ctaLabel": "Discuss Your Compliance Workflow"
+        "ctaLabel": "Discuss Your Compliance Workflow",
+        "ctaActions": [
+          {
+            "label": "Book Fit Call",
+            "service": "workflow-deployment",
+            "section": "visa-travel-platform-primary",
+            "variant": "primary"
+          },
+          {
+            "label": "Start Diagnostic Review",
+            "service": "diagnostic-review",
+            "section": "visa-travel-platform-secondary",
+            "variant": "secondary"
+          }
+        ]
       },
       "image": "assets/images/projects/project-dashboard.svg",
       "demoUrl": null,
@@ -244,6 +301,20 @@
         "Diagnosed governance and behavior root causes before modeling",
         "Improved review cadence and sales-cycle assumptions",
         "Helped leadership move toward stronger forecast confidence"
+      ],
+      "ctaActions": [
+        {
+          "label": "Start Diagnostic Review",
+          "service": "diagnostic-review",
+          "section": "forecast-governance-reset-primary",
+          "variant": "primary"
+        },
+        {
+          "label": "Book Fit Call",
+          "service": "fit-call",
+          "section": "forecast-governance-reset-secondary",
+          "variant": "secondary"
+        }
       ]
     },
     {
@@ -257,6 +328,20 @@
         "Standardized KPI definitions and improved reporting ownership",
         "Supported centralized Power BI model and governance direction",
         "Reduced conflicting narratives and improved decision speed"
+      ],
+      "ctaActions": [
+        {
+          "label": "Start Foundation Fix Conversation",
+          "service": "foundation-fix",
+          "section": "commercial-analytics-foundation-primary",
+          "variant": "primary"
+        },
+        {
+          "label": "Start Diagnostic Review",
+          "service": "diagnostic-review",
+          "section": "commercial-analytics-foundation-secondary",
+          "variant": "secondary"
+        }
       ]
     },
     {
@@ -269,6 +354,20 @@
         "Built targeting, distributor identification, and operating rhythm from scratch",
         "Connected process, prioritization, and analytics to execution discipline",
         "Delivered major growth improvement against the original target"
+      ],
+      "ctaActions": [
+        {
+          "label": "Start Prioritization Sprint Conversation",
+          "service": "prioritization-sprint",
+          "section": "sales-engine-from-zero-primary",
+          "variant": "primary"
+        },
+        {
+          "label": "Book Fit Call",
+          "service": "fit-call",
+          "section": "sales-engine-from-zero-secondary",
+          "variant": "secondary"
+        }
       ]
     },
     {
@@ -281,6 +380,20 @@
         "Rebuilt decomposition logic and aligned methodology",
         "Identified defects creating margin distortion across markets",
         "Improved pricing and margin interpretation for leadership"
+      ],
+      "ctaActions": [
+        {
+          "label": "Start Foundation Fix Conversation",
+          "service": "foundation-fix",
+          "section": "margin-pricing-logic-repair-primary",
+          "variant": "primary"
+        },
+        {
+          "label": "Start Diagnostic Review",
+          "service": "diagnostic-review",
+          "section": "margin-pricing-logic-repair-secondary",
+          "variant": "secondary"
+        }
       ]
     },
     {
@@ -293,6 +406,20 @@
         "Built training and enablement around practical business use cases",
         "Connected governance, operating model, and adoption rather than hype",
         "Positioned AI as a decision-system capability, not a side experiment"
+      ],
+      "ctaActions": [
+        {
+          "label": "Start Team Enablement Conversation",
+          "service": "team-enablement",
+          "section": "applied-ai-enablement-primary",
+          "variant": "primary"
+        },
+        {
+          "label": "Book Fit Call",
+          "service": "fit-call",
+          "section": "applied-ai-enablement-secondary",
+          "variant": "secondary"
+        }
       ]
     }
   ],

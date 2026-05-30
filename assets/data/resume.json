@@ -1,13 +1,13 @@
 {
   "personalInfo": {
     "name": "Jason Rae",
-    "title": "Commercial Analytics & Applied AI Leader | Leading EMEA Commercial & Sales Analytics",
+    "title": "Commercial Analytics & Applied AI Leader | EMEA Analytics, Pricing, Forecasting, KPI Governance",
     "location": "Stuttgart, Germany",
     "email": "Jason_C_Rae@Outlook.com",
     "linkedin": "https://www.linkedin.com/in/jason-c-rae/",
     "github": "https://github.com/JSunRae",
     "website": "jasonrae.ai",
-    "summary": "Commercial analytics and applied AI leader with 13+ years across commercial leadership and analytics, including EMEA analytics, pricing, forecasting, margin analysis, CRM governance, acquisition integration and data transformation. Proven record of building commercial systems from zero, improving sales performance, correcting broken reporting logic and translating fragmented data into trusted executive decision systems. Brings hands-on BI, analytics engineering, automation, and applied AI capability in service of clearer commercial decisions across Sales, Finance, BI and executive stakeholder environments."
+    "summary": "Commercial analytics and applied AI leader with 13+ years spanning sales leadership, EMEA analytics, pricing, forecasting, margin analysis, CRM governance, and executive decision support. Strongest where a business needs clearer KPI logic, stronger reporting trust, and better cross-functional operating rhythms rather than more dashboard volume. Combines commercial judgment with hands-on delivery in Python, SQL, Power BI, automation, and governed AI workflows to turn fragmented data into auditable decisions across Sales, Finance, BI, IT, and leadership teams."
   },
   "experience": [
     {
@@ -18,10 +18,10 @@
       "startDate": "2026-01",
       "endDate": null,
       "current": true,
-      "description": "Own and develop EMEA commercial analytics architecture across gross margin walks, pricing intelligence, forecasting, CRM analytics, opportunity identification, incentives and executive business review support. Build decision-ready reporting, automation, and analytical workflows across Power BI, Python, SQL, ML, and controlled LLM systems where they improve auditability and speed.",
+      "description": "Lead EMEA commercial analytics architecture across gross margin walks, pricing intelligence, forecasting, CRM analytics, opportunity identification, incentives, and executive business review support. Build decision-ready reporting, automation, and analytical workflows across Power BI, Python, SQL, ML, and controlled LLM systems where they improve auditability, speed, and stakeholder trust.",
       "achievements": [
         {
-          "text": "Own and develop EMEA commercial analytics architecture across gross margin walks, pricing intelligence, forecasting, CRM analytics and executive business review support",
+          "text": "Lead and develop EMEA commercial analytics architecture across gross margin walks, pricing intelligence, forecasting, CRM analytics, and executive business review support",
           "metric": "EMEA",
           "category": "analytics"
         },
@@ -31,7 +31,7 @@
           "category": "innovation"
         },
         {
-          "text": "Support European leadership with forecasting governance, CRM quality improvement, pricing interpretation, margin analysis and business review narratives",
+          "text": "Support European leadership with forecasting governance, CRM quality improvement, pricing interpretation, margin analysis, and executive business review narratives",
           "metric": "Executive",
           "category": "impact"
         },
@@ -63,7 +63,7 @@
       "startDate": "2022-10",
       "endDate": "2026-01",
       "current": false,
-      "description": "Reporting to the SVP of Sales for Europe, combining commercial analytics leadership with UK key account sales development. Led European forecasting, pricing, financial integrity, and decision-system improvement, with applied AI introduced only where it served real workflows.",
+      "description": "Reporting to the SVP of Sales for Europe, combining commercial analytics leadership with UK key account sales development. Led European forecasting, pricing, financial integrity, and decision-system improvement, with applied AI introduced only where it served real workflows and measurable business value.",
       "achievements": [
         {
           "text": "Achieved €1.3M in UK sales growth in 2023, surpassing target by more than fourfold — independently",
@@ -340,7 +340,7 @@
   },
   "languages": [
     { "name": "English", "level": "Native" },
-    { "name": "German", "level": "Working proficiency" }
+    { "name": "German", "level": "B1 / Working proficiency" }
   ],
   "dailyAIStack": [
     {
